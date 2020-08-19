@@ -1,0 +1,742 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="D:/Work/MadarSoft/AlMousallyDummyProject">
+        <classes>
+            <class name="java.Screens.benefits.Benefits_CommentScreenTest">
+                <methods>
+                    <include name="testReturnActualScreenTitle"/>
+                    <include name="testClickOnAddCommentButton"/>
+                    <include name="testSendTextToCommentTextField"/>
+                </methods>
+            </class>
+            <class name="java.Screens.calender.CalenderGregorianScreenTest">
+                <methods>
+                    <include name="testReturnActualScreenTitle"/>
+                    <include name="testClickOnNavigationDrawerButton"/>
+                    <include name="testClickOnHijriDateCorrectionButton"/>
+                    <include name="testClickOnHijriCalenderButton"/>
+                    <include name="testClickOnGregorianCalenderButton"/>
+                    <include name="testClickOnPreviousMonthButton"/>
+                    <include name="testClickOnNextMonthButton"/>
+                    <include name="testReturnCurrentMonthInString"/>
+                    <include name="testCheckCalenderExistance"/>
+                    <include name="testCheckEventsListExistance"/>
+                </methods>
+            </class>
+            <class name="java.Screens.calender.CalenderHijriDateCorrectionScreenTest">
+                <methods>
+                    <include name="testReturnActualScreenTitle"/>
+                    <include name="testReturnCurrentDataInString"/>
+                    <include name="testClickOnMinusThreeButton"/>
+                    <include name="testClickOnMinusTwoButton"/>
+                    <include name="testClickOnMinusOneButton"/>
+                    <include name="testClickOnZeroButton"/>
+                    <include name="testClickOnPlusOneButton"/>
+                    <include name="testClickOnPlusTwoButton"/>
+                    <include name="testClickOnPlusThreeButton"/>
+                    <include name="testClickOnSaveButton"/>
+                    <include name="testClickOnCancelButton"/>
+                </methods>
+            </class>
+            <class name="java.Screens.calender.CalenderHijriScreenTest">
+                <methods>
+                    <include name="testReturnActualScreenTitle"/>
+                    <include name="testClickOnNavigationDrawerButton"/>
+                    <include name="testClickOnHijriDateCorrectionButton"/>
+                    <include name="testClickOnHijriCalenderButton"/>
+                    <include name="testClickOnGregorianCalenderButton"/>
+                    <include name="testClickOnPreviousMonthButton"/>
+                    <include name="testClickOnNextMonthButton"/>
+                    <include name="testReturnCurrentMonthInString"/>
+                    <include name="testCheckCalenderExistance"/>
+                </methods>
+            </class>
+            <class name="java.Screens.fajrList.FajrListScreenTest">
+                <methods>
+                    <include name="testReturnActualScreenTitle"/>
+                    <include name="testClickOnNavigationDrawerButton"/>
+                    <include name="testClickOnAddElementButton"/>
+                    <include name="testClickOnDeleteElementButton"/>
+                    <include name="testClickOnPauseButton"/>
+                    <include name="testSendTextToSearchTextField"/>
+                    <include name="testClickOnAddContactButton"/>
+                    <include name="testTestReturnActualScreenTitle"/>
+                    <include name="testTestClickOnNavigationDrawerButton"/>
+                    <include name="testTestClickOnAddElementButton"/>
+                    <include name="testTestClickOnDeleteElementButton"/>
+                    <include name="testTestClickOnPauseButton"/>
+                    <include name="testTestSendTextToSearchTextField"/>
+                    <include name="testTestClickOnAddContactButton"/>
+                    <include name="testTestReturnActualScreenTitle1"/>
+                    <include name="testTestClickOnNavigationDrawerButton1"/>
+                    <include name="testTestClickOnAddElementButton1"/>
+                    <include name="testTestClickOnDeleteElementButton1"/>
+                    <include name="testTestClickOnPauseButton1"/>
+                    <include name="testTestSendTextToSearchTextField1"/>
+                    <include name="testTestClickOnAddContactButton1"/>
+                </methods>
+            </class>
+            <class name="java.Screens.followUs.FollowIUsScreenTest">
+                <methods>
+                    <include name="testReturnActualScreenTitle"/>
+                    <include name="testClickOnNavigationDrawerButton"/>
+                    <include name="testClickOnFacebookButton"/>
+                    <include name="testClickOnTwitterButton"/>
+                    <include name="testClickOnYouTubeButton"/>
+                    <include name="testTestReturnActualScreenTitle"/>
+                    <include name="testTestClickOnNavigationDrawerButton"/>
+                    <include name="testTestClickOnFacebookButton"/>
+                    <include name="testTestClickOnTwitterButton"/>
+                    <include name="testTestClickOnYouTubeButton"/>
+                </methods>
+            </class>
+            <class name="java.Screens.golden.GoldenScreenTest">
+                <methods>
+                    <include name="testReturnActualScreenTitle"/>
+                    <include name="testClickOnSubscribeButton"/>
+                    <include name="testClickOnRenewSubscribtion"/>
+                    <include name="testClickOnPrivacyAndPolicyButton"/>
+                    <include name="testClickOnTermsAndConditionsButton"/>
+                    <include name="testTestReturnActualScreenTitle"/>
+                    <include name="testTestClickOnSubscribeButton"/>
+                    <include name="testTestClickOnRenewSubscribtion"/>
+                    <include name="testTestClickOnPrivacyAndPolicyButton"/>
+                    <include name="testTestClickOnTermsAndConditionsButton"/>
+                </methods>
+            </class>
+            <class name="java.Screens.home.HomePageScreenTest">
+                <methods>
+                    <include name="testClickOnToolBarSebhaButton"/>
+                    <include name="testClickOnToolBarAzkarButton"/>
+                    <include name="testClickOnToolBarWerdAlMohasbaButton"/>
+                    <include name="testClickOnToolBarBenefitsButton"/>
+                    <include name="testClickOnToolBarSettingsButton"/>
+                    <include name="testClickOnToolBarNavigationDrawerButton"/>
+                    <include name="testClickOnPrayerTimesRightArrowButton"/>
+                    <include name="testClickOnPrayerTimesLeftArrowButton"/>
+                    <include name="testClickOnPrayerTimesFajrButton"/>
+                    <include name="testClickOnPrayerTimesSheroukButton"/>
+                    <include name="testClickOnPrayerTimesDuhrButton"/>
+                    <include name="testClickOnPrayerTimesAsrButton"/>
+                    <include name="testClickOnPrayerTimesMaghrebButton"/>
+                    <include name="testClickOnPrayerTimesIshaaButton"/>
+                    <include name="testScrollToTheNextDayOnPrayerTimesCard"/>
+                    <include name="testScrollToThePreviousDayOnPrayerTimesCard"/>
+                    <include name="testClickOnPrayerTimesMoreButton"/>
+                    <include name="testClickOnPrayerTimesShareButton"/>
+                    <include name="testClickOnApproveButtonAzkarCard"/>
+                    <include name="testClickOnMoreButtonAzkarCard"/>
+                    <include name="testClickOnQiblaCompassButton"/>
+                    <include name="testClickOnQiblaSunAndMoonButton"/>
+                    <include name="testClickOnQiblaShadowButton"/>
+                    <include name="testClickOnQiblaVisualButton"/>
+                    <include name="testClickOnQuranWerdReadFromMushafButton"/>
+                    <include name="testClickOnQuranWerdAddNewKhatmaButton"/>
+                    <include name="testClickOnWerdAlMohasbaDoneButton"/>
+                    <include name="testClickOnWerdAlMohasbaMoreButton"/>
+                    <include name="testClickOnBestParticipationLikeButton"/>
+                    <include name="testClickOnBestParticipationCommentButton"/>
+                    <include name="testClickOnBestParticipationShareButton"/>
+                    <include name="testClickOnBeneftitsCardLikeButton"/>
+                    <include name="testClickOnBeneftitsCardCommentButton"/>
+                    <include name="testClickOnBeneftitsCardShareButton"/>
+                    <include name="testClickOnBenefitsSubject"/>
+                    <include name="testScrollToTheNextBenefitOnTheScreen"/>
+                    <include name="testScrollToThePreviousBenefitOnTheScreen"/>
+                    <include name="testTestClickOnToolBarSebhaButton"/>
+                    <include name="testTestClickOnToolBarAzkarButton"/>
+                    <include name="testTestClickOnToolBarWerdAlMohasbaButton"/>
+                    <include name="testTestClickOnToolBarBenefitsButton"/>
+                    <include name="testTestClickOnToolBarSettingsButton"/>
+                    <include name="testTestClickOnToolBarNavigationDrawerButton"/>
+                    <include name="testTestClickOnPrayerTimesRightArrowButton"/>
+                    <include name="testTestClickOnPrayerTimesLeftArrowButton"/>
+                    <include name="testTestClickOnPrayerTimesFajrButton"/>
+                    <include name="testTestClickOnPrayerTimesSheroukButton"/>
+                    <include name="testTestClickOnPrayerTimesDuhrButton"/>
+                    <include name="testTestClickOnPrayerTimesAsrButton"/>
+                    <include name="testTestClickOnPrayerTimesMaghrebButton"/>
+                    <include name="testTestClickOnPrayerTimesIshaaButton"/>
+                    <include name="testTestScrollToTheNextDayOnPrayerTimesCard"/>
+                    <include name="testTestScrollToThePreviousDayOnPrayerTimesCard"/>
+                    <include name="testTestClickOnPrayerTimesMoreButton"/>
+                    <include name="testTestClickOnPrayerTimesShareButton"/>
+                    <include name="testTestClickOnApproveButtonAzkarCard"/>
+                    <include name="testTestClickOnMoreButtonAzkarCard"/>
+                    <include name="testTestClickOnQiblaCompassButton"/>
+                    <include name="testTestClickOnQiblaSunAndMoonButton"/>
+                    <include name="testTestClickOnQiblaShadowButton"/>
+                    <include name="testTestClickOnQiblaVisualButton"/>
+                    <include name="testTestClickOnQuranWerdReadFromMushafButton"/>
+                    <include name="testTestClickOnQuranWerdAddNewKhatmaButton"/>
+                    <include name="testTestClickOnWerdAlMohasbaDoneButton"/>
+                    <include name="testTestClickOnWerdAlMohasbaMoreButton"/>
+                    <include name="testTestClickOnBestParticipationLikeButton"/>
+                    <include name="testTestClickOnBestParticipationCommentButton"/>
+                    <include name="testTestClickOnBestParticipationShareButton"/>
+                    <include name="testTestClickOnBeneftitsCardLikeButton"/>
+                    <include name="testTestClickOnBeneftitsCardCommentButton"/>
+                    <include name="testTestClickOnBeneftitsCardShareButton"/>
+                    <include name="testTestClickOnBenefitsSubject"/>
+                    <include name="testTestScrollToTheNextBenefitOnTheScreen"/>
+                    <include name="testTestScrollToThePreviousBenefitOnTheScreen"/>
+                </methods>
+            </class>
+            <class name="java.Screens.mosques.MosquesScreenTest">
+                <methods>
+                    <include name="testReturnActualScreenTitle"/>
+                    <include name="testClickOnNavigationDrawerButton"/>
+                </methods>
+            </class>
+            <class name="java.Screens.qibla.Qibla_CompassScreenTest">
+                <methods>
+                    <include name="testReturnActualScreenTitle"/>
+                    <include name="testClickOnNavigationDrawerButton"/>
+                    <include name="testClickOnCompassButton"/>
+                    <include name="testClickOnSunAndMoonButton"/>
+                    <include name="testClickOnShadowButton"/>
+                    <include name="testClickOnVisibleButton"/>
+                    <include name="testClickOnHelpButton"/>
+                </methods>
+            </class>
+            <class name="java.Screens.qibla.Qibla_ShadowScreenTest">
+                <methods>
+                    <include name="testReturnActualScreenTitle"/>
+                    <include name="testClickOnNavigationDrawerButton"/>
+                    <include name="testClickOnCompassButton"/>
+                    <include name="testClickOnSunAndMoonButton"/>
+                    <include name="testClickOnShadowButton"/>
+                    <include name="testClickOnVisibleButton"/>
+                    <include name="testClickOnHelpButton"/>
+                </methods>
+            </class>
+            <class name="java.Screens.qibla.Qibla_SunAndMoonScreenTest">
+                <methods>
+                    <include name="testReturnActualScreenTitle"/>
+                    <include name="testClickOnNavigationDrawerButton"/>
+                    <include name="testClickOnCompassButton"/>
+                    <include name="testClickOnSunAndMoonButton"/>
+                    <include name="testClickOnShadowButton"/>
+                    <include name="testClickOnVisibleButton"/>
+                    <include name="testClickOnHelpButton"/>
+                </methods>
+            </class>
+            <class name="java.Screens.qibla.Qibla_VisualScreenTest">
+                <methods>
+                    <include name="testReturnActualScreenTitle"/>
+                    <include name="testClickOnNavigationDrawerButton"/>
+                    <include name="testClickOnCompassButton"/>
+                    <include name="testClickOnSunAndMoonButton"/>
+                    <include name="testClickOnShadowButton"/>
+                    <include name="testClickOnVisibleButton"/>
+                    <include name="testClickOnHelpButton"/>
+                    <include name="testClickOnZoomInButton"/>
+                    <include name="testClickOnZoomOutButton"/>
+                </methods>
+            </class>
+            <class name="java.Screens.quranWerd.QuranWerd_AddWerdScreenTest">
+                <methods>
+                    <include name="testReturnActualScreenTitle"/>
+                    <include name="testClickOnNavigationDrawerButton"/>
+                    <include name="testSendTextToKhatmaNameTextField"/>
+                    <include name="testClickOnDailyReadingButton"/>
+                    <include name="testClickOnHowManyChaptersButton"/>
+                    <include name="testClickOnStartFromButton"/>
+                    <include name="testClickOnAlertOnOffSwitch"/>
+                    <include name="testClickOnSetAlertTimeButton"/>
+                    <include name="testClickOnCancelButton"/>
+                    <include name="testClickOnSaveButton"/>
+                </methods>
+            </class>
+            <class name="java.Screens.quranWerd.QuranWerd_AddWerd_DailyReadingScreenTest">
+                <methods>
+                    <include name="testClickOnGozaaButton"/>
+                    <include name="testClickOnHezbButton"/>
+                    <include name="testClickOnRobaaButton"/>
+                    <include name="testClickOnPageButton"/>
+                    <include name="testClickOnSoraaButton"/>
+                </methods>
+            </class>
+            <class name="java.Screens.quranWerd.QuranWerd_AddWerd_HowManyChaptersScreenTest">
+                <methods>
+                    <include name="testScrollToAChapterNumberAndClickIt"/>
+                </methods>
+            </class>
+            <class name="java.Screens.quranWerd.QuranWerd_AddWerd_SetAlertTimeScreenTest">
+                <methods>
+                    <include name="testSendKeysToMinutesTextField"/>
+                    <include name="testSendKeysToHoursTextField"/>
+                    <include name="testClickOnCancelButton"/>
+                    <include name="testClickOnSaveButton"/>
+                </methods>
+            </class>
+            <class name="java.Screens.quranWerd.QuranWerd_AddWerd_StartFromScreenTest">
+                <methods>
+                    <include name="testScrollToAChapterNumberAndClickIt"/>
+                </methods>
+            </class>
+            <class name="java.Screens.quranWerd.QuranWerd_AddedScreenTest">
+                <methods>
+                    <include name="testReturnActualScreenTitle"/>
+                    <include name="testClickOnNavigationDrawerButton"/>
+                    <include name="testClickOnAddWerdButton"/>
+                    <include name="testClickOnInfoButtonForAWerdByItsIndex"/>
+                </methods>
+            </class>
+            <class name="java.Screens.quranWerd.QuranWerd_EmptyScreenTest">
+                <methods>
+                    <include name="testReturnActualScreenTitle"/>
+                    <include name="testClickOnNavigationDrawerButton"/>
+                    <include name="testClickOnInfoButton"/>
+                    <include name="testClickOnReadFromMushafButton"/>
+                    <include name="testClickOnAddWerdButton"/>
+                </methods>
+            </class>
+            <class name="java.Screens.quranWerd.QuranWerd_InfoScreenTest">
+                <methods>
+                    <include name="testReturnActualScreenTitle"/>
+                    <include name="testClickOnNavigationDrawerButton"/>
+                    <include name="testClickOnPauseButton"/>
+                    <include name="testClickOnDeleteButton"/>
+                </methods>
+            </class>
+            <class name="java.Screens.quranWerd.QuranWerd_InfoScreen_PopUpScreenTest">
+                <methods>
+                    <include name="testClickOnOkButton"/>
+                    <include name="testClickOnCancelButton"/>
+                </methods>
+            </class>
+            <class name="java.Screens.quranWerd.QuranWerd_MushafScreenTest">
+                <methods>
+                    <include name="testReturnActualScreenTitle"/>
+                    <include name="testClickOnBackButton"/>
+                    <include name="testClickOnScreenOnButton"/>
+                    <include name="testClickOnMushafBrowseButton"/>
+                    <include name="testScrollToNextPage"/>
+                    <include name="testScrollToPreviousPage"/>
+                </methods>
+            </class>
+            <class name="java.Screens.quranWerd.QuranWerd_Mushaf_BrowseScreenTest">
+                <methods>
+                    <include name="testClickOnSuraaMenuButton"/>
+                    <include name="testClickOnChapterMenuButton"/>
+                    <include name="testClickOnPagesMenuButton"/>
+                    <include name="testClickOnDownloadButton"/>
+                </methods>
+            </class>
+            <class name="java.Screens.settings.SettingsScreenTest">
+                <methods>
+                    <include name="testReturnActualScreenTitle"/>
+                    <include name="testClickOnLanguageButton"/>
+                    <include name="testReturnLanguageChoiceString"/>
+                    <include name="testClickOnBackgroundActivationButton"/>
+                    <include name="testClickOnSolveAzaanProblemsSolutionsButton"/>
+                    <include name="testClickOnAzanModeButton"/>
+                    <include name="testReturnAzanModeSelectionString"/>
+                    <include name="testClickOnAzanModeOneButton"/>
+                    <include name="testClickOnAzanModeTwoButton"/>
+                    <include name="testClickOnCalculationMethodButton"/>
+                    <include name="testReturnCalculationMethodChoiceString"/>
+                    <include name="testClickOnMazhabButton"/>
+                    <include name="testReturnMazhabChoiceString"/>
+                    <include name="testClickOnSummerTimeButton"/>
+                    <include name="testReturnSummerTimingChoiceString"/>
+                    <include name="testClickOnPrayerTimesCorrectionButton"/>
+                    <include name="testClickOnTimeZoneButton"/>
+                    <include name="testReturnTimeZoneChoiceString"/>
+                    <include name="testClickOnPolarZonesCalculationButton"/>
+                    <include name="testReturnPolarZonesChoiceString"/>
+                    <include name="testClickOnResetToDefaultButton"/>
+                    <include name="testClickOnAutoDetectLocationButton"/>
+                    <include name="testReturnLocationChoiceString"/>
+                    <include name="testClickOnTravelModeSwitch"/>
+                    <include name="testClickOnTravelModeSectionToOpenTravelModeScreen"/>
+                    <include name="testClickOnAzkarSettingsButton"/>
+                    <include name="testClickOnAzanSettingsButton"/>
+                    <include name="testClickOnAlertSoundButton"/>
+                    <include name="testReturnALertSoundChoiceAsAString"/>
+                    <include name="testClickOnAlertSoundOptionOne"/>
+                    <include name="testClickOnAlertSoundOptionTwo"/>
+                    <include name="testClickOnAzanAndIqamaSettingsButton"/>
+                    <include name="testClickOnAzanAndIqamaNotificationsSwitch"/>
+                    <include name="testClickOnNawafelSettingsButton"/>
+                    <include name="testClickOnNawafelNotificationsSwitch"/>
+                    <include name="testClickOnGomaaSettingsButton"/>
+                    <include name="testClickOnGomaaNotificationsSwitch"/>
+                    <include name="testClickOnFastingSettingsButton"/>
+                    <include name="testClickOnFastingNotificationsSwitch"/>
+                    <include name="testClickOnSilentDuringPrayerSettingsButton"/>
+                    <include name="testClickOnSilentDurningPrayerNotificationsSwitch"/>
+                    <include name="testClickOnAzkarNotificationsSettingsButton"/>
+                    <include name="testClickOnAzkarNotificationsSwitch"/>
+                    <include name="testClickOnBenefitsNotificationsSwitch"/>
+                </methods>
+            </class>
+            <class name="java.Screens.settings.generalSettings.Settings_EnableBackgroudActivationScreenTest">
+                <methods>
+                    <include name="testClickOnCloseButton"/>
+                    <include name="testReturnScreenTitle"/>
+                    <include name="testClickOnSettingsButton"/>
+                    <include name="testClickOnDoNotShowThisAgainButton"/>
+                </methods>
+            </class>
+            <class name="java.Screens.settings.generalSettings.Settings_LanguageScreenTest">
+                <methods>
+                    <include name="testReturnScreenTitle"/>
+                    <include name="testClickOnArabicElement"/>
+                    <include name="testClickOnEnglishElement"/>
+                    <include name="testClickOnTurkishElement"/>
+                    <include name="testClickOnGermanElement"/>
+                    <include name="testClickOnFrenchElement"/>
+                    <include name="testClickOnSpanishElement"/>
+                    <include name="testClickOnIndonesianElement"/>
+                    <include name="testClickOnArduElement"/>
+                    <include name="testClickOnIgurElement"/>
+                </methods>
+            </class>
+            <class name="java.Screens.settings.location.automatic.Settings_Location_AutomaticScreenTest">
+                <methods>
+                    <include name="testReturnCityNameAsString"/>
+                    <include name="testClickOnNextButton"/>
+                    <include name="testClickOnDetectViaOtherMethodsScreen"/>
+                </methods>
+            </class>
+            <class name="java.Screens.settings.location.automatic.Settings_Location_OtherMethod_AddCit_CityListScreenTest">
+                <methods>
+                    <include name="testSearchForACountryByTextAndClickIt"/>
+                </methods>
+            </class>
+            <class name="java.Screens.settings.location.automatic.Settings_Location_OtherMethod_AddCityNameScreenTest">
+                <methods>
+                    <include name="testClickOnCountryElementToOpenCountriesList"/>
+                    <include name="testSendKeysToSearchTextField"/>
+                    <include name="testReturnTextFromSearchTextField"/>
+                    <include name="testClickOnSaveButton"/>
+                </methods>
+            </class>
+            <class name="java.Screens.settings.location.automatic.Settings_Location_OtherMethodsScreenTest">
+                <methods>
+                    <include name="testClickOnOfflineSearchButton"/>
+                    <include name="testClickOnOnlineDetectionButton"/>
+                    <include name="testClickOnSearchOnlineButton"/>
+                    <include name="testClickOnAddCityNameButton"/>
+                </methods>
+            </class>
+            <class name="java.Screens.settings.location.automatic.Settings_Location_OtherMethods_OfflineSearchScreenTest">
+                <methods>
+                    <include name="testReturnScreenTitle"/>
+                    <include name="testClickOnBackButton"/>
+                    <include name="testSendKeysToSearchTextField"/>
+                    <include name="testReturnTextFromSearchTextField"/>
+                    <include name="testSearchForACountryByTextAndClickIt"/>
+                </methods>
+            </class>
+            <class name="java.Screens.settings.location.automatic.Settings_Location_OtherMethods_SearchOnlineScreenTest">
+                <methods>
+                    <include name="testReturnScreenTitle"/>
+                    <include name="testSendKeysToSearchTextField"/>
+                    <include name="testReturnTextFromSearchTextField"/>
+                </methods>
+            </class>
+            <class name="java.Screens.settings.location.travelMode.Settings_Location_TravelModeScreenTest">
+                <methods>
+                    <include name="testReturnScreenTitleText"/>
+                    <include name="testClickOnTravelModeSwitch"/>
+                    <include name="testClickOnUpdateLocationTimeIntervalButton"/>
+                    <include name="testClickOnGoToPhoneSettingsButton"/>
+                </methods>
+            </class>
+            <class name="java.Screens.settings.location.travelMode.Settings_Location_TravelMode_IntervalsScreenTest">
+                <methods>
+                    <include name="testClickOnQuarterHourButton"/>
+                    <include name="testClickOnHalfHourButton"/>
+                    <include name="testClickOnHourButton"/>
+                    <include name="testClickOnTwoHoursButton"/>
+                    <include name="testClickOnThreeHoursButton"/>
+                    <include name="testClickOnFourHoursButton"/>
+                    <include name="testClickOnFiveHoursButton"/>
+                </methods>
+            </class>
+            <class name="java.Screens.settings.notifications.azkarNotifications.Settings_AzkarNotificationsSettingsScreenTest">
+                <methods>
+                    <include name="testReturnScreenTitle"/>
+                    <include name="testClickOnAllNotificationsSwitch"/>
+                    <include name="testClickOnMorningAzkarSwitch"/>
+                    <include name="testClickOnHoursAfterFajrMinusButton"/>
+                    <include name="testSendNumberToHoursAfterFajrTextField"/>
+                    <include name="testClickOnHoursAfterFajrPlusButton"/>
+                    <include name="testClickOnEveningAzkarSwitch"/>
+                    <include name="testClickOnAsrRadioButton"/>
+                    <include name="testClickOnMaghribRadioButton"/>
+                    <include name="testClickOnSleepingAzkarSwitch"/>
+                    <include name="testClickOnSleepingAzkarTimeButton"/>
+                    <include name="testClickOnOpenAzkarDuringPrayerSwitch"/>
+                    <include name="testTestReturnScreenTitle"/>
+                    <include name="testTestClickOnAllNotificationsSwitch"/>
+                    <include name="testTestClickOnMorningAzkarSwitch"/>
+                    <include name="testTestClickOnHoursAfterFajrMinusButton"/>
+                    <include name="testTestSendNumberToHoursAfterFajrTextField"/>
+                    <include name="testTestClickOnHoursAfterFajrPlusButton"/>
+                    <include name="testTestClickOnEveningAzkarSwitch"/>
+                    <include name="testTestClickOnAsrRadioButton"/>
+                    <include name="testTestClickOnMaghribRadioButton"/>
+                    <include name="testTestClickOnSleepingAzkarSwitch"/>
+                    <include name="testTestClickOnSleepingAzkarTimeButton"/>
+                    <include name="testTestClickOnOpenAzkarDuringPrayerSwitch"/>
+                </methods>
+            </class>
+            <class name="java.Screens.settings.notifications.silentDuringPrayer.Settings_SilentDuringPrayerNotificationsScreenTest">
+                <methods>
+                    <include name="testReturnScreenTitleString"/>
+                    <include name="testClickOnEnableNotificationsDuringSilentSwitch"/>
+                    <include name="testClickOnSilentModesButton"/>
+                    <include name="testReturnSilentModeChoiceString"/>
+                    <include name="testClickOnSilentRadioButton"/>
+                    <include name="testClickOnVibrateRadioButton"/>
+                    <include name="testClickOnEnableSilentDuringPrayerSwitch"/>
+                    <include name="testClickOnApplySettingsForAllPrayersSwitch"/>
+                    <include name="testClickOnMakePhoneSilentDuringAllPrayersSwitch"/>
+                    <include name="testClickOnPlusButtonForTimeAfterAzanToMakeThePhoneSilentForAllPrayers"/>
+                    <include name="testSendNumberToPeriodAfterAzanToMakeThePhoneSilentForAllPrayers"/>
+                    <include name="testClickOnMinusButtonForTimeAfterAzanToMakeThePhoneSilentForAllPrayers"/>
+                    <include name="testClickOnPlusButtonForPeriodOfMakingPhoneSilentDuringPrayerForAllPrayers"/>
+                    <include name="testSendNumberToPeriodOfMakingPhoneSilentDuringPrayerForAllPrayers"/>
+                    <include name="testClickOnMinusButtonForPeriodOfMakingPhoneSilentDuringPrayerForAllPrayers"/>
+                    <include name="testClickOnExpandFajrSection"/>
+                    <include name="testClickOnMakePhoneSilentDuringFajrPrayerSwitch"/>
+                    <include name="testClickOnPlusButtonForTimeAfterAzanToMakeThePhoneSilentFoFajrPrayer"/>
+                    <include name="testSendNumberToPeriodAfterAzanToMakeThePhoneSilentForFajrPrayer"/>
+                    <include name="testClickOnMinusButtonForTimeAfterAzanToMakeThePhoneSilentForFajrPrayer"/>
+                    <include name="testClickOnPlusButtonForPeriodOfMakingPhoneSilentDuringPrayerForFajrPrayer"/>
+                    <include name="testSendNumberToPeriodOfMakingPhoneSilentDuringPrayerForFajrPrayer"/>
+                    <include name="testClickOnMinusButtonForPeriodOfMakingPhoneSilentDuringPrayerForFajrPrayer"/>
+                    <include name="testClickOnExpandZohrSection"/>
+                    <include name="testClickOnMakePhoneSilentDuringZohrPrayerSwitch"/>
+                    <include name="testClickOnPlusButtonForTimeAfterAzanToMakeThePhoneSilentFoZohrPrayer"/>
+                    <include name="testSendNumberToPeriodAfterAzanToMakeThePhoneSilentForZohrPrayer"/>
+                    <include name="testClickOnMinusButtonForTimeAfterAzanToMakeThePhoneSilentForZohrPrayer"/>
+                    <include name="testClickOnPlusButtonForPeriodOfMakingPhoneSilentDuringPrayerForZohrPrayer"/>
+                    <include name="testSendNumberToPeriodOfMakingPhoneSilentDuringPrayerForZohrPrayer"/>
+                    <include name="testClickOnMinusButtonForPeriodOfMakingPhoneSilentDuringPrayerForZohrPrayer"/>
+                    <include name="testClickOnExpandAsrSection"/>
+                    <include name="testClickOnMakePhoneSilentDuringAsrPrayerSwitch"/>
+                    <include name="testClickOnPlusButtonForTimeAfterAzanToMakeThePhoneSilentFoAsrPrayer"/>
+                    <include name="testSendNumberToPeriodAfterAzanToMakeThePhoneSilentForAsrPrayer"/>
+                    <include name="testClickOnMinusButtonForTimeAfterAzanToMakeThePhoneSilentForAsrPrayer"/>
+                    <include name="testClickOnPlusButtonForPeriodOfMakingPhoneSilentDuringPrayerForAsrPrayer"/>
+                    <include name="testSendNumberToPeriodOfMakingPhoneSilentDuringPrayerForAsrPrayer"/>
+                    <include name="testClickOnMinusButtonForPeriodOfMakingPhoneSilentDuringPrayerForAsrPrayer"/>
+                    <include name="testClickOnExpandMaghribSection"/>
+                    <include name="testClickOnMakePhoneSilentDuringMaghribPrayerSwitch"/>
+                    <include name="testClickOnPlusButtonForTimeAfterAzanToMakeThePhoneSilentFoMaghribPrayer"/>
+                    <include name="testSendNumberToPeriodAfterAzanToMakeThePhoneSilentForMaghribPrayer"/>
+                    <include name="testClickOnMinusButtonForTimeAfterAzanToMakeThePhoneSilentForMaghribPrayer"/>
+                    <include name="testClickOnPlusButtonForPeriodOfMakingPhoneSilentDuringPrayerForMaghribPrayer"/>
+                    <include name="testSendNumberToPeriodOfMakingPhoneSilentDuringPrayerForMaghribPrayer"/>
+                    <include name="testClickOnMinusButtonForPeriodOfMakingPhoneSilentDuringPrayerForMaghribPrayer"/>
+                    <include name="testClickOnExpandIshaaSection"/>
+                    <include name="testClickOnMakePhoneSilentDuringIshaaPrayerSwitch"/>
+                    <include name="testClickOnPlusButtonForTimeAfterAzanToMakeThePhoneSilentFoIshaaPrayer"/>
+                    <include name="testSendNumberToPeriodAfterAzanToMakeThePhoneSilentForIshaaPrayer"/>
+                    <include name="testClickOnMinusButtonForTimeAfterAzanToMakeThePhoneSilentForIshaaPrayer"/>
+                    <include name="testClickOnPlusButtonForPeriodOfMakingPhoneSilentDuringPrayerForIshaaPrayer"/>
+                    <include name="testSendNumberToPeriodOfMakingPhoneSilentDuringPrayerForIshaaPrayer"/>
+                    <include name="testClickOnMinusButtonForPeriodOfMakingPhoneSilentDuringPrayerForIshaaPrayer"/>
+                    <include name="testClickOnMakePhoneSilentDuringGomaaPrayerSwitch"/>
+                    <include name="testClickOnPlusButtonForTimeAfterAzanToMakeThePhoneSilentFoGomaaPrayer"/>
+                    <include name="testSendNumberToPeriodAfterAzanToMakeThePhoneSilentForGomaaPrayer"/>
+                    <include name="testClickOnMinusButtonForTimeAfterAzanToMakeThePhoneSilentForGomaaPrayer"/>
+                    <include name="testClickOnPlusButtonForPeriodOfMakingPhoneSilentDuringPrayerForGomaaPrayer"/>
+                    <include name="testSendNumberToPeriodOfMakingPhoneSilentDuringPrayerForGomaaPrayer"/>
+                    <include name="testClickOnMinusButtonForPeriodOfMakingPhoneSilentDuringPrayerForGomaaPrayer"/>
+                    <include name="testClickOnMakePhoneSilentDuringTaraweehPrayerSwitch"/>
+                    <include name="testClickOnPlusButtonForTimeAfterAzanToMakeThePhoneSilentFoTaraweehPrayer"/>
+                    <include name="testSendNumberToPeriodAfterAzanToMakeThePhoneSilentForTaraweehPrayer"/>
+                    <include name="testClickOnMinusButtonForTimeAfterAzanToMakeThePhoneSilentForTaraweehPrayer"/>
+                    <include name="testClickOnPlusButtonForPeriodOfMakingPhoneSilentDuringPrayerForTaraweehPrayer"/>
+                    <include name="testSendNumberToPeriodOfMakingPhoneSilentDuringPrayerForTaraweehPrayer"/>
+                    <include name="testClickOnMinusButtonForPeriodOfMakingPhoneSilentDuringPrayerForTaraweehPrayer"/>
+                </methods>
+            </class>
+            <class name="java.Screens.settings.prayerTimesCorrection.Settings_PrayerTimes_CalculationMethodScreenTest">
+                <methods>
+                    <include name="testClickOnNavigationDrawerButton"/>
+                    <include name="testReturnScreenGeneralTitleString"/>
+                    <include name="testReturnIshaaTimeString"/>
+                    <include name="testReturnMaghribTimeString"/>
+                    <include name="testReturnAsrTimeString"/>
+                    <include name="testReturnZohrTimeString"/>
+                    <include name="testReturnSherouqeTimeString"/>
+                    <include name="testReturnFajrTimeString"/>
+                    <include name="testReturnScreenTitleString"/>
+                    <include name="testScrollToACalculationMehtodAndClickIt"/>
+                    <include name="testClickOnAScrollDotByIndex"/>
+                </methods>
+            </class>
+            <class name="java.Screens.settings.prayerTimesCorrection.Settings_PrayerTimes_MazhabScreenTest">
+                <methods>
+                    <include name="testClickOnNavigationDrawerButton"/>
+                    <include name="testReturnScreenGeneralTitleString"/>
+                    <include name="testReturnIshaaTimeString"/>
+                    <include name="testReturnMaghribTimeString"/>
+                    <include name="testReturnAsrTimeString"/>
+                    <include name="testReturnZohrTimeString"/>
+                    <include name="testReturnSherouqeTimeString"/>
+                    <include name="testReturnFajrTimeString"/>
+                    <include name="testReturnScreenTitleString"/>
+                    <include name="testClickOnHanbalyMazhabButton"/>
+                    <include name="testClickOnHanafyMazhabButton"/>
+                    <include name="testClickOnAScrollDotByIndex"/>
+                </methods>
+            </class>
+            <class name="java.Screens.settings.prayerTimesCorrection.Settings_PrayerTimes_PolarZonesScreenTest">
+                <methods>
+                    <include name="testClickOnNavigationDrawerButton"/>
+                    <include name="testReturnScreenGeneralTitleString"/>
+                    <include name="testReturnIshaaTimeString"/>
+                    <include name="testReturnMaghribTimeString"/>
+                    <include name="testReturnAsrTimeString"/>
+                    <include name="testReturnZohrTimeString"/>
+                    <include name="testReturnSherouqeTimeString"/>
+                    <include name="testReturnFajrTimeString"/>
+                    <include name="testReturnScreenTitleString"/>
+                    <include name="testClickOnNoneButton"/>
+                    <include name="testClickOnUsingAngleButton"/>
+                    <include name="testClickOnMidnightButton"/>
+                    <include name="testClickOnSeventhNightButton"/>
+                    <include name="testClickOnAScrollDotByIndex"/>
+                </methods>
+            </class>
+            <class name="java.Screens.settings.prayerTimesCorrection.Settings_PrayerTimes_ResetScreenTest">
+                <methods>
+                    <include name="testClickOnNavigationDrawerButton"/>
+                    <include name="testReturnScreenGeneralTitleString"/>
+                    <include name="testReturnIshaaTimeString"/>
+                    <include name="testReturnMaghribTimeString"/>
+                    <include name="testReturnAsrTimeString"/>
+                    <include name="testReturnZohrTimeString"/>
+                    <include name="testReturnSherouqeTimeString"/>
+                    <include name="testReturnFajrTimeString"/>
+                    <include name="testReturnScreenTitleString"/>
+                    <include name="testClickOnResetButton"/>
+                    <include name="testClickOnAScrollDotByIndex"/>
+                </methods>
+            </class>
+            <class name="java.Screens.settings.prayerTimesCorrection.Settings_PrayerTimes_SummerTimeScreenTest">
+                <methods>
+                    <include name="testClickOnNavigationDrawerButton"/>
+                    <include name="testReturnScreenGeneralTitleString"/>
+                    <include name="testReturnIshaaTimeString"/>
+                    <include name="testReturnMaghribTimeString"/>
+                    <include name="testReturnAsrTimeString"/>
+                    <include name="testReturnZohrTimeString"/>
+                    <include name="testReturnSherouqeTimeString"/>
+                    <include name="testReturnFajrTimeString"/>
+                    <include name="testReturnScreenTitleString"/>
+                    <include name="testClickOnDisableSummerTimingButton"/>
+                    <include name="testClickOnEnableSummerTimingButton"/>
+                    <include name="testClickOnAScrollDotByIndex"/>
+                </methods>
+            </class>
+            <class name="java.Screens.settings.prayerTimesCorrection.Settings_PrayerTimes_TimeZoneScreenTest">
+                <methods>
+                    <include name="testClickOnNavigationDrawerButton"/>
+                    <include name="testReturnScreenGeneralTitleString"/>
+                    <include name="testReturnIshaaTimeString"/>
+                    <include name="testReturnMaghribTimeString"/>
+                    <include name="testReturnAsrTimeString"/>
+                    <include name="testReturnZohrTimeString"/>
+                    <include name="testReturnSherouqeTimeString"/>
+                    <include name="testReturnFajrTimeString"/>
+                    <include name="testReturnScreenTitleString"/>
+                    <include name="testClickOnATimeZoneByIndex"/>
+                    <include name="testClickOnAScrollDotByIndex"/>
+                </methods>
+            </class>
+            <class name="java.Screens.settings.prayerTimesCorrection.Settings_PrayerTimes_TimesCorrectionScreenTest">
+                <methods>
+                    <include name="testClickOnNavigationDrawerButton"/>
+                    <include name="testReturnScreenGeneralTitleString"/>
+                    <include name="testReturnIshaaTimeString"/>
+                    <include name="testReturnMaghribTimeString"/>
+                    <include name="testReturnAsrTimeString"/>
+                    <include name="testReturnZohrTimeString"/>
+                    <include name="testReturnSherouqeTimeString"/>
+                    <include name="testReturnFajrTimeString"/>
+                    <include name="testReturnScreenTitleString"/>
+                    <include name="testClickOnFajrPlusButton"/>
+                    <include name="testSendNumberToFajrCorrectionTimeTextField"/>
+                    <include name="testClickOnFajrMinusButton"/>
+                    <include name="testClickOnSherouqePlusButton"/>
+                    <include name="testSendNumberToSherouqeCorrectionTimeTextField"/>
+                    <include name="testClickOnSherouqeMinusButton"/>
+                    <include name="testClickOnZohrPlusButton"/>
+                    <include name="testSendNumberToZohrCorrectionTimeTextField"/>
+                    <include name="testClickOnZohrMinusButton"/>
+                    <include name="testClickOnAsrPlusButton"/>
+                    <include name="testSendNumberToAsrCorrectionTimeTextField"/>
+                    <include name="testClickOnAsrMinusButton"/>
+                    <include name="testClickOnMaghribPlusButton"/>
+                    <include name="testSendNumberToMaghribCorrectionTimeTextField"/>
+                    <include name="testClickOnMaghribMinusButton"/>
+                    <include name="testClickOnIshaaPlusButton"/>
+                    <include name="testSendNumberToIshaaCorrectionTimeTextField"/>
+                    <include name="testClickOnIshaaMinusButton"/>
+                    <include name="testClickOnAScrollDotByIndex"/>
+                </methods>
+            </class>
+            <class name="java.Screens.technicalSupport.TechnicalSupportScreenTest">
+                <methods>
+                    <include name="testReturnActualScreenTitle"/>
+                    <include name="testClickOnNavigationDrawerButton"/>
+                    <include name="testClickOnAzaanQuestionsButton"/>
+                    <include name="testClickOnContactUsButton"/>
+                </methods>
+            </class>
+            <class name="java.Screens.technicalSupport.contactUs.TechnicalSupport_ContactUsScreenTest">
+                <methods>
+                    <include name="testReturnActualScreenTitle"/>
+                    <include name="testClickOnNavigationDrawerButton"/>
+                    <include name="testSendKeysToNameTextField"/>
+                    <include name="testSendKeysToEmailTextField"/>
+                    <include name="testSendKeysToTitleTextField"/>
+                    <include name="testSendKeysToMessageTextField"/>
+                    <include name="testClickOnContactUsPurposeScreenButton"/>
+                    <include name="testClickOnUploadImageScreen"/>
+                    <include name="testClickOnSendScreen"/>
+                </methods>
+            </class>
+            <class name="java.Screens.werdAlMohasba.WerdAlMohasbaScreenTest">
+                <methods>
+                    <include name="testReturnActualScreenTitle"/>
+                    <include name="testClickOnBackButton"/>
+                    <include name="testClickOnInfoButton"/>
+                    <include name="testClickOnStatsButton"/>
+                    <include name="testClickOnAddTaskButton"/>
+                    <include name="testSendTextToTaskNameTextInput"/>
+                    <include name="testClickOnFinishAddTaskButton"/>
+                    <include name="testAccessTaskViaIndex"/>
+                    <include name="testClickOnCheckTaskButtonForATaskSelectedVIAIndex"/>
+                    <include name="testClickOnDeleteTaskButtonForATaskSelectedVIAIndex"/>
+                    <include name="testClickOnHideDoneTasksButton"/>
+                </methods>
+            </class>
+            <class name="java.Screens.werdAlMohasba.WerdAlMohasba_InfoScreenTest">
+                <methods>
+                    <include name="testClickOnCloseButton"/>
+                </methods>
+            </class>
+            <class name="java.Screens.worldPrayers.WorldPrayersScreenTest">
+                <methods>
+                    <include name="testReturnActualScreenTitle"/>
+                    <include name="testClickOnNavigationDrawerButton"/>
+                    <include name="testClickOnShareButton"/>
+                    <include name="testClickOnHelpButton"/>
+                    <include name="testClickOnZoomInButton"/>
+                    <include name="testClickOnZoomOutButton"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
