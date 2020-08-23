@@ -3,125 +3,91 @@ package java.Screens.settings;
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 
-import java.Screens.settings.generalSettings.Settings_EnableBackgroudActivationScreen;
-import java.Screens.settings.generalSettings.Settings_LanguageScreen;
-import java.Screens.settings.location.automatic.Settings_Location_AutomaticScreen;
-import java.Screens.settings.location.travelMode.Settings_Location_TravelModeScreen;
-import java.Screens.settings.notifications.silentDuringPrayer.Settings_SilentDuringPrayerNotificationsScreen;
+import java.Screens.settings.generalSettings.EnableBackgroudActivationScreen;
+import java.Screens.settings.generalSettings.LanguageScreen;
+import java.Screens.settings.location.automatic.AutomaticScreen;
+import java.Screens.settings.location.travelMode.TravelModeScreen;
+import java.Screens.settings.notifications.silentDuringPrayer.SilentDuringPrayerNotificationsScreen;
 import java.Screens.settings.prayerTimesCorrection.*;
 import java.base.Base;
 import java.utilities.TestUtils;
 
 public class SettingsScreen extends Base {
+    String expectedTile = "الاعدادات";
     @AndroidFindBy(id = "com.moslay:id/settings")
     private AndroidElement screenTitleTxt_Text;
-
     @AndroidFindBy(id = "com.moslay:id/settings_language_layout")
     private AndroidElement languageButton_Btn;
-
     @AndroidFindBy(id = "com.moslay:id/settings_general_language")
     private AndroidElement languageChoiceTxt_TxtView;
-
     @AndroidFindBy(id = "com.moslay:id/mosaly_bg_activate")
     private AndroidElement backgroundActivationButton_Btn;
-
     @AndroidFindBy(id = "com.moslay:id/solve_azan_problems")
     private AndroidElement solveAzanProblemsButton_Btn;
-
     @AndroidFindBy(id = "com.moslay:id/ll_azan_mode")
     private AndroidElement azanModeButton_Btn;
-
     @AndroidFindBy(id = "com.moslay:id/tv_azan_mode")
     private AndroidElement azanModeChoiceTxt_TxtView;
-
     @AndroidFindBy(id = "com.moslay:id/ex_azanMode")
     private AndroidElement azanModeSelectionsList_Element;
-
     @AndroidFindBy(id = "com.moslay:id/settings_calcultionMethod")
     private AndroidElement calcultionMethodButton_Btn;
-
     @AndroidFindBy(id = "com.moslay:id/settings_calculation")
     private AndroidElement calcultionMethodChoiceTxt_TxtView;
-
     @AndroidFindBy(id = "com.moslay:id/settings_asr")
     private AndroidElement mazhabCorrectionButton_Btn;
-
     @AndroidFindBy(id = "com.moslay:id/settings_prayer_mazhab")
     private AndroidElement mazhabCorrectionChoiceTxt_TxtView;
-
     @AndroidFindBy(id = "com.moslay:id/settings_DayLightSaving")
     private AndroidElement summerTimingButton_Btn;
-
     @AndroidFindBy(id = "com.moslay:id/settings_day_light_saving")
     private AndroidElement summerTimingChoiceTxt_TxtView;
-
     @AndroidFindBy(id = "com.moslay:id/settings_prayerTimeCorrection")
     private AndroidElement prayerTimeCorrectionButton_Btn;
-
     @AndroidFindBy(id = "com.moslay:id/settings_timeZone")
     private AndroidElement timeZoneButton_Btn;
-
     @AndroidFindBy(id = "com.moslay:id/time_zone")
     private AndroidElement timeZoneChoiceTxt_TxtView;
-
     @AndroidFindBy(id = "com.moslay:id/settings_highLatitudeWay")
     private AndroidElement polarZonesCalculationButton_Btn;
-
     @AndroidFindBy(id = "com.moslay:id/high_latitude")
     private AndroidElement polarZonesCalculationChoiceTxt_TxtView;
-
     @AndroidFindBy(id = "com.moslay:id/settings_restoreSettings")
     private AndroidElement resetPrayerTimesCorrectionsButton_Btn;
-
     @AndroidFindBy(id = "com.moslay:id/settings_location_layout")
     private AndroidElement autoDetectLocationButton_Btn;
-
     @AndroidFindBy(id = "com.moslay:id/settings_country_city")
     private AndroidElement locationChoiceTxt_TxtView;
-
     @AndroidFindBy(id = "com.moslay:id/setting_travel_on")
     private AndroidElement travelModeSection_Element;
-
     @AndroidFindBy(id = "com.moslay:id/settings_azkar_layout")
     private AndroidElement azkarSettingsButton_Btn;
-
     @AndroidFindBy(id = "com.moslay:id/settingsAzanLayout")
     private AndroidElement azanSettingsButton_Btn;
-
     @AndroidFindBy(id = "com.moslay:id/ll_alert_sound")
     private AndroidElement alertSoundButton_Btn;
-
     @AndroidFindBy(id = "com.moslay:id/tv_choosen_alert_sound")
     private AndroidElement alertSoundChoiceTxt_TxtView;
-
     @AndroidFindBy(id = "com.moslay:id/lv_alert_sounds")
     private AndroidElement alertSoundList_Element;
-
     @AndroidFindBy(id = "com.moslay:id/setting_azanAndIqama_ll")
     private AndroidElement azanAndIqamaSettingsSection_Btn;
-
     @AndroidFindBy(id = "com.moslay:id/settings_nawafel")
     private AndroidElement nawafelSettingsSection_Btn;
-
     @AndroidFindBy(id = "com.moslay:id/settings_notification_Friday")
     private AndroidElement gomaaSettingsSection_Btn;
-
     @AndroidFindBy(id = "com.moslay:id/settings_fasting")
     private AndroidElement fastingSettingsFasting_Btn;
-
     @AndroidFindBy(id = "com.moslay:id/settings_silent")
     private AndroidElement silentDuringPrayerSettingsSection_Btn;
-
     @AndroidFindBy(id = "com.moslay:id/settings_azkar_notification_on_off")
     private AndroidElement azkarNotificationsSettingsSection_Btn;
-
     @AndroidFindBy(id = "com.moslay:id/settings_benefits_notifications")
     private AndroidElement benefitsNotificationsSettingsSections_Btn;
-
-    String expectedTile = "الاعدادات";
     /**
      * *********************************************************************************************************************************************
      */
+
     /**
      * This method is to return the screen's actual title as a string
      *
@@ -137,12 +103,12 @@ public class SettingsScreen extends Base {
     /**
      * This method is to click on language button
      *
-     * @return Settings_LanguageScreen
+     * @return LanguageScreen
      */
-    public Settings_LanguageScreen clickOnLanguageButton() {
+    public LanguageScreen clickOnLanguageButton() {
         TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, languageButton_Btn);
         languageButton_Btn.click();
-        return new Settings_LanguageScreen();
+        return new LanguageScreen();
     }
     /**
      * *********************************************************************************************************************************************
@@ -161,12 +127,12 @@ public class SettingsScreen extends Base {
     /**
      * This method is to click on background activation button
      *
-     * @return Settings_EnableBackgroudActivationScreen
+     * @return EnableBackgroudActivationScreen
      */
-    public Settings_EnableBackgroudActivationScreen clickOnBackgroundActivationButton() {
+    public EnableBackgroudActivationScreen clickOnBackgroundActivationButton() {
         TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, backgroundActivationButton_Btn);
         backgroundActivationButton_Btn.click();
-        return new Settings_EnableBackgroudActivationScreen();
+        return new EnableBackgroudActivationScreen();
     }
     /**
      * *********************************************************************************************************************************************
@@ -230,12 +196,12 @@ public class SettingsScreen extends Base {
     /**
      * This method is to click on calculation method button
      *
-     * @return Settings_PrayerTimes_CalculationMethodScreen
+     * @return CalculationMethodScreen
      */
-    public Settings_PrayerTimes_CalculationMethodScreen clickOnCalculationMethodButton() {
+    public CalculationMethodScreen clickOnCalculationMethodButton() {
         TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, calcultionMethodButton_Btn);
         calcultionMethodButton_Btn.click();
-        return new Settings_PrayerTimes_CalculationMethodScreen();
+        return new CalculationMethodScreen();
     }
     /**
      * *********************************************************************************************************************************************
@@ -255,12 +221,12 @@ public class SettingsScreen extends Base {
     /**
      * This method is to click on Mazhab button
      *
-     * @return Settings_PrayerTimes_MazhabScreen
+     * @return MazhabScreen
      */
-    public Settings_PrayerTimes_MazhabScreen clickOnMazhabButton() {
+    public MazhabScreen clickOnMazhabButton() {
         TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, mazhabCorrectionButton_Btn);
         mazhabCorrectionButton_Btn.click();
-        return new Settings_PrayerTimes_MazhabScreen();
+        return new MazhabScreen();
     }
     /**
      * *********************************************************************************************************************************************
@@ -280,12 +246,12 @@ public class SettingsScreen extends Base {
     /**
      * This method is to click on summer time button
      *
-     * @return Settings_PrayerTimes_SummerTimeScreen
+     * @return SummerTimeScreen
      */
-    public Settings_PrayerTimes_SummerTimeScreen clickOnSummerTimeButton() {
+    public SummerTimeScreen clickOnSummerTimeButton() {
         TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, summerTimingButton_Btn);
         summerTimingButton_Btn.click();
-        return new Settings_PrayerTimes_SummerTimeScreen();
+        return new SummerTimeScreen();
     }
     /**
      * *********************************************************************************************************************************************
@@ -305,12 +271,12 @@ public class SettingsScreen extends Base {
     /**
      * This method is to click on prayer times correction button
      *
-     * @return Settings_PrayerTimes_TimesCorrectionScreen
+     * @return TimesCorrectionScreen
      */
-    public Settings_PrayerTimes_TimesCorrectionScreen clickOnPrayerTimesCorrectionButton() {
+    public TimesCorrectionScreen clickOnPrayerTimesCorrectionButton() {
         TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, prayerTimeCorrectionButton_Btn);
         prayerTimeCorrectionButton_Btn.click();
-        return new Settings_PrayerTimes_TimesCorrectionScreen();
+        return new TimesCorrectionScreen();
     }
     /**
      * *********************************************************************************************************************************************
@@ -318,12 +284,12 @@ public class SettingsScreen extends Base {
     /**
      * This method is to click on time zone button
      *
-     * @return Settings_PrayerTimes_TimeZoneScreen
+     * @return TimeZoneScreen
      */
-    public Settings_PrayerTimes_TimeZoneScreen clickOnTimeZoneButton() {
+    public TimeZoneScreen clickOnTimeZoneButton() {
         TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, timeZoneButton_Btn);
         timeZoneButton_Btn.click();
-        return new Settings_PrayerTimes_TimeZoneScreen();
+        return new TimeZoneScreen();
     }
     /**
      * *********************************************************************************************************************************************
@@ -343,12 +309,12 @@ public class SettingsScreen extends Base {
     /**
      * This method is to click on polar zones calculation button
      *
-     * @return Settings_PrayerTimes_PolarZonesScreen
+     * @return PolarZonesScreen
      */
-    public Settings_PrayerTimes_PolarZonesScreen clickOnPolarZonesCalculationButton() {
+    public PolarZonesScreen clickOnPolarZonesCalculationButton() {
         TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, polarZonesCalculationButton_Btn);
         polarZonesCalculationButton_Btn.click();
-        return new Settings_PrayerTimes_PolarZonesScreen();
+        return new PolarZonesScreen();
     }
     /**
      * *********************************************************************************************************************************************
@@ -368,12 +334,12 @@ public class SettingsScreen extends Base {
     /**
      * This method is to click on reset to default prayer times button
      *
-     * @return Settings_PrayerTimes_ResetScreen
+     * @return ResetScreen
      */
-    public Settings_PrayerTimes_ResetScreen clickOnResetToDefaultButton() {
+    public ResetScreen clickOnResetToDefaultButton() {
         TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, resetPrayerTimesCorrectionsButton_Btn);
         resetPrayerTimesCorrectionsButton_Btn.click();
-        return new Settings_PrayerTimes_ResetScreen();
+        return new ResetScreen();
     }
     /**
      * *********************************************************************************************************************************************
@@ -381,12 +347,12 @@ public class SettingsScreen extends Base {
     /**
      * This method is to click on auto location detection button
      *
-     * @return Settings_Location_AutomaticScreen
+     * @return AutomaticScreen
      */
-    public Settings_Location_AutomaticScreen clickOnAutoDetectLocationButton() {
+    public AutomaticScreen clickOnAutoDetectLocationButton() {
         TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, autoDetectLocationButton_Btn);
         autoDetectLocationButton_Btn.click();
-        return new Settings_Location_AutomaticScreen();
+        return new AutomaticScreen();
     }
     /**
      * *********************************************************************************************************************************************
@@ -417,14 +383,14 @@ public class SettingsScreen extends Base {
     /**
      * This method is to click on travel mode section and open travel mode screen
      *
-     * @return Settings_Location_TravelModeScreen
+     * @return TravelModeScreen
      */
-    public Settings_Location_TravelModeScreen clickOnTravelModeSectionToOpenTravelModeScreen() {
+    public TravelModeScreen clickOnTravelModeSectionToOpenTravelModeScreen() {
         TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, travelModeSection_Element);
         AndroidElement travelModeSection = (AndroidElement) travelModeSection_Element.findElementById("com.moslay:id/title");
         TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, travelModeSection);
         travelModeSection.click();
-        return new Settings_Location_TravelModeScreen();
+        return new TravelModeScreen();
     }
     /**
      * *********************************************************************************************************************************************
@@ -601,12 +567,12 @@ public class SettingsScreen extends Base {
     /**
      * This method is to click on silent during prayer settings button
      *
-     * @return Settings_SilentDuringPrayerNotificationsScreen
+     * @return SilentDuringPrayerNotificationsScreen
      */
-    public Settings_SilentDuringPrayerNotificationsScreen clickOnSilentDuringPrayerSettingsButton() {
+    public SilentDuringPrayerNotificationsScreen clickOnSilentDuringPrayerSettingsButton() {
         TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, silentDuringPrayerSettingsSection_Btn);
         silentDuringPrayerSettingsSection_Btn.click();
-        return new Settings_SilentDuringPrayerNotificationsScreen();
+        return new SilentDuringPrayerNotificationsScreen();
     }
     /**
      * *********************************************************************************************************************************************

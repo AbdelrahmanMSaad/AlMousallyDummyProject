@@ -30,18 +30,17 @@ import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
 public class Base {
-    protected FileInputStream fileInputStream;
-    protected Properties properties;
     public static AndroidDriver driver;
     public static Dimension windowSize;
     public static File screenshot;
     public static ExtentSparkReporter extentSparkReporter;
     public static ExtentReports extentReports;
     public static ExtentTest extentTest;
+    protected FileInputStream fileInputStream;
+    protected Properties properties;
 
 
     public Base() {
-
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);
     }
 
@@ -84,7 +83,7 @@ public class Base {
         extentSparkReporter.config().setDocumentTitle("Nabaa_Report");
         extentSparkReporter.config().setEncoding("UTF-8");
         extentSparkReporter.config().setReportName("Shams");
-        extentReports.setSystemInfo("Company","MadarSoft ");
+        extentReports.setSystemInfo("Company", "MadarSoft ");
 
     }
 

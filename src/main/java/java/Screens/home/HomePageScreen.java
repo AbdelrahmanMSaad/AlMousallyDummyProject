@@ -3,13 +3,13 @@ package java.Screens.home;
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 
-import java.Screens.benefits.Benefits_CommentScreen;
-import java.Screens.qibla.Qibla_CompassScreen;
-import java.Screens.qibla.Qibla_ShadowScreen;
-import java.Screens.qibla.Qibla_SunAndMoonScreen;
-import java.Screens.qibla.Qibla_VisualScreen;
-import java.Screens.quranWerd.QuranWerd_AddWerdScreen;
-import java.Screens.quranWerd.QuranWerd_MushafScreen;
+import java.Screens.benefits.CommentScreen;
+import java.Screens.qibla.CompassScreen;
+import java.Screens.qibla.ShadowScreen;
+import java.Screens.qibla.SunAndMoonScreen;
+import java.Screens.qibla.VisualScreen;
+import java.Screens.quranWerd.MushafScreen;
+import java.Screens.quranWerd.addWerd.AddWerdScreen;
 import java.Screens.settings.SettingsScreen;
 import java.Screens.werdAlMohasba.WerdAlMohasbaScreen;
 import java.base.Base;
@@ -343,12 +343,12 @@ public class HomePageScreen extends Base {
     /**
      * This method is to click on Qibla compass button
      *
-     * @return Qibla_CompassScreen
+     * @return CompassScreen
      */
-    public Qibla_CompassScreen clickOnQiblaCompassButton() {
+    public CompassScreen clickOnQiblaCompassButton() {
         TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, qiblaCard_ByCompassButton_Btn);
         qiblaCard_ByCompassButton_Btn.click();
-        return new Qibla_CompassScreen();
+        return new CompassScreen();
     }
     /**
      * *********************************************************************************************************************************************
@@ -356,12 +356,12 @@ public class HomePageScreen extends Base {
     /**
      * This method is to click on Qibla Sun ANd Moon button
      *
-     * @return Qibla_SunAndMoonScreen
+     * @return SunAndMoonScreen
      */
-    public Qibla_SunAndMoonScreen clickOnQiblaSunAndMoonButton() {
+    public SunAndMoonScreen clickOnQiblaSunAndMoonButton() {
         TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, qiblaCard_BySunAndMoonButton_Btn);
         qiblaCard_BySunAndMoonButton_Btn.click();
-        return new Qibla_SunAndMoonScreen();
+        return new SunAndMoonScreen();
     }
     /**
      * *********************************************************************************************************************************************
@@ -369,12 +369,12 @@ public class HomePageScreen extends Base {
     /**
      * This method is to click on Qibla Shadow button
      *
-     * @return Qibla_ShadowScreen
+     * @return ShadowScreen
      */
-    public Qibla_ShadowScreen clickOnQiblaShadowButton() {
+    public ShadowScreen clickOnQiblaShadowButton() {
         TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, qiblaCard_ByShadowButton_Btn);
         qiblaCard_ByShadowButton_Btn.click();
-        return new Qibla_ShadowScreen();
+        return new ShadowScreen();
     }
     /**
      * *********************************************************************************************************************************************
@@ -382,12 +382,12 @@ public class HomePageScreen extends Base {
     /**
      * This method is to click on Qibla Visual button
      *
-     * @return Qibla_VisualScreen
+     * @return VisualScreen
      */
-    public Qibla_VisualScreen clickOnQiblaVisualButton() {
+    public VisualScreen clickOnQiblaVisualButton() {
         TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, qiblaCard_ByVisualButton_Btn);
         qiblaCard_ByVisualButton_Btn.click();
-        return new Qibla_VisualScreen();
+        return new VisualScreen();
     }
     /**
      * *********************************************************************************************************************************************
@@ -395,13 +395,13 @@ public class HomePageScreen extends Base {
     /**
      * This method is to click on Quran Werd read from mushaf button
      *
-     * @return QuranWerd_MushafScreen
+     * @return MushafScreen
      */
-    public QuranWerd_MushafScreen clickOnQuranWerdReadFromMushafButton() {
+    public MushafScreen clickOnQuranWerdReadFromMushafButton() {
         AndroidElement quranWerdReadFromMushafButton = (AndroidElement) TestUtils.scrollToASpecificElementByItsText("اضافة ختمة جديده");
         TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, quranWerdReadFromMushafButton);
         quranWerdReadFromMushafButton.click();
-        return new QuranWerd_MushafScreen();
+        return new MushafScreen();
     }
     /**
      * *********************************************************************************************************************************************
@@ -409,13 +409,13 @@ public class HomePageScreen extends Base {
     /**
      * This method is to click on add new khatma button
      *
-     * @return QuranWerd_AddWerdScreen
+     * @return AddWerdScreen
      */
-    public QuranWerd_AddWerdScreen clickOnQuranWerdAddNewKhatmaButton() {
+    public AddWerdScreen clickOnQuranWerdAddNewKhatmaButton() {
         AndroidElement quranWerdAddNewKhatmaButton = (AndroidElement) TestUtils.scrollToASpecificElementByItsText("اقرأ من المصحف");
         TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, quranWerdAddNewKhatmaButton);
         quranWerdAddNewKhatmaButton.click();
-        return new QuranWerd_AddWerdScreen();
+        return new AddWerdScreen();
     }
     /**
      * *********************************************************************************************************************************************
@@ -458,12 +458,12 @@ public class HomePageScreen extends Base {
     /**
      * This method is to click on best participation like button
      *
-     * @return Benefits_CommentScreen
+     * @return CommentScreen
      */
-    public Benefits_CommentScreen clickOnBestParticipationCommentButton() {
+    public CommentScreen clickOnBestParticipationCommentButton() {
         TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, bestParticipation_CommentButton_Btn);
         bestParticipation_CommentButton_Btn.click();
-        return new Benefits_CommentScreen();
+        return new CommentScreen();
     }
     /**
      * *********************************************************************************************************************************************
@@ -491,12 +491,12 @@ public class HomePageScreen extends Base {
     /**
      * This method is to click on benefits comment button
      *
-     * @return Benefits_CommentScreen
+     * @return CommentScreen
      */
-    public Benefits_CommentScreen clickOnBeneftitsCardCommentButton() {
+    public CommentScreen clickOnBeneftitsCardCommentButton() {
         TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, benefits_CommentButton_Btn);
         benefits_CommentButton_Btn.click();
-        return new Benefits_CommentScreen();
+        return new CommentScreen();
     }
     /**
      * *********************************************************************************************************************************************

@@ -7,25 +7,21 @@ import java.base.Base;
 import java.utilities.TestUtils;
 
 public class FollowIUsScreen extends Base {
+    String expectedTitle = "تابعنا";
     @AndroidFindBy(id = "com.moslay:id/img_more")
     private AndroidElement navigationDrawerButton_Btn;
-
     @AndroidFindBy(id = "com.moslay:id/my_resources_header")
     private AndroidElement screenTitleTxt_Text;
-
     @AndroidFindBy(id = "com.moslay:id/follow_us_fb")
     private AndroidElement facebookButton_Btn;
-
     @AndroidFindBy(id = "com.moslay:id/settings_twitter")
     private AndroidElement twitterButton_Btn;
-
     @AndroidFindBy(id = "com.moslay:id/settings_instagram")
     private AndroidElement youtubeButton_Btn;
-
-    String expectedTitle = "تابعنا";
     /**
      * *********************************************************************************************************************************************
      */
+
     /**
      * This method is to return the screen's actual title as a string
      *

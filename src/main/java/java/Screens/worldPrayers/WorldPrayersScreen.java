@@ -7,28 +7,23 @@ import java.base.Base;
 import java.utilities.TestUtils;
 
 public class WorldPrayersScreen extends Base {
+    String expectedTitle = "الصلاة حول العالم";
     @AndroidFindBy(id = "com.moslay:id/img_more")
     private AndroidElement navigationDrawerButton_Btn;
-
     @AndroidFindBy(id = "com.moslay:id/qibla_inside_title")
     private AndroidElement screenTitleTxt_Text;
-
     @AndroidFindBy(id = "com.moslay:id/img_share")
     private AndroidElement shareButton_Btn;
-
     @AndroidFindBy(id = "com.moslay:id/frag_around_world_help")
     private AndroidElement helpButton_Btn;
-
     @AndroidFindBy(accessibility = "Zoom in")
     private AndroidElement zoomInButton_Btn;
-
     @AndroidFindBy(accessibility = "Zoom out")
     private AndroidElement zoomOutButton_Btn;
-
-    String expectedTitle = "الصلاة حول العالم";
     /**
      * *********************************************************************************************************************************************
      */
+
     /**
      * This method is to return the screen's actual title as a string
      *

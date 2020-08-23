@@ -4,8 +4,6 @@ import org.testng.annotations.Test;
 
 import java.base.Base;
 
-import static org.testng.Assert.*;
-
 public class WorldPrayersScreenTest extends Base {
 
     @Test

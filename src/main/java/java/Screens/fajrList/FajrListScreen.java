@@ -2,37 +2,30 @@ package java.Screens.fajrList;
 
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;
-import org.testng.Assert;
 
 import java.base.Base;
 import java.utilities.TestUtils;
 
 public class FajrListScreen extends Base {
+    String expectedTitle = "قائمة الفجر";
     @AndroidFindBy(id = "com.moslay:id/img_more")
     private AndroidElement navigationDrawerButton_Btn;
-
     @AndroidFindBy(xpath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.drawerlayout.widget.DrawerLayout/android.widget.RelativeLayout/android.widget.RelativeLayout/android.widget.RelativeLayout/android.widget.LinearLayout/android.widget.RelativeLayout[1]/android.widget.TextView")
     private AndroidElement screenTitleTxt_Text;
-
     @AndroidFindBy(id = "com.moslay:id/im_fajr_list_add")
     private AndroidElement addElementButton_Btn;
-
     @AndroidFindBy(id = "com.moslay:id/im_fajr_list_delete")
     private AndroidElement deleteElementButton_Btn;
-
     @AndroidFindBy(id = "com.moslay:id/im_fajr_list_pause")
     private AndroidElement pauseButton_Btn;
-
     @AndroidFindBy(id = "com.moslay:id/et_fajr_list_search")
     private AndroidElement searchTxtField_TxtEdit;
-
     @AndroidFindBy(id = "com.moslay:id/txt_fagr_list_add")
     private AndroidElement addContactButton_Btn;
-
-    String expectedTitle = "قائمة الفجر";
     /**
      * *********************************************************************************************************************************************
      */
+
     /**
      * This method is to return the screen's actual title as a string
      *
