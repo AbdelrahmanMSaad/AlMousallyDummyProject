@@ -25,7 +25,6 @@ public class ContactUsPurposeScreen extends Base {
      * @return ContactUsScreen
      */
     public ContactUsScreen clickOnTechnicalSupportButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, technicalSupport_Btn);
         technicalSupport_Btn.click();
         return new ContactUsScreen();
     }
@@ -38,7 +37,6 @@ public class ContactUsPurposeScreen extends Base {
      * @return ContactUsScreen
      */
     public ContactUsScreen clickOnSuggestionsButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, suggestions_Btn);
         suggestions_Btn.click();
         return new ContactUsScreen();
     }
@@ -51,7 +49,6 @@ public class ContactUsPurposeScreen extends Base {
      * @return ContactUsScreen
      */
     public ContactUsScreen clickOnSalesAndMarketingButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, marketingAndSales_Btn);
         marketingAndSales_Btn.click();
         return new ContactUsScreen();
     }

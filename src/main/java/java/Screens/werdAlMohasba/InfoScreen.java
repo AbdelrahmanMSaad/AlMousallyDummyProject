@@ -19,7 +19,6 @@ public class InfoScreen extends Base {
      * @return WerdAlMohasbaScreen
      */
     public WerdAlMohasbaScreen clickOnCloseButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, close_Btn);
         close_Btn.click();
         return new WerdAlMohasbaScreen();
     }

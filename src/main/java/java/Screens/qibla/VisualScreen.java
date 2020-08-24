@@ -22,7 +22,6 @@ public class VisualScreen extends QiblaScreen {
      * @return Screen title as a string
      */
     public String getActualScreenTitle() {
-        TestUtils.fluentWaitBySecondsToCheckTheVisibilityOfAnAndroidElemnet(1, 60, screenTitle_Text);
         return screenTitle_Text.getText();
     }
     /**
@@ -34,7 +33,6 @@ public class VisualScreen extends QiblaScreen {
      * @return navigation drawer screen
      */
     public void clickOnNavigationDrawerButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, navigationDrawer_Btn);
         navigationDrawer_Btn.click();
         //This method returns navigation drawer method with shams
     }
@@ -47,7 +45,6 @@ public class VisualScreen extends QiblaScreen {
      * @return CompassScreen
      */
     public CompassScreen clickOnCompassButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, compass_Btn);
         compass_Btn.click();
         return new CompassScreen();
     }
@@ -60,7 +57,6 @@ public class VisualScreen extends QiblaScreen {
      * @returns SunAndMoonScreen
      */
     public SunAndMoonScreen clickOnSunAndMoonButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, sunAndMoon_Btn);
         sunAndMoon_Btn.click();
         return new SunAndMoonScreen();
     }
@@ -73,7 +69,6 @@ public class VisualScreen extends QiblaScreen {
      * @return ShadowScreen
      */
     public ShadowScreen clickOnShadowButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, shadow_Btn);
         shadow_Btn.click();
         return new ShadowScreen();
     }
@@ -84,7 +79,6 @@ public class VisualScreen extends QiblaScreen {
      * This method is to click on help button
      */
     public void clickOnHelpButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, help_Btn);
         help_Btn.click();
     }
     /**
@@ -94,7 +88,6 @@ public class VisualScreen extends QiblaScreen {
      * This method is to click on zoom in button
      */
     public void clickOnZoomInButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, zoomIn_Btn);
         zoomIn_Btn.click();
     }
     /**
@@ -104,7 +97,6 @@ public class VisualScreen extends QiblaScreen {
      * This method is to click on zoom in button
      */
     public void clickOnZoomOutButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, zoomOut_Btn);
         zoomOut_Btn.click();
     }
     /**

@@ -40,7 +40,6 @@ public class TravelMode_IntervalsScreen extends Base {
      * @return TravelModeScreen
      */
     public TravelModeScreen clickOnQuarterHourButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, quarterHour_Btn);
         quarterHour_Btn.click();
         return new TravelModeScreen();
     }
@@ -53,7 +52,6 @@ public class TravelMode_IntervalsScreen extends Base {
      * @return TravelModeScreen
      */
     public TravelModeScreen clickOnHalfHourButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, halfHour_Btn);
         halfHour_Btn.click();
         return new TravelModeScreen();
     }
@@ -66,7 +64,6 @@ public class TravelMode_IntervalsScreen extends Base {
      * @return TravelModeScreen
      */
     public TravelModeScreen clickOnHourButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, hour_Btn);
         hour_Btn.click();
         return new TravelModeScreen();
     }
@@ -79,7 +76,6 @@ public class TravelMode_IntervalsScreen extends Base {
      * @return TravelModeScreen
      */
     public TravelModeScreen clickOnTwoHoursButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, twoHours_Btn);
         twoHours_Btn.click();
         return new TravelModeScreen();
     }
@@ -92,7 +88,6 @@ public class TravelMode_IntervalsScreen extends Base {
      * @return TravelModeScreen
      */
     public TravelModeScreen clickOnThreeHoursButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, threeHours_Btn);
         threeHours_Btn.click();
         return new TravelModeScreen();
     }
@@ -105,7 +100,6 @@ public class TravelMode_IntervalsScreen extends Base {
      * @return TravelModeScreen
      */
     public TravelModeScreen clickOnFourHoursButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, fourHours_Btn);
         fourHours_Btn.click();
         return new TravelModeScreen();
     }
@@ -118,7 +112,6 @@ public class TravelMode_IntervalsScreen extends Base {
      * @return TravelModeScreen
      */
     public TravelModeScreen clickOnFiveHoursButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, fiveHours_Btn);
         fiveHours_Btn.click();
         return new TravelModeScreen();
     }

@@ -16,7 +16,6 @@ public class CompassScreen extends QiblaScreen {
      * @return Screen title as a string
      */
     public String getActualScreenTitle() {
-        TestUtils.fluentWaitBySecondsToCheckTheVisibilityOfAnAndroidElemnet(1, 60, screenTitle_Text);
         return screenTitle_Text.getText();
     }
     /**
@@ -28,7 +27,6 @@ public class CompassScreen extends QiblaScreen {
      * @return navigation drawer screen
      */
     public void clickOnNavigationDrawerButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, navigationDrawer_Btn);
         navigationDrawer_Btn.click();
         //This method returns navigation drawer method with shams
     }
@@ -41,7 +39,6 @@ public class CompassScreen extends QiblaScreen {
      * @returns SunAndMoonScreen
      */
     public SunAndMoonScreen clickOnSunAndMoonButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, sunAndMoon_Btn);
         sunAndMoon_Btn.click();
         return new SunAndMoonScreen();
     }
@@ -54,7 +51,6 @@ public class CompassScreen extends QiblaScreen {
      * @return ShadowScreen
      */
     public ShadowScreen clickOnShadowButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, shadow_Btn);
         shadow_Btn.click();
         return new ShadowScreen();
     }
@@ -67,7 +63,6 @@ public class CompassScreen extends QiblaScreen {
      * @return VisualScreen
      */
     public VisualScreen clickOnVisibleButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, visual_Btn);
         visual_Btn.click();
         return new VisualScreen();
     }
@@ -78,7 +73,6 @@ public class CompassScreen extends QiblaScreen {
      * This method is to click on help button
      */
     public void clickOnHelpButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, help_Btn);
         help_Btn.click();
     }
     /**

@@ -43,7 +43,6 @@ public class AutomaticScreen extends Base {
      * @return HomePageScreen
      */
     public HomePageScreen clickOnNextButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, next_Btn);
         next_Btn.click();
         return new HomePageScreen();
     }
@@ -56,7 +55,6 @@ public class AutomaticScreen extends Base {
      * @return OtherMethodsScreen
      */
     public OtherMethodsScreen clickOnDetectViaOtherMethodsScreen() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, detectViaOtherWays_Btn);
         detectViaOtherWays_Btn.click();
         return new OtherMethodsScreen();
     }

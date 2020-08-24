@@ -29,7 +29,6 @@ public class AddedScreen extends Base {
      * @return Screen title as a string
      */
     public String getActualScreenTitle() {
-        TestUtils.fluentWaitBySecondsToCheckTheVisibilityOfAnAndroidElemnet(1, 60, screenTitle_Text);
         return screenTitle_Text.getText();
     }
     /**
@@ -41,7 +40,6 @@ public class AddedScreen extends Base {
      * @return navigation drawer screen
      */
     public void clickOnNavigationDrawerButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, navigationDrawer_Btn);
         navigationDrawer_Btn.click();
         //This method returns navigation drawer method with shams
     }
@@ -54,7 +52,6 @@ public class AddedScreen extends Base {
      * @return AddWerdScreen
      */
     public AddWerdScreen clickOnAddWerdButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, addKhatma_Btn);
         addKhatma_Btn.click();
         return new AddWerdScreen();
     }
@@ -67,12 +64,9 @@ public class AddedScreen extends Base {
      * @return InfoScreen
      */
     public InfoScreen clickOnInfoButtonForAWerdByItsIndex(int index) {
-        TestUtils.fluentWaitBySecondsToCheckTheVisibilityOfAnAndroidElemnet(1, 60, khatmaList_Element);
         List<MobileElement> khatmaList_List = khatmaList_Element.findElementsById("com.moslay:id/dimmed");
-        TestUtils.fluentWaitBySecondsToCheckTheVisibilityOfAnAndroidElemnet(1, 60, khatmaList_List.get(index));
         AndroidElement requiredElement = (AndroidElement) khatmaList_List.get(index);
         AndroidElement requiredElement_KhatmaInfoButton = (AndroidElement) requiredElement.findElementById("com.moslay:id/khtma_info");
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, requiredElement_KhatmaInfoButton);
         requiredElement_KhatmaInfoButton.click();
         return new InfoScreen();
     }

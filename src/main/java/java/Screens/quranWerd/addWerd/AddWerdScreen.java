@@ -40,7 +40,6 @@ public class AddWerdScreen extends Base {
      * @return Screen title as a string
      */
     public String getActualScreenTitle() {
-        TestUtils.fluentWaitBySecondsToCheckTheVisibilityOfAnAndroidElemnet(1, 60, screenTitle_Text);
         return screenTitle_Text.getText();
     }
     /**
@@ -52,7 +51,6 @@ public class AddWerdScreen extends Base {
      * @return navigation drawer screen
      */
     public void clickOnNavigationDrawerButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, navigationDrawer_Btn);
         navigationDrawer_Btn.click();
         //This method returns navigation drawer method with shams
     }
@@ -65,7 +63,6 @@ public class AddWerdScreen extends Base {
      * @param text the text sent to khatma name text field
      */
     public void sendTextToKhatmaNameTextBar(String text) {
-        TestUtils.fluentWaitBySecondsToCheckTheVisibilityOfAnAndroidElemnet(1, 60, khatmaNameTxtBar_TextView);
         khatmaNameTxtBar_TextView.sendKeys(text);
     }
     /**
@@ -77,7 +74,6 @@ public class AddWerdScreen extends Base {
      * @return DailyReadingScreen
      */
     public DailyReadingScreen clickOnDailyReadingButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, dailyReadingType_Button);
         dailyReadingType_Button.click();
         return new DailyReadingScreen();
     }
@@ -90,7 +86,6 @@ public class AddWerdScreen extends Base {
      * @return HowManyChaptersScreen
      */
     public HowManyChaptersScreen clickOnHowManyChaptersButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, howManyChapters_Btn);
         howManyChapters_Btn.click();
         return new HowManyChaptersScreen();
     }
@@ -103,7 +98,6 @@ public class AddWerdScreen extends Base {
      * @return StartFromScreen
      */
     public StartFromScreen clickOnStartFromButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, startReadingFrom_Btn);
         startReadingFrom_Btn.click();
         return new StartFromScreen();
     }
@@ -114,7 +108,6 @@ public class AddWerdScreen extends Base {
      * This method is to click on alert switch
      */
     public void clickOnAlertOnOffSwitch() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, alertSwitch_Switch);
         alertSwitch_Switch.click();
     }
     /**
@@ -126,7 +119,6 @@ public class AddWerdScreen extends Base {
      * @return SetAlertTimeScreen
      */
     public SetAlertTimeScreen clickOnSetAlertTimeButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, setAlertTime_Btn);
         setAlertTime_Btn.click();
         return new SetAlertTimeScreen();
     }
@@ -139,7 +131,6 @@ public class AddWerdScreen extends Base {
      * @return HomePageScreen
      */
     public HomePageScreen clickOnCancelButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, cancel_Btn);
         cancel_Btn.click();
         return new HomePageScreen();
     }
@@ -152,7 +143,6 @@ public class AddWerdScreen extends Base {
      * @return MushafScreen
      */
     public MushafScreen clickOnSaveButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, save_Btn);
         save_Btn.click();
         return new MushafScreen();
     }

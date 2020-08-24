@@ -28,7 +28,6 @@ public class TravelModeScreen extends Base {
      * @return home page screen
      */
     public String getScreenTitleText() {
-        TestUtils.fluentWaitBySecondsToCheckTheVisibilityOfAnAndroidElemnet(1, 60, screenTitle_Text);
         return screenTitle_Text.getText();
     }
     /**
@@ -38,7 +37,6 @@ public class TravelModeScreen extends Base {
      * This method is to click on the travel mode switch
      */
     public void clickOnTravelModeSwitch() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, onOff_Switch);
         onOff_Switch.click();
     }
     /**
@@ -50,7 +48,6 @@ public class TravelModeScreen extends Base {
      * @return TravelMode_IntervalsScreen
      */
     public TravelMode_IntervalsScreen clickOnUpdateLocationTimeIntervalButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, updateLocationInterval_Btn);
         updateLocationInterval_Btn.click();
         return new TravelMode_IntervalsScreen();
     }
@@ -61,7 +58,6 @@ public class TravelModeScreen extends Base {
      * This method is to click on the settigns button which directs the user to the phone location settings
      */
     public void clickOnGoToPhoneSettingsButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, goToPhoneSettings_Btn);
         goToPhoneSettings_Btn.click();
     }
     /**

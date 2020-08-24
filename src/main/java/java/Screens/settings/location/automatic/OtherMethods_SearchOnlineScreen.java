@@ -22,9 +22,6 @@ public class OtherMethods_SearchOnlineScreen extends Base {
      * @return actual title as a string
      */
     public String getScreenTitle() {
-        TestUtils.fluentWaitBySecondsToCheckTheVisibilityOfAnAndroidElemnet(
-                1, 60, screenTitle_Text
-        );
         return screenTitle_Text.getText();
     }
     /**
@@ -36,7 +33,6 @@ public class OtherMethods_SearchOnlineScreen extends Base {
      * @param text to be sent to the search bar
      */
     public void sendTextToSearchBar(String text) {
-        TestUtils.fluentWaitBySecondsToCheckTheVisibilityOfAnAndroidElemnet(1, 60, searchBar_TextView);
         searchBar_TextView.sendKeys(text);
     }
     /**
@@ -48,7 +44,6 @@ public class OtherMethods_SearchOnlineScreen extends Base {
      * @return the text within the search bar as a string
      */
     public String getTextFromSearchBar() {
-        TestUtils.fluentWaitBySecondsToCheckTheVisibilityOfAnAndroidElemnet(1, 60, searchBar_TextView);
         return searchBar_TextView.getText();
     }
     /**

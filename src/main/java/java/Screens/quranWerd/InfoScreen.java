@@ -27,7 +27,6 @@ public class InfoScreen extends Base {
      * @return Screen title as a string
      */
     public String getActualScreenTitle() {
-        TestUtils.fluentWaitBySecondsToCheckTheVisibilityOfAnAndroidElemnet(1, 60, screenTitle_Text);
         return screenTitle_Text.getText();
     }
     /**
@@ -39,7 +38,6 @@ public class InfoScreen extends Base {
      * @return navigation drawer screen
      */
     public void clickOnNavigationDrawerButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, navigationDrawer_Btn);
         navigationDrawer_Btn.click();
         //This method returns navigation drawer method with shams
     }
@@ -52,7 +50,6 @@ public class InfoScreen extends Base {
      * @return InfoScreen_PopUpScreen
      */
     public InfoScreen_PopUpScreen clickOnPauseButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, pause_Btn);
         pause_Btn.click();
         return new InfoScreen_PopUpScreen();
     }
@@ -65,7 +62,6 @@ public class InfoScreen extends Base {
      * @return InfoScreen_PopUpScreen
      */
     public InfoScreen_PopUpScreen clickOnDeleteButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, delete_Btn);
         delete_Btn.click();
         return new InfoScreen_PopUpScreen();
     }

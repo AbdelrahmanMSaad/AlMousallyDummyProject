@@ -28,9 +28,6 @@ public class OtherMethods_OfflineSearchScreen extends Base {
      * @return actual title as a string
      */
     public String getScreenTitle() {
-        TestUtils.fluentWaitBySecondsToCheckTheVisibilityOfAnAndroidElemnet(
-                1, 60, screenTitle_Text
-        );
         return screenTitle_Text.getText();
     }
     /**
@@ -42,7 +39,6 @@ public class OtherMethods_OfflineSearchScreen extends Base {
      * @return OtherMethodsScreen
      */
     public OtherMethodsScreen clickOnBackButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, back_Btn);
         back_Btn.click();
         return new OtherMethodsScreen();
     }
@@ -55,7 +51,6 @@ public class OtherMethods_OfflineSearchScreen extends Base {
      * @param text to be sent to the search bar
      */
     public void sendKeysToSearchBar(String text) {
-        TestUtils.fluentWaitBySecondsToCheckTheVisibilityOfAnAndroidElemnet(1, 60, searchBar_TextView);
         searchBar_TextView.sendKeys(text);
     }
     /**
@@ -67,7 +62,6 @@ public class OtherMethods_OfflineSearchScreen extends Base {
      * @return the text within the search bar as a string
      */
     public String getTextFromSearchBar() {
-        TestUtils.fluentWaitBySecondsToCheckTheVisibilityOfAnAndroidElemnet(1, 60, searchBar_TextView);
         return searchBar_TextView.getText();
     }
     /**

@@ -29,7 +29,6 @@ public class EmptyScreen extends Base {
      * @return Screen title as a string
      */
     public String getActualScreenTitle() {
-        TestUtils.fluentWaitBySecondsToCheckTheVisibilityOfAnAndroidElemnet(1, 60, screenTitle_Text);
         return screenTitle_Text.getText();
     }
     /**
@@ -41,7 +40,6 @@ public class EmptyScreen extends Base {
      * @return navigation drawer screen
      */
     public void clickOnNavigationDrawerButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, navigationDrawer_Btn);
         navigationDrawer_Btn.click();
         //This method returns navigation drawer method with shams
     }
@@ -52,7 +50,6 @@ public class EmptyScreen extends Base {
      * This method is to click on info button
      */
     public void clickOnInfoButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, info_btn);
         info_btn.click();
     }
     /**
@@ -64,7 +61,6 @@ public class EmptyScreen extends Base {
      * @return MushafScreen
      */
     public MushafScreen clickOnReadFromMushafButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, readFromMoshaf_Btn);
         readFromMoshaf_Btn.click();
         return new MushafScreen();
     }
@@ -77,7 +73,6 @@ public class EmptyScreen extends Base {
      * @return AddWerdScreen
      */
     public AddWerdScreen clickOnAddWerdButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, addWerd_Btn);
         addWerd_Btn.click();
         return new AddWerdScreen();
     }

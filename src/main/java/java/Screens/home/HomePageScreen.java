@@ -121,7 +121,6 @@ public class HomePageScreen extends Base {
      * @returns sebha screen
      */
     public void clickOnToolBarSebhaButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, toolbar_Sebha_Btn);
         toolbar_Sebha_Btn.click();
         //This method returns Sebha screen with shams
     }
@@ -134,7 +133,6 @@ public class HomePageScreen extends Base {
      * @returns azkar screen
      */
     public void clickOnToolBarAzkarButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, toolbar_Azkar_Btn);
         toolbar_Azkar_Btn.click();
         //This method returns Azkar screen with shams
     }
@@ -147,7 +145,6 @@ public class HomePageScreen extends Base {
      * @return WerdAlMohasbaScreen
      */
     public WerdAlMohasbaScreen clickOnToolBarWerdAlMohasbaButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, toolbar_WerdMohasba_Btn);
         toolbar_WerdMohasba_Btn.click();
         return new WerdAlMohasbaScreen();
     }
@@ -160,7 +157,6 @@ public class HomePageScreen extends Base {
      * @returns benefits screen
      */
     public void clickOnToolBarBenefitsButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, toolbar_Benefits_Btn);
         toolbar_Benefits_Btn.click();
         //This method returns Benefits screen with shams
     }
@@ -173,7 +169,6 @@ public class HomePageScreen extends Base {
      * @returns SettingsScreen
      */
     public SettingsScreen clickOnToolBarSettingsButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, toolbar_Settings_Btn);
         toolbar_Settings_Btn.click();
         return new SettingsScreen();
     }
@@ -186,7 +181,6 @@ public class HomePageScreen extends Base {
      * @return navigation drawer screen
      */
     public void clickOnToolBarNavigationDrawerButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, toolbar_NavigationDrawer_Btn);
         toolbar_NavigationDrawer_Btn.click();
         //This method returns Navigation Drawer screen with shams
     }
@@ -197,7 +191,6 @@ public class HomePageScreen extends Base {
      * This method is to click on prayer times right arrow button
      */
     public void clickOnPrayerTimesRightArrowButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, prayerTimes_RightArrow_Btn);
         prayerTimes_RightArrow_Btn.click();
     }
     /**
@@ -207,7 +200,6 @@ public class HomePageScreen extends Base {
      * This method is to click on prayer times left arrow button
      */
     public void clickOnPrayerTimesLeftArrowButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, prayerTimes_LeftArrow_Btn);
         prayerTimes_LeftArrow_Btn.click();
     }
     /**
@@ -217,7 +209,6 @@ public class HomePageScreen extends Base {
      * This method is to click on prayer times fajr button
      */
     public void clickOnPrayerTimesFajrButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, prayerTimes_Fajr_Btn);
         prayerTimes_Fajr_Btn.click();
     }
     /**
@@ -227,7 +218,6 @@ public class HomePageScreen extends Base {
      * This method is to click on prayer times fajr button
      */
     public void clickOnPrayerTimesSheroukButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, prayerTimes_Sherouk_Btn);
         prayerTimes_Sherouk_Btn.click();
     }
     /**
@@ -237,7 +227,6 @@ public class HomePageScreen extends Base {
      * This method is to click on prayer times fajr button
      */
     public void clickOnPrayerTimesDuhrButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, prayerTimes_Duhr_Btn);
         prayerTimes_Duhr_Btn.click();
     }
     /**
@@ -247,7 +236,6 @@ public class HomePageScreen extends Base {
      * This method is to click on prayer times Asr button
      */
     public void clickOnPrayerTimesAsrButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, prayerTimes_Asr_Btn);
         prayerTimes_Asr_Btn.click();
     }
     /**
@@ -257,7 +245,6 @@ public class HomePageScreen extends Base {
      * This method is to click on prayer times Maghreb button
      */
     public void clickOnPrayerTimesMaghrebButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, prayerTimes_Maghreb_Btn);
         prayerTimes_Maghreb_Btn.click();
     }
     /**
@@ -267,7 +254,6 @@ public class HomePageScreen extends Base {
      * This method is to click on prayer times Ishaa button
      */
     public void clickOnPrayerTimesIshaaButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, prayerTimes_Ishaa_Btn);
         prayerTimes_Ishaa_Btn.click();
     }
     /**
@@ -297,7 +283,6 @@ public class HomePageScreen extends Base {
      * @return prayer times more screen
      */
     public void clickOnPrayerTimesMoreButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, prayerTimes_MoreButton_Btn);
         prayerTimes_MoreButton_Btn.click();
         //This method returns PrayerTimesMoreScreen with shams
     }
@@ -308,7 +293,6 @@ public class HomePageScreen extends Base {
      * This method is to click on prayer times Share button
      */
     public void clickOnPrayerTimesShareButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, prayerTimes_Share_Btn);
         prayerTimes_Share_Btn.click();
     }
     /**
@@ -320,7 +304,6 @@ public class HomePageScreen extends Base {
      * @return azkar variety Screen
      */
     public void clickOnApproveButtonAzkarCard() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, azkarCard_Approve_Btn);
         azkarCard_Approve_Btn.click();
         //This method returns AzkarVarietyScreen with shams
     }
@@ -333,7 +316,6 @@ public class HomePageScreen extends Base {
      * @return azkar variety list Screen
      */
     public void clickOnMoreButtonAzkarCard() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, azkarCard_More_Btn);
         azkarCard_More_Btn.click();
         //This method returns AzkarVarietyListScreen with shams
     }
@@ -346,7 +328,6 @@ public class HomePageScreen extends Base {
      * @return CompassScreen
      */
     public CompassScreen clickOnQiblaCompassButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, qiblaCard_ByCompass_Btn);
         qiblaCard_ByCompass_Btn.click();
         return new CompassScreen();
     }
@@ -359,7 +340,6 @@ public class HomePageScreen extends Base {
      * @return SunAndMoonScreen
      */
     public SunAndMoonScreen clickOnQiblaSunAndMoonButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, qiblaCard_BySunAndMoon_Btn);
         qiblaCard_BySunAndMoon_Btn.click();
         return new SunAndMoonScreen();
     }
@@ -372,7 +352,6 @@ public class HomePageScreen extends Base {
      * @return ShadowScreen
      */
     public ShadowScreen clickOnQiblaShadowButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, qiblaCard_ByShadow_Btn);
         qiblaCard_ByShadow_Btn.click();
         return new ShadowScreen();
     }
@@ -385,7 +364,6 @@ public class HomePageScreen extends Base {
      * @return VisualScreen
      */
     public VisualScreen clickOnQiblaVisualButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, qiblaCard_ByVisual_Btn);
         qiblaCard_ByVisual_Btn.click();
         return new VisualScreen();
     }
@@ -399,7 +377,6 @@ public class HomePageScreen extends Base {
      */
     public MushafScreen clickOnQuranWerdReadFromMushafButton() {
         AndroidElement quranWerdReadFromMushafButton = (AndroidElement) TestUtils.scrollToASpecificElementByItsText("اضافة ختمة جديده");
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, quranWerdReadFromMushafButton);
         quranWerdReadFromMushafButton.click();
         return new MushafScreen();
     }
@@ -413,7 +390,6 @@ public class HomePageScreen extends Base {
      */
     public AddWerdScreen clickOnQuranWerdAddNewKhatmaButton() {
         AndroidElement quranWerdAddNewKhatmaButton = (AndroidElement) TestUtils.scrollToASpecificElementByItsText("اقرأ من المصحف");
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, quranWerdAddNewKhatmaButton);
         quranWerdAddNewKhatmaButton.click();
         return new AddWerdScreen();
     }
@@ -425,7 +401,6 @@ public class HomePageScreen extends Base {
      */
     public void clickOnWerdAlMohasbaDoneButton() {
         AndroidElement werdAlMohasbaDoneButton = (AndroidElement) TestUtils.scrollToASpecificElementByItsText("تم");
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, werdAlMohasbaDoneButton);
         werdAlMohasbaDoneButton.click();
     }
     /**
@@ -438,7 +413,6 @@ public class HomePageScreen extends Base {
      */
     public WerdAlMohasbaScreen clickOnWerdAlMohasbaMoreButton() {
         AndroidElement werdAlMohasbaMoreButton = (AndroidElement) TestUtils.scrollToASpecificElementByItsText("المزيد");
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, werdAlMohasbaMoreButton);
         werdAlMohasbaMoreButton.click();
         return new WerdAlMohasbaScreen();
     }
@@ -449,7 +423,6 @@ public class HomePageScreen extends Base {
      * This method is to click on best participation like button
      */
     public void clickOnBestParticipationLikeButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, bestParticipation_Like_Btn);
         bestParticipation_Like_Btn.click();
     }
     /**
@@ -461,7 +434,6 @@ public class HomePageScreen extends Base {
      * @return CommentScreen
      */
     public CommentScreen clickOnBestParticipationCommentButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, bestParticipation_Comment_Btn);
         bestParticipation_Comment_Btn.click();
         return new CommentScreen();
     }
@@ -472,7 +444,6 @@ public class HomePageScreen extends Base {
      * This method is to click on best participation share button
      */
     public void clickOnBestParticipationShareButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, bestParticipation_Share_Btn);
         bestParticipation_Share_Btn.click();
     }
     /**
@@ -482,7 +453,6 @@ public class HomePageScreen extends Base {
      * This method is to click on benefits like button
      */
     public void clickOnBenefitsCardLikeButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, benefits_Like_Btn);
         benefits_Like_Btn.click();
     }
     /**
@@ -494,7 +464,6 @@ public class HomePageScreen extends Base {
      * @return CommentScreen
      */
     public CommentScreen clickOnBenefitsCardCommentButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, benefits_Comment_Btn);
         benefits_Comment_Btn.click();
         return new CommentScreen();
     }
@@ -505,7 +474,6 @@ public class HomePageScreen extends Base {
      * This method is to click on benefits share button
      */
     public void clickOnBenefitsCardShareButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, benefits_Share_Btn);
         benefits_Share_Btn.click();
     }
     /**
@@ -515,7 +483,6 @@ public class HomePageScreen extends Base {
      * This method is to click on benefits subject button
      */
     public void clickOnBenefitsSubject() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, benefits_BenefitSubject_Btn);
         benefits_BenefitSubject_Btn.click();
         //This method returns benefit subject with shams
     }

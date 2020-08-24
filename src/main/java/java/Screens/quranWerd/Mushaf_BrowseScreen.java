@@ -26,7 +26,6 @@ public class Mushaf_BrowseScreen extends Base {
      * This method is to click on suraa menu button
      */
     public void clickOnSuraaMenuButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, suraaMenu_Btn);
         suraaMenu_Btn.click();
     }
     /**
@@ -36,7 +35,6 @@ public class Mushaf_BrowseScreen extends Base {
      * This method is to click on chapter menu button
      */
     public void clickOnChapterMenuButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, chapterMenu_Btn);
         chapterMenu_Btn.click();
     }
     /**
@@ -46,7 +44,6 @@ public class Mushaf_BrowseScreen extends Base {
      * This method is to click on pages menu button
      */
     public void clickOnPagesMenuButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, pagesMenu_Btn);
         pagesMenu_Btn.click();
     }
     /**
@@ -56,7 +53,6 @@ public class Mushaf_BrowseScreen extends Base {
      * This method is to click on download button
      */
     public void clickOnDownloadButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, downloadMushaf_Btn);
         downloadMushaf_Btn.click();
     }
     /**

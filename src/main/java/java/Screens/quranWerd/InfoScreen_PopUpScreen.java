@@ -22,7 +22,6 @@ public class InfoScreen_PopUpScreen extends Base {
      * @return InfoScreen
      */
     public InfoScreen clickOnOkButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, ok_Btn);
         ok_Btn.click();
         return new InfoScreen();
     }
@@ -35,7 +34,6 @@ public class InfoScreen_PopUpScreen extends Base {
      * @return InfoScreen
      */
     public InfoScreen clickOnCancelButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, cancel_Btn);
         cancel_Btn.click();
         return new InfoScreen();
     }

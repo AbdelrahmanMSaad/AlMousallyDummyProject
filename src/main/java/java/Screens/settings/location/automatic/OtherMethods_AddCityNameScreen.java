@@ -25,7 +25,6 @@ public class OtherMethods_AddCityNameScreen extends Base {
      * @return OtherMethods_AddCit_CityListScreen
      */
     public OtherMethods_AddCit_CityListScreen clickOnCountryElementToOpenCountriesList() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, countryList_Element);
         countryList_Element.click();
         return new OtherMethods_AddCit_CityListScreen();
     }
@@ -37,8 +36,7 @@ public class OtherMethods_AddCityNameScreen extends Base {
      *
      * @param text to be sent to the city name bar
      */
-    public void sendKeysToSearchBar(String text) {
-        TestUtils.fluentWaitBySecondsToCheckTheVisibilityOfAnAndroidElemnet(1, 60, cityName_TextView);
+    public void sendTextToSearchBar(String text) {
         cityName_TextView.sendKeys(text);
     }
     /**
@@ -50,7 +48,6 @@ public class OtherMethods_AddCityNameScreen extends Base {
      * @return the text within the city name bar bar as a string
      */
     public String getTextFromSearchBar() {
-        TestUtils.fluentWaitBySecondsToCheckTheVisibilityOfAnAndroidElemnet(1, 60, cityName_TextView);
         return cityName_TextView.getText();
     }
     /**
@@ -60,7 +57,6 @@ public class OtherMethods_AddCityNameScreen extends Base {
      * This method is to click on save button
      */
     public void clickOnSaveButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, save_Btn);
         save_Btn.click();
     }
     /**

@@ -28,7 +28,6 @@ public class PolarZonesScreen extends PrayerTimesCorrectionScreen {
      * @return navigation drawer screen
      */
     public void clickOnNavigationDrawerButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, navigationDrawerBtn_Btn);
         navigationDrawerBtn_Btn.click();
         //This method returns navigation drawer screen with shams
     }
@@ -41,7 +40,6 @@ public class PolarZonesScreen extends PrayerTimesCorrectionScreen {
      * @return the screen's general title as a string
      */
     public String returnScreenGeneralTitleString() {
-        TestUtils.fluentWaitBySecondsToCheckTheVisibilityOfAnAndroidElemnet(1, 60, screenGeneralTitleTxt_Text);
         return screenGeneralTitleTxt_Text.getText();
     }
     /**
@@ -53,7 +51,6 @@ public class PolarZonesScreen extends PrayerTimesCorrectionScreen {
      * @return ishaa time in string
      */
     public String returnIshaaTimeString() {
-        TestUtils.fluentWaitBySecondsToCheckTheVisibilityOfAnAndroidElemnet(1, 60, ishaTimeElement_Element);
         return ishaTimeElement_Element.findElementByClassName("android.widget.TextView").getText();
     }
     /**
@@ -65,7 +62,6 @@ public class PolarZonesScreen extends PrayerTimesCorrectionScreen {
      * @return maghrib time in string
      */
     public String returnMaghribTimeString() {
-        TestUtils.fluentWaitBySecondsToCheckTheVisibilityOfAnAndroidElemnet(1, 60, maghribTimeElement_Element);
         return maghribTimeElement_Element.findElementByClassName("android.widget.TextView").getText();
     }
     /**
@@ -77,7 +73,6 @@ public class PolarZonesScreen extends PrayerTimesCorrectionScreen {
      * @return asr time in string
      */
     public String returnAsrTimeString() {
-        TestUtils.fluentWaitBySecondsToCheckTheVisibilityOfAnAndroidElemnet(1, 60, asrTimeElement_Element);
         return asrTimeElement_Element.findElementByClassName("android.widget.TextView").getText();
     }
     /**
@@ -89,7 +84,6 @@ public class PolarZonesScreen extends PrayerTimesCorrectionScreen {
      * @return zohr time in string
      */
     public String returnZohrTimeString() {
-        TestUtils.fluentWaitBySecondsToCheckTheVisibilityOfAnAndroidElemnet(1, 60, zohrTimeElement_Element);
         return zohrTimeElement_Element.findElementByClassName("android.widget.TextView").getText();
     }
     /**
@@ -101,7 +95,6 @@ public class PolarZonesScreen extends PrayerTimesCorrectionScreen {
      * @return sherouqe time in string
      */
     public String returnSherouqeTimeString() {
-        TestUtils.fluentWaitBySecondsToCheckTheVisibilityOfAnAndroidElemnet(1, 60, shrouqeTimeElement_Element);
         return shrouqeTimeElement_Element.findElementByClassName("android.widget.TextView").getText();
     }
     /**
@@ -113,7 +106,6 @@ public class PolarZonesScreen extends PrayerTimesCorrectionScreen {
      * @return fajr time in string
      */
     public String returnFajrTimeString() {
-        TestUtils.fluentWaitBySecondsToCheckTheVisibilityOfAnAndroidElemnet(1, 60, fajrTimeElement_Element);
         return fajrTimeElement_Element.findElementByClassName("android.widget.TextView").getText();
     }
     /**
@@ -125,7 +117,6 @@ public class PolarZonesScreen extends PrayerTimesCorrectionScreen {
      * @return screen's title as a string
      */
     public String returnScreenTitleString() {
-        TestUtils.fluentWaitBySecondsToCheckTheVisibilityOfAnAndroidElemnet(1, 60, screenTitleTxt_Text);
         return screenTitleTxt_Text.getText();
     }
     /**
@@ -135,7 +126,6 @@ public class PolarZonesScreen extends PrayerTimesCorrectionScreen {
      * This method is to click on none button
      */
     public void clickOnNoneButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheVisibilityOfAnAndroidElemnet(1, 60, polarZonesListElement_Element);
         List<MobileElement> polarZonesList_List = (List<MobileElement>) polarZonesListElement_Element.findElementByClassName("android.widget.LinearLayout");
         AndroidElement noneButton = (AndroidElement) polarZonesList_List.get(0);
         noneButton.click();
@@ -147,7 +137,6 @@ public class PolarZonesScreen extends PrayerTimesCorrectionScreen {
      * This method is to click on using angle button
      */
     public void clickOnUsingAngleButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheVisibilityOfAnAndroidElemnet(1, 60, polarZonesListElement_Element);
         List<MobileElement> polarZonesList_List = (List<MobileElement>) polarZonesListElement_Element.findElementByClassName("android.widget.LinearLayout");
         AndroidElement usingAngleButton = (AndroidElement) polarZonesList_List.get(1);
         usingAngleButton.click();
@@ -159,7 +148,6 @@ public class PolarZonesScreen extends PrayerTimesCorrectionScreen {
      * This method is to click on mid night button
      */
     public void clickOnMidnightButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheVisibilityOfAnAndroidElemnet(1, 60, polarZonesListElement_Element);
         List<MobileElement> polarZonesList_List = (List<MobileElement>) polarZonesListElement_Element.findElementByClassName("android.widget.LinearLayout");
         AndroidElement midnightButton = (AndroidElement) polarZonesList_List.get(2);
         midnightButton.click();
@@ -171,7 +159,6 @@ public class PolarZonesScreen extends PrayerTimesCorrectionScreen {
      * This method is to click on seventh night button
      */
     public void clickOnSeventhNightButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheVisibilityOfAnAndroidElemnet(1, 60, polarZonesListElement_Element);
         List<MobileElement> polarZonesList_List = (List<MobileElement>) polarZonesListElement_Element.findElementByClassName("android.widget.LinearLayout");
         AndroidElement seventhNightButton = (AndroidElement) polarZonesList_List.get(3);
         seventhNightButton.click();
@@ -185,7 +172,6 @@ public class PolarZonesScreen extends PrayerTimesCorrectionScreen {
      * @param index that represents the scroll dot number
      */
     public void clickOnAScrollDotByIndex(int index) {
-        TestUtils.fluentWaitBySecondsToCheckTheVisibilityOfAnAndroidElemnet(1, 60, scrollListElement_Element);
         List<MobileElement> scrollList_List = scrollListElement_Element.findElementsByClassName("android.widget.LinearLayout");
         scrollList_List.get(index).click();
     }

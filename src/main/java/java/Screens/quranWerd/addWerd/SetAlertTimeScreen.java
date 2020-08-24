@@ -28,7 +28,6 @@ public class SetAlertTimeScreen extends Base {
      * @param numberOfMinutes number of minutes sent as a string
      */
     public void sendKeysToMinutesTextField(String numberOfMinutes) {
-        TestUtils.fluentWaitBySecondsToCheckTheVisibilityOfAnAndroidElemnet(1, 60, minutesBar_TextView);
         minutesBar_TextView.sendKeys(numberOfMinutes);
     }
     /**
@@ -40,7 +39,6 @@ public class SetAlertTimeScreen extends Base {
      * @param numberOfHours number of hours sent as a string
      */
     public void sendKeysToHoursTextField(String numberOfHours) {
-        TestUtils.fluentWaitBySecondsToCheckTheVisibilityOfAnAndroidElemnet(1, 60, hoursBar_TextView);
         hoursBar_TextView.sendKeys(numberOfHours);
     }
     /**
@@ -52,7 +50,6 @@ public class SetAlertTimeScreen extends Base {
      * @return AddWerdScreen
      */
     public AddWerdScreen clickOnCancelButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, cancel_Btn);
         cancel_Btn.click();
         return new AddWerdScreen();
     }
@@ -65,7 +62,6 @@ public class SetAlertTimeScreen extends Base {
      * @return AddWerdScreen
      */
     public AddWerdScreen clickOnSaveButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, save_Btn);
         save_Btn.click();
         return new AddWerdScreen();
     }

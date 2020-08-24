@@ -55,7 +55,6 @@ public class ShadowScreen extends QiblaScreen {
      * @returns SunAndMoonScreen
      */
     public SunAndMoonScreen clickOnSunAndMoonButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, sunAndMoon_Btn);
         sunAndMoon_Btn.click();
         return new SunAndMoonScreen();
     }
@@ -68,7 +67,6 @@ public class ShadowScreen extends QiblaScreen {
      * @return VisualScreen
      */
     public VisualScreen clickOnVisibleButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, visual_Btn);
         visual_Btn.click();
         return new VisualScreen();
     }
@@ -79,7 +77,6 @@ public class ShadowScreen extends QiblaScreen {
      * This method is to click on help button
      */
     public void clickOnHelpButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, help_Btn);
         help_Btn.click();
     }
     /**

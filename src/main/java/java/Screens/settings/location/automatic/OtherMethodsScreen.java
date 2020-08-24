@@ -34,7 +34,6 @@ public class OtherMethodsScreen extends Base {
      * @return OtherMethods_OfflineSearchScreen
      */
     public OtherMethods_OfflineSearchScreen clickOnOfflineSearchButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, offlineSearch_Btn);
         offlineSearch_Btn.click();
         return new OtherMethods_OfflineSearchScreen();
     }
@@ -47,7 +46,6 @@ public class OtherMethodsScreen extends Base {
      * @return AutomaticScreen
      */
     public AutomaticScreen clickOnOnlineDetectionButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, onlineDetection_Btn);
         onlineDetection_Btn.click();
         return new AutomaticScreen();
     }
@@ -60,7 +58,6 @@ public class OtherMethodsScreen extends Base {
      * @return OtherMethods_SearchOnlineScreen
      */
     public OtherMethods_SearchOnlineScreen clickOnSearchOnlineButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, searchOnline_Btn);
         searchOnline_Btn.click();
         return new OtherMethods_SearchOnlineScreen();
     }
@@ -73,7 +70,6 @@ public class OtherMethodsScreen extends Base {
      * @return OtherMethods_AddCityNameScreen
      */
     public OtherMethods_AddCityNameScreen clickOnAddCityNameButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, addCityNameToYourLocation_Btn);
         addCityNameToYourLocation_Btn.click();
         return new OtherMethods_AddCityNameScreen();
     }

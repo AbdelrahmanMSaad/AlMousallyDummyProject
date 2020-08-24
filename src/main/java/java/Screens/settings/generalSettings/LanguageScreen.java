@@ -50,7 +50,6 @@ public class LanguageScreen extends Base {
      * @return String representing the screen's title
      */
     public String getScreenTitle() {
-        TestUtils.fluentWaitBySecondsToCheckTheVisibilityOfAnAndroidElemnet(1, 60, screenTitle_Text);
         return screenTitle_Text.getText();
     }
     /**
@@ -62,7 +61,6 @@ public class LanguageScreen extends Base {
      * @return home page screen
      */
     public HomePageScreen clickOnArabicElement() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, arabic_Btn);
         arabic_Btn.click();
         return new HomePageScreen();
     }
@@ -75,7 +73,6 @@ public class LanguageScreen extends Base {
      * @return home page screen
      */
     public HomePageScreen clickOnEnglishElement() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, english_Btn);
         english_Btn.click();
         return new HomePageScreen();
     }
@@ -88,7 +85,6 @@ public class LanguageScreen extends Base {
      * @return home page screen
      */
     public HomePageScreen clickOnTurkishElement() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, turkish_Btn);
         turkish_Btn.click();
         return new HomePageScreen();
     }
@@ -101,7 +97,6 @@ public class LanguageScreen extends Base {
      * @return home page screen
      */
     public HomePageScreen clickOnGermanElement() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, german_Btn);
         german_Btn.click();
         return new HomePageScreen();
     }
@@ -114,7 +109,6 @@ public class LanguageScreen extends Base {
      * @return home page screen
      */
     public HomePageScreen clickOnFrenchElement() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, french_Btn);
         french_Btn.click();
         return new HomePageScreen();
     }
@@ -127,7 +121,6 @@ public class LanguageScreen extends Base {
      * @return home page screen
      */
     public HomePageScreen clickOnSpanishElement() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, spanish_Btn);
         spanish_Btn.click();
         return new HomePageScreen();
     }
@@ -140,7 +133,6 @@ public class LanguageScreen extends Base {
      * @return home page screen
      */
     public HomePageScreen clickOnIndonesianElement() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, indonesian_Btn);
         indonesian_Btn.click();
         return new HomePageScreen();
     }
@@ -153,7 +145,6 @@ public class LanguageScreen extends Base {
      * @return home page screen
      */
     public HomePageScreen clickOnArduElement() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, ardu_Btn);
         ardu_Btn.click();
         return new HomePageScreen();
     }
@@ -166,7 +157,6 @@ public class LanguageScreen extends Base {
      * @return home page screen
      */
     public HomePageScreen clickOnIgurElement() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, igur_Btn);
         igur_Btn.click();
         return new HomePageScreen();
     }

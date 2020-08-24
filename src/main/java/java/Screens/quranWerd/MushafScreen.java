@@ -28,7 +28,6 @@ public class MushafScreen extends Base {
      * @return Screen title as a string
      */
     public String getActualScreenTitle() {
-        TestUtils.fluentWaitBySecondsToCheckTheVisibilityOfAnAndroidElemnet(1, 60, screenTitle_Text);
         return screenTitle_Text.getText();
     }
     /**
@@ -40,7 +39,6 @@ public class MushafScreen extends Base {
      * @return AddedScreen
      */
     public AddedScreen clickOnBackButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, back_Btn);
         back_Btn.click();
         return new AddedScreen();
     }
@@ -51,7 +49,6 @@ public class MushafScreen extends Base {
      * This method is to click on Screen On Button
      */
     public void clickOnScreenOnButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, screenOn_Btn);
         screenOn_Btn.click();
     }
     /**
@@ -63,7 +60,6 @@ public class MushafScreen extends Base {
      * @return Mushaf_BrowseScreen
      */
     public Mushaf_BrowseScreen clickOnMushafBrowseButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, browsingMushaf_Btn);
         browsingMushaf_Btn.click();
         return new Mushaf_BrowseScreen();
     }

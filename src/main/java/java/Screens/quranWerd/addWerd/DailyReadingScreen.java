@@ -29,7 +29,6 @@ public class DailyReadingScreen extends Base {
      * This method is to click on gozaa button
      */
     public void clickOnGozaaButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, gozaaButton_Btn);
         gozaaButton_Btn.click();
     }
     /**
@@ -39,7 +38,6 @@ public class DailyReadingScreen extends Base {
      * This method is to click on hezb button
      */
     public void clickOnHezbButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, hezbButton_Btn);
         hezbButton_Btn.click();
     }
     /**
@@ -49,7 +47,6 @@ public class DailyReadingScreen extends Base {
      * This method is to click on robaa button
      */
     public void clickOnRobaaButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, robaaButton);
         robaaButton.click();
     }
     /**
@@ -59,7 +56,6 @@ public class DailyReadingScreen extends Base {
      * This method is to click on page button
      */
     public void clickOnPageButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, pageButton_Btn);
         pageButton_Btn.click();
     }
     /**
@@ -69,7 +65,6 @@ public class DailyReadingScreen extends Base {
      * This method is to click on soraa button
      */
     public void clickOnSoraaButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, soraaButton_Btn);
         soraaButton_Btn.click();
     }
     /**

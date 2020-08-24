@@ -94,7 +94,6 @@ public class SettingsScreen extends Base {
      * @return Screen title as a string
      */
     public String getActualScreenTitle() {
-        TestUtils.fluentWaitBySecondsToCheckTheVisibilityOfAnAndroidElemnet(1, 60, screenTitle_Text);
         return screenTitle_Text.getText();
     }
     /**
@@ -106,7 +105,6 @@ public class SettingsScreen extends Base {
      * @return LanguageScreen
      */
     public LanguageScreen clickOnLanguageButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, language_Btn);
         language_Btn.click();
         return new LanguageScreen();
     }
@@ -130,7 +128,6 @@ public class SettingsScreen extends Base {
      * @return EnableBackgroudActivationScreen
      */
     public EnableBackgroudActivationScreen clickOnBackgroundActivationButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, backgroundActivation_Btn);
         backgroundActivation_Btn.click();
         return new EnableBackgroudActivationScreen();
     }
@@ -143,7 +140,6 @@ public class SettingsScreen extends Base {
      * @return common questions screen
      */
     public void clickOnSolveAzaanProblemsSolutionsButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, solveAzanProblems_Btn);
         solveAzanProblems_Btn.click();
         //This methods returns CommonQuestionsScreen class with shams
     }
@@ -154,7 +150,6 @@ public class SettingsScreen extends Base {
      * This method is to click on azan mode button
      */
     public void clickOnAzanModeButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, azanMode_Btn);
         azanMode_Btn.click();
     }
     /**
@@ -176,7 +171,6 @@ public class SettingsScreen extends Base {
      */
     public void clickOnAzanModeOneButton() {
         AndroidElement azanModeOne = (AndroidElement) TestUtils.scrollToASpecificElementByItsText("نمط صوتى 1");
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, azanModeOne);
         azanModeOne.click();
     }
     /**
@@ -187,7 +181,6 @@ public class SettingsScreen extends Base {
      */
     public void clickOnAzanModeTwoButton() {
         AndroidElement azanModeTwo = (AndroidElement) TestUtils.scrollToASpecificElementByItsText("نمط صوتى 2");
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, azanModeTwo);
         azanModeTwo.click();
     }
     /**
@@ -199,7 +192,6 @@ public class SettingsScreen extends Base {
      * @return CalculationMethodScreen
      */
     public CalculationMethodScreen clickOnCalculationMethodButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, calcultionMethod_Btn);
         calcultionMethod_Btn.click();
         return new CalculationMethodScreen();
     }
@@ -212,7 +204,6 @@ public class SettingsScreen extends Base {
      * @return the chosen calculation method as a string
      */
     public String getCalculationMethodChoiceString() {
-        TestUtils.fluentWaitBySecondsToCheckTheVisibilityOfAnAndroidElemnet(1, 60, calcultionMethodChoice_TxtView);
         return calcultionMethodChoice_TxtView.getText();
     }
     /**
@@ -224,7 +215,6 @@ public class SettingsScreen extends Base {
      * @return MazhabScreen
      */
     public MazhabScreen clickOnMazhabButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, mazhabCorrection_Btn);
         mazhabCorrection_Btn.click();
         return new MazhabScreen();
     }
@@ -237,7 +227,6 @@ public class SettingsScreen extends Base {
      * @return the chosen mazhab as a string
      */
     public String getMazhabChoiceString() {
-        TestUtils.fluentWaitBySecondsToCheckTheVisibilityOfAnAndroidElemnet(1, 60, mazhabCorrectionChoice_TxtView);
         return mazhabCorrectionChoice_TxtView.getText();
     }
     /**
@@ -249,7 +238,6 @@ public class SettingsScreen extends Base {
      * @return SummerTimeScreen
      */
     public SummerTimeScreen clickOnSummerTimeButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, summerTiming_Btn);
         summerTiming_Btn.click();
         return new SummerTimeScreen();
     }
@@ -262,7 +250,6 @@ public class SettingsScreen extends Base {
      * @return the chosen option for summer timing
      */
     public String getSummerTimingChoiceString() {
-        TestUtils.fluentWaitBySecondsToCheckTheVisibilityOfAnAndroidElemnet(1, 60, summerTimingChoice_TxtView);
         return summerTimingChoice_TxtView.getText();
     }
     /**
@@ -274,7 +261,6 @@ public class SettingsScreen extends Base {
      * @return TimesCorrectionScreen
      */
     public TimesCorrectionScreen clickOnPrayerTimesCorrectionButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, prayerTimeCorrection_Btn);
         prayerTimeCorrection_Btn.click();
         return new TimesCorrectionScreen();
     }
@@ -287,7 +273,6 @@ public class SettingsScreen extends Base {
      * @return TimeZoneScreen
      */
     public TimeZoneScreen clickOnTimeZoneButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, timeZone_Btn);
         timeZone_Btn.click();
         return new TimeZoneScreen();
     }
@@ -300,7 +285,6 @@ public class SettingsScreen extends Base {
      * @return the chosen time zone as a string
      */
     public String getTimeZoneChoiceString() {
-        TestUtils.fluentWaitBySecondsToCheckTheVisibilityOfAnAndroidElemnet(1, 60, timeZoneChoice_TxtView);
         return timeZoneChoice_TxtView.getText();
     }
     /**
@@ -312,7 +296,6 @@ public class SettingsScreen extends Base {
      * @return PolarZonesScreen
      */
     public PolarZonesScreen clickOnPolarZonesCalculationButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, polarZonesCalculation_Btn);
         polarZonesCalculation_Btn.click();
         return new PolarZonesScreen();
     }
@@ -325,7 +308,6 @@ public class SettingsScreen extends Base {
      * @return the chose option for the polar zone as a string
      */
     public String getPolarZonesChoiceString() {
-        TestUtils.fluentWaitBySecondsToCheckTheVisibilityOfAnAndroidElemnet(1, 60, polarZonesCalculationChoice_TxtView);
         return polarZonesCalculationChoice_TxtView.getText();
     }
     /**
@@ -337,7 +319,6 @@ public class SettingsScreen extends Base {
      * @return ResetScreen
      */
     public ResetScreen clickOnResetToDefaultButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, resetPrayerTimesCorrections_Btn);
         resetPrayerTimesCorrections_Btn.click();
         return new ResetScreen();
     }
@@ -350,7 +331,6 @@ public class SettingsScreen extends Base {
      * @return AutomaticScreen
      */
     public AutomaticScreen clickOnAutoDetectLocationButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, autoDetectLocation_Btn);
         autoDetectLocation_Btn.click();
         return new AutomaticScreen();
     }
@@ -372,9 +352,7 @@ public class SettingsScreen extends Base {
      * This method is to click on travel mode switch
      */
     public void clickOnTravelModeSwitch() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, travelModeSection_Element);
         AndroidElement travelModeSwitch = (AndroidElement) travelModeSection_Element.findElementById("com.moslay:id/on_off_switch");
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, travelModeSwitch);
         travelModeSwitch.click();
     }
     /**
@@ -386,9 +364,7 @@ public class SettingsScreen extends Base {
      * @return TravelModeScreen
      */
     public TravelModeScreen clickOnTravelModeSectionToOpenTravelModeScreen() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, travelModeSection_Element);
         AndroidElement travelModeSection = (AndroidElement) travelModeSection_Element.findElementById("com.moslay:id/title");
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, travelModeSection);
         travelModeSection.click();
         return new TravelModeScreen();
     }
@@ -401,7 +377,6 @@ public class SettingsScreen extends Base {
      * @return the azkar settings screen
      */
     public void clickOnAzkarSettingsButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, azkarSettings_Btn);
         azkarSettings_Btn.click();
         //This method returns azkar settings screen with shams
     }
@@ -414,7 +389,6 @@ public class SettingsScreen extends Base {
      * @return the azan settings screen
      */
     public void clickOnAzanSettingsButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, azanSettings_Btn);
         azanSettings_Btn.click();
         //This method returns azan settings screen with shams
     }
@@ -425,7 +399,6 @@ public class SettingsScreen extends Base {
      * This method is to click on alert sound button
      */
     public void clickOnAlertSoundButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, alertSound_Btn);
         alertSound_Btn.click();
     }
     /**
@@ -446,7 +419,6 @@ public class SettingsScreen extends Base {
      * This method is to click on alert sound option one
      */
     public void clickOnAlertSoundOptionOne() {
-        TestUtils.fluentWaitBySecondsToCheckTheVisibilityOfAnAndroidElemnet(1, 60, alertSoundList_Element);
         AndroidElement soundAlertsOptionOne = (AndroidElement) alertSoundList_Element.findElementById("com.moslay:id/radio_button_layout[1]");
         soundAlertsOptionOne.click();
     }
@@ -457,7 +429,6 @@ public class SettingsScreen extends Base {
      * This method is to click on alert sound option Two
      */
     public void clickOnAlertSoundOptionTwo() {
-        TestUtils.fluentWaitBySecondsToCheckTheVisibilityOfAnAndroidElemnet(1, 60, alertSoundList_Element);
         AndroidElement soundAlertsOptionTwo = (AndroidElement) alertSoundList_Element.findElementById("com.moslay:id/radio_button_layout[2]");
         soundAlertsOptionTwo.click();
     }
@@ -470,7 +441,6 @@ public class SettingsScreen extends Base {
      * @return azan and iqama notifications screen
      */
     public void clickOnAzanAndIqamaSettingsButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, azanAndIqamaSettingsSection_Btn);
         azanAndIqamaSettingsSection_Btn.click();
         //This method returns azan and iqama notifications screen with shams
     }
@@ -481,9 +451,7 @@ public class SettingsScreen extends Base {
      * This method is to click on azan and Iqama notifications switch
      */
     public void clickOnAzanAndIqamaNotificationsSwitch() {
-        TestUtils.fluentWaitBySecondsToCheckTheVisibilityOfAnAndroidElemnet(1, 60, azanAndIqamaSettingsSection_Btn);
         AndroidElement azanAndIqamaSwitch = (AndroidElement) azanAndIqamaSettingsSection_Btn.findElementById("com.moslay:id/bg");
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, azanAndIqamaSwitch);
         azanAndIqamaSwitch.click();
     }
     /**
@@ -495,7 +463,6 @@ public class SettingsScreen extends Base {
      * @return nawafel notifications settings button
      */
     public void clickOnNawafelSettingsButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, nawafelSettingsSection_Btn);
         nawafelSettingsSection_Btn.click();
         //This method returns nawafel notifications screen with shams
     }
@@ -506,9 +473,7 @@ public class SettingsScreen extends Base {
      * This method is to click on nawafel notifications switch
      */
     public void clickOnNawafelNotificationsSwitch() {
-        TestUtils.fluentWaitBySecondsToCheckTheVisibilityOfAnAndroidElemnet(1, 60, nawafelSettingsSection_Btn);
         AndroidElement nawafelSwitch = (AndroidElement) nawafelSettingsSection_Btn.findElementById("com.moslay:id/bg");
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, nawafelSwitch);
         nawafelSwitch.click();
     }
     /**
@@ -520,7 +485,6 @@ public class SettingsScreen extends Base {
      * @return gomaa notifications screen
      */
     public void clickOnGomaaSettingsButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, gomaaSettingsSection_Btn);
         gomaaSettingsSection_Btn.click();
         //This method returns gomaa notifications screen with shams
     }
@@ -531,9 +495,7 @@ public class SettingsScreen extends Base {
      * This method is to click on gomaa notifications switch
      */
     public void clickOnGomaaNotificationsSwitch() {
-        TestUtils.fluentWaitBySecondsToCheckTheVisibilityOfAnAndroidElemnet(1, 60, gomaaSettingsSection_Btn);
         AndroidElement gomaaSwitch = (AndroidElement) gomaaSettingsSection_Btn.findElementById("com.moslay:id/bg");
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, gomaaSwitch);
         gomaaSwitch.click();
     }
     /**
@@ -545,7 +507,6 @@ public class SettingsScreen extends Base {
      * @return fasting notifications settings screen
      */
     public void clickOnFastingSettingsButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, fastingSettingsFasting_Btn);
         fastingSettingsFasting_Btn.click();
         //This method will return fasting notifications screen with shams
     }
@@ -556,9 +517,7 @@ public class SettingsScreen extends Base {
      * This method is to click on fasting notifications switch
      */
     public void clickOnFastingNotificationsSwitch() {
-        TestUtils.fluentWaitBySecondsToCheckTheVisibilityOfAnAndroidElemnet(1, 60, fastingSettingsFasting_Btn);
         AndroidElement fastingSwitch = (AndroidElement) fastingSettingsFasting_Btn.findElementById("com.moslay:id/bg");
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, fastingSwitch);
         fastingSwitch.click();
     }
     /**
@@ -570,7 +529,6 @@ public class SettingsScreen extends Base {
      * @return SilentDuringPrayerNotificationsScreen
      */
     public SilentDuringPrayerNotificationsScreen clickOnSilentDuringPrayerSettingsButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, silentDuringPrayerSettingsSection_Btn);
         silentDuringPrayerSettingsSection_Btn.click();
         return new SilentDuringPrayerNotificationsScreen();
     }
@@ -581,9 +539,7 @@ public class SettingsScreen extends Base {
      * This method is to click on silent during prayer notifications switch
      */
     public void clickOnSilentDurningPrayerNotificationsSwitch() {
-        TestUtils.fluentWaitBySecondsToCheckTheVisibilityOfAnAndroidElemnet(1, 60, silentDuringPrayerSettingsSection_Btn);
         AndroidElement silentDuringPrayerSwitch = (AndroidElement) silentDuringPrayerSettingsSection_Btn.findElementById("com.moslay:id/bg");
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, silentDuringPrayerSwitch);
         silentDuringPrayerSwitch.click();
     }
     /**
@@ -595,7 +551,6 @@ public class SettingsScreen extends Base {
      * @return azkar notifications screen
      */
     public void clickOnAzkarNotificationsSettingsButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, azkarNotificationsSettingsSection_Btn);
         azkarNotificationsSettingsSection_Btn.click();
         //This method will return azkar notifications screen with shams
     }
@@ -606,9 +561,7 @@ public class SettingsScreen extends Base {
      * This method is to click on azkar notification notifications switch
      */
     public void clickOnAzkarNotificationsSwitch() {
-        TestUtils.fluentWaitBySecondsToCheckTheVisibilityOfAnAndroidElemnet(1, 60, azkarNotificationsSettingsSection_Btn);
         AndroidElement azkarNotificationsSwitch = (AndroidElement) azkarNotificationsSettingsSection_Btn.findElementById("com.moslay:id/bg");
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, azkarNotificationsSwitch);
         azkarNotificationsSwitch.click();
     }
     /**
@@ -618,9 +571,7 @@ public class SettingsScreen extends Base {
      * This method is to click on beneftis notifications switch
      */
     public void clickOnBenefitsNotificationsSwitch() {
-        TestUtils.fluentWaitBySecondsToCheckTheVisibilityOfAnAndroidElemnet(1, 60, benefitsNotificationsSettingsSections_Btn);
         AndroidElement benefitsNotificationsSwitch = (AndroidElement) benefitsNotificationsSettingsSections_Btn.findElementById("com.moslay:id/bg");
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, benefitsNotificationsSwitch);
         benefitsNotificationsSwitch.click();
     }
     /**
