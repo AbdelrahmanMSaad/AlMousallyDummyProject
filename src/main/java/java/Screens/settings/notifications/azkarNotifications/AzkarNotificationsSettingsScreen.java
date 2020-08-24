@@ -8,34 +8,34 @@ import java.utilities.TestUtils;
 
 public class AzkarNotificationsSettingsScreen extends Base {
     @AndroidFindBy(id = "com.moslay:id/Azkar_menu_Header")
-    private AndroidElement screenTitleTxt_Text;
+    private AndroidElement screenTitle_Text;
 
     @AndroidFindBy(id = "com.moslay:id/on_off_alert")
-    private AndroidElement allNotificationsOnOffSwitchElement_Element;
+    private AndroidElement allNotificationsOnOffSwitch_Element;
 
     @AndroidFindBy(id = "com.moslay:id/azkar_Settings_day_on_off")
-    private AndroidElement morningAzkarOnOffSwitchElement_Element;
+    private AndroidElement morningAzkarOnOffSwitch_Element;
 
     @AndroidFindBy(id = "com.moslay:id/azkar_day_picker")
-    private AndroidElement hoursAfterFajrElement_Element;
+    private AndroidElement hoursAfterFajr_Element;
 
     @AndroidFindBy(id = "com.moslay:id/azkar_Settings_evening_on_off")
-    private AndroidElement eveningAzkarOnOffSwitchElement_Element;
+    private AndroidElement eveningAzkarOnOffSwitch_Element;
 
     @AndroidFindBy(id = "com.moslay:id/azkar_Settings_radio_asr")
-    private AndroidElement asrRadioButton_Btn;
+    private AndroidElement asrRadioButton;
 
     @AndroidFindBy(id = "com.moslay:id/azkar_Settings_maghrib")
-    private AndroidElement maghrebRadioButton_Btn;
+    private AndroidElement maghrebRadioButton;
 
     @AndroidFindBy(id = "com.moslay:id/azkar_Settings_sleep_on_off")
-    private AndroidElement sleepingAzkarOnOffSwitchElement_Element;
+    private AndroidElement sleepingAzkarOnOffSwitch_Element;
 
     @AndroidFindBy(id = "com.moslay:id/tv_azkar_sleep_time")
-    private AndroidElement sleepingAzkarTimeButton_Btn;
+    private AndroidElement sleepingAzkarTime_Btn;
 
     @AndroidFindBy(id = "com.moslay:id/open_azkar_sala")
-    private AndroidElement openAzkarDuringPrayerOnOffSwitchElement_Element;
+    private AndroidElement openAzkarDuringPrayerOnOffSwitch_Element;
 
     /**
      * *********************************************************************************************************************************************
@@ -45,8 +45,8 @@ public class AzkarNotificationsSettingsScreen extends Base {
      *
      * @return screen title string
      */
-    public String returnScreenTitle() {
-        return screenTitleTxt_Text.getText();
+    public String getScreenTitle() {
+        return screenTitle_Text.getText();
     }
     /**
      * *********************************************************************************************************************************************
@@ -55,8 +55,8 @@ public class AzkarNotificationsSettingsScreen extends Base {
      * This method is to click on all notifications switch
      */
     public void clickOnAllNotificationsSwitch() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, allNotificationsOnOffSwitchElement_Element);
-        allNotificationsOnOffSwitchElement_Element.click();
+        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, allNotificationsOnOffSwitch_Element);
+        allNotificationsOnOffSwitch_Element.click();
     }
     /**
      * *********************************************************************************************************************************************
@@ -65,8 +65,8 @@ public class AzkarNotificationsSettingsScreen extends Base {
      * This method is to click on morning azkar switch
      */
     public void clickOnMorningAzkarSwitch() {
-        TestUtils.fluentWaitBySecondsToCheckTheVisibilityOfAnAndroidElemnet(1, 60, morningAzkarOnOffSwitchElement_Element);
-        AndroidElement morningAzkarSwitch = (AndroidElement) morningAzkarOnOffSwitchElement_Element.findElementById("com.moslay:id/on_off_switch");
+        TestUtils.fluentWaitBySecondsToCheckTheVisibilityOfAnAndroidElemnet(1, 60, morningAzkarOnOffSwitch_Element);
+        AndroidElement morningAzkarSwitch = (AndroidElement) morningAzkarOnOffSwitch_Element.findElementById("com.moslay:id/on_off_switch");
         morningAzkarSwitch.click();
     }
     /**
@@ -76,8 +76,8 @@ public class AzkarNotificationsSettingsScreen extends Base {
      * This method is to click on hours after fajr minus button
      */
     public void clickOnHoursAfterFajrMinusButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheVisibilityOfAnAndroidElemnet(1, 60, hoursAfterFajrElement_Element);
-        AndroidElement hoursAfterFajrMinusButton = (AndroidElement) hoursAfterFajrElement_Element.findElementById("com.moslay:id/im_minus");
+        TestUtils.fluentWaitBySecondsToCheckTheVisibilityOfAnAndroidElemnet(1, 60, hoursAfterFajr_Element);
+        AndroidElement hoursAfterFajrMinusButton = (AndroidElement) hoursAfterFajr_Element.findElementById("com.moslay:id/im_minus");
         hoursAfterFajrMinusButton.click();
     }
     /**
@@ -88,9 +88,9 @@ public class AzkarNotificationsSettingsScreen extends Base {
      *
      * @param number --> the hours after fajr to be sent
      */
-    public void sendNumberToHoursAfterFajrTextField(String number) {
-        TestUtils.fluentWaitBySecondsToCheckTheVisibilityOfAnAndroidElemnet(1, 60, hoursAfterFajrElement_Element);
-        AndroidElement hoursAfterFajrTextField = (AndroidElement) hoursAfterFajrElement_Element.findElementById("com.moslay:id/et_number");
+    public void sendNumberToHoursAfterFajrTextView(String number) {
+        TestUtils.fluentWaitBySecondsToCheckTheVisibilityOfAnAndroidElemnet(1, 60, hoursAfterFajr_Element);
+        AndroidElement hoursAfterFajrTextField = (AndroidElement) hoursAfterFajr_Element.findElementById("com.moslay:id/et_number");
         hoursAfterFajrTextField.sendKeys(number);
     }
     /**
@@ -100,8 +100,8 @@ public class AzkarNotificationsSettingsScreen extends Base {
      * This method is to click on hours after fajr plus button
      */
     public void clickOnHoursAfterFajrPlusButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheVisibilityOfAnAndroidElemnet(1, 60, hoursAfterFajrElement_Element);
-        AndroidElement hoursAfterFajrPlusButton = (AndroidElement) hoursAfterFajrElement_Element.findElementById("com.moslay:id/im_plus");
+        TestUtils.fluentWaitBySecondsToCheckTheVisibilityOfAnAndroidElemnet(1, 60, hoursAfterFajr_Element);
+        AndroidElement hoursAfterFajrPlusButton = (AndroidElement) hoursAfterFajr_Element.findElementById("com.moslay:id/im_plus");
         hoursAfterFajrPlusButton.click();
     }
     /**
@@ -111,8 +111,8 @@ public class AzkarNotificationsSettingsScreen extends Base {
      * This method is to click on evening azkar switch
      */
     public void clickOnEveningAzkarSwitch() {
-        TestUtils.fluentWaitBySecondsToCheckTheVisibilityOfAnAndroidElemnet(1, 60, eveningAzkarOnOffSwitchElement_Element);
-        AndroidElement eveningAzkarSwitch = (AndroidElement) eveningAzkarOnOffSwitchElement_Element.findElementById("com.moslay:id/on_off_switch");
+        TestUtils.fluentWaitBySecondsToCheckTheVisibilityOfAnAndroidElemnet(1, 60, eveningAzkarOnOffSwitch_Element);
+        AndroidElement eveningAzkarSwitch = (AndroidElement) eveningAzkarOnOffSwitch_Element.findElementById("com.moslay:id/on_off_switch");
         eveningAzkarSwitch.click();
     }
     /**
@@ -122,8 +122,8 @@ public class AzkarNotificationsSettingsScreen extends Base {
      * This method is to click on asr radio button
      */
     public void clickOnAsrRadioButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheVisibilityOfAnAndroidElemnet(1, 60, asrRadioButton_Btn);
-        asrRadioButton_Btn.click();
+        TestUtils.fluentWaitBySecondsToCheckTheVisibilityOfAnAndroidElemnet(1, 60, asrRadioButton);
+        asrRadioButton.click();
     }
     /**
      * *********************************************************************************************************************************************
@@ -132,8 +132,8 @@ public class AzkarNotificationsSettingsScreen extends Base {
      * This method is to click on maghrib radio button
      */
     public void clickOnMaghribRadioButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheVisibilityOfAnAndroidElemnet(1, 60, maghrebRadioButton_Btn);
-        maghrebRadioButton_Btn.click();
+        TestUtils.fluentWaitBySecondsToCheckTheVisibilityOfAnAndroidElemnet(1, 60, maghrebRadioButton);
+        maghrebRadioButton.click();
     }
     /**
      * *********************************************************************************************************************************************
@@ -142,8 +142,8 @@ public class AzkarNotificationsSettingsScreen extends Base {
      * This method is to click on sleep azkar switch
      */
     public void clickOnSleepingAzkarSwitch() {
-        TestUtils.fluentWaitBySecondsToCheckTheVisibilityOfAnAndroidElemnet(1, 60, sleepingAzkarOnOffSwitchElement_Element);
-        AndroidElement sleepingAzkarSwitch = (AndroidElement) sleepingAzkarOnOffSwitchElement_Element.findElementById("com.moslay:id/on_off_switch");
+        TestUtils.fluentWaitBySecondsToCheckTheVisibilityOfAnAndroidElemnet(1, 60, sleepingAzkarOnOffSwitch_Element);
+        AndroidElement sleepingAzkarSwitch = (AndroidElement) sleepingAzkarOnOffSwitch_Element.findElementById("com.moslay:id/on_off_switch");
         sleepingAzkarSwitch.click();
     }
     /**
@@ -155,8 +155,8 @@ public class AzkarNotificationsSettingsScreen extends Base {
      * @returns clock class
      */
     public void clickOnSleepingAzkarTimeButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheVisibilityOfAnAndroidElemnet(1, 60, sleepingAzkarTimeButton_Btn);
-        sleepingAzkarTimeButton_Btn.click();
+        TestUtils.fluentWaitBySecondsToCheckTheVisibilityOfAnAndroidElemnet(1, 60, sleepingAzkarTime_Btn);
+        sleepingAzkarTime_Btn.click();
         //This method will return clock class with shams
     }
     /**
@@ -166,8 +166,8 @@ public class AzkarNotificationsSettingsScreen extends Base {
      * This method is to click on open azkar during prayer switch
      */
     public void clickOnOpenAzkarDuringPrayerSwitch() {
-        TestUtils.fluentWaitBySecondsToCheckTheVisibilityOfAnAndroidElemnet(1, 60, openAzkarDuringPrayerOnOffSwitchElement_Element);
-        AndroidElement openAzkarDuringPrayerSwitch = (AndroidElement) openAzkarDuringPrayerOnOffSwitchElement_Element.findElementById("com.moslay:id/on_off_switch");
+        TestUtils.fluentWaitBySecondsToCheckTheVisibilityOfAnAndroidElemnet(1, 60, openAzkarDuringPrayerOnOffSwitch_Element);
+        AndroidElement openAzkarDuringPrayerSwitch = (AndroidElement) openAzkarDuringPrayerOnOffSwitch_Element.findElementById("com.moslay:id/on_off_switch");
         openAzkarDuringPrayerSwitch.click();
     }
     /**

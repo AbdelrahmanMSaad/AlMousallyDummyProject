@@ -15,59 +15,59 @@ import java.utilities.TestUtils;
 public class SettingsScreen extends Base {
     String expectedTile = "الاعدادات";
     @AndroidFindBy(id = "com.moslay:id/settings")
-    private AndroidElement screenTitleTxt_Text;
+    private AndroidElement screenTitle_Text;
     @AndroidFindBy(id = "com.moslay:id/settings_language_layout")
-    private AndroidElement languageButton_Btn;
+    private AndroidElement language_Btn;
     @AndroidFindBy(id = "com.moslay:id/settings_general_language")
-    private AndroidElement languageChoiceTxt_TxtView;
+    private AndroidElement languageChoice_TxtView;
     @AndroidFindBy(id = "com.moslay:id/mosaly_bg_activate")
-    private AndroidElement backgroundActivationButton_Btn;
+    private AndroidElement backgroundActivation_Btn;
     @AndroidFindBy(id = "com.moslay:id/solve_azan_problems")
-    private AndroidElement solveAzanProblemsButton_Btn;
+    private AndroidElement solveAzanProblems_Btn;
     @AndroidFindBy(id = "com.moslay:id/ll_azan_mode")
-    private AndroidElement azanModeButton_Btn;
+    private AndroidElement azanMode_Btn;
     @AndroidFindBy(id = "com.moslay:id/tv_azan_mode")
-    private AndroidElement azanModeChoiceTxt_TxtView;
+    private AndroidElement azanModeChoice_TxtView;
     @AndroidFindBy(id = "com.moslay:id/ex_azanMode")
     private AndroidElement azanModeSelectionsList_Element;
     @AndroidFindBy(id = "com.moslay:id/settings_calcultionMethod")
-    private AndroidElement calcultionMethodButton_Btn;
+    private AndroidElement calcultionMethod_Btn;
     @AndroidFindBy(id = "com.moslay:id/settings_calculation")
-    private AndroidElement calcultionMethodChoiceTxt_TxtView;
+    private AndroidElement calcultionMethodChoice_TxtView;
     @AndroidFindBy(id = "com.moslay:id/settings_asr")
-    private AndroidElement mazhabCorrectionButton_Btn;
+    private AndroidElement mazhabCorrection_Btn;
     @AndroidFindBy(id = "com.moslay:id/settings_prayer_mazhab")
-    private AndroidElement mazhabCorrectionChoiceTxt_TxtView;
+    private AndroidElement mazhabCorrectionChoice_TxtView;
     @AndroidFindBy(id = "com.moslay:id/settings_DayLightSaving")
-    private AndroidElement summerTimingButton_Btn;
+    private AndroidElement summerTiming_Btn;
     @AndroidFindBy(id = "com.moslay:id/settings_day_light_saving")
-    private AndroidElement summerTimingChoiceTxt_TxtView;
+    private AndroidElement summerTimingChoice_TxtView;
     @AndroidFindBy(id = "com.moslay:id/settings_prayerTimeCorrection")
-    private AndroidElement prayerTimeCorrectionButton_Btn;
+    private AndroidElement prayerTimeCorrection_Btn;
     @AndroidFindBy(id = "com.moslay:id/settings_timeZone")
-    private AndroidElement timeZoneButton_Btn;
+    private AndroidElement timeZone_Btn;
     @AndroidFindBy(id = "com.moslay:id/time_zone")
-    private AndroidElement timeZoneChoiceTxt_TxtView;
+    private AndroidElement timeZoneChoice_TxtView;
     @AndroidFindBy(id = "com.moslay:id/settings_highLatitudeWay")
-    private AndroidElement polarZonesCalculationButton_Btn;
+    private AndroidElement polarZonesCalculation_Btn;
     @AndroidFindBy(id = "com.moslay:id/high_latitude")
-    private AndroidElement polarZonesCalculationChoiceTxt_TxtView;
+    private AndroidElement polarZonesCalculationChoice_TxtView;
     @AndroidFindBy(id = "com.moslay:id/settings_restoreSettings")
-    private AndroidElement resetPrayerTimesCorrectionsButton_Btn;
+    private AndroidElement resetPrayerTimesCorrections_Btn;
     @AndroidFindBy(id = "com.moslay:id/settings_location_layout")
-    private AndroidElement autoDetectLocationButton_Btn;
+    private AndroidElement autoDetectLocation_Btn;
     @AndroidFindBy(id = "com.moslay:id/settings_country_city")
-    private AndroidElement locationChoiceTxt_TxtView;
+    private AndroidElement locationChoice_TxtView;
     @AndroidFindBy(id = "com.moslay:id/setting_travel_on")
     private AndroidElement travelModeSection_Element;
     @AndroidFindBy(id = "com.moslay:id/settings_azkar_layout")
-    private AndroidElement azkarSettingsButton_Btn;
+    private AndroidElement azkarSettings_Btn;
     @AndroidFindBy(id = "com.moslay:id/settingsAzanLayout")
-    private AndroidElement azanSettingsButton_Btn;
+    private AndroidElement azanSettings_Btn;
     @AndroidFindBy(id = "com.moslay:id/ll_alert_sound")
-    private AndroidElement alertSoundButton_Btn;
+    private AndroidElement alertSound_Btn;
     @AndroidFindBy(id = "com.moslay:id/tv_choosen_alert_sound")
-    private AndroidElement alertSoundChoiceTxt_TxtView;
+    private AndroidElement alertSoundChoice_TxtView;
     @AndroidFindBy(id = "com.moslay:id/lv_alert_sounds")
     private AndroidElement alertSoundList_Element;
     @AndroidFindBy(id = "com.moslay:id/setting_azanAndIqama_ll")
@@ -93,9 +93,9 @@ public class SettingsScreen extends Base {
      *
      * @return Screen title as a string
      */
-    public String returnActualScreenTitle() {
-        TestUtils.fluentWaitBySecondsToCheckTheVisibilityOfAnAndroidElemnet(1, 60, screenTitleTxt_Text);
-        return screenTitleTxt_Text.getText();
+    public String getActualScreenTitle() {
+        TestUtils.fluentWaitBySecondsToCheckTheVisibilityOfAnAndroidElemnet(1, 60, screenTitle_Text);
+        return screenTitle_Text.getText();
     }
     /**
      * *********************************************************************************************************************************************
@@ -106,8 +106,8 @@ public class SettingsScreen extends Base {
      * @return LanguageScreen
      */
     public LanguageScreen clickOnLanguageButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, languageButton_Btn);
-        languageButton_Btn.click();
+        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, language_Btn);
+        language_Btn.click();
         return new LanguageScreen();
     }
     /**
@@ -118,8 +118,8 @@ public class SettingsScreen extends Base {
      *
      * @return the chosen language as text
      */
-    public String returnLanguageChoiceString() {
-        return languageChoiceTxt_TxtView.getText();
+    public String getLanguageChoiceString() {
+        return languageChoice_TxtView.getText();
     }
     /**
      * *********************************************************************************************************************************************
@@ -130,8 +130,8 @@ public class SettingsScreen extends Base {
      * @return EnableBackgroudActivationScreen
      */
     public EnableBackgroudActivationScreen clickOnBackgroundActivationButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, backgroundActivationButton_Btn);
-        backgroundActivationButton_Btn.click();
+        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, backgroundActivation_Btn);
+        backgroundActivation_Btn.click();
         return new EnableBackgroudActivationScreen();
     }
     /**
@@ -143,8 +143,8 @@ public class SettingsScreen extends Base {
      * @return common questions screen
      */
     public void clickOnSolveAzaanProblemsSolutionsButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, solveAzanProblemsButton_Btn);
-        solveAzanProblemsButton_Btn.click();
+        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, solveAzanProblems_Btn);
+        solveAzanProblems_Btn.click();
         //This methods returns CommonQuestionsScreen class with shams
     }
     /**
@@ -154,8 +154,8 @@ public class SettingsScreen extends Base {
      * This method is to click on azan mode button
      */
     public void clickOnAzanModeButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, azanModeButton_Btn);
-        azanModeButton_Btn.click();
+        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, azanMode_Btn);
+        azanMode_Btn.click();
     }
     /**
      * *********************************************************************************************************************************************
@@ -165,8 +165,8 @@ public class SettingsScreen extends Base {
      *
      * @return the chosen azan mode as a string
      */
-    public String returnAzanModeSelectionString() {
-        return azanModeChoiceTxt_TxtView.getText();
+    public String getAzanModeSelectionString() {
+        return azanModeChoice_TxtView.getText();
     }
     /**
      * *********************************************************************************************************************************************
@@ -199,8 +199,8 @@ public class SettingsScreen extends Base {
      * @return CalculationMethodScreen
      */
     public CalculationMethodScreen clickOnCalculationMethodButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, calcultionMethodButton_Btn);
-        calcultionMethodButton_Btn.click();
+        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, calcultionMethod_Btn);
+        calcultionMethod_Btn.click();
         return new CalculationMethodScreen();
     }
     /**
@@ -211,9 +211,9 @@ public class SettingsScreen extends Base {
      *
      * @return the chosen calculation method as a string
      */
-    public String returnCalculationMethodChoiceString() {
-        TestUtils.fluentWaitBySecondsToCheckTheVisibilityOfAnAndroidElemnet(1, 60, calcultionMethodChoiceTxt_TxtView);
-        return calcultionMethodChoiceTxt_TxtView.getText();
+    public String getCalculationMethodChoiceString() {
+        TestUtils.fluentWaitBySecondsToCheckTheVisibilityOfAnAndroidElemnet(1, 60, calcultionMethodChoice_TxtView);
+        return calcultionMethodChoice_TxtView.getText();
     }
     /**
      * *********************************************************************************************************************************************
@@ -224,8 +224,8 @@ public class SettingsScreen extends Base {
      * @return MazhabScreen
      */
     public MazhabScreen clickOnMazhabButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, mazhabCorrectionButton_Btn);
-        mazhabCorrectionButton_Btn.click();
+        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, mazhabCorrection_Btn);
+        mazhabCorrection_Btn.click();
         return new MazhabScreen();
     }
     /**
@@ -236,9 +236,9 @@ public class SettingsScreen extends Base {
      *
      * @return the chosen mazhab as a string
      */
-    public String returnMazhabChoiceString() {
-        TestUtils.fluentWaitBySecondsToCheckTheVisibilityOfAnAndroidElemnet(1, 60, mazhabCorrectionChoiceTxt_TxtView);
-        return mazhabCorrectionChoiceTxt_TxtView.getText();
+    public String getMazhabChoiceString() {
+        TestUtils.fluentWaitBySecondsToCheckTheVisibilityOfAnAndroidElemnet(1, 60, mazhabCorrectionChoice_TxtView);
+        return mazhabCorrectionChoice_TxtView.getText();
     }
     /**
      * *********************************************************************************************************************************************
@@ -249,8 +249,8 @@ public class SettingsScreen extends Base {
      * @return SummerTimeScreen
      */
     public SummerTimeScreen clickOnSummerTimeButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, summerTimingButton_Btn);
-        summerTimingButton_Btn.click();
+        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, summerTiming_Btn);
+        summerTiming_Btn.click();
         return new SummerTimeScreen();
     }
     /**
@@ -261,9 +261,9 @@ public class SettingsScreen extends Base {
      *
      * @return the chosen option for summer timing
      */
-    public String returnSummerTimingChoiceString() {
-        TestUtils.fluentWaitBySecondsToCheckTheVisibilityOfAnAndroidElemnet(1, 60, summerTimingChoiceTxt_TxtView);
-        return summerTimingChoiceTxt_TxtView.getText();
+    public String getSummerTimingChoiceString() {
+        TestUtils.fluentWaitBySecondsToCheckTheVisibilityOfAnAndroidElemnet(1, 60, summerTimingChoice_TxtView);
+        return summerTimingChoice_TxtView.getText();
     }
     /**
      * *********************************************************************************************************************************************
@@ -274,8 +274,8 @@ public class SettingsScreen extends Base {
      * @return TimesCorrectionScreen
      */
     public TimesCorrectionScreen clickOnPrayerTimesCorrectionButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, prayerTimeCorrectionButton_Btn);
-        prayerTimeCorrectionButton_Btn.click();
+        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, prayerTimeCorrection_Btn);
+        prayerTimeCorrection_Btn.click();
         return new TimesCorrectionScreen();
     }
     /**
@@ -287,8 +287,8 @@ public class SettingsScreen extends Base {
      * @return TimeZoneScreen
      */
     public TimeZoneScreen clickOnTimeZoneButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, timeZoneButton_Btn);
-        timeZoneButton_Btn.click();
+        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, timeZone_Btn);
+        timeZone_Btn.click();
         return new TimeZoneScreen();
     }
     /**
@@ -299,9 +299,9 @@ public class SettingsScreen extends Base {
      *
      * @return the chosen time zone as a string
      */
-    public String returnTimeZoneChoiceString() {
-        TestUtils.fluentWaitBySecondsToCheckTheVisibilityOfAnAndroidElemnet(1, 60, timeZoneChoiceTxt_TxtView);
-        return timeZoneChoiceTxt_TxtView.getText();
+    public String getTimeZoneChoiceString() {
+        TestUtils.fluentWaitBySecondsToCheckTheVisibilityOfAnAndroidElemnet(1, 60, timeZoneChoice_TxtView);
+        return timeZoneChoice_TxtView.getText();
     }
     /**
      * *********************************************************************************************************************************************
@@ -312,8 +312,8 @@ public class SettingsScreen extends Base {
      * @return PolarZonesScreen
      */
     public PolarZonesScreen clickOnPolarZonesCalculationButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, polarZonesCalculationButton_Btn);
-        polarZonesCalculationButton_Btn.click();
+        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, polarZonesCalculation_Btn);
+        polarZonesCalculation_Btn.click();
         return new PolarZonesScreen();
     }
     /**
@@ -324,9 +324,9 @@ public class SettingsScreen extends Base {
      *
      * @return the chose option for the polar zone as a string
      */
-    public String returnPolarZonesChoiceString() {
-        TestUtils.fluentWaitBySecondsToCheckTheVisibilityOfAnAndroidElemnet(1, 60, polarZonesCalculationChoiceTxt_TxtView);
-        return polarZonesCalculationChoiceTxt_TxtView.getText();
+    public String getPolarZonesChoiceString() {
+        TestUtils.fluentWaitBySecondsToCheckTheVisibilityOfAnAndroidElemnet(1, 60, polarZonesCalculationChoice_TxtView);
+        return polarZonesCalculationChoice_TxtView.getText();
     }
     /**
      * *********************************************************************************************************************************************
@@ -337,8 +337,8 @@ public class SettingsScreen extends Base {
      * @return ResetScreen
      */
     public ResetScreen clickOnResetToDefaultButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, resetPrayerTimesCorrectionsButton_Btn);
-        resetPrayerTimesCorrectionsButton_Btn.click();
+        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, resetPrayerTimesCorrections_Btn);
+        resetPrayerTimesCorrections_Btn.click();
         return new ResetScreen();
     }
     /**
@@ -350,8 +350,8 @@ public class SettingsScreen extends Base {
      * @return AutomaticScreen
      */
     public AutomaticScreen clickOnAutoDetectLocationButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, autoDetectLocationButton_Btn);
-        autoDetectLocationButton_Btn.click();
+        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, autoDetectLocation_Btn);
+        autoDetectLocation_Btn.click();
         return new AutomaticScreen();
     }
     /**
@@ -362,8 +362,8 @@ public class SettingsScreen extends Base {
      *
      * @return the chosen location as a string
      */
-    public String returnLocationChoiceString() {
-        return locationChoiceTxt_TxtView.getText();
+    public String getLocationChoiceString() {
+        return locationChoice_TxtView.getText();
     }
     /**
      * *********************************************************************************************************************************************
@@ -401,8 +401,8 @@ public class SettingsScreen extends Base {
      * @return the azkar settings screen
      */
     public void clickOnAzkarSettingsButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, azkarSettingsButton_Btn);
-        azkarSettingsButton_Btn.click();
+        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, azkarSettings_Btn);
+        azkarSettings_Btn.click();
         //This method returns azkar settings screen with shams
     }
     /**
@@ -414,8 +414,8 @@ public class SettingsScreen extends Base {
      * @return the azan settings screen
      */
     public void clickOnAzanSettingsButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, azanSettingsButton_Btn);
-        azanSettingsButton_Btn.click();
+        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, azanSettings_Btn);
+        azanSettings_Btn.click();
         //This method returns azan settings screen with shams
     }
     /**
@@ -425,8 +425,8 @@ public class SettingsScreen extends Base {
      * This method is to click on alert sound button
      */
     public void clickOnAlertSoundButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, alertSoundButton_Btn);
-        alertSoundButton_Btn.click();
+        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, alertSound_Btn);
+        alertSound_Btn.click();
     }
     /**
      * *********************************************************************************************************************************************
@@ -437,7 +437,7 @@ public class SettingsScreen extends Base {
      * @return the alert sound as a string
      */
     public String returnALertSoundChoiceAsAString() {
-        return alertSoundChoiceTxt_TxtView.getText();
+        return alertSoundChoice_TxtView.getText();
     }
     /**
      * *********************************************************************************************************************************************

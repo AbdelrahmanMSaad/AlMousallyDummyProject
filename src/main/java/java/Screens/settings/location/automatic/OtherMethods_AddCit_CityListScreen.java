@@ -8,7 +8,7 @@ import java.utilities.TestUtils;
 
 public class OtherMethods_AddCit_CityListScreen extends Base {
     @AndroidFindBy(id = "android:id/select_dialog_listview")
-    private AndroidElement countriesListElement_Element;
+    private AndroidElement countriesList_Element;
 
     /**
      * *********************************************************************************************************************************************

@@ -8,7 +8,7 @@ import java.utilities.TestUtils;
 
 public class HowManyChaptersScreen extends Base {
     @AndroidFindBy(id = "android:id/select_dialog_listview")
-    private AndroidElement numbersListElement_Element;
+    private AndroidElement numbersList_Element;
 
     /**
      * *********************************************************************************************************************************************
@@ -19,7 +19,7 @@ public class HowManyChaptersScreen extends Base {
      * @return AddWerdScreen
      */
     public AddWerdScreen scrollToAChapterNumberAndClickIt(String chapterNumber) {
-        TestUtils.fluentWaitBySecondsToCheckTheVisibilityOfAnAndroidElemnet(1, 60, numbersListElement_Element);
+        TestUtils.fluentWaitBySecondsToCheckTheVisibilityOfAnAndroidElemnet(1, 60, numbersList_Element);
         AndroidElement requiredElement = (AndroidElement) TestUtils.scrollToASpecificElementByItsText(chapterNumber);
         TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, requiredElement);
         requiredElement.click();

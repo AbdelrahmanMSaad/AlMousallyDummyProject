@@ -11,25 +11,25 @@ import java.utilities.TestUtils;
 public class WerdAlMohasbaScreen extends Base {
     String expectedTitle = "ورد المحاسبة";
     @AndroidFindBy(id = "com.moslay:id/img_back")
-    private AndroidElement backButton_Btn;
+    private AndroidElement back_Btn;
     @AndroidFindBy(id = "com.moslay:id/img_help")
-    private AndroidElement infoButton_Btn;
+    private AndroidElement info_Btn;
     @AndroidFindBy(id = "com.moslay:id/azkar_inside_title")
-    private AndroidElement screenTitleTxt_Text;
+    private AndroidElement screenTitle_Text;
     @AndroidFindBy(id = "com.moslay:id/img_statistics")
-    private AndroidElement statsButton_Btn;
+    private AndroidElement statistics_Btn;
     @AndroidFindBy(id = "com.moslay:id/selected_date")
-    private AndroidElement selectedDateTxt_TxtView;
+    private AndroidElement selectedDate_TextView;
     @AndroidFindBy(id = "com.moslay:id/imgview_add")
     private AndroidElement addTaskButton;
     @AndroidFindBy(id = "com.moslay:id/edittext_add_tasks_cat")
-    private AndroidElement taskNameTxtInput_TextInput;
+    private AndroidElement taskName_TextView;
     @AndroidFindBy(id = "com.moslay:id/imgview_add_cat_text")
-    private AndroidElement finishAddTaskButton_Btn;
+    private AndroidElement finishAddTask_Btn;
     @AndroidFindBy(id = "com.moslay:id/tasks_items_recycler_view")
     private AndroidElement tasksList_Element;
     @AndroidFindBy(id = "com.moslay:id/txtview_hide_done")
-    private AndroidElement hideDoneTaskButton_Btn;
+    private AndroidElement hideDoneTask_Btn;
     /**
      * *********************************************************************************************************************************************
      */
@@ -39,9 +39,9 @@ public class WerdAlMohasbaScreen extends Base {
      *
      * @return Screen title as a string
      */
-    public String returnActualScreenTitle() {
-        TestUtils.fluentWaitBySecondsToCheckTheVisibilityOfAnAndroidElemnet(1, 60, screenTitleTxt_Text);
-        return screenTitleTxt_Text.getText();
+    public String getActualScreenTitle() {
+        TestUtils.fluentWaitBySecondsToCheckTheVisibilityOfAnAndroidElemnet(1, 60, screenTitle_Text);
+        return screenTitle_Text.getText();
     }
     /**
      * *********************************************************************************************************************************************
@@ -50,8 +50,8 @@ public class WerdAlMohasbaScreen extends Base {
      * This method is to click on back button
      */
     public void clickOnBackButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, backButton_Btn);
-        backButton_Btn.click();
+        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, back_Btn);
+        back_Btn.click();
     }
     /**
      * *********************************************************************************************************************************************
@@ -60,8 +60,8 @@ public class WerdAlMohasbaScreen extends Base {
      * This method is to click on info screen and returns InfoScreen
      */
     public InfoScreen clickOnInfoButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, infoButton_Btn);
-        infoButton_Btn.click();
+        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, info_Btn);
+        info_Btn.click();
         return new InfoScreen();
     }
     /**
@@ -71,8 +71,8 @@ public class WerdAlMohasbaScreen extends Base {
      * This method is to click on info screen and returns InfoScreen
      */
     public void clickOnStatsButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, statsButton_Btn);
-        statsButton_Btn.click();
+        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, statistics_Btn);
+        statistics_Btn.click();
     }
     /**
      * *********************************************************************************************************************************************
@@ -92,9 +92,9 @@ public class WerdAlMohasbaScreen extends Base {
      *
      * @param text string sent to task name text field
      */
-    public void sendTextToTaskNameTextInput(String text) {
-        TestUtils.fluentWaitBySecondsToCheckTheVisibilityOfAnAndroidElemnet(1, 60, taskNameTxtInput_TextInput);
-        taskNameTxtInput_TextInput.sendKeys(text);
+    public void sendTextToTaskNameTextBar(String text) {
+        TestUtils.fluentWaitBySecondsToCheckTheVisibilityOfAnAndroidElemnet(1, 60, taskName_TextView);
+        taskName_TextView.sendKeys(text);
     }
     /**
      * *********************************************************************************************************************************************
@@ -103,8 +103,8 @@ public class WerdAlMohasbaScreen extends Base {
      * This method is to click on finish add task button
      */
     public void clickOnFinishAddTaskButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, finishAddTaskButton_Btn);
-        finishAddTaskButton_Btn.click();
+        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, finishAddTask_Btn);
+        finishAddTask_Btn.click();
     }
     /**
      * *********************************************************************************************************************************************
@@ -156,8 +156,8 @@ public class WerdAlMohasbaScreen extends Base {
      * This method is to click on hide done tasks button
      */
     public void clickOnHideDoneTasksButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, hideDoneTaskButton_Btn);
-        hideDoneTaskButton_Btn.click();
+        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, hideDoneTask_Btn);
+        hideDoneTask_Btn.click();
     }
     /**
      * *********************************************************************************************************************************************

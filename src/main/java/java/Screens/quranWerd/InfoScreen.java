@@ -9,13 +9,13 @@ import java.utilities.TestUtils;
 public class InfoScreen extends Base {
     String expectedTitle = "ورد القران";
     @AndroidFindBy(id = "com.moslay:id/img_menu")
-    private AndroidElement navigationDrawerButton_Btn;
+    private AndroidElement navigationDrawer_Btn;
     @AndroidFindBy(id = "com.moslay:id/Azkar_menu_Header")
-    private AndroidElement screenTitleTxt_Text;
+    private AndroidElement screenTitle_Text;
     @AndroidFindBy(id = "com.moslay:id/delete_khtma")
-    private AndroidElement deleteButton_Btn;
+    private AndroidElement delete_Btn;
     @AndroidFindBy(id = "com.moslay:id/pause_khtma")
-    private AndroidElement pauseButton_Btn;
+    private AndroidElement pause_Btn;
 
     /**
      * *********************************************************************************************************************************************
@@ -26,9 +26,9 @@ public class InfoScreen extends Base {
      *
      * @return Screen title as a string
      */
-    public String returnActualScreenTitle() {
-        TestUtils.fluentWaitBySecondsToCheckTheVisibilityOfAnAndroidElemnet(1, 60, screenTitleTxt_Text);
-        return screenTitleTxt_Text.getText();
+    public String getActualScreenTitle() {
+        TestUtils.fluentWaitBySecondsToCheckTheVisibilityOfAnAndroidElemnet(1, 60, screenTitle_Text);
+        return screenTitle_Text.getText();
     }
     /**
      * *********************************************************************************************************************************************
@@ -39,8 +39,8 @@ public class InfoScreen extends Base {
      * @return navigation drawer screen
      */
     public void clickOnNavigationDrawerButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, navigationDrawerButton_Btn);
-        navigationDrawerButton_Btn.click();
+        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, navigationDrawer_Btn);
+        navigationDrawer_Btn.click();
         //This method returns navigation drawer method with shams
     }
     /**
@@ -52,8 +52,8 @@ public class InfoScreen extends Base {
      * @return InfoScreen_PopUpScreen
      */
     public InfoScreen_PopUpScreen clickOnPauseButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, pauseButton_Btn);
-        pauseButton_Btn.click();
+        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, pause_Btn);
+        pause_Btn.click();
         return new InfoScreen_PopUpScreen();
     }
     /**
@@ -65,8 +65,8 @@ public class InfoScreen extends Base {
      * @return InfoScreen_PopUpScreen
      */
     public InfoScreen_PopUpScreen clickOnDeleteButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, deleteButton_Btn);
-        deleteButton_Btn.click();
+        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, delete_Btn);
+        delete_Btn.click();
         return new InfoScreen_PopUpScreen();
     }
     /**

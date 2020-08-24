@@ -8,10 +8,10 @@ import java.utilities.TestUtils;
 
 public class OtherMethods_SearchOnlineScreen extends Base {
     @AndroidFindBy(xpath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.RelativeLayout/android.widget.LinearLayout/android.widget.RelativeLayout/android.widget.TextView")
-    private AndroidElement screenTitleTxt_Text;
+    private AndroidElement screenTitle_Text;
 
     @AndroidFindBy(id = "com.moslay:id/autocomplete_places")
-    private AndroidElement searchBarTextField_TxtInput;
+    private AndroidElement searchBar_TextView;
 
     /**
      * *********************************************************************************************************************************************
@@ -21,11 +21,11 @@ public class OtherMethods_SearchOnlineScreen extends Base {
      *
      * @return actual title as a string
      */
-    public String returnScreenTitle() {
+    public String getScreenTitle() {
         TestUtils.fluentWaitBySecondsToCheckTheVisibilityOfAnAndroidElemnet(
-                1, 60, screenTitleTxt_Text
+                1, 60, screenTitle_Text
         );
-        return screenTitleTxt_Text.getText();
+        return screenTitle_Text.getText();
     }
     /**
      * *********************************************************************************************************************************************
@@ -35,9 +35,9 @@ public class OtherMethods_SearchOnlineScreen extends Base {
      *
      * @param text to be sent to the search bar
      */
-    public void sendKeysToSearchTextField(String text) {
-        TestUtils.fluentWaitBySecondsToCheckTheVisibilityOfAnAndroidElemnet(1, 60, searchBarTextField_TxtInput);
-        searchBarTextField_TxtInput.sendKeys(text);
+    public void sendTextToSearchBar(String text) {
+        TestUtils.fluentWaitBySecondsToCheckTheVisibilityOfAnAndroidElemnet(1, 60, searchBar_TextView);
+        searchBar_TextView.sendKeys(text);
     }
     /**
      * *********************************************************************************************************************************************
@@ -47,9 +47,9 @@ public class OtherMethods_SearchOnlineScreen extends Base {
      *
      * @return the text within the search bar as a string
      */
-    public String returnTextFromSearchTextField() {
-        TestUtils.fluentWaitBySecondsToCheckTheVisibilityOfAnAndroidElemnet(1, 60, searchBarTextField_TxtInput);
-        return searchBarTextField_TxtInput.getText();
+    public String getTextFromSearchBar() {
+        TestUtils.fluentWaitBySecondsToCheckTheVisibilityOfAnAndroidElemnet(1, 60, searchBar_TextView);
+        return searchBar_TextView.getText();
     }
     /**
      * *********************************************************************************************************************************************

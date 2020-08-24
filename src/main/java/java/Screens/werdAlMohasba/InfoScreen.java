@@ -8,7 +8,7 @@ import java.utilities.TestUtils;
 
 public class InfoScreen extends Base {
     @AndroidFindBy(id = "com.moslay:id/werd_close")
-    private AndroidElement closeButton_Btn;
+    private AndroidElement close_Btn;
 
     /**
      * *********************************************************************************************************************************************
@@ -19,8 +19,8 @@ public class InfoScreen extends Base {
      * @return WerdAlMohasbaScreen
      */
     public WerdAlMohasbaScreen clickOnCloseButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, closeButton_Btn);
-        closeButton_Btn.click();
+        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, close_Btn);
+        close_Btn.click();
         return new WerdAlMohasbaScreen();
     }
     /**

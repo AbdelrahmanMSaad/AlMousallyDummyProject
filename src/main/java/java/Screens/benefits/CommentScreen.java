@@ -9,13 +9,13 @@ import java.utilities.TestUtils;
 public class CommentScreen extends Base {
     String expectedTitle = "التعليقات";
     @AndroidFindBy(id = "com.moslay:id/news_like")
-    private AndroidElement screenTitleTxt_Text;
+    private AndroidElement screenTitle_Text;
     @AndroidFindBy(id = "com.moslay:id/comments_list")
-    private AndroidElement commentsListElement_Element;
+    private AndroidElement commentsList_Element;
     @AndroidFindBy(id = "com.moslay:id/comments_add_comment_Image")
-    private AndroidElement addCommentButton_Btn;
+    private AndroidElement addComment_Btn;
     @AndroidFindBy(id = "com.moslay:id/commnet_list_editText")
-    private AndroidElement commentTextInput_TextInput;
+    private AndroidElement commentTextBar_TextView;
     /**
      * *********************************************************************************************************************************************
      */
@@ -24,9 +24,9 @@ public class CommentScreen extends Base {
      *
      * @return Screen title as a string
      */
-    public String returnActualScreenTitle() {
-        TestUtils.fluentWaitBySecondsToCheckTheVisibilityOfAnAndroidElemnet(1, 60, screenTitleTxt_Text);
-        return screenTitleTxt_Text.getText();
+    public String getActualScreenTitle() {
+        TestUtils.fluentWaitBySecondsToCheckTheVisibilityOfAnAndroidElemnet(1, 60, screenTitle_Text);
+        return screenTitle_Text.getText();
     }
     /**
      * *********************************************************************************************************************************************
@@ -35,8 +35,8 @@ public class CommentScreen extends Base {
      * This method is to click on add comment button
      */
     public void clickOnAddCommentButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, addCommentButton_Btn);
-        addCommentButton_Btn.click();
+        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, addComment_Btn);
+        addComment_Btn.click();
     }
     /**
      * *********************************************************************************************************************************************
@@ -44,9 +44,9 @@ public class CommentScreen extends Base {
     /**
      * This method is to add text to the comment text field
      */
-    public void sendTextToCommentTextField(String text) {
-        TestUtils.fluentWaitBySecondsToCheckTheVisibilityOfAnAndroidElemnet(1, 60, commentTextInput_TextInput);
-        commentTextInput_TextInput.sendKeys(text);
+    public void sendTextToCommentTextBar(String text) {
+        TestUtils.fluentWaitBySecondsToCheckTheVisibilityOfAnAndroidElemnet(1, 60, commentTextBar_TextView);
+        commentTextBar_TextView.sendKeys(text);
     }
     /**
      * *********************************************************************************************************************************************

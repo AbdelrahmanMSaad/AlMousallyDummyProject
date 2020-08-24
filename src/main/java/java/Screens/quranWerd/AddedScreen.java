@@ -12,11 +12,11 @@ import java.utilities.TestUtils;
 public class AddedScreen extends Base {
     String expectedTitle = "ورد القران";
     @AndroidFindBy(id = "com.moslay:id/img_menu")
-    private AndroidElement navigationDrawerButton_Btn;
+    private AndroidElement navigationDrawer_Btn;
     @AndroidFindBy(id = "com.moslay:id/Azkar_menu_Header")
-    private AndroidElement screenTitleTxt_Text;
+    private AndroidElement screenTitle_Text;
     @AndroidFindBy(id = "com.moslay:id/add_khtma")
-    private AndroidElement addKhatmaButton_Btn;
+    private AndroidElement addKhatma_Btn;
     @AndroidFindBy(id = "com.moslay:id/khatma_listview")
     private AndroidElement khatmaList_Element;
     /**
@@ -28,9 +28,9 @@ public class AddedScreen extends Base {
      *
      * @return Screen title as a string
      */
-    public String returnActualScreenTitle() {
-        TestUtils.fluentWaitBySecondsToCheckTheVisibilityOfAnAndroidElemnet(1, 60, screenTitleTxt_Text);
-        return screenTitleTxt_Text.getText();
+    public String getActualScreenTitle() {
+        TestUtils.fluentWaitBySecondsToCheckTheVisibilityOfAnAndroidElemnet(1, 60, screenTitle_Text);
+        return screenTitle_Text.getText();
     }
     /**
      * *********************************************************************************************************************************************
@@ -41,8 +41,8 @@ public class AddedScreen extends Base {
      * @return navigation drawer screen
      */
     public void clickOnNavigationDrawerButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, navigationDrawerButton_Btn);
-        navigationDrawerButton_Btn.click();
+        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, navigationDrawer_Btn);
+        navigationDrawer_Btn.click();
         //This method returns navigation drawer method with shams
     }
     /**
@@ -54,8 +54,8 @@ public class AddedScreen extends Base {
      * @return AddWerdScreen
      */
     public AddWerdScreen clickOnAddWerdButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, addKhatmaButton_Btn);
-        addKhatmaButton_Btn.click();
+        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, addKhatma_Btn);
+        addKhatma_Btn.click();
         return new AddWerdScreen();
     }
     /**

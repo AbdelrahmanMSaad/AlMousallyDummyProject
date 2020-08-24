@@ -10,15 +10,15 @@ import java.utilities.TestUtils;
 public class EmptyScreen extends Base {
     String expectedTitle = "ورد القران";
     @AndroidFindBy(id = "com.moslay:id/img_menu")
-    private AndroidElement navigationDrawerButton_Btn;
+    private AndroidElement navigationDrawer_Btn;
     @AndroidFindBy(id = "com.moslay:id/header_txt")
-    private AndroidElement screenTitleTxt_Text;
+    private AndroidElement screenTitle_Text;
     @AndroidFindBy(id = "com.moslay:id/fagr_help")
-    private AndroidElement infoButton_btn;
+    private AndroidElement info_btn;
     @AndroidFindBy(id = "com.moslay:id/werd_add_default_khatma")
-    private AndroidElement readFromMoshafButton_Btn;
+    private AndroidElement readFromMoshaf_Btn;
     @AndroidFindBy(id = "com.moslay:id/werd_add_khatma")
-    private AndroidElement addWerdButton;
+    private AndroidElement addWerd_Btn;
     /**
      * *********************************************************************************************************************************************
      */
@@ -28,9 +28,9 @@ public class EmptyScreen extends Base {
      *
      * @return Screen title as a string
      */
-    public String returnActualScreenTitle() {
-        TestUtils.fluentWaitBySecondsToCheckTheVisibilityOfAnAndroidElemnet(1, 60, screenTitleTxt_Text);
-        return screenTitleTxt_Text.getText();
+    public String getActualScreenTitle() {
+        TestUtils.fluentWaitBySecondsToCheckTheVisibilityOfAnAndroidElemnet(1, 60, screenTitle_Text);
+        return screenTitle_Text.getText();
     }
     /**
      * *********************************************************************************************************************************************
@@ -41,8 +41,8 @@ public class EmptyScreen extends Base {
      * @return navigation drawer screen
      */
     public void clickOnNavigationDrawerButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, navigationDrawerButton_Btn);
-        navigationDrawerButton_Btn.click();
+        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, navigationDrawer_Btn);
+        navigationDrawer_Btn.click();
         //This method returns navigation drawer method with shams
     }
     /**
@@ -52,8 +52,8 @@ public class EmptyScreen extends Base {
      * This method is to click on info button
      */
     public void clickOnInfoButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, infoButton_btn);
-        infoButton_btn.click();
+        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, info_btn);
+        info_btn.click();
     }
     /**
      * *********************************************************************************************************************************************
@@ -64,8 +64,8 @@ public class EmptyScreen extends Base {
      * @return MushafScreen
      */
     public MushafScreen clickOnReadFromMushafButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, readFromMoshafButton_Btn);
-        readFromMoshafButton_Btn.click();
+        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, readFromMoshaf_Btn);
+        readFromMoshaf_Btn.click();
         return new MushafScreen();
     }
     /**
@@ -77,8 +77,8 @@ public class EmptyScreen extends Base {
      * @return AddWerdScreen
      */
     public AddWerdScreen clickOnAddWerdButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, addWerdButton);
-        addWerdButton.click();
+        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, addWerd_Btn);
+        addWerd_Btn.click();
         return new AddWerdScreen();
     }
     /**

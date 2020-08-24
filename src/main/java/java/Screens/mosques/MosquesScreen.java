@@ -9,9 +9,9 @@ import java.utilities.TestUtils;
 public class MosquesScreen extends Base {
     String expectedTitle = "مساجد";
     @AndroidFindBy(id = "com.moslay:id/img_more")
-    private AndroidElement navigationDrawerButton_Btn;
+    private AndroidElement navigationDrawer_Btn;
     @AndroidFindBy(id = "com.moslay:id/qibla_inside_title")
-    private AndroidElement screenTitleTxt_Text;
+    private AndroidElement screenTitle_Text;
     /**
      * *********************************************************************************************************************************************
      */
@@ -21,9 +21,9 @@ public class MosquesScreen extends Base {
      *
      * @return Screen title as a string
      */
-    public String returnActualScreenTitle() {
-        TestUtils.fluentWaitBySecondsToCheckTheVisibilityOfAnAndroidElemnet(1, 60, screenTitleTxt_Text);
-        return screenTitleTxt_Text.getText();
+    public String getActualScreenTitle() {
+        TestUtils.fluentWaitBySecondsToCheckTheVisibilityOfAnAndroidElemnet(1, 60, screenTitle_Text);
+        return screenTitle_Text.getText();
     }
     /**
      * *********************************************************************************************************************************************
@@ -34,8 +34,8 @@ public class MosquesScreen extends Base {
      * @return navigation drawer screen
      */
     public void clickOnNavigationDrawerButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, navigationDrawerButton_Btn);
-        navigationDrawerButton_Btn.click();
+        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, navigationDrawer_Btn);
+        navigationDrawer_Btn.click();
         //This method returns navigation drawer method with shams
     }
     /**

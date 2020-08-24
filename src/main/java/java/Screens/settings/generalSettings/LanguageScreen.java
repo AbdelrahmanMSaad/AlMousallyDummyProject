@@ -9,37 +9,37 @@ import java.utilities.TestUtils;
 
 public class LanguageScreen extends Base {
     @AndroidFindBy(id = "com.moslay:id/lang_txt_chooseLanguage")
-    private AndroidElement screenTitleTxt_Text;
+    private AndroidElement screenTitle_Text;
 
     @AndroidFindBy(id = "com.moslay:id/list_container")
-    private AndroidElement languagesListElements_Element;
+    private AndroidElement languagesList_Element;
 
     @AndroidFindBy(accessibility = "العربية")
-    private AndroidElement arabicElement_ELement;
+    private AndroidElement arabic_Btn;
 
     @AndroidFindBy(accessibility = "English")
-    private AndroidElement englishElement_Element;
+    private AndroidElement english_Btn;
 
     @AndroidFindBy(accessibility = "Türk")
-    private AndroidElement turkishElement_Element;
+    private AndroidElement turkish_Btn;
 
     @AndroidFindBy(accessibility = "Duits")
-    private AndroidElement germanElement_Element;
+    private AndroidElement german_Btn;
 
     @AndroidFindBy(accessibility = "francais")
-    private AndroidElement frenchElement_Element;
+    private AndroidElement french_Btn;
 
     @AndroidFindBy(accessibility = "Español")
-    private AndroidElement spanishElement_Element;
+    private AndroidElement spanish_Btn;
 
     @AndroidFindBy(accessibility = "Indonesia")
-    private AndroidElement indonesianElement_Element;
+    private AndroidElement indonesian_Btn;
 
     @AndroidFindBy(accessibility = "اردو")
-    private AndroidElement arduElement_Element;
+    private AndroidElement ardu_Btn;
 
     @AndroidFindBy(accessibility = "ئۇيغۇرچە")
-    private AndroidElement igurElement_Element;
+    private AndroidElement igur_Btn;
 
     /**
      * *********************************************************************************************************************************************
@@ -49,9 +49,9 @@ public class LanguageScreen extends Base {
      *
      * @return String representing the screen's title
      */
-    public String returnScreenTitle() {
-        TestUtils.fluentWaitBySecondsToCheckTheVisibilityOfAnAndroidElemnet(1, 60, screenTitleTxt_Text);
-        return screenTitleTxt_Text.getText();
+    public String getScreenTitle() {
+        TestUtils.fluentWaitBySecondsToCheckTheVisibilityOfAnAndroidElemnet(1, 60, screenTitle_Text);
+        return screenTitle_Text.getText();
     }
     /**
      * *********************************************************************************************************************************************
@@ -62,8 +62,8 @@ public class LanguageScreen extends Base {
      * @return home page screen
      */
     public HomePageScreen clickOnArabicElement() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, arabicElement_ELement);
-        arabicElement_ELement.click();
+        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, arabic_Btn);
+        arabic_Btn.click();
         return new HomePageScreen();
     }
     /**
@@ -75,8 +75,8 @@ public class LanguageScreen extends Base {
      * @return home page screen
      */
     public HomePageScreen clickOnEnglishElement() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, englishElement_Element);
-        englishElement_Element.click();
+        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, english_Btn);
+        english_Btn.click();
         return new HomePageScreen();
     }
     /**
@@ -88,8 +88,8 @@ public class LanguageScreen extends Base {
      * @return home page screen
      */
     public HomePageScreen clickOnTurkishElement() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, turkishElement_Element);
-        turkishElement_Element.click();
+        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, turkish_Btn);
+        turkish_Btn.click();
         return new HomePageScreen();
     }
     /**
@@ -101,8 +101,8 @@ public class LanguageScreen extends Base {
      * @return home page screen
      */
     public HomePageScreen clickOnGermanElement() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, germanElement_Element);
-        germanElement_Element.click();
+        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, german_Btn);
+        german_Btn.click();
         return new HomePageScreen();
     }
     /**
@@ -114,8 +114,8 @@ public class LanguageScreen extends Base {
      * @return home page screen
      */
     public HomePageScreen clickOnFrenchElement() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, frenchElement_Element);
-        frenchElement_Element.click();
+        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, french_Btn);
+        french_Btn.click();
         return new HomePageScreen();
     }
     /**
@@ -127,8 +127,8 @@ public class LanguageScreen extends Base {
      * @return home page screen
      */
     public HomePageScreen clickOnSpanishElement() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, spanishElement_Element);
-        spanishElement_Element.click();
+        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, spanish_Btn);
+        spanish_Btn.click();
         return new HomePageScreen();
     }
     /**
@@ -140,8 +140,8 @@ public class LanguageScreen extends Base {
      * @return home page screen
      */
     public HomePageScreen clickOnIndonesianElement() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, indonesianElement_Element);
-        indonesianElement_Element.click();
+        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, indonesian_Btn);
+        indonesian_Btn.click();
         return new HomePageScreen();
     }
     /**
@@ -153,8 +153,8 @@ public class LanguageScreen extends Base {
      * @return home page screen
      */
     public HomePageScreen clickOnArduElement() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, arduElement_Element);
-        arduElement_Element.click();
+        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, ardu_Btn);
+        ardu_Btn.click();
         return new HomePageScreen();
     }
     /**
@@ -166,8 +166,8 @@ public class LanguageScreen extends Base {
      * @return home page screen
      */
     public HomePageScreen clickOnIgurElement() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, igurElement_Element);
-        igurElement_Element.click();
+        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, igur_Btn);
+        igur_Btn.click();
         return new HomePageScreen();
     }
     /**

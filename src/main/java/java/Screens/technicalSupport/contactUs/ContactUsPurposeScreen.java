@@ -8,13 +8,13 @@ import java.utilities.TestUtils;
 
 public class ContactUsPurposeScreen extends Base {
     @AndroidFindBy(xpath = "/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.ListView/android.widget.CheckedTextView[1]")
-    private AndroidElement technicalSupportButton_Btn;
+    private AndroidElement technicalSupport_Btn;
 
     @AndroidFindBy(xpath = "/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.ListView/android.widget.CheckedTextView[2]")
-    private AndroidElement suggestionsButton_Btn;
+    private AndroidElement suggestions_Btn;
 
     @AndroidFindBy(xpath = "/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.ListView/android.widget.CheckedTextView[3]")
-    private AndroidElement marketingAndSalesButton_Btn;
+    private AndroidElement marketingAndSales_Btn;
 
     /**
      * *********************************************************************************************************************************************
@@ -25,8 +25,8 @@ public class ContactUsPurposeScreen extends Base {
      * @return ContactUsScreen
      */
     public ContactUsScreen clickOnTechnicalSupportButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, technicalSupportButton_Btn);
-        technicalSupportButton_Btn.click();
+        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, technicalSupport_Btn);
+        technicalSupport_Btn.click();
         return new ContactUsScreen();
     }
     /**
@@ -38,8 +38,8 @@ public class ContactUsPurposeScreen extends Base {
      * @return ContactUsScreen
      */
     public ContactUsScreen clickOnSuggestionsButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, suggestionsButton_Btn);
-        suggestionsButton_Btn.click();
+        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, suggestions_Btn);
+        suggestions_Btn.click();
         return new ContactUsScreen();
     }
     /**
@@ -51,8 +51,8 @@ public class ContactUsPurposeScreen extends Base {
      * @return ContactUsScreen
      */
     public ContactUsScreen clickOnSalesAndMarketingButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, marketingAndSalesButton_Btn);
-        marketingAndSalesButton_Btn.click();
+        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, marketingAndSales_Btn);
+        marketingAndSales_Btn.click();
         return new ContactUsScreen();
     }
     /**

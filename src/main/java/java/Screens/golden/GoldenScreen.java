@@ -8,22 +8,22 @@ import java.utilities.TestUtils;
 
 public class GoldenScreen extends Base {
     @AndroidFindBy(xpath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.RelativeLayout/android.widget.TextView")
-    private AndroidElement screenTitleTxt_Text;
+    private AndroidElement screenTitle_Text;
 
     @AndroidFindBy(id = "com.moslay:id/subscribe")
-    private AndroidElement subscribeButton_Btn;
+    private AndroidElement subscribe_Btn;
 
     @AndroidFindBy(id = "com.moslay:id/renew_subscribe")
-    private AndroidElement renewSubscribtionButton_Btn;
+    private AndroidElement renewSubscribtion_Btn;
 
     @AndroidFindBy(id = "com.moslay:id/list")
-    private AndroidElement plansListElement_Element;
+    private AndroidElement plansList_Element;
 
     @AndroidFindBy(id = "com.moslay:id/privacy_policy")
-    private AndroidElement privacyPolicyButton_Btn;
+    private AndroidElement privacyPolicy_Btn;
 
     @AndroidFindBy(id = "com.moslay:id/terms_conditions")
-    private AndroidElement termsAndConditionsButton_Btn;
+    private AndroidElement termsAndConditions_Btn;
     /**
      * *********************************************************************************************************************************************
      */
@@ -32,9 +32,9 @@ public class GoldenScreen extends Base {
      *
      * @return Screen title as a string
      */
-    public String returnActualScreenTitle() {
-        TestUtils.fluentWaitBySecondsToCheckTheVisibilityOfAnAndroidElemnet(1, 60, screenTitleTxt_Text);
-        return screenTitleTxt_Text.getText();
+    public String getActualScreenTitle() {
+        TestUtils.fluentWaitBySecondsToCheckTheVisibilityOfAnAndroidElemnet(1, 60, screenTitle_Text);
+        return screenTitle_Text.getText();
     }
     /**
      * *********************************************************************************************************************************************
@@ -43,8 +43,8 @@ public class GoldenScreen extends Base {
      * This method is to click on subscribe button
      */
     public void clickOnSubscribeButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, subscribeButton_Btn);
-        subscribeButton_Btn.click();
+        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, subscribe_Btn);
+        subscribe_Btn.click();
     }
     /**
      * *********************************************************************************************************************************************
@@ -53,8 +53,8 @@ public class GoldenScreen extends Base {
      * This method is to click on renew subscribtion button
      */
     public void clickOnRenewSubscribtion() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, renewSubscribtionButton_Btn);
-        renewSubscribtionButton_Btn.click();
+        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, renewSubscribtion_Btn);
+        renewSubscribtion_Btn.click();
     }
     /**
      * *********************************************************************************************************************************************
@@ -63,8 +63,8 @@ public class GoldenScreen extends Base {
      * This method is to click on privacy and policy button
      */
     public void clickOnPrivacyAndPolicyButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, privacyPolicyButton_Btn);
-        privacyPolicyButton_Btn.click();
+        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, privacyPolicy_Btn);
+        privacyPolicy_Btn.click();
     }
     /**
      * *********************************************************************************************************************************************
@@ -73,8 +73,8 @@ public class GoldenScreen extends Base {
      * This method is to click on terms and condition button
      */
     public void clickOnTermsAndConditionsButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, termsAndConditionsButton_Btn);
-        termsAndConditionsButton_Btn.click();
+        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, termsAndConditions_Btn);
+        termsAndConditions_Btn.click();
     }
     /**
      * *********************************************************************************************************************************************

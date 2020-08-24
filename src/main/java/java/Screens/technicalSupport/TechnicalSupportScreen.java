@@ -10,13 +10,13 @@ import java.utilities.TestUtils;
 public class TechnicalSupportScreen extends Base {
     String expectedTitle = "الدعم الفنى";
     @AndroidFindBy(id = "com.moslay:id/img_more")
-    private AndroidElement navigationDrawerButton_Btn;
+    private AndroidElement navigationDrawer_Btn;
     @AndroidFindBy(xpath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.drawerlayout.widget.DrawerLayout/android.widget.RelativeLayout/android.widget.RelativeLayout/android.widget.RelativeLayout/android.widget.RelativeLayout/android.widget.TextView")
-    private AndroidElement screenTitleTxt_Text;
+    private AndroidElement screenTitle_Text;
     @AndroidFindBy(id = "com.moslay:id/azan_questions")
-    private AndroidElement azanQuestionsButton_Btn;
+    private AndroidElement azanQuestions_Btn;
     @AndroidFindBy(id = "com.moslay:id/add_question")
-    private AndroidElement contactUsButton_Btn;
+    private AndroidElement contactUs_Btn;
     /**
      * *********************************************************************************************************************************************
      */
@@ -26,9 +26,9 @@ public class TechnicalSupportScreen extends Base {
      *
      * @return Screen title as a string
      */
-    public String returnActualScreenTitle() {
-        TestUtils.fluentWaitBySecondsToCheckTheVisibilityOfAnAndroidElemnet(1, 60, screenTitleTxt_Text);
-        return screenTitleTxt_Text.getText();
+    public String getActualScreenTitle() {
+        TestUtils.fluentWaitBySecondsToCheckTheVisibilityOfAnAndroidElemnet(1, 60, screenTitle_Text);
+        return screenTitle_Text.getText();
     }
     /**
      * *********************************************************************************************************************************************
@@ -39,8 +39,8 @@ public class TechnicalSupportScreen extends Base {
      * @return navigation drawer screen
      */
     public void clickOnNavigationDrawerButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, navigationDrawerButton_Btn);
-        navigationDrawerButton_Btn.click();
+        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, navigationDrawer_Btn);
+        navigationDrawer_Btn.click();
         //This method returns navigation drawer method with shams
     }
     /**
@@ -52,8 +52,8 @@ public class TechnicalSupportScreen extends Base {
      * @return common questions screen
      */
     public void clickOnAzaanQuestionsButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, azanQuestionsButton_Btn);
-        azanQuestionsButton_Btn.click();
+        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, azanQuestions_Btn);
+        azanQuestions_Btn.click();
         //It is supposed to return common questions class which is with shams
     }
     /**
@@ -65,8 +65,8 @@ public class TechnicalSupportScreen extends Base {
      * @return ContactUsScreen
      */
     public ContactUsScreen clickOnContactUsButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, contactUsButton_Btn);
-        contactUsButton_Btn.click();
+        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, contactUs_Btn);
+        contactUs_Btn.click();
         return new ContactUsScreen();
     }
     /**

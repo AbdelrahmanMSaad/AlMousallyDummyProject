@@ -8,22 +8,22 @@ import java.utilities.TestUtils;
 
 public class OtherMethodsScreen extends Base {
     @AndroidFindBy(id = "com.moslay:id/hint")
-    private AndroidElement hintTxt_Text;
+    private AndroidElement hint_Text;
 
     @AndroidFindBy(id = "com.moslay:id/rv_city_list")
-    private AndroidElement cityListElement_Element;
+    private AndroidElement cityList_Element;
 
     @AndroidFindBy(id = "com.moslay:id/txt_offline_search")
-    private AndroidElement offlineSearchButton_Btn;
+    private AndroidElement offlineSearch_Btn;
 
     @AndroidFindBy(id = "com.moslay:id/txt_online_detection")
-    private AndroidElement onlineDetectionButton_Btn;
+    private AndroidElement onlineDetection_Btn;
 
     @AndroidFindBy(id = "com.moslay:id/txt_search_online")
-    private AndroidElement searchOnlineButton_Btn;
+    private AndroidElement searchOnline_Btn;
 
     @AndroidFindBy(id = "com.moslay:id/txt_add_city_name_to_your_location")
-    private AndroidElement addCityNameToYourLocationButton_Btn;
+    private AndroidElement addCityNameToYourLocation_Btn;
 
     /**
      * *********************************************************************************************************************************************
@@ -34,8 +34,8 @@ public class OtherMethodsScreen extends Base {
      * @return OtherMethods_OfflineSearchScreen
      */
     public OtherMethods_OfflineSearchScreen clickOnOfflineSearchButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, offlineSearchButton_Btn);
-        offlineSearchButton_Btn.click();
+        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, offlineSearch_Btn);
+        offlineSearch_Btn.click();
         return new OtherMethods_OfflineSearchScreen();
     }
     /**
@@ -47,8 +47,8 @@ public class OtherMethodsScreen extends Base {
      * @return AutomaticScreen
      */
     public AutomaticScreen clickOnOnlineDetectionButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, onlineDetectionButton_Btn);
-        onlineDetectionButton_Btn.click();
+        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, onlineDetection_Btn);
+        onlineDetection_Btn.click();
         return new AutomaticScreen();
     }
     /**
@@ -60,8 +60,8 @@ public class OtherMethodsScreen extends Base {
      * @return OtherMethods_SearchOnlineScreen
      */
     public OtherMethods_SearchOnlineScreen clickOnSearchOnlineButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, searchOnlineButton_Btn);
-        searchOnlineButton_Btn.click();
+        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, searchOnline_Btn);
+        searchOnline_Btn.click();
         return new OtherMethods_SearchOnlineScreen();
     }
     /**
@@ -73,8 +73,8 @@ public class OtherMethodsScreen extends Base {
      * @return OtherMethods_AddCityNameScreen
      */
     public OtherMethods_AddCityNameScreen clickOnAddCityNameButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, addCityNameToYourLocationButton_Btn);
-        addCityNameToYourLocationButton_Btn.click();
+        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, addCityNameToYourLocation_Btn);
+        addCityNameToYourLocation_Btn.click();
         return new OtherMethods_AddCityNameScreen();
     }
     /**

@@ -3,29 +3,15 @@ package java.Screens.qibla;
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 
-import java.base.Base;
 import java.utilities.TestUtils;
 
-public class VisualScreen extends Base {
-    String expectedTitle = "القبلة";
-    @AndroidFindBy(id = "com.moslay:id/qibla_inside_title")
-    private AndroidElement screenTitleTxt_Text;
-    @AndroidFindBy(id = "com.moslay:id/img_menu")
-    private AndroidElement navigationDrawerButton_Btn;
-    @AndroidFindBy(id = "com.moslay:id/qibla_by_north")
-    private AndroidElement compassButton_Btn;
-    @AndroidFindBy(id = "com.moslay:id/qibla_by_sun_and_moon")
-    private AndroidElement sunAndMoonButton_Btn;
-    @AndroidFindBy(id = "com.moslay:id/qibla_by_shadow")
-    private AndroidElement shadowButton_Btn;
-    @AndroidFindBy(id = "com.moslay:id/qibla_visual")
-    private AndroidElement visualButton_Btn;
-    @AndroidFindBy(id = "com.moslay:id/qibla_help_imageview")
-    private AndroidElement helpButton_Btn;
+public class VisualScreen extends QiblaScreen {
     @AndroidFindBy(xpath = "//android.widget.ImageView[@content-desc=\"Zoom in\"]")
-    private AndroidElement zoomInButton_Btn;
+    private AndroidElement zoomIn_Btn;
     @AndroidFindBy(xpath = "//android.widget.ImageView[@content-desc=\"Zoom out\"]")
-    private AndroidElement zoomOutButton_Btn;
+    private AndroidElement zoomOut_Btn;
+    @AndroidFindBy(id = "com.moslay:id/map_type")
+    private AndroidElement mapLayers_Btn;
     /**
      * *********************************************************************************************************************************************
      */
@@ -35,9 +21,9 @@ public class VisualScreen extends Base {
      *
      * @return Screen title as a string
      */
-    public String returnActualScreenTitle() {
-        TestUtils.fluentWaitBySecondsToCheckTheVisibilityOfAnAndroidElemnet(1, 60, screenTitleTxt_Text);
-        return screenTitleTxt_Text.getText();
+    public String getActualScreenTitle() {
+        TestUtils.fluentWaitBySecondsToCheckTheVisibilityOfAnAndroidElemnet(1, 60, screenTitle_Text);
+        return screenTitle_Text.getText();
     }
     /**
      * *********************************************************************************************************************************************
@@ -48,8 +34,8 @@ public class VisualScreen extends Base {
      * @return navigation drawer screen
      */
     public void clickOnNavigationDrawerButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, navigationDrawerButton_Btn);
-        navigationDrawerButton_Btn.click();
+        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, navigationDrawer_Btn);
+        navigationDrawer_Btn.click();
         //This method returns navigation drawer method with shams
     }
     /**
@@ -61,8 +47,8 @@ public class VisualScreen extends Base {
      * @return CompassScreen
      */
     public CompassScreen clickOnCompassButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, compassButton_Btn);
-        compassButton_Btn.click();
+        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, compass_Btn);
+        compass_Btn.click();
         return new CompassScreen();
     }
     /**
@@ -74,8 +60,8 @@ public class VisualScreen extends Base {
      * @returns SunAndMoonScreen
      */
     public SunAndMoonScreen clickOnSunAndMoonButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, sunAndMoonButton_Btn);
-        sunAndMoonButton_Btn.click();
+        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, sunAndMoon_Btn);
+        sunAndMoon_Btn.click();
         return new SunAndMoonScreen();
     }
     /**
@@ -87,22 +73,9 @@ public class VisualScreen extends Base {
      * @return ShadowScreen
      */
     public ShadowScreen clickOnShadowButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, shadowButton_Btn);
-        shadowButton_Btn.click();
+        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, shadow_Btn);
+        shadow_Btn.click();
         return new ShadowScreen();
-    }
-    /**
-     * *********************************************************************************************************************************************
-     */
-    /**
-     * This method is to click on visible button
-     *
-     * @return VisualScreen
-     */
-    public VisualScreen clickOnVisibleButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, visualButton_Btn);
-        visualButton_Btn.click();
-        return new VisualScreen();
     }
     /**
      * *********************************************************************************************************************************************
@@ -111,8 +84,8 @@ public class VisualScreen extends Base {
      * This method is to click on help button
      */
     public void clickOnHelpButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, helpButton_Btn);
-        helpButton_Btn.click();
+        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, help_Btn);
+        help_Btn.click();
     }
     /**
      * *********************************************************************************************************************************************
@@ -121,8 +94,8 @@ public class VisualScreen extends Base {
      * This method is to click on zoom in button
      */
     public void clickOnZoomInButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, zoomInButton_Btn);
-        zoomInButton_Btn.click();
+        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, zoomIn_Btn);
+        zoomIn_Btn.click();
     }
     /**
      * *********************************************************************************************************************************************
@@ -131,8 +104,17 @@ public class VisualScreen extends Base {
      * This method is to click on zoom in button
      */
     public void clickOnZoomOutButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, zoomOutButton_Btn);
-        zoomOutButton_Btn.click();
+        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, zoomOut_Btn);
+        zoomOut_Btn.click();
+    }
+    /**
+     * *********************************************************************************************************************************************
+     */
+    /**
+     * This method is to click on map layers button
+     */
+    public void clickOnMapLayersButton(){
+        mapLayers_Btn.click();
     }
     /**
      * *********************************************************************************************************************************************

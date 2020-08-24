@@ -8,28 +8,28 @@ import java.utilities.TestUtils;
 
 public class TravelMode_IntervalsScreen extends Base {
     @AndroidFindBy(id = "android:id/select_dialog_listview")
-    AndroidElement intervalsListElement_Element;
+    private AndroidElement intervalsList_Element;
 
     @AndroidFindBy(xpath = "/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.ListView/android.widget.CheckedTextView[1]")
-    private AndroidElement quarterHourButton_Btn;
+    private AndroidElement quarterHour_Btn;
 
     @AndroidFindBy(xpath = "/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.ListView/android.widget.CheckedTextView[2]")
-    private AndroidElement halfHourButton_Btn;
+    private AndroidElement halfHour_Btn;
 
     @AndroidFindBy(xpath = "/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.ListView/android.widget.CheckedTextView[3]")
-    private AndroidElement hourButton_Btn;
+    private AndroidElement hour_Btn;
 
     @AndroidFindBy(xpath = "/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.ListView/android.widget.CheckedTextView[4]")
-    private AndroidElement twoHoursButton_Btn;
+    private AndroidElement twoHours_Btn;
 
     @AndroidFindBy(xpath = "/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.ListView/android.widget.CheckedTextView[5]")
-    private AndroidElement threeHoursButton_Btn;
+    private AndroidElement threeHours_Btn;
 
     @AndroidFindBy(xpath = "/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.ListView/android.widget.CheckedTextView[6]")
-    private AndroidElement fourHoursButton_Btn;
+    private AndroidElement fourHours_Btn;
 
     @AndroidFindBy(xpath = "/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.ListView/android.widget.CheckedTextView[7]")
-    private AndroidElement fiveHoursButton_Btn;
+    private AndroidElement fiveHours_Btn;
 
     /**
      * *********************************************************************************************************************************************
@@ -40,8 +40,8 @@ public class TravelMode_IntervalsScreen extends Base {
      * @return TravelModeScreen
      */
     public TravelModeScreen clickOnQuarterHourButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, quarterHourButton_Btn);
-        quarterHourButton_Btn.click();
+        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, quarterHour_Btn);
+        quarterHour_Btn.click();
         return new TravelModeScreen();
     }
     /**
@@ -53,8 +53,8 @@ public class TravelMode_IntervalsScreen extends Base {
      * @return TravelModeScreen
      */
     public TravelModeScreen clickOnHalfHourButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, halfHourButton_Btn);
-        halfHourButton_Btn.click();
+        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, halfHour_Btn);
+        halfHour_Btn.click();
         return new TravelModeScreen();
     }
     /**
@@ -66,8 +66,8 @@ public class TravelMode_IntervalsScreen extends Base {
      * @return TravelModeScreen
      */
     public TravelModeScreen clickOnHourButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, hourButton_Btn);
-        hourButton_Btn.click();
+        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, hour_Btn);
+        hour_Btn.click();
         return new TravelModeScreen();
     }
     /**
@@ -79,8 +79,8 @@ public class TravelMode_IntervalsScreen extends Base {
      * @return TravelModeScreen
      */
     public TravelModeScreen clickOnTwoHoursButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, twoHoursButton_Btn);
-        twoHoursButton_Btn.click();
+        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, twoHours_Btn);
+        twoHours_Btn.click();
         return new TravelModeScreen();
     }
     /**
@@ -92,8 +92,8 @@ public class TravelMode_IntervalsScreen extends Base {
      * @return TravelModeScreen
      */
     public TravelModeScreen clickOnThreeHoursButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, threeHoursButton_Btn);
-        threeHoursButton_Btn.click();
+        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, threeHours_Btn);
+        threeHours_Btn.click();
         return new TravelModeScreen();
     }
     /**
@@ -105,8 +105,8 @@ public class TravelMode_IntervalsScreen extends Base {
      * @return TravelModeScreen
      */
     public TravelModeScreen clickOnFourHoursButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, fourHoursButton_Btn);
-        fourHoursButton_Btn.click();
+        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, fourHours_Btn);
+        fourHours_Btn.click();
         return new TravelModeScreen();
     }
     /**
@@ -118,8 +118,8 @@ public class TravelMode_IntervalsScreen extends Base {
      * @return TravelModeScreen
      */
     public TravelModeScreen clickOnFiveHoursButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, fiveHoursButton_Btn);
-        fiveHoursButton_Btn.click();
+        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, fiveHours_Btn);
+        fiveHours_Btn.click();
         return new TravelModeScreen();
     }
     /**

@@ -9,27 +9,26 @@ import java.utilities.TestUtils;
 public class FollowIUsScreen extends Base {
     String expectedTitle = "تابعنا";
     @AndroidFindBy(id = "com.moslay:id/img_more")
-    private AndroidElement navigationDrawerButton_Btn;
+    private AndroidElement navigationDrawer_Btn;
     @AndroidFindBy(id = "com.moslay:id/my_resources_header")
-    private AndroidElement screenTitleTxt_Text;
+    private AndroidElement screenTitle_Text;
     @AndroidFindBy(id = "com.moslay:id/follow_us_fb")
-    private AndroidElement facebookButton_Btn;
+    private AndroidElement facebook_Btn;
     @AndroidFindBy(id = "com.moslay:id/settings_twitter")
-    private AndroidElement twitterButton_Btn;
+    private AndroidElement twitter_Btn;
     @AndroidFindBy(id = "com.moslay:id/settings_instagram")
-    private AndroidElement youtubeButton_Btn;
+    private AndroidElement youtube_Btn;
     /**
      * *********************************************************************************************************************************************
      */
-
     /**
      * This method is to return the screen's actual title as a string
      *
      * @return Screen title as a string
      */
-    public String returnActualScreenTitle() {
-        TestUtils.fluentWaitBySecondsToCheckTheVisibilityOfAnAndroidElemnet(1, 60, screenTitleTxt_Text);
-        return screenTitleTxt_Text.getText();
+    public String getActualScreenTitle() {
+        TestUtils.fluentWaitBySecondsToCheckTheVisibilityOfAnAndroidElemnet(1, 60, screenTitle_Text);
+        return screenTitle_Text.getText();
     }
     /**
      * *********************************************************************************************************************************************
@@ -40,8 +39,8 @@ public class FollowIUsScreen extends Base {
      * @return navigation drawer screen
      */
     public void clickOnNavigationDrawerButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, navigationDrawerButton_Btn);
-        navigationDrawerButton_Btn.click();
+        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, navigationDrawer_Btn);
+        navigationDrawer_Btn.click();
         //This method returns navigation drawer method with shams
     }
     /**
@@ -51,8 +50,8 @@ public class FollowIUsScreen extends Base {
      * This method is click on facebook button
      */
     public void clickOnFacebookButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, facebookButton_Btn);
-        facebookButton_Btn.click();
+        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, facebook_Btn);
+        facebook_Btn.click();
     }
     /**
      * *********************************************************************************************************************************************
@@ -61,8 +60,8 @@ public class FollowIUsScreen extends Base {
      * This method is to click on twitter button
      */
     public void clickOnTwitterButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, twitterButton_Btn);
-        twitterButton_Btn.click();
+        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, twitter_Btn);
+        twitter_Btn.click();
     }
     /**
      * *********************************************************************************************************************************************
@@ -71,8 +70,8 @@ public class FollowIUsScreen extends Base {
      * This method is to click on youtube button
      */
     public void clickOnYouTubeButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, youtubeButton_Btn);
-        youtubeButton_Btn.click();
+        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, youtube_Btn);
+        youtube_Btn.click();
     }
     /**
      * *********************************************************************************************************************************************

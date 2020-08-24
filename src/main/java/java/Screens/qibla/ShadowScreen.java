@@ -6,22 +6,7 @@ import io.appium.java_client.pagefactory.AndroidFindBy;
 import java.base.Base;
 import java.utilities.TestUtils;
 
-public class ShadowScreen extends Base {
-    String expectedTitle = "القبلة";
-    @AndroidFindBy(id = "com.moslay:id/qibla_inside_title")
-    private AndroidElement screenTitleTxt_Text;
-    @AndroidFindBy(id = "com.moslay:id/img_menu")
-    private AndroidElement navigationDrawerButton_Btn;
-    @AndroidFindBy(id = "com.moslay:id/qibla_by_north")
-    private AndroidElement compassButton_Btn;
-    @AndroidFindBy(id = "com.moslay:id/qibla_by_sun_and_moon")
-    private AndroidElement sunAndMoonButton_Btn;
-    @AndroidFindBy(id = "com.moslay:id/qibla_by_shadow")
-    private AndroidElement shadowButton_Btn;
-    @AndroidFindBy(id = "com.moslay:id/qibla_visual")
-    private AndroidElement visualButton_Btn;
-    @AndroidFindBy(id = "com.moslay:id/qibla_help_imageview")
-    private AndroidElement helpButton_Btn;
+public class ShadowScreen extends QiblaScreen {
     /**
      * *********************************************************************************************************************************************
      */
@@ -31,9 +16,9 @@ public class ShadowScreen extends Base {
      *
      * @return Screen title as a string
      */
-    public String returnActualScreenTitle() {
-        TestUtils.fluentWaitBySecondsToCheckTheVisibilityOfAnAndroidElemnet(1, 60, screenTitleTxt_Text);
-        return screenTitleTxt_Text.getText();
+    public String getActualScreenTitle() {
+        TestUtils.fluentWaitBySecondsToCheckTheVisibilityOfAnAndroidElemnet(1, 60, screenTitle_Text);
+        return screenTitle_Text.getText();
     }
     /**
      * *********************************************************************************************************************************************
@@ -44,8 +29,8 @@ public class ShadowScreen extends Base {
      * @return navigation drawer screen
      */
     public void clickOnNavigationDrawerButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, navigationDrawerButton_Btn);
-        navigationDrawerButton_Btn.click();
+        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, navigationDrawer_Btn);
+        navigationDrawer_Btn.click();
         //This method returns navigation drawer method with shams
     }
     /**
@@ -57,8 +42,8 @@ public class ShadowScreen extends Base {
      * @return CompassScreen
      */
     public CompassScreen clickOnCompassButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, compassButton_Btn);
-        compassButton_Btn.click();
+        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, compass_Btn);
+        compass_Btn.click();
         return new CompassScreen();
     }
     /**
@@ -70,22 +55,9 @@ public class ShadowScreen extends Base {
      * @returns SunAndMoonScreen
      */
     public SunAndMoonScreen clickOnSunAndMoonButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, sunAndMoonButton_Btn);
-        sunAndMoonButton_Btn.click();
+        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, sunAndMoon_Btn);
+        sunAndMoon_Btn.click();
         return new SunAndMoonScreen();
-    }
-    /**
-     * *********************************************************************************************************************************************
-     */
-    /**
-     * This method is to click on shadow button
-     *
-     * @return ShadowScreen
-     */
-    public ShadowScreen clickOnShadowButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, shadowButton_Btn);
-        shadowButton_Btn.click();
-        return new ShadowScreen();
     }
     /**
      * *********************************************************************************************************************************************
@@ -96,8 +68,8 @@ public class ShadowScreen extends Base {
      * @return VisualScreen
      */
     public VisualScreen clickOnVisibleButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, visualButton_Btn);
-        visualButton_Btn.click();
+        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, visual_Btn);
+        visual_Btn.click();
         return new VisualScreen();
     }
     /**
@@ -107,8 +79,8 @@ public class ShadowScreen extends Base {
      * This method is to click on help button
      */
     public void clickOnHelpButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, helpButton_Btn);
-        helpButton_Btn.click();
+        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, help_Btn);
+        help_Btn.click();
     }
     /**
      * *********************************************************************************************************************************************

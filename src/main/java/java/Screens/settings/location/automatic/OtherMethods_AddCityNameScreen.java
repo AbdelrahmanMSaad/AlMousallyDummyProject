@@ -8,13 +8,13 @@ import java.utilities.TestUtils;
 
 public class OtherMethods_AddCityNameScreen extends Base {
     @AndroidFindBy(id = "com.moslay:id/country_list_spinner")
-    private AndroidElement countryListElement_Element;
+    private AndroidElement countryList_Element;
 
     @AndroidFindBy(id = "com.moslay:id/et_city_name")
-    private AndroidElement cityNameTxtInput_TxtInput;
+    private AndroidElement cityName_TextView;
 
     @AndroidFindBy(id = "com.moslay:id/txt_save")
-    private AndroidElement saveButton_Btn;
+    private AndroidElement save_Btn;
 
     /**
      * *********************************************************************************************************************************************
@@ -25,8 +25,8 @@ public class OtherMethods_AddCityNameScreen extends Base {
      * @return OtherMethods_AddCit_CityListScreen
      */
     public OtherMethods_AddCit_CityListScreen clickOnCountryElementToOpenCountriesList() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, countryListElement_Element);
-        countryListElement_Element.click();
+        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, countryList_Element);
+        countryList_Element.click();
         return new OtherMethods_AddCit_CityListScreen();
     }
     /**
@@ -37,9 +37,9 @@ public class OtherMethods_AddCityNameScreen extends Base {
      *
      * @param text to be sent to the city name bar
      */
-    public void sendKeysToSearchTextField(String text) {
-        TestUtils.fluentWaitBySecondsToCheckTheVisibilityOfAnAndroidElemnet(1, 60, cityNameTxtInput_TxtInput);
-        cityNameTxtInput_TxtInput.sendKeys(text);
+    public void sendKeysToSearchBar(String text) {
+        TestUtils.fluentWaitBySecondsToCheckTheVisibilityOfAnAndroidElemnet(1, 60, cityName_TextView);
+        cityName_TextView.sendKeys(text);
     }
     /**
      * *********************************************************************************************************************************************
@@ -49,9 +49,9 @@ public class OtherMethods_AddCityNameScreen extends Base {
      *
      * @return the text within the city name bar bar as a string
      */
-    public String returnTextFromSearchTextField() {
-        TestUtils.fluentWaitBySecondsToCheckTheVisibilityOfAnAndroidElemnet(1, 60, cityNameTxtInput_TxtInput);
-        return cityNameTxtInput_TxtInput.getText();
+    public String getTextFromSearchBar() {
+        TestUtils.fluentWaitBySecondsToCheckTheVisibilityOfAnAndroidElemnet(1, 60, cityName_TextView);
+        return cityName_TextView.getText();
     }
     /**
      * *********************************************************************************************************************************************
@@ -60,7 +60,8 @@ public class OtherMethods_AddCityNameScreen extends Base {
      * This method is to click on save button
      */
     public void clickOnSaveButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, saveButton_Btn);
+        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, save_Btn);
+        save_Btn.click();
     }
     /**
      * *********************************************************************************************************************************************

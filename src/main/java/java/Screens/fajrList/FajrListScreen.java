@@ -9,31 +9,30 @@ import java.utilities.TestUtils;
 public class FajrListScreen extends Base {
     String expectedTitle = "قائمة الفجر";
     @AndroidFindBy(id = "com.moslay:id/img_more")
-    private AndroidElement navigationDrawerButton_Btn;
+    private AndroidElement navigationDrawer_Btn;
     @AndroidFindBy(xpath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.drawerlayout.widget.DrawerLayout/android.widget.RelativeLayout/android.widget.RelativeLayout/android.widget.RelativeLayout/android.widget.LinearLayout/android.widget.RelativeLayout[1]/android.widget.TextView")
-    private AndroidElement screenTitleTxt_Text;
+    private AndroidElement screenTitle_Text;
     @AndroidFindBy(id = "com.moslay:id/im_fajr_list_add")
-    private AndroidElement addElementButton_Btn;
+    private AndroidElement addElement_Btn;
     @AndroidFindBy(id = "com.moslay:id/im_fajr_list_delete")
-    private AndroidElement deleteElementButton_Btn;
+    private AndroidElement deleteElement_Btn;
     @AndroidFindBy(id = "com.moslay:id/im_fajr_list_pause")
-    private AndroidElement pauseButton_Btn;
+    private AndroidElement pause_Btn;
     @AndroidFindBy(id = "com.moslay:id/et_fajr_list_search")
-    private AndroidElement searchTxtField_TxtEdit;
+    private AndroidElement searchBar_TextView;
     @AndroidFindBy(id = "com.moslay:id/txt_fagr_list_add")
-    private AndroidElement addContactButton_Btn;
+    private AndroidElement addContact_Btn;
     /**
      * *********************************************************************************************************************************************
      */
-
     /**
      * This method is to return the screen's actual title as a string
      *
      * @return Screen title as a string
      */
-    public String returnActualScreenTitle() {
-        TestUtils.fluentWaitBySecondsToCheckTheVisibilityOfAnAndroidElemnet(1, 60, screenTitleTxt_Text);
-        return screenTitleTxt_Text.getText();
+    public String getActualScreenTitle() {
+        TestUtils.fluentWaitBySecondsToCheckTheVisibilityOfAnAndroidElemnet(1, 60, screenTitle_Text);
+        return screenTitle_Text.getText();
     }
     /**
      * *********************************************************************************************************************************************
@@ -44,8 +43,8 @@ public class FajrListScreen extends Base {
      * @return navigation drawer screen
      */
     public void clickOnNavigationDrawerButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, navigationDrawerButton_Btn);
-        navigationDrawerButton_Btn.click();
+        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, navigationDrawer_Btn);
+        navigationDrawer_Btn.click();
         //This method returns navigation drawer method with shams
     }
     /**
@@ -55,8 +54,8 @@ public class FajrListScreen extends Base {
      * This method is to click on add element button
      */
     public void clickOnAddElementButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, addElementButton_Btn);
-        addElementButton_Btn.click();
+        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, addElement_Btn);
+        addElement_Btn.click();
     }
     /**
      * *********************************************************************************************************************************************
@@ -65,8 +64,8 @@ public class FajrListScreen extends Base {
      * This method is to click on delete element button
      */
     public void clickOnDeleteElementButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, deleteElementButton_Btn);
-        deleteElementButton_Btn.click();
+        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, deleteElement_Btn);
+        deleteElement_Btn.click();
     }
     /**
      * *********************************************************************************************************************************************
@@ -75,8 +74,8 @@ public class FajrListScreen extends Base {
      * This method is to click on pause button
      */
     public void clickOnPauseButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, pauseButton_Btn);
-        pauseButton_Btn.click();
+        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, pause_Btn);
+        pause_Btn.click();
     }
     /**
      * *********************************************************************************************************************************************
@@ -84,9 +83,9 @@ public class FajrListScreen extends Base {
     /**
      * This method is to send text to search text field
      */
-    public void sendTextToSearchTextField(String text) {
-        TestUtils.fluentWaitBySecondsToCheckTheVisibilityOfAnAndroidElemnet(1, 60, searchTxtField_TxtEdit);
-        searchTxtField_TxtEdit.sendKeys(text);
+    public void sendTextToSearchBar(String text) {
+        TestUtils.fluentWaitBySecondsToCheckTheVisibilityOfAnAndroidElemnet(1, 60, searchBar_TextView);
+        searchBar_TextView.sendKeys(text);
     }
     /**
      * *********************************************************************************************************************************************
@@ -95,8 +94,8 @@ public class FajrListScreen extends Base {
      * This method is to click on add contact button
      */
     public void clickOnAddContactButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, addContactButton_Btn);
-        addContactButton_Btn.click();
+        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, addContact_Btn);
+        addContact_Btn.click();
     }
     /**
      * *********************************************************************************************************************************************

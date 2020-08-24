@@ -12,16 +12,16 @@ public class AutomaticScreen extends Base {
     private AndroidElement backgroundImgLayout_Element;
 
     @AndroidFindBy(id = "com.moslay:id/loading_image")
-    private AndroidElement loadingImg_Img;
+    private AndroidElement loadingImg;
 
     @AndroidFindBy(id = "com.moslay:id/tvCityName")
-    private AndroidElement cityNameTxt_Text;
+    private AndroidElement cityName_Text;
 
     @AndroidFindBy(id = "com.moslay:id/txt_next")
-    private AndroidElement nextButton_Btn;
+    private AndroidElement next_Btn;
 
     @AndroidFindBy(id = "com.moslay:id/detect_other_ways")
-    private AndroidElement detectViaOtherWaysButton_Btn;
+    private AndroidElement detectViaOtherWays_Btn;
 
     /**
      * *********************************************************************************************************************************************
@@ -31,8 +31,8 @@ public class AutomaticScreen extends Base {
      *
      * @return city name as a string
      */
-    public String returnCityNameAsString() {
-        return cityNameTxt_Text.getText();
+    public String getCityNameAsString() {
+        return cityName_Text.getText();
     }
     /**
      * *********************************************************************************************************************************************
@@ -43,8 +43,8 @@ public class AutomaticScreen extends Base {
      * @return HomePageScreen
      */
     public HomePageScreen clickOnNextButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, nextButton_Btn);
-        nextButton_Btn.click();
+        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, next_Btn);
+        next_Btn.click();
         return new HomePageScreen();
     }
     /**
@@ -56,8 +56,8 @@ public class AutomaticScreen extends Base {
      * @return OtherMethodsScreen
      */
     public OtherMethodsScreen clickOnDetectViaOtherMethodsScreen() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, detectViaOtherWaysButton_Btn);
-        detectViaOtherWaysButton_Btn.click();
+        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, detectViaOtherWays_Btn);
+        detectViaOtherWays_Btn.click();
         return new OtherMethodsScreen();
     }
     /**

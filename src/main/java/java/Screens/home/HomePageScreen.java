@@ -17,22 +17,22 @@ import java.utilities.TestUtils;
 
 public class HomePageScreen extends Base {
     @AndroidFindBy(id = "com.moslay:id/img_sebha")
-    private AndroidElement toolbar_SebhaButton_Btn;
+    private AndroidElement toolbar_Sebha_Btn;
 
     @AndroidFindBy(id = "com.moslay:id/img_azkar")
-    private AndroidElement toolbar_AzkarButton_Btn;
+    private AndroidElement toolbar_Azkar_Btn;
 
     @AndroidFindBy(id = "com.moslay:id/img_werd_mohasba")
-    private AndroidElement toolbar_WerdMohasbaButton_Btn;
+    private AndroidElement toolbar_WerdMohasba_Btn;
 
     @AndroidFindBy(id = "com.moslay:id/img_benefits")
-    private AndroidElement toolbar_BenefitsButton_Btn;
+    private AndroidElement toolbar_Benefits_Btn;
 
     @AndroidFindBy(id = "com.moslay:id/img_settings")
-    private AndroidElement toolbar_SettingsButton_Btn;
+    private AndroidElement toolbar_Settings_Btn;
 
     @AndroidFindBy(id = "com.moslay:id/img_more")
-    private AndroidElement toolbar_NavigationDrawerButton_Btn;
+    private AndroidElement toolbar_NavigationDrawer_Btn;
 
     @AndroidFindBy(id = "com.moslay:id/right_arrow_imageView")
     private AndroidElement prayerTimes_RightArrow_Btn;
@@ -62,7 +62,7 @@ public class HomePageScreen extends Base {
     private AndroidElement prayerTimes_MoreButton_Btn;
 
     @AndroidFindBy(id = "com.moslay:id/shareTv")
-    private AndroidElement prayerTimes_ShareButton_Btn;
+    private AndroidElement prayerTimes_Share_Btn;
 
     @AndroidFindBy(id = "com.moslay:id/azkar_title")
     private AndroidElement azkarCard_Title_TxtView;
@@ -71,43 +71,43 @@ public class HomePageScreen extends Base {
     private AndroidElement azkarCard_Content_TxtView;
 
     @AndroidFindBy(id = "com.moslay:id/approveButton")
-    private AndroidElement azkarCard_ApproveButton_Btn;
+    private AndroidElement azkarCard_Approve_Btn;
 
     @AndroidFindBy(id = "com.moslay:id/moreButton")
-    private AndroidElement azkarCard_MoreButton_Btn;
+    private AndroidElement azkarCard_More_Btn;
 
     @AndroidFindBy(id = "com.moslay:id/qibla_by_compass")
-    private AndroidElement qiblaCard_ByCompassButton_Btn;
+    private AndroidElement qiblaCard_ByCompass_Btn;
 
     @AndroidFindBy(id = "com.moslay:id/qibla_by_sun_and_moon")
-    private AndroidElement qiblaCard_BySunAndMoonButton_Btn;
+    private AndroidElement qiblaCard_BySunAndMoon_Btn;
 
     @AndroidFindBy(id = "com.moslay:id/qibla_by_shadow")
-    private AndroidElement qiblaCard_ByShadowButton_Btn;
+    private AndroidElement qiblaCard_ByShadow_Btn;
 
     @AndroidFindBy(id = "com.moslay:id/qibla_visual")
-    private AndroidElement qiblaCard_ByVisualButton_Btn;
+    private AndroidElement qiblaCard_ByVisual_Btn;
 
     @AndroidFindBy(id = "com.moslay:id/congrats_btn")
-    private AndroidElement eidCard_CongratsButton_Btn;
+    private AndroidElement eidCard_Congrats_Btn;
 
     @AndroidFindBy(id = "com.moslay:id/like_image")
-    private AndroidElement bestParticipation_LikeButton_Btn;
+    private AndroidElement bestParticipation_Like_Btn;
 
     @AndroidFindBy(id = "com.moslay:id/news_comment")
-    private AndroidElement bestParticipation_CommentButton_Btn;
+    private AndroidElement bestParticipation_Comment_Btn;
 
     @AndroidFindBy(id = "com.moslay:id/news_share")
-    private AndroidElement bestParticipation_ShareButton_Btn;
+    private AndroidElement bestParticipation_Share_Btn;
 
     @AndroidFindBy(id = "com.moslay:id/like_layout")
-    private AndroidElement benefits_LikeButton_Btn;
+    private AndroidElement benefits_Like_Btn;
 
     @AndroidFindBy(id = "com.moslay:id/comment_layout")
-    private AndroidElement benefits_CommentButton_Btn;
+    private AndroidElement benefits_Comment_Btn;
 
     @AndroidFindBy(id = "com.moslay:id/share_layout")
-    private AndroidElement benefits_ShareButton_Btn;
+    private AndroidElement benefits_Share_Btn;
 
     @AndroidFindBy(id = "com.moslay:id/new_benefits_layout")
     private AndroidElement benefits_BenefitSubject_Btn;
@@ -121,8 +121,8 @@ public class HomePageScreen extends Base {
      * @returns sebha screen
      */
     public void clickOnToolBarSebhaButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, toolbar_SebhaButton_Btn);
-        toolbar_SebhaButton_Btn.click();
+        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, toolbar_Sebha_Btn);
+        toolbar_Sebha_Btn.click();
         //This method returns Sebha screen with shams
     }
     /**
@@ -134,8 +134,8 @@ public class HomePageScreen extends Base {
      * @returns azkar screen
      */
     public void clickOnToolBarAzkarButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, toolbar_AzkarButton_Btn);
-        toolbar_AzkarButton_Btn.click();
+        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, toolbar_Azkar_Btn);
+        toolbar_Azkar_Btn.click();
         //This method returns Azkar screen with shams
     }
     /**
@@ -147,8 +147,8 @@ public class HomePageScreen extends Base {
      * @return WerdAlMohasbaScreen
      */
     public WerdAlMohasbaScreen clickOnToolBarWerdAlMohasbaButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, toolbar_WerdMohasbaButton_Btn);
-        toolbar_WerdMohasbaButton_Btn.click();
+        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, toolbar_WerdMohasba_Btn);
+        toolbar_WerdMohasba_Btn.click();
         return new WerdAlMohasbaScreen();
     }
     /**
@@ -160,8 +160,8 @@ public class HomePageScreen extends Base {
      * @returns benefits screen
      */
     public void clickOnToolBarBenefitsButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, toolbar_BenefitsButton_Btn);
-        toolbar_BenefitsButton_Btn.click();
+        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, toolbar_Benefits_Btn);
+        toolbar_Benefits_Btn.click();
         //This method returns Benefits screen with shams
     }
     /**
@@ -173,8 +173,8 @@ public class HomePageScreen extends Base {
      * @returns SettingsScreen
      */
     public SettingsScreen clickOnToolBarSettingsButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, toolbar_SettingsButton_Btn);
-        toolbar_SettingsButton_Btn.click();
+        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, toolbar_Settings_Btn);
+        toolbar_Settings_Btn.click();
         return new SettingsScreen();
     }
     /**
@@ -186,8 +186,8 @@ public class HomePageScreen extends Base {
      * @return navigation drawer screen
      */
     public void clickOnToolBarNavigationDrawerButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, toolbar_NavigationDrawerButton_Btn);
-        toolbar_NavigationDrawerButton_Btn.click();
+        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, toolbar_NavigationDrawer_Btn);
+        toolbar_NavigationDrawer_Btn.click();
         //This method returns Navigation Drawer screen with shams
     }
     /**
@@ -308,8 +308,8 @@ public class HomePageScreen extends Base {
      * This method is to click on prayer times Share button
      */
     public void clickOnPrayerTimesShareButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, prayerTimes_ShareButton_Btn);
-        prayerTimes_ShareButton_Btn.click();
+        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, prayerTimes_Share_Btn);
+        prayerTimes_Share_Btn.click();
     }
     /**
      * *********************************************************************************************************************************************
@@ -320,8 +320,8 @@ public class HomePageScreen extends Base {
      * @return azkar variety Screen
      */
     public void clickOnApproveButtonAzkarCard() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, azkarCard_ApproveButton_Btn);
-        azkarCard_ApproveButton_Btn.click();
+        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, azkarCard_Approve_Btn);
+        azkarCard_Approve_Btn.click();
         //This method returns AzkarVarietyScreen with shams
     }
     /**
@@ -333,8 +333,8 @@ public class HomePageScreen extends Base {
      * @return azkar variety list Screen
      */
     public void clickOnMoreButtonAzkarCard() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, azkarCard_MoreButton_Btn);
-        azkarCard_MoreButton_Btn.click();
+        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, azkarCard_More_Btn);
+        azkarCard_More_Btn.click();
         //This method returns AzkarVarietyListScreen with shams
     }
     /**
@@ -346,8 +346,8 @@ public class HomePageScreen extends Base {
      * @return CompassScreen
      */
     public CompassScreen clickOnQiblaCompassButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, qiblaCard_ByCompassButton_Btn);
-        qiblaCard_ByCompassButton_Btn.click();
+        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, qiblaCard_ByCompass_Btn);
+        qiblaCard_ByCompass_Btn.click();
         return new CompassScreen();
     }
     /**
@@ -359,8 +359,8 @@ public class HomePageScreen extends Base {
      * @return SunAndMoonScreen
      */
     public SunAndMoonScreen clickOnQiblaSunAndMoonButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, qiblaCard_BySunAndMoonButton_Btn);
-        qiblaCard_BySunAndMoonButton_Btn.click();
+        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, qiblaCard_BySunAndMoon_Btn);
+        qiblaCard_BySunAndMoon_Btn.click();
         return new SunAndMoonScreen();
     }
     /**
@@ -372,8 +372,8 @@ public class HomePageScreen extends Base {
      * @return ShadowScreen
      */
     public ShadowScreen clickOnQiblaShadowButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, qiblaCard_ByShadowButton_Btn);
-        qiblaCard_ByShadowButton_Btn.click();
+        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, qiblaCard_ByShadow_Btn);
+        qiblaCard_ByShadow_Btn.click();
         return new ShadowScreen();
     }
     /**
@@ -385,8 +385,8 @@ public class HomePageScreen extends Base {
      * @return VisualScreen
      */
     public VisualScreen clickOnQiblaVisualButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, qiblaCard_ByVisualButton_Btn);
-        qiblaCard_ByVisualButton_Btn.click();
+        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, qiblaCard_ByVisual_Btn);
+        qiblaCard_ByVisual_Btn.click();
         return new VisualScreen();
     }
     /**
@@ -449,8 +449,8 @@ public class HomePageScreen extends Base {
      * This method is to click on best participation like button
      */
     public void clickOnBestParticipationLikeButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, bestParticipation_LikeButton_Btn);
-        bestParticipation_LikeButton_Btn.click();
+        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, bestParticipation_Like_Btn);
+        bestParticipation_Like_Btn.click();
     }
     /**
      * *********************************************************************************************************************************************
@@ -461,8 +461,8 @@ public class HomePageScreen extends Base {
      * @return CommentScreen
      */
     public CommentScreen clickOnBestParticipationCommentButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, bestParticipation_CommentButton_Btn);
-        bestParticipation_CommentButton_Btn.click();
+        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, bestParticipation_Comment_Btn);
+        bestParticipation_Comment_Btn.click();
         return new CommentScreen();
     }
     /**
@@ -472,8 +472,8 @@ public class HomePageScreen extends Base {
      * This method is to click on best participation share button
      */
     public void clickOnBestParticipationShareButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, bestParticipation_ShareButton_Btn);
-        bestParticipation_ShareButton_Btn.click();
+        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, bestParticipation_Share_Btn);
+        bestParticipation_Share_Btn.click();
     }
     /**
      * *********************************************************************************************************************************************
@@ -481,9 +481,9 @@ public class HomePageScreen extends Base {
     /**
      * This method is to click on benefits like button
      */
-    public void clickOnBeneftitsCardLikeButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, benefits_LikeButton_Btn);
-        benefits_LikeButton_Btn.click();
+    public void clickOnBenefitsCardLikeButton() {
+        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, benefits_Like_Btn);
+        benefits_Like_Btn.click();
     }
     /**
      * *********************************************************************************************************************************************
@@ -493,9 +493,9 @@ public class HomePageScreen extends Base {
      *
      * @return CommentScreen
      */
-    public CommentScreen clickOnBeneftitsCardCommentButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, benefits_CommentButton_Btn);
-        benefits_CommentButton_Btn.click();
+    public CommentScreen clickOnBenefitsCardCommentButton() {
+        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, benefits_Comment_Btn);
+        benefits_Comment_Btn.click();
         return new CommentScreen();
     }
     /**
@@ -504,9 +504,9 @@ public class HomePageScreen extends Base {
     /**
      * This method is to click on benefits share button
      */
-    public void clickOnBeneftitsCardShareButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, benefits_ShareButton_Btn);
-        benefits_ShareButton_Btn.click();
+    public void clickOnBenefitsCardShareButton() {
+        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, benefits_Share_Btn);
+        benefits_Share_Btn.click();
     }
     /**
      * *********************************************************************************************************************************************
@@ -526,7 +526,7 @@ public class HomePageScreen extends Base {
      * This method is to scroll to the next benefit on the screen
      */
     public void scrollToTheNextBenefitOnTheScreen() {
-        TestUtils.scrollFromAnElementToAnElement(benefits_ShareButton_Btn, benefits_LikeButton_Btn);
+        TestUtils.scrollFromAnElementToAnElement(benefits_Share_Btn, benefits_Like_Btn);
     }
     /**
      * *********************************************************************************************************************************************
@@ -535,7 +535,7 @@ public class HomePageScreen extends Base {
      * This method is to scroll to the prevoius benefit on the screen
      */
     public void scrollToThePreviousBenefitOnTheScreen() {
-        TestUtils.scrollFromAnElementToAnElement(benefits_LikeButton_Btn, benefits_ShareButton_Btn);
+        TestUtils.scrollFromAnElementToAnElement(benefits_Like_Btn, benefits_Share_Btn);
     }
     /**
      * *********************************************************************************************************************************************

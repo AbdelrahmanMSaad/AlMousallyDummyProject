@@ -8,16 +8,16 @@ import java.utilities.TestUtils;
 
 public class OtherMethods_OfflineSearchScreen extends Base {
     @AndroidFindBy(accessibility = "رجوع")
-    private AndroidElement backButton_Btn;
+    private AndroidElement back_Btn;
 
     @AndroidFindBy(id = "com.moslay:id/country_header")
-    private AndroidElement screenTitleTxt_Text;
+    private AndroidElement screenTitle_Text;
 
     @AndroidFindBy(id = "com.moslay:id/countrySelection_inputSearch")
-    private AndroidElement searchBarTextField_TxtInput;
+    private AndroidElement searchBar_TextView;
 
     @AndroidFindBy(id = "com.moslay:id/country_ListView")
-    private AndroidElement countryListElement_Element;
+    private AndroidElement countryList_Element;
 
     /**
      * *********************************************************************************************************************************************
@@ -27,11 +27,11 @@ public class OtherMethods_OfflineSearchScreen extends Base {
      *
      * @return actual title as a string
      */
-    public String returnScreenTitle() {
+    public String getScreenTitle() {
         TestUtils.fluentWaitBySecondsToCheckTheVisibilityOfAnAndroidElemnet(
-                1, 60, screenTitleTxt_Text
+                1, 60, screenTitle_Text
         );
-        return screenTitleTxt_Text.getText();
+        return screenTitle_Text.getText();
     }
     /**
      * *********************************************************************************************************************************************
@@ -42,8 +42,8 @@ public class OtherMethods_OfflineSearchScreen extends Base {
      * @return OtherMethodsScreen
      */
     public OtherMethodsScreen clickOnBackButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, backButton_Btn);
-        backButton_Btn.click();
+        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, back_Btn);
+        back_Btn.click();
         return new OtherMethodsScreen();
     }
     /**
@@ -54,9 +54,9 @@ public class OtherMethods_OfflineSearchScreen extends Base {
      *
      * @param text to be sent to the search bar
      */
-    public void sendKeysToSearchTextField(String text) {
-        TestUtils.fluentWaitBySecondsToCheckTheVisibilityOfAnAndroidElemnet(1, 60, searchBarTextField_TxtInput);
-        searchBarTextField_TxtInput.sendKeys(text);
+    public void sendKeysToSearchBar(String text) {
+        TestUtils.fluentWaitBySecondsToCheckTheVisibilityOfAnAndroidElemnet(1, 60, searchBar_TextView);
+        searchBar_TextView.sendKeys(text);
     }
     /**
      * *********************************************************************************************************************************************
@@ -66,9 +66,9 @@ public class OtherMethods_OfflineSearchScreen extends Base {
      *
      * @return the text within the search bar as a string
      */
-    public String returnTextFromSearchTextField() {
-        TestUtils.fluentWaitBySecondsToCheckTheVisibilityOfAnAndroidElemnet(1, 60, searchBarTextField_TxtInput);
-        return searchBarTextField_TxtInput.getText();
+    public String getTextFromSearchBar() {
+        TestUtils.fluentWaitBySecondsToCheckTheVisibilityOfAnAndroidElemnet(1, 60, searchBar_TextView);
+        return searchBar_TextView.getText();
     }
     /**
      * *********************************************************************************************************************************************

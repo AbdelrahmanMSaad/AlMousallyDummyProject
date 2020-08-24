@@ -10,13 +10,13 @@ import java.utilities.TestUtils;
 public class MushafScreen extends Base {
     String expectedTitle = "ورد القران";
     @AndroidFindBy(id = "com.moslay:id/im_back")
-    private AndroidElement backButton_Btn;
+    private AndroidElement back_Btn;
     @AndroidFindBy(xpath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.drawerlayout.widget.DrawerLayout/android.widget.RelativeLayout/android.widget.RelativeLayout/android.widget.RelativeLayout[2]/android.widget.RelativeLayout/android.widget.TextView")
-    private AndroidElement screenTitleTxt_Text;
+    private AndroidElement screenTitle_Text;
     @AndroidFindBy(id = "com.moslay:id/tb_turn_screen_on")
-    private AndroidElement screenOnButton_Btn;
+    private AndroidElement screenOn_Btn;
     @AndroidFindBy(id = "com.moslay:id/im_download_moshaf")
-    private AndroidElement browsingMushafButton_Btn;
+    private AndroidElement browsingMushaf_Btn;
 
     /**
      * *********************************************************************************************************************************************
@@ -27,9 +27,9 @@ public class MushafScreen extends Base {
      *
      * @return Screen title as a string
      */
-    public String returnActualScreenTitle() {
-        TestUtils.fluentWaitBySecondsToCheckTheVisibilityOfAnAndroidElemnet(1, 60, screenTitleTxt_Text);
-        return screenTitleTxt_Text.getText();
+    public String getActualScreenTitle() {
+        TestUtils.fluentWaitBySecondsToCheckTheVisibilityOfAnAndroidElemnet(1, 60, screenTitle_Text);
+        return screenTitle_Text.getText();
     }
     /**
      * *********************************************************************************************************************************************
@@ -40,8 +40,8 @@ public class MushafScreen extends Base {
      * @return AddedScreen
      */
     public AddedScreen clickOnBackButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, backButton_Btn);
-        backButton_Btn.click();
+        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, back_Btn);
+        back_Btn.click();
         return new AddedScreen();
     }
     /**
@@ -51,8 +51,8 @@ public class MushafScreen extends Base {
      * This method is to click on Screen On Button
      */
     public void clickOnScreenOnButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, screenOnButton_Btn);
-        screenOnButton_Btn.click();
+        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, screenOn_Btn);
+        screenOn_Btn.click();
     }
     /**
      * *********************************************************************************************************************************************
@@ -63,8 +63,8 @@ public class MushafScreen extends Base {
      * @return Mushaf_BrowseScreen
      */
     public Mushaf_BrowseScreen clickOnMushafBrowseButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, browsingMushafButton_Btn);
-        browsingMushafButton_Btn.click();
+        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, browsingMushaf_Btn);
+        browsingMushaf_Btn.click();
         return new Mushaf_BrowseScreen();
     }
     /**

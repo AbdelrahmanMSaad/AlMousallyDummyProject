@@ -8,16 +8,16 @@ import java.utilities.TestUtils;
 
 public class TravelModeScreen extends Base {
     @AndroidFindBy(xpath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.RelativeLayout[1]/android.widget.LinearLayout/android.widget.RelativeLayout/android.widget.TextView")
-    private AndroidElement screenTitleTxt_Text;
+    private AndroidElement screenTitle_Text;
 
     @AndroidFindBy(id = "com.moslay:id/on_off_switch")
-    private AndroidElement onOffSwitch_Btn;
+    private AndroidElement onOff_Switch;
 
     @AndroidFindBy(id = "com.moslay:id/tv_loc_period")
-    private AndroidElement updateLocationIntervalButton_Btn;
+    private AndroidElement updateLocationInterval_Btn;
 
     @AndroidFindBy(id = "com.moslay:id/tv_settings")
-    private AndroidElement goToPhoneSettingsButton_Btn;
+    private AndroidElement goToPhoneSettings_Btn;
 
     /**
      * *********************************************************************************************************************************************
@@ -27,9 +27,9 @@ public class TravelModeScreen extends Base {
      *
      * @return home page screen
      */
-    public String returnScreenTitleText() {
-        TestUtils.fluentWaitBySecondsToCheckTheVisibilityOfAnAndroidElemnet(1, 60, screenTitleTxt_Text);
-        return screenTitleTxt_Text.getText();
+    public String getScreenTitleText() {
+        TestUtils.fluentWaitBySecondsToCheckTheVisibilityOfAnAndroidElemnet(1, 60, screenTitle_Text);
+        return screenTitle_Text.getText();
     }
     /**
      * *********************************************************************************************************************************************
@@ -38,8 +38,8 @@ public class TravelModeScreen extends Base {
      * This method is to click on the travel mode switch
      */
     public void clickOnTravelModeSwitch() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, onOffSwitch_Btn);
-        onOffSwitch_Btn.click();
+        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, onOff_Switch);
+        onOff_Switch.click();
     }
     /**
      * *********************************************************************************************************************************************
@@ -50,8 +50,8 @@ public class TravelModeScreen extends Base {
      * @return TravelMode_IntervalsScreen
      */
     public TravelMode_IntervalsScreen clickOnUpdateLocationTimeIntervalButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, updateLocationIntervalButton_Btn);
-        updateLocationIntervalButton_Btn.click();
+        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, updateLocationInterval_Btn);
+        updateLocationInterval_Btn.click();
         return new TravelMode_IntervalsScreen();
     }
     /**
@@ -61,8 +61,8 @@ public class TravelModeScreen extends Base {
      * This method is to click on the settigns button which directs the user to the phone location settings
      */
     public void clickOnGoToPhoneSettingsButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, goToPhoneSettingsButton_Btn);
-        goToPhoneSettingsButton_Btn.click();
+        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, goToPhoneSettings_Btn);
+        goToPhoneSettings_Btn.click();
     }
     /**
      * *********************************************************************************************************************************************

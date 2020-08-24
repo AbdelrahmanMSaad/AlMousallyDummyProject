@@ -3,31 +3,14 @@ package java.Screens.calender;
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 
-import java.base.Base;
 import java.utilities.TestUtils;
 
-public class GregorianScreen extends Base {
-    String expectedTitle = "التقويم";
-    @AndroidFindBy(id = "com.moslay:id/img_more")
-    private AndroidElement navigationDrawerButton_Btn;
-    @AndroidFindBy(id = "com.moslay:id/tv_hegry_date")
-    private AndroidElement screenTitleTxt_Text;
-    @AndroidFindBy(id = "com.moslay:id/openCorrectionImageView")
-    private AndroidElement hijriDateCorrectionButton_Btn;
-    @AndroidFindBy(id = "com.moslay:id/tv_hegry_tab")
-    private AndroidElement hijriCalenderButton_Btn;
-    @AndroidFindBy(id = "com.moslay:id/tv_melady_tab")
-    private AndroidElement gregorianCalenderButton_Btn;
-    @AndroidFindBy(id = "com.moslay:id/im_prev_month")
-    private AndroidElement prevMonthButton_Btn;
+public class GregorianScreen extends CalenderScreen {
     @AndroidFindBy(id = "com.moslay:id/tv_currnet_month")
-    private AndroidElement currentMonthTxt_TxtView;
-    @AndroidFindBy(id = "com.moslay:id/im_next_month")
-    private AndroidElement nextMonthButton_Btn;
+    private AndroidElement currentMonthText;
     @AndroidFindBy(id = "com.moslay:id/gv_calendrview")
-    private AndroidElement calenderElement_Element;
-    @AndroidFindBy(id = "com.moslay:id/lv_listevents")
-    private AndroidElement listEventsElement_Element;
+    private AndroidElement calenderElement;
+
     /**
      * *********************************************************************************************************************************************
      */
@@ -37,9 +20,9 @@ public class GregorianScreen extends Base {
      *
      * @return Screen title as a string
      */
-    public String returnActualScreenTitle() {
-        TestUtils.fluentWaitBySecondsToCheckTheVisibilityOfAnAndroidElemnet(1, 60, screenTitleTxt_Text);
-        return screenTitleTxt_Text.getText();
+    public String getActualScreenTitle() {
+        TestUtils.fluentWaitBySecondsToCheckTheVisibilityOfAnAndroidElemnet(1, 60, screenTitle_Text);
+        return screenTitle_Text.getText();
     }
 
     /**
@@ -50,8 +33,8 @@ public class GregorianScreen extends Base {
      * @return navigation drawer screen
      */
     public void clickOnNavigationDrawerButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, navigationDrawerButton_Btn);
-        navigationDrawerButton_Btn.click();
+        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, navigationDrawer_Btn);
+        navigationDrawer_Btn.click();
         //This method returns navigation drawer method with shams
     }
     /**
@@ -63,8 +46,8 @@ public class GregorianScreen extends Base {
      * @return HijriDateCorrectionScreen
      */
     public HijriDateCorrectionScreen clickOnHijriDateCorrectionButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, hijriDateCorrectionButton_Btn);
-        hijriDateCorrectionButton_Btn.click();
+        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, hijriDateCorrection_Btn);
+        hijriDateCorrection_Btn.click();
         return new HijriDateCorrectionScreen();
     }
     /**
@@ -76,8 +59,8 @@ public class GregorianScreen extends Base {
      * @return HijriScreen
      */
     public HijriScreen clickOnHijriCalenderButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, hijriCalenderButton_Btn);
-        hijriCalenderButton_Btn.click();
+        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, hijriCalender_Btn);
+        hijriCalender_Btn.click();
         return new HijriScreen();
     }
     /**
@@ -89,8 +72,8 @@ public class GregorianScreen extends Base {
      * @return GregorianScreen
      */
     public GregorianScreen clickOnGregorianCalenderButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, gregorianCalenderButton_Btn);
-        gregorianCalenderButton_Btn.click();
+        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, gregorianCalender_Btn);
+        gregorianCalender_Btn.click();
         return new GregorianScreen();
     }
     /**
@@ -100,8 +83,8 @@ public class GregorianScreen extends Base {
      * This method is to click on previous month button
      */
     public void clickOnPreviousMonthButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, prevMonthButton_Btn);
-        prevMonthButton_Btn.click();
+        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, prevMonth_Btn);
+        prevMonth_Btn.click();
     }
     /**
      * *********************************************************************************************************************************************
@@ -110,8 +93,8 @@ public class GregorianScreen extends Base {
      * This method is to click on next month button
      */
     public void clickOnNextMonthButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, nextMonthButton_Btn);
-        nextMonthButton_Btn.click();
+        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, nextMonth_Btn);
+        nextMonth_Btn.click();
     }
     /**
      * *********************************************************************************************************************************************
@@ -121,19 +104,19 @@ public class GregorianScreen extends Base {
      *
      * @return current month as a string
      */
-    public String returnCurrentMonthInString() {
-        TestUtils.fluentWaitBySecondsToCheckTheVisibilityOfAnAndroidElemnet(1, 60, currentMonthTxt_TxtView);
-        return currentMonthTxt_TxtView.getText();
+    public String getCurrentMonthInString() {
+        TestUtils.fluentWaitBySecondsToCheckTheVisibilityOfAnAndroidElemnet(1, 60, currentMonthText);
+        return currentMonthText.getText();
     }
     /**
      * *********************************************************************************************************************************************
      */
     /**
-     * This method is to check the calender existance
+     * This method is to check if the calender is displayed
      */
-    public void checkCalenderExistance() {
-        TestUtils.fluentWaitBySecondsToCheckTheVisibilityOfAnAndroidElemnet(1, 60, calenderElement_Element);
-        calenderElement_Element.isDisplayed();
+    public boolean isCalenderDisplayed() {
+        TestUtils.fluentWaitBySecondsToCheckTheVisibilityOfAnAndroidElemnet(1, 60, calenderElement);
+        return calenderElement.isDisplayed();
     }
     /**
      * *********************************************************************************************************************************************
@@ -143,9 +126,9 @@ public class GregorianScreen extends Base {
      *
      * @return bool represents if the list of events is displayed
      */
-    public boolean checkEventsListExistance() {
-        TestUtils.fluentWaitBySecondsToCheckTheVisibilityOfAnAndroidElemnet(1, 60, listEventsElement_Element);
-        return (listEventsElement_Element.isDisplayed());
+    public boolean isEventsLisDisplayed() {
+        TestUtils.fluentWaitBySecondsToCheckTheVisibilityOfAnAndroidElemnet(1, 60, listEvents_Element);
+        return (listEvents_Element.isDisplayed());
     }
     /**
      * *********************************************************************************************************************************************

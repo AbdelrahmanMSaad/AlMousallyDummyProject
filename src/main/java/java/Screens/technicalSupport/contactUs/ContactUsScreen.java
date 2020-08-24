@@ -9,23 +9,23 @@ import java.utilities.TestUtils;
 public class ContactUsScreen extends Base {
     String expectedTitle = "الدعم الفنى";
     @AndroidFindBy(id = "com.moslay:id/img_menu")
-    private AndroidElement navigationDrawerButton_Btn;
+    private AndroidElement navigationDrawer_Btn;
     @AndroidFindBy(xpath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.drawerlayout.widget.DrawerLayout/android.widget.RelativeLayout/android.widget.RelativeLayout/android.widget.RelativeLayout[2]/android.widget.RelativeLayout/android.widget.TextView")
-    private AndroidElement screenTitleTxt_Text;
+    private AndroidElement screenTitle_Text;
     @AndroidFindBy(id = "name")
-    private AndroidElement nameTxtField_TxtEdit;
+    private AndroidElement name_TextView;
     @AndroidFindBy(id = "email")
-    private AndroidElement emailTxtField_TxtEdit;
+    private AndroidElement email_TextView;
     @AndroidFindBy(id = "title")
-    private AndroidElement titleTxtField_TxtEdit;
+    private AndroidElement title_TextView;
     @AndroidFindBy(id = "message")
-    private AndroidElement messageTxtField_TxtEdit;
+    private AndroidElement message_TextView;
     @AndroidFindBy(id = "groupId")
-    private AndroidElement contactUsPurposeButton_Btn;
+    private AndroidElement contactUsPurpose_Btn;
     @AndroidFindBy(id = "image")
-    private AndroidElement uplaodFileButton_Btn;
+    private AndroidElement uplaodFile_Btn;
     @AndroidFindBy(id = "allAppsId")
-    private AndroidElement sendButton_Btn;
+    private AndroidElement send_Btn;
     /**
      * *********************************************************************************************************************************************
      */
@@ -35,9 +35,9 @@ public class ContactUsScreen extends Base {
      *
      * @return Screen title as a string
      */
-    public String returnActualScreenTitle() {
-        TestUtils.fluentWaitBySecondsToCheckTheVisibilityOfAnAndroidElemnet(1, 60, screenTitleTxt_Text);
-        return screenTitleTxt_Text.getText();
+    public String getActualScreenTitle() {
+        TestUtils.fluentWaitBySecondsToCheckTheVisibilityOfAnAndroidElemnet(1, 60, screenTitle_Text);
+        return screenTitle_Text.getText();
     }
     /**
      * *********************************************************************************************************************************************
@@ -48,8 +48,8 @@ public class ContactUsScreen extends Base {
      * @return navigation drawer screen
      */
     public void clickOnNavigationDrawerButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, navigationDrawerButton_Btn);
-        navigationDrawerButton_Btn.click();
+        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, navigationDrawer_Btn);
+        navigationDrawer_Btn.click();
         //This method returns navigation drawer method with shams
     }
     /**
@@ -60,9 +60,9 @@ public class ContactUsScreen extends Base {
      *
      * @param text string sent to the name text field
      */
-    public void sendKeysToNameTextField(String text) {
-        TestUtils.fluentWaitBySecondsToCheckTheVisibilityOfAnAndroidElemnet(1, 60, nameTxtField_TxtEdit);
-        nameTxtField_TxtEdit.sendKeys(text);
+    public void sendTextToNameTextBar(String text) {
+        TestUtils.fluentWaitBySecondsToCheckTheVisibilityOfAnAndroidElemnet(1, 60, name_TextView);
+        name_TextView.sendKeys(text);
     }
     /**
      * *********************************************************************************************************************************************
@@ -72,9 +72,9 @@ public class ContactUsScreen extends Base {
      *
      * @param text string sent to the email text field
      */
-    public void sendKeysToEmailTextField(String text) {
-        TestUtils.fluentWaitBySecondsToCheckTheVisibilityOfAnAndroidElemnet(1, 60, emailTxtField_TxtEdit);
-        emailTxtField_TxtEdit.sendKeys(text);
+    public void sendTextToEmailTextBar(String text) {
+        TestUtils.fluentWaitBySecondsToCheckTheVisibilityOfAnAndroidElemnet(1, 60, email_TextView);
+        email_TextView.sendKeys(text);
     }
     /**
      * *********************************************************************************************************************************************
@@ -84,9 +84,9 @@ public class ContactUsScreen extends Base {
      *
      * @param text string sent to the title text field
      */
-    public void sendKeysToTitleTextField(String text) {
-        TestUtils.fluentWaitBySecondsToCheckTheVisibilityOfAnAndroidElemnet(1, 60, titleTxtField_TxtEdit);
-        titleTxtField_TxtEdit.sendKeys(text);
+    public void sendTextToTitleTextBar(String text) {
+        TestUtils.fluentWaitBySecondsToCheckTheVisibilityOfAnAndroidElemnet(1, 60, title_TextView);
+        title_TextView.sendKeys(text);
     }
     /**
      * *********************************************************************************************************************************************
@@ -96,9 +96,9 @@ public class ContactUsScreen extends Base {
      *
      * @param text string sent to the message text field
      */
-    public void sendKeysToMessageTextField(String text) {
-        TestUtils.fluentWaitBySecondsToCheckTheVisibilityOfAnAndroidElemnet(1, 60, messageTxtField_TxtEdit);
-        messageTxtField_TxtEdit.sendKeys(text);
+    public void sendTextToMessageTextBar(String text) {
+        TestUtils.fluentWaitBySecondsToCheckTheVisibilityOfAnAndroidElemnet(1, 60, message_TextView);
+        message_TextView.sendKeys(text);
     }
     /**
      * *********************************************************************************************************************************************
@@ -109,8 +109,8 @@ public class ContactUsScreen extends Base {
      * @return ContactUsPurposeScreen
      */
     public ContactUsPurposeScreen clickOnContactUsPurposeScreenButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheVisibilityOfAnAndroidElemnet(1, 60, contactUsPurposeButton_Btn);
-        contactUsPurposeButton_Btn.click();
+        TestUtils.fluentWaitBySecondsToCheckTheVisibilityOfAnAndroidElemnet(1, 60, contactUsPurpose_Btn);
+        contactUsPurpose_Btn.click();
         return new ContactUsPurposeScreen();
     }
     /**
@@ -119,9 +119,9 @@ public class ContactUsScreen extends Base {
     /**
      * This method is to click on upload image button
      */
-    public void clickOnUploadImageScreen() {
-        TestUtils.fluentWaitBySecondsToCheckTheVisibilityOfAnAndroidElemnet(1, 60, uplaodFileButton_Btn);
-        uplaodFileButton_Btn.click();
+    public void clickOnUploadImageButton() {
+        TestUtils.fluentWaitBySecondsToCheckTheVisibilityOfAnAndroidElemnet(1, 60, uplaodFile_Btn);
+        uplaodFile_Btn.click();
     }
     /**
      * *********************************************************************************************************************************************
@@ -129,9 +129,9 @@ public class ContactUsScreen extends Base {
     /**
      * This method is to click on upload image button
      */
-    public void clickOnSendScreen() {
-        TestUtils.fluentWaitBySecondsToCheckTheVisibilityOfAnAndroidElemnet(1, 60, sendButton_Btn);
-        sendButton_Btn.click();
+    public void clickOnSendButton() {
+        TestUtils.fluentWaitBySecondsToCheckTheVisibilityOfAnAndroidElemnet(1, 60, send_Btn);
+        send_Btn.click();
     }
     /**
      * *********************************************************************************************************************************************
