@@ -20,7 +20,6 @@ public class HijriScreen extends CalenderScreen {
      * @return Screen title as a string
      */
     public String getActualScreenTitle() {
-        TestUtils.fluentWaitBySecondsToCheckTheVisibilityOfAnAndroidElemnet(1, 60, screenTitle_Text);
         return screenTitle_Text.getText();
     }
     /**
@@ -32,7 +31,6 @@ public class HijriScreen extends CalenderScreen {
      * @return navigation drawer screen
      */
     public void clickOnNavigationDrawerButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, navigationDrawer_Btn);
         navigationDrawer_Btn.click();
         //This method returns navigation drawer screen with shams
     }
@@ -45,7 +43,6 @@ public class HijriScreen extends CalenderScreen {
      * @return HijriDateCorrectionScreen
      */
     public HijriDateCorrectionScreen clickOnHijriDateCorrectionButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, hijriDateCorrection_Btn);
         hijriDateCorrection_Btn.click();
         return new HijriDateCorrectionScreen();
     }
@@ -58,7 +55,6 @@ public class HijriScreen extends CalenderScreen {
      * @return HijriScreen
      */
     public HijriScreen clickOnHijriCalenderButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, hijriCalender_Btn);
         hijriCalender_Btn.click();
         return new HijriScreen();
     }
@@ -71,7 +67,6 @@ public class HijriScreen extends CalenderScreen {
      * @return GregorianScreen
      */
     public GregorianScreen clickOnGregorianCalenderButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, gregorianCalender_Btn);
         gregorianCalender_Btn.click();
         return new GregorianScreen();
     }
@@ -82,7 +77,6 @@ public class HijriScreen extends CalenderScreen {
      * This method is to click on previous month button
      */
     public void clickOnPreviousMonthButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, prevMonth_Btn);
         prevMonth_Btn.click();
     }
     /**
@@ -92,7 +86,6 @@ public class HijriScreen extends CalenderScreen {
      * This method is to click on next month button
      */
     public void clickOnNextMonthButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, nextMonth_Btn);
         nextMonth_Btn.click();
     }
     /**
@@ -104,7 +97,6 @@ public class HijriScreen extends CalenderScreen {
      * @return the current month as a string
      */
     public String getCurrentMonthInString() {
-        TestUtils.fluentWaitBySecondsToCheckTheVisibilityOfAnAndroidElemnet(1, 60, currentMonthTxt_TxtView);
         return currentMonthTxt_TxtView.getText();
     }
     /**
@@ -116,7 +108,6 @@ public class HijriScreen extends CalenderScreen {
      * @return bool representing if th calender exists or not
      */
     public boolean isCalenderDisplayed() {
-        TestUtils.fluentWaitBySecondsToCheckTheVisibilityOfAnAndroidElemnet(1, 60, calenderElement_Element);
         return calenderElement_Element.isDisplayed();
     }
     /**
@@ -128,7 +119,6 @@ public class HijriScreen extends CalenderScreen {
      * @return bool represents if the list of events is displayed
      */
     public boolean isEventsLisDisplayed() {
-        TestUtils.fluentWaitBySecondsToCheckTheVisibilityOfAnAndroidElemnet(1, 60, listEvents_Element);
         return (listEvents_Element.isDisplayed());
     }
     /**

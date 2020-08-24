@@ -27,7 +27,6 @@ public class FollowIUsScreen extends Base {
      * @return Screen title as a string
      */
     public String getActualScreenTitle() {
-        TestUtils.fluentWaitBySecondsToCheckTheVisibilityOfAnAndroidElemnet(1, 60, screenTitle_Text);
         return screenTitle_Text.getText();
     }
     /**
@@ -39,7 +38,6 @@ public class FollowIUsScreen extends Base {
      * @return navigation drawer screen
      */
     public void clickOnNavigationDrawerButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, navigationDrawer_Btn);
         navigationDrawer_Btn.click();
         //This method returns navigation drawer method with shams
     }
@@ -50,7 +48,6 @@ public class FollowIUsScreen extends Base {
      * This method is click on facebook button
      */
     public void clickOnFacebookButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, facebook_Btn);
         facebook_Btn.click();
     }
     /**
@@ -60,7 +57,6 @@ public class FollowIUsScreen extends Base {
      * This method is to click on twitter button
      */
     public void clickOnTwitterButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, twitter_Btn);
         twitter_Btn.click();
     }
     /**
@@ -70,7 +66,6 @@ public class FollowIUsScreen extends Base {
      * This method is to click on youtube button
      */
     public void clickOnYouTubeButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, youtube_Btn);
         youtube_Btn.click();
     }
     /**

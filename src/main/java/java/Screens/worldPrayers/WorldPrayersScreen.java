@@ -30,7 +30,6 @@ public class WorldPrayersScreen extends Base {
      * @return Screen title as a string
      */
     public String getActualScreenTitle() {
-        TestUtils.fluentWaitBySecondsToCheckTheVisibilityOfAnAndroidElemnet(1, 60, screenTitle_Text);
         return screenTitle_Text.getText();
     }
     /**
@@ -42,7 +41,6 @@ public class WorldPrayersScreen extends Base {
      * @return navigation drawer screen
      */
     public void clickOnNavigationDrawerButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, navigationDrawer_Btn);
         navigationDrawer_Btn.click();
         //This method returns navigation drawer method with shams
     }
@@ -53,7 +51,6 @@ public class WorldPrayersScreen extends Base {
      * This test case is to click on share button
      */
     public void clickOnShareButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, share_Btn);
         share_Btn.click();
     }
     /**
@@ -63,7 +60,6 @@ public class WorldPrayersScreen extends Base {
      * This test case is to click on help button
      */
     public void clickOnHelpButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, help_Btn);
         help_Btn.click();
     }
     /**
@@ -73,7 +69,6 @@ public class WorldPrayersScreen extends Base {
      * This test case is to click on zoom in button
      */
     public void clickOnZoomInButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, zoomIn_Btn);
         zoomIn_Btn.click();
     }
     /**
@@ -83,7 +78,6 @@ public class WorldPrayersScreen extends Base {
      * This test case is to click on zoom out button
      */
     public void clickOnZoomOutButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, zoomOut_Btn);
         zoomOut_Btn.click();
     }
     /**

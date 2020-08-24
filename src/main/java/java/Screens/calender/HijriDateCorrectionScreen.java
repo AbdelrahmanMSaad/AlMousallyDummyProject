@@ -40,7 +40,6 @@ public class HijriDateCorrectionScreen extends Base {
      * @return Screen title as a string
      */
     public String getActualScreenTitle() {
-        TestUtils.fluentWaitBySecondsToCheckTheVisibilityOfAnAndroidElemnet(1, 60, screenTitle_Text);
         return screenTitle_Text.getText();
     }
     /**
@@ -52,7 +51,6 @@ public class HijriDateCorrectionScreen extends Base {
      * @return current date as a string
      */
     public String getCurrentDateInString() {
-        TestUtils.fluentWaitBySecondsToCheckTheVisibilityOfAnAndroidElemnet(1, 60, date_Text);
         return date_Text.getText();
     }
     /**
@@ -62,7 +60,6 @@ public class HijriDateCorrectionScreen extends Base {
      * This method is to click on -3 button
      */
     public void clickOnMinusThreeButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, correctionMinusThree_Btn);
         correctionMinusThree_Btn.click();
     }
     /**
@@ -72,7 +69,6 @@ public class HijriDateCorrectionScreen extends Base {
      * This method is to click on -2 button
      */
     public void clickOnMinusTwoButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, correctionMinusTwo_Btn);
         correctionMinusTwo_Btn.click();
     }
     /**
@@ -82,7 +78,6 @@ public class HijriDateCorrectionScreen extends Base {
      * This method is to click on -1 button
      */
     public void clickOnMinusOneButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, correctionMinusOne_Btn);
         correctionMinusOne_Btn.click();
     }
     /**
@@ -92,7 +87,6 @@ public class HijriDateCorrectionScreen extends Base {
      * This method is to click on zero button
      */
     public void clickOnZeroButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, correctionZero_Btn);
         correctionZero_Btn.click();
     }
     /**
@@ -102,7 +96,6 @@ public class HijriDateCorrectionScreen extends Base {
      * This method is to click on +1 button
      */
     public void clickOnPlusOneButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, correctionPlusOne_Btn);
         correctionPlusOne_Btn.click();
     }
     /**
@@ -112,7 +105,6 @@ public class HijriDateCorrectionScreen extends Base {
      * This method is to click on +2 button
      */
     public void clickOnPlusTwoButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, correctionPlusTwo_Btn);
         correctionPlusTwo_Btn.click();
     }
     /**
@@ -122,7 +114,6 @@ public class HijriDateCorrectionScreen extends Base {
      * This method is to click on +3 button
      */
     public void clickOnPlusThreeButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, correctionPlusThree_Btn);
         correctionPlusThree_Btn.click();
     }
     /**
@@ -132,7 +123,6 @@ public class HijriDateCorrectionScreen extends Base {
      * This method is to click on save button
      */
     public void clickOnSaveButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, save_Btn);
         save_Btn.click();
     }
     /**
@@ -142,7 +132,6 @@ public class HijriDateCorrectionScreen extends Base {
      * This method is to click on cancel button
      */
     public void clickOnCancelButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, cancel_Btn);
         cancel_Btn.click();
     }
     /**

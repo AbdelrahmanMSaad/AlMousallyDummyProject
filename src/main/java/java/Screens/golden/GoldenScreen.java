@@ -33,7 +33,6 @@ public class GoldenScreen extends Base {
      * @return Screen title as a string
      */
     public String getActualScreenTitle() {
-        TestUtils.fluentWaitBySecondsToCheckTheVisibilityOfAnAndroidElemnet(1, 60, screenTitle_Text);
         return screenTitle_Text.getText();
     }
     /**
@@ -43,7 +42,6 @@ public class GoldenScreen extends Base {
      * This method is to click on subscribe button
      */
     public void clickOnSubscribeButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, subscribe_Btn);
         subscribe_Btn.click();
     }
     /**
@@ -53,7 +51,6 @@ public class GoldenScreen extends Base {
      * This method is to click on renew subscribtion button
      */
     public void clickOnRenewSubscribtion() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, renewSubscribtion_Btn);
         renewSubscribtion_Btn.click();
     }
     /**
@@ -63,7 +60,6 @@ public class GoldenScreen extends Base {
      * This method is to click on privacy and policy button
      */
     public void clickOnPrivacyAndPolicyButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, privacyPolicy_Btn);
         privacyPolicy_Btn.click();
     }
     /**
@@ -73,7 +69,6 @@ public class GoldenScreen extends Base {
      * This method is to click on terms and condition button
      */
     public void clickOnTermsAndConditionsButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, termsAndConditions_Btn);
         termsAndConditions_Btn.click();
     }
     /**

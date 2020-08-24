@@ -25,7 +25,6 @@ public class CommentScreen extends Base {
      * @return Screen title as a string
      */
     public String getActualScreenTitle() {
-        TestUtils.fluentWaitBySecondsToCheckTheVisibilityOfAnAndroidElemnet(1, 60, screenTitle_Text);
         return screenTitle_Text.getText();
     }
     /**
@@ -35,7 +34,6 @@ public class CommentScreen extends Base {
      * This method is to click on add comment button
      */
     public void clickOnAddCommentButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, addComment_Btn);
         addComment_Btn.click();
     }
     /**
@@ -45,7 +43,6 @@ public class CommentScreen extends Base {
      * This method is to add text to the comment text field
      */
     public void sendTextToCommentTextBar(String text) {
-        TestUtils.fluentWaitBySecondsToCheckTheVisibilityOfAnAndroidElemnet(1, 60, commentTextBar_TextView);
         commentTextBar_TextView.sendKeys(text);
     }
     /**

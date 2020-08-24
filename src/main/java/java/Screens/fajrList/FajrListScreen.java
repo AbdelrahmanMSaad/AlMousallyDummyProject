@@ -31,7 +31,6 @@ public class FajrListScreen extends Base {
      * @return Screen title as a string
      */
     public String getActualScreenTitle() {
-        TestUtils.fluentWaitBySecondsToCheckTheVisibilityOfAnAndroidElemnet(1, 60, screenTitle_Text);
         return screenTitle_Text.getText();
     }
     /**
@@ -43,7 +42,6 @@ public class FajrListScreen extends Base {
      * @return navigation drawer screen
      */
     public void clickOnNavigationDrawerButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, navigationDrawer_Btn);
         navigationDrawer_Btn.click();
         //This method returns navigation drawer method with shams
     }
@@ -54,7 +52,6 @@ public class FajrListScreen extends Base {
      * This method is to click on add element button
      */
     public void clickOnAddElementButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, addElement_Btn);
         addElement_Btn.click();
     }
     /**
@@ -64,7 +61,6 @@ public class FajrListScreen extends Base {
      * This method is to click on delete element button
      */
     public void clickOnDeleteElementButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, deleteElement_Btn);
         deleteElement_Btn.click();
     }
     /**
@@ -74,7 +70,6 @@ public class FajrListScreen extends Base {
      * This method is to click on pause button
      */
     public void clickOnPauseButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, pause_Btn);
         pause_Btn.click();
     }
     /**
@@ -84,7 +79,6 @@ public class FajrListScreen extends Base {
      * This method is to send text to search text field
      */
     public void sendTextToSearchBar(String text) {
-        TestUtils.fluentWaitBySecondsToCheckTheVisibilityOfAnAndroidElemnet(1, 60, searchBar_TextView);
         searchBar_TextView.sendKeys(text);
     }
     /**
@@ -94,7 +88,6 @@ public class FajrListScreen extends Base {
      * This method is to click on add contact button
      */
     public void clickOnAddContactButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, addContact_Btn);
         addContact_Btn.click();
     }
     /**
