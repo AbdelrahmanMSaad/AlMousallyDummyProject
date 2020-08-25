@@ -1,4 +1,4 @@
-package java.Screens.settings.location.automatic;
+package java.Screens.settings.location.otherMethods;
 
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;
@@ -6,7 +6,7 @@ import io.appium.java_client.pagefactory.AndroidFindBy;
 import java.base.Base;
 import java.utilities.TestUtils;
 
-public class OtherMethods_SearchOnlineScreen extends Base {
+public class SearchOnlineScreen extends Base {
     @AndroidFindBy(xpath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.RelativeLayout/android.widget.LinearLayout/android.widget.RelativeLayout/android.widget.TextView")
     private AndroidElement screenTitle_Text;
 

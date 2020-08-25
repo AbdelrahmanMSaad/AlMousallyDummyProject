@@ -1,12 +1,11 @@
-package java.Screens.settings.location.automatic;
+package java.Screens.settings.location.otherMethods;
 
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 
 import java.base.Base;
-import java.utilities.TestUtils;
 
-public class OtherMethods_AddCityNameScreen extends Base {
+public class AddCityNameScreen extends Base {
     @AndroidFindBy(id = "com.moslay:id/country_list_spinner")
     private AndroidElement countryList_Element;
 
@@ -24,9 +23,9 @@ public class OtherMethods_AddCityNameScreen extends Base {
      *
      * @return OtherMethods_AddCit_CityListScreen
      */
-    public OtherMethods_AddCit_CityListScreen clickOnCountryElementToOpenCountriesList() {
+    public AddCityName_CityListScreen clickOnCountryElementToOpenCountriesList() {
         countryList_Element.click();
-        return new OtherMethods_AddCit_CityListScreen();
+        return new AddCityName_CityListScreen();
     }
     /**
      * *********************************************************************************************************************************************
@@ -36,7 +35,7 @@ public class OtherMethods_AddCityNameScreen extends Base {
      *
      * @param text to be sent to the city name bar
      */
-    public void sendTextToSearchBar(String text) {
+    public void sendTextToCityNameBar(String text) {
         cityName_TextView.sendKeys(text);
     }
     /**
@@ -47,7 +46,7 @@ public class OtherMethods_AddCityNameScreen extends Base {
      *
      * @return the text within the city name bar bar as a string
      */
-    public String getTextFromSearchBar() {
+    public String getTextFromCityNameBar() {
         return cityName_TextView.getText();
     }
     /**

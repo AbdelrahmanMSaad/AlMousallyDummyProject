@@ -5,7 +5,6 @@ import io.appium.java_client.pagefactory.AndroidFindBy;
 
 import java.Screens.home.HomePageScreen;
 import java.base.Base;
-import java.utilities.TestUtils;
 
 public class LanguageScreen extends Base {
     @AndroidFindBy(id = "com.moslay:id/lang_txt_chooseLanguage")
@@ -39,7 +38,7 @@ public class LanguageScreen extends Base {
     private AndroidElement ardu_Btn;
 
     @AndroidFindBy(accessibility = "ئۇيغۇرچە")
-    private AndroidElement igur_Btn;
+    private AndroidElement ugyhr_Btn;
 
     /**
      * *********************************************************************************************************************************************
@@ -157,7 +156,7 @@ public class LanguageScreen extends Base {
      * @return home page screen
      */
     public HomePageScreen clickOnIgurElement() {
-        igur_Btn.click();
+        ugyhr_Btn.click();
         return new HomePageScreen();
     }
     /**

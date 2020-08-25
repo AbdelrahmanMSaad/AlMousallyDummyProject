@@ -1,4 +1,4 @@
-package java.Screens.settings.location.automatic;
+package java.Screens.settings.location.otherMethods;
 
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;
@@ -6,7 +6,7 @@ import io.appium.java_client.pagefactory.AndroidFindBy;
 import java.base.Base;
 import java.utilities.TestUtils;
 
-public class OtherMethods_OfflineSearchScreen extends Base {
+public class OfflineSearchScreen extends Base {
     @AndroidFindBy(accessibility = "رجوع")
     private AndroidElement back_Btn;
 
@@ -50,7 +50,7 @@ public class OtherMethods_OfflineSearchScreen extends Base {
      *
      * @param text to be sent to the search bar
      */
-    public void sendKeysToSearchBar(String text) {
+    public void sendTextToSearchBar(String text) {
         searchBar_TextView.sendKeys(text);
     }
     /**

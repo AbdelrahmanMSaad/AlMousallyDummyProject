@@ -59,15 +59,7 @@ public class HijriDateCorrectionScreen extends Base {
     /**
      * This method is to click on -3 button
      */
-    public void clickOnMinusThreeButton() {
-        correctionMinusThree_Btn.click();
-        String goo;
-        goo.
-    }
-    /**
-     * *********************************************************************************************************************************************
-     */
-    public void isMinusThreeSelected
+    public void clickOnMinusThreeButton() { correctionMinusThree_Btn.click(); }
     /**
      * This method is to click on -2 button
      */

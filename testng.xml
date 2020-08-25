@@ -402,12 +402,12 @@
                     <include name="testClickOnDetectViaOtherMethodsScreen"/>
                 </methods>
             </class>
-            <class name="java.Screens.settings.location.automatic._OtherMethods_AddCit_CityListScreenTest">
+            <class name="java.Screens.settings.location.automatic.__AddCityName_CityListScreenTest">
                 <methods>
                     <include name="testSearchForACountryByTextAndClickIt"/>
                 </methods>
             </class>
-            <class name="java.Screens.settings.location.automatic._OtherMethods_AddCityNameScreenTest">
+            <class name="java.Screens.settings.location.automatic.__AddCityNameScreenTest">
                 <methods>
                     <include name="testClickOnCountryElementToOpenCountriesList"/>
                     <include name="testSendKeysToSearchTextField"/>
@@ -423,7 +423,7 @@
                     <include name="testClickOnAddCityNameButton"/>
                 </methods>
             </class>
-            <class name="java.Screens.settings.location.automatic._OtherMethods_OfflineSearchScreenTest">
+            <class name="java.Screens.settings.location.automatic.__OfflineSearchScreenTest">
                 <methods>
                     <include name="testReturnScreenTitle"/>
                     <include name="testClickOnBackButton"/>
@@ -432,7 +432,7 @@
                     <include name="testSearchForACountryByTextAndClickIt"/>
                 </methods>
             </class>
-            <class name="java.Screens.settings.location.automatic._OtherMethods_SearchOnlineScreenTest">
+            <class name="java.Screens.settings.location.automatic.__SearchOnlineScreenTest">
                 <methods>
                     <include name="testReturnScreenTitle"/>
                     <include name="testSendKeysToSearchTextField"/>

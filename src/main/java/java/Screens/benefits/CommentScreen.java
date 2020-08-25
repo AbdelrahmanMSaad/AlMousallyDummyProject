@@ -59,6 +59,10 @@ public class CommentScreen extends Base {
         List<MobileElement> commentsList = (List<MobileElement>) commentsList_Element.findElementByClassName("android.widget.RelativeLayout");
         return commentsList.get(index);
     }
+    public String getTextFromASelectedCommentByIndex(int index){
+        MobileElement requiredElement = accessCommentByIndex(index);
+
+    }
     /**
      * *********************************************************************************************************************************************
      */

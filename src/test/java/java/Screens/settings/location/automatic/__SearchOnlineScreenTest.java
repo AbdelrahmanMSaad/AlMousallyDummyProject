@@ -4,7 +4,7 @@ import org.testng.annotations.Test;
 
 import java.base.Base;
 
-public class _OtherMethods_SearchOnlineScreenTest extends Base {
+public class __SearchOnlineScreenTest extends Base {
 
     @Test
     public void testReturnScreenTitle() {

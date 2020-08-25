@@ -4,8 +4,8 @@ import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 
 import java.Screens.home.HomePageScreen;
+import java.Screens.settings.location.otherMethods.OtherMethodsScreen;
 import java.base.Base;
-import java.utilities.TestUtils;
 
 public class AutomaticScreen extends Base {
     @AndroidFindBy(id = "com.moslay:id/background_onbaording")
@@ -23,6 +23,17 @@ public class AutomaticScreen extends Base {
     @AndroidFindBy(id = "com.moslay:id/detect_other_ways")
     private AndroidElement detectViaOtherWays_Btn;
 
+    /**
+     * *********************************************************************************************************************************************
+     */
+    /**
+     * This method is to check if the background image is displayed
+     *
+     * @return boolean
+     */
+    public boolean isBackgroundImageDisplayed() {
+        return backgroundImgLayout_Element.isDisplayed();
+    }
     /**
      * *********************************************************************************************************************************************
      */

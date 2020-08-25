@@ -1,17 +1,17 @@
-package java.Screens.settings.location.automatic;
+package java.Screens.settings.location.otherMethods;
 
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 
+import java.Screens.settings.location.automatic.AutomaticScreen;
 import java.base.Base;
-import java.utilities.TestUtils;
 
 public class OtherMethodsScreen extends Base {
     @AndroidFindBy(id = "com.moslay:id/hint")
     private AndroidElement hint_Text;
 
     @AndroidFindBy(id = "com.moslay:id/rv_city_list")
-    private AndroidElement cityList_Element;
+    private AndroidElement citySuggestionList_Element;
 
     @AndroidFindBy(id = "com.moslay:id/txt_offline_search")
     private AndroidElement offlineSearch_Btn;
@@ -29,13 +29,24 @@ public class OtherMethodsScreen extends Base {
      * *********************************************************************************************************************************************
      */
     /**
+     * This method is to check if the location suggestion list
+     *
+     * @return boolean
+     */
+    public boolean isLocationSuggestionListDisplayed() {
+        return citySuggestionList_Element.isDisplayed();
+    }
+    /**
+     * *********************************************************************************************************************************************
+     */
+    /**
      * This method is to click on offline search button to open the offline search screen
      *
      * @return OtherMethods_OfflineSearchScreen
      */
-    public OtherMethods_OfflineSearchScreen clickOnOfflineSearchButton() {
+    public OfflineSearchScreen clickOnOfflineSearchButton() {
         offlineSearch_Btn.click();
-        return new OtherMethods_OfflineSearchScreen();
+        return new OfflineSearchScreen();
     }
     /**
      * *********************************************************************************************************************************************
@@ -57,9 +68,9 @@ public class OtherMethodsScreen extends Base {
      *
      * @return OtherMethods_SearchOnlineScreen
      */
-    public OtherMethods_SearchOnlineScreen clickOnSearchOnlineButton() {
+    public SearchOnlineScreen clickOnSearchOnlineButton() {
         searchOnline_Btn.click();
-        return new OtherMethods_SearchOnlineScreen();
+        return new SearchOnlineScreen();
     }
     /**
      * *********************************************************************************************************************************************
@@ -69,9 +80,9 @@ public class OtherMethodsScreen extends Base {
      *
      * @return OtherMethods_AddCityNameScreen
      */
-    public OtherMethods_AddCityNameScreen clickOnAddCityNameButton() {
+    public AddCityNameScreen clickOnAddCityNameButton() {
         addCityNameToYourLocation_Btn.click();
-        return new OtherMethods_AddCityNameScreen();
+        return new AddCityNameScreen();
     }
     /**
      * *********************************************************************************************************************************************

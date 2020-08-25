@@ -4,7 +4,6 @@ import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 
 import java.base.Base;
-import java.utilities.TestUtils;
 
 public class FajrListScreen extends Base {
     String expectedTitle = "قائمة الفجر";
@@ -81,6 +80,13 @@ public class FajrListScreen extends Base {
     public void sendTextToSearchBar(String text) {
         searchBar_TextView.sendKeys(text);
     }
+    /**
+     * *********************************************************************************************************************************************
+     */
+    /**
+     * This method is to get text from search text field
+     */
+    public String getTextFromSearchBar(){return searchBar_TextView.getText();}
     /**
      * *********************************************************************************************************************************************
      */

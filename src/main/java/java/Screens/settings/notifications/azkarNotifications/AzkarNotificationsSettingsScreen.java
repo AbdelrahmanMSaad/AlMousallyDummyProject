@@ -86,8 +86,8 @@ public class AzkarNotificationsSettingsScreen extends Base {
      * @param number --> the hours after fajr to be sent
      */
     public void sendNumberToHoursAfterFajrTextView(String number) {
-        AndroidElement hoursAfterFajrTextField = (AndroidElement) hoursAfterFajr_Element.findElementById("com.moslay:id/et_number");
-        hoursAfterFajrTextField.sendKeys(number);
+        AndroidElement hoursAfterFajrTextview = (AndroidElement) hoursAfterFajr_Element.findElementById("com.moslay:id/et_number");
+        hoursAfterFajrTextview.sendKeys(number);
     }
     /**
      * *********************************************************************************************************************************************

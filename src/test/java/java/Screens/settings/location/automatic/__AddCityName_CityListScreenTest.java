@@ -4,7 +4,7 @@ import org.testng.annotations.Test;
 
 import java.base.Base;
 
-public class _OtherMethods_AddCit_CityListScreenTest extends Base {
+public class __AddCityName_CityListScreenTest extends Base {
 
     @Test
     public void testSearchForACountryByTextAndClickIt() {
