@@ -63,13 +63,12 @@ public class GregorianScreen extends CalenderScreen {
      * *********************************************************************************************************************************************
      */
     /**
-     * This method is to click on gregorian calender button
+     * This method is to check if the gregorian button is selected
      *
-     * @return GregorianScreen
+     * @return boolean
      */
-    public GregorianScreen clickOnGregorianCalenderButton() {
-        gregorianCalender_Btn.click();
-        return new GregorianScreen();
+    public boolean isGregorianCalenderSelected(){
+        return gregorianCalender_Btn.isSelected();
     }
     /**
      * *********************************************************************************************************************************************

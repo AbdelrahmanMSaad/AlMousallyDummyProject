@@ -3,8 +3,6 @@ package java.Screens.calender;
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 
-import java.utilities.TestUtils;
-
 public class HijriScreen extends CalenderScreen {
     @AndroidFindBy(id = "com.moslay:id/tv_currnet_month")
     private AndroidElement currentMonthTxt_TxtView;
@@ -50,13 +48,12 @@ public class HijriScreen extends CalenderScreen {
      * *********************************************************************************************************************************************
      */
     /**
-     * This method is to click on hijri calender button
+     * This method is to check if the hijri button is selected
      *
-     * @return HijriScreen
+     * @return boolean
      */
-    public HijriScreen clickOnHijriCalenderButton() {
-        hijriCalender_Btn.click();
-        return new HijriScreen();
+    public boolean isHijriCalenderSelected() {
+        return hijriCalender_Btn.isSelected();
     }
     /**
      * *********************************************************************************************************************************************
