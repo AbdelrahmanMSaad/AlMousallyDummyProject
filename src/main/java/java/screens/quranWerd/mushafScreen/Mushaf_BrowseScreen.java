@@ -1,4 +1,4 @@
-package java.screens.quranWerd;
+package java.screens.quranWerd.mushafScreen;
 
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;

@@ -2,33 +2,37 @@ package java.screens.quranWerd.addWerd;
 
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Wait;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.screens.home.HomePageScreen;
-import java.screens.quranWerd.MushafScreen;
+import java.screens.quranWerd.mushafScreen.MushafScreen;
 import java.base.Base;
 
 public class AddWerdScreen extends Base {
+    Wait wait = new WebDriverWait(driver,10);
     String expectedTitle = "اضافة ختمة جديده";
     @AndroidFindBy(id = "com.moslay:id/img_more")
-    private AndroidElement navigationDrawer_Btn;
+    private AndroidElement navigationDrawerButton;
     @AndroidFindBy(xpath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.drawerlayout.widget.DrawerLayout/android.widget.RelativeLayout/android.widget.RelativeLayout/android.widget.LinearLayout[2]/android.widget.ScrollView/android.widget.LinearLayout/android.widget.LinearLayout[1]/android.widget.TextView")
-    private AndroidElement screenTitle_Text;
+    private AndroidElement screenTitleText;
     @AndroidFindBy(id = "com.moslay:id/werd_add_khatma_name")
-    private AndroidElement khatmaNameTxtBar_TextView;
+    private AndroidElement khatmaNameTextBar;
     @AndroidFindBy(id = "com.moslay:id/imageView1")
-    private AndroidElement dailyReadingType_Button;
+    private AndroidElement dailyReadingTypeButton;
     @AndroidFindBy(id = "com.moslay:id/text_change")
-    private AndroidElement howManyChapters_Btn;
+    private AndroidElement howManyChaptersButton;
     @AndroidFindBy(id = "com.moslay:id/werd_spin_start")
-    private AndroidElement startReadingFrom_Btn;
+    private AndroidElement startReadingFromButton;
     @AndroidFindBy(id = "com.moslay:id/bg")
-    private AndroidElement alertSwitch_Switch;
+    private AndroidElement alertSwitch;
     @AndroidFindBy(id = "com.moslay:id/alert_exp")
-    private AndroidElement setAlertTime_Btn;
+    private AndroidElement setAlertTimeButton;
     @AndroidFindBy(id = "com.moslay:id/werd_cancel_khatma")
-    private AndroidElement cancel_Btn;
+    private AndroidElement cancelButton;
     @AndroidFindBy(id = "com.moslay:id/werd_save_khatma")
-    private AndroidElement save_Btn;
+    private AndroidElement saveButton;
     /**
      * *********************************************************************************************************************************************
      */
@@ -39,7 +43,8 @@ public class AddWerdScreen extends Base {
      * @return Screen title as a string
      */
     public String getActualScreenTitle() {
-        return screenTitle_Text.getText();
+        wait.until(ExpectedConditions.visibilityOf(screenTitleText));
+        return screenTitleText.getText();
     }
     /**
      * *********************************************************************************************************************************************
@@ -50,7 +55,8 @@ public class AddWerdScreen extends Base {
      * @return navigation drawer screen
      */
     public void clickOnNavigationDrawerButton() {
-        navigationDrawer_Btn.click();
+        wait.until(ExpectedConditions.visibilityOf(navigationDrawerButton));
+        navigationDrawerButton.click();
         //This method returns navigation drawer method with shams
     }
     /**
@@ -62,7 +68,8 @@ public class AddWerdScreen extends Base {
      * @param text the text sent to khatma name text field
      */
     public void sendTextToKhatmaNameTextBar(String text) {
-        khatmaNameTxtBar_TextView.sendKeys(text);
+        wait.until(ExpectedConditions.visibilityOf(khatmaNameTextBar));
+        khatmaNameTextBar.sendKeys(text);
     }
     /**
      * *********************************************************************************************************************************************
@@ -73,7 +80,8 @@ public class AddWerdScreen extends Base {
      * @return DailyReadingScreen
      */
     public DailyReadingScreen clickOnDailyReadingButton() {
-        dailyReadingType_Button.click();
+        wait.until(ExpectedConditions.visibilityOf(dailyReadingTypeButton));
+        dailyReadingTypeButton.click();
         return new DailyReadingScreen();
     }
     /**
@@ -85,7 +93,8 @@ public class AddWerdScreen extends Base {
      * @return HowManyChaptersScreen
      */
     public HowManyChaptersScreen clickOnHowManyChaptersButton() {
-        howManyChapters_Btn.click();
+        wait.until(ExpectedConditions.visibilityOf(howManyChaptersButton));
+        howManyChaptersButton.click();
         return new HowManyChaptersScreen();
     }
     /**
@@ -97,7 +106,8 @@ public class AddWerdScreen extends Base {
      * @return StartFromScreen
      */
     public StartFromScreen clickOnStartFromButton() {
-        startReadingFrom_Btn.click();
+        wait.until(ExpectedConditions.visibilityOf(startReadingFromButton));
+        startReadingFromButton.click();
         return new StartFromScreen();
     }
     /**
@@ -107,7 +117,8 @@ public class AddWerdScreen extends Base {
      * This method is to click on alert switch
      */
     public void clickOnAlertOnOffSwitch() {
-        alertSwitch_Switch.click();
+        wait.until(ExpectedConditions.visibilityOf(alertSwitch));
+        alertSwitch.click();
     }
     /**
      * *********************************************************************************************************************************************
@@ -118,7 +129,8 @@ public class AddWerdScreen extends Base {
      * @return SetAlertTimeScreen
      */
     public SetAlertTimeScreen clickOnSetAlertTimeButton() {
-        setAlertTime_Btn.click();
+        wait.until(ExpectedConditions.visibilityOf(setAlertTimeButton));
+        setAlertTimeButton.click();
         return new SetAlertTimeScreen();
     }
     /**
@@ -130,7 +142,8 @@ public class AddWerdScreen extends Base {
      * @return HomePageScreen
      */
     public HomePageScreen clickOnCancelButton() {
-        cancel_Btn.click();
+        wait.until(ExpectedConditions.visibilityOf(cancelButton));
+        cancelButton.click();
         return new HomePageScreen();
     }
     /**
@@ -142,7 +155,8 @@ public class AddWerdScreen extends Base {
      * @return MushafScreen
      */
     public MushafScreen clickOnSaveButton() {
-        save_Btn.click();
+        wait.until(ExpectedConditions.visibilityOf(saveButton));
+        saveButton.click();
         return new MushafScreen();
     }
     /**

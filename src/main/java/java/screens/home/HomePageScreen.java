@@ -2,13 +2,16 @@ package java.screens.home;
 
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Wait;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.screens.benefits.CommentScreen;
 import java.screens.qibla.CompassScreen;
 import java.screens.qibla.ShadowScreen;
 import java.screens.qibla.SunAndMoonScreen;
 import java.screens.qibla.VisualScreen;
-import java.screens.quranWerd.MushafScreen;
+import java.screens.quranWerd.mushafScreen.MushafScreen;
 import java.screens.quranWerd.addWerd.AddWerdScreen;
 import java.screens.settings.SettingsScreen;
 import java.screens.werdAlMohasba.WerdAlMohasbaScreen;
@@ -16,101 +19,102 @@ import java.base.Base;
 import java.utilities.TestUtils;
 
 public class HomePageScreen extends Base {
+    Wait wait = new WebDriverWait(driver,10);
     @AndroidFindBy(id = "com.moslay:id/img_sebha")
-    private AndroidElement toolbar_Sebha_Btn;
+    private AndroidElement toolbar_SebhaButton;
 
     @AndroidFindBy(id = "com.moslay:id/img_azkar")
-    private AndroidElement toolbar_Azkar_Btn;
+    private AndroidElement toolbar_AzkarButton;
 
     @AndroidFindBy(id = "com.moslay:id/img_werd_mohasba")
-    private AndroidElement toolbar_WerdMohasba_Btn;
+    private AndroidElement toolbar_WerdMohasbaButton;
 
     @AndroidFindBy(id = "com.moslay:id/img_benefits")
-    private AndroidElement toolbar_Benefits_Btn;
+    private AndroidElement toolbar_BenefitsButton;
 
     @AndroidFindBy(id = "com.moslay:id/img_settings")
-    private AndroidElement toolbar_Settings_Btn;
+    private AndroidElement toolbar_SettingsButton;
 
     @AndroidFindBy(id = "com.moslay:id/img_more")
-    private AndroidElement toolbar_NavigationDrawer_Btn;
+    private AndroidElement toolbar_NavigationDrawerButton;
 
     @AndroidFindBy(id = "com.moslay:id/right_arrow_imageView")
-    private AndroidElement prayerTimes_RightArrow_Btn;
+    private AndroidElement prayerTimes_RightArrowButton;
 
     @AndroidFindBy(id = "com.moslay:id/left_arrow_imageView")
-    private AndroidElement prayerTimes_LeftArrow_Btn;
+    private AndroidElement prayerTimes_LeftArrowButton;
 
     @AndroidFindBy(xpath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.drawerlayout.widget.DrawerLayout/android.widget.RelativeLayout/android.widget.RelativeLayout/android.widget.LinearLayout/android.widget.RelativeLayout/android.widget.FrameLayout/android.widget.ScrollView/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.LinearLayout[1]/androidx.viewpager.widget.ViewPager/android.widget.LinearLayout/androidx.recyclerview.widget.RecyclerView/android.widget.LinearLayout[6]")
-    private AndroidElement prayerTimes_Fajr_Btn;
+    private AndroidElement prayerTimes_FajrButton;
 
     @AndroidFindBy(xpath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.drawerlayout.widget.DrawerLayout/android.widget.RelativeLayout/android.widget.RelativeLayout/android.widget.LinearLayout/android.widget.RelativeLayout/android.widget.FrameLayout/android.widget.ScrollView/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.LinearLayout[1]/androidx.viewpager.widget.ViewPager/android.widget.LinearLayout/androidx.recyclerview.widget.RecyclerView/android.widget.LinearLayout[5]")
-    private AndroidElement prayerTimes_Sherouk_Btn;
+    private AndroidElement prayerTimes_SheroukButton;
 
     @AndroidFindBy(xpath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.drawerlayout.widget.DrawerLayout/android.widget.RelativeLayout/android.widget.RelativeLayout/android.widget.LinearLayout/android.widget.RelativeLayout/android.widget.FrameLayout/android.widget.ScrollView/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.LinearLayout[1]/androidx.viewpager.widget.ViewPager/android.widget.LinearLayout/androidx.recyclerview.widget.RecyclerView/android.widget.LinearLayout[4]")
-    private AndroidElement prayerTimes_Duhr_Btn;
+    private AndroidElement prayerTimes_DuhrButton;
 
     @AndroidFindBy(xpath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.drawerlayout.widget.DrawerLayout/android.widget.RelativeLayout/android.widget.RelativeLayout/android.widget.LinearLayout/android.widget.RelativeLayout/android.widget.FrameLayout/android.widget.ScrollView/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.LinearLayout[1]/androidx.viewpager.widget.ViewPager/android.widget.LinearLayout/androidx.recyclerview.widget.RecyclerView/android.widget.LinearLayout[3]")
-    private AndroidElement prayerTimes_Asr_Btn;
+    private AndroidElement prayerTimes_AsrButton;
 
     @AndroidFindBy(xpath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.drawerlayout.widget.DrawerLayout/android.widget.RelativeLayout/android.widget.RelativeLayout/android.widget.LinearLayout/android.widget.RelativeLayout/android.widget.FrameLayout/android.widget.ScrollView/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.LinearLayout[1]/androidx.viewpager.widget.ViewPager/android.widget.LinearLayout/androidx.recyclerview.widget.RecyclerView/android.widget.LinearLayout[2]")
-    private AndroidElement prayerTimes_Maghreb_Btn;
+    private AndroidElement prayerTimes_MaghrebButton;
 
     @AndroidFindBy(xpath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.drawerlayout.widget.DrawerLayout/android.widget.RelativeLayout/android.widget.RelativeLayout/android.widget.LinearLayout/android.widget.RelativeLayout/android.widget.FrameLayout/android.widget.ScrollView/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.LinearLayout[1]/androidx.viewpager.widget.ViewPager/android.widget.LinearLayout/androidx.recyclerview.widget.RecyclerView/android.widget.LinearLayout[1]")
-    private AndroidElement prayerTimes_Ishaa_Btn;
+    private AndroidElement prayerTimes_IshaaButton;
 
     @AndroidFindBy(id = "com.moslay:id/moreTv")
-    private AndroidElement prayerTimes_MoreButton_Btn;
+    private AndroidElement prayerTimes_MoreButtonButton;
 
     @AndroidFindBy(id = "com.moslay:id/shareTv")
-    private AndroidElement prayerTimes_Share_Btn;
+    private AndroidElement prayerTimes_ShareButton;
 
     @AndroidFindBy(id = "com.moslay:id/azkar_title")
-    private AndroidElement azkarCard_Title_TxtView;
+    private AndroidElement azkarCard_TitleText;
 
     @AndroidFindBy(id = "com.moslay:id/zekrContent")
-    private AndroidElement azkarCard_Content_TxtView;
+    private AndroidElement azkarCard_ContentText;
 
     @AndroidFindBy(id = "com.moslay:id/approveButton")
-    private AndroidElement azkarCard_Approve_Btn;
+    private AndroidElement azkarCard_ApproveButton;
 
     @AndroidFindBy(id = "com.moslay:id/moreButton")
-    private AndroidElement azkarCard_More_Btn;
+    private AndroidElement azkarCard_MoreButton;
 
     @AndroidFindBy(id = "com.moslay:id/qibla_by_compass")
-    private AndroidElement qiblaCard_ByCompass_Btn;
+    private AndroidElement byCompassButton;
 
     @AndroidFindBy(id = "com.moslay:id/qibla_by_sun_and_moon")
-    private AndroidElement qiblaCard_BySunAndMoon_Btn;
+    private AndroidElement bySunAndMoonButton;
 
     @AndroidFindBy(id = "com.moslay:id/qibla_by_shadow")
-    private AndroidElement qiblaCard_ByShadow_Btn;
+    private AndroidElement byShadowButton;
 
     @AndroidFindBy(id = "com.moslay:id/qibla_visual")
-    private AndroidElement qiblaCard_ByVisual_Btn;
+    private AndroidElement byVisualButton;
 
     @AndroidFindBy(id = "com.moslay:id/congrats_btn")
-    private AndroidElement eidCard_Congrats_Btn;
+    private AndroidElement eidCard_CongratsButton;
 
     @AndroidFindBy(id = "com.moslay:id/like_image")
-    private AndroidElement bestParticipation_Like_Btn;
+    private AndroidElement bestParticipation_LikeButton;
 
     @AndroidFindBy(id = "com.moslay:id/news_comment")
-    private AndroidElement bestParticipation_Comment_Btn;
+    private AndroidElement bestParticipation_CommentButton;
 
     @AndroidFindBy(id = "com.moslay:id/news_share")
-    private AndroidElement bestParticipation_Share_Btn;
+    private AndroidElement bestParticipation_ShareButton;
 
     @AndroidFindBy(id = "com.moslay:id/like_layout")
-    private AndroidElement benefits_Like_Btn;
+    private AndroidElement benefits_LikeButton;
 
     @AndroidFindBy(id = "com.moslay:id/comment_layout")
-    private AndroidElement benefits_Comment_Btn;
+    private AndroidElement benefits_CommentButton;
 
     @AndroidFindBy(id = "com.moslay:id/share_layout")
-    private AndroidElement benefits_Share_Btn;
+    private AndroidElement benefits_ShareButton;
 
     @AndroidFindBy(id = "com.moslay:id/new_benefits_layout")
-    private AndroidElement benefits_BenefitSubject_Btn;
+    private AndroidElement benefits_BenefitSubjectButton;
 
     /**
      * *********************************************************************************************************************************************
@@ -121,7 +125,8 @@ public class HomePageScreen extends Base {
      * @returns sebha screen
      */
     public void clickOnToolBarSebhaButton() {
-        toolbar_Sebha_Btn.click();
+        wait.until(ExpectedConditions.visibilityOf(toolbar_SebhaButton));
+        toolbar_SebhaButton.click();
         //This method returns Sebha screen with shams
     }
     /**
@@ -133,7 +138,8 @@ public class HomePageScreen extends Base {
      * @returns azkar screen
      */
     public void clickOnToolBarAzkarButton() {
-        toolbar_Azkar_Btn.click();
+        wait.until(ExpectedConditions.visibilityOf(toolbar_AzkarButton));
+        toolbar_AzkarButton.click();
         //This method returns Azkar screen with shams
     }
     /**
@@ -145,7 +151,8 @@ public class HomePageScreen extends Base {
      * @return WerdAlMohasbaScreen
      */
     public WerdAlMohasbaScreen clickOnToolBarWerdAlMohasbaButton() {
-        toolbar_WerdMohasba_Btn.click();
+        wait.until(ExpectedConditions.visibilityOf(toolbar_WerdMohasbaButton));
+        toolbar_WerdMohasbaButton.click();
         return new WerdAlMohasbaScreen();
     }
     /**
@@ -157,7 +164,8 @@ public class HomePageScreen extends Base {
      * @returns benefits screen
      */
     public void clickOnToolBarBenefitsButton() {
-        toolbar_Benefits_Btn.click();
+        wait.until(ExpectedConditions.visibilityOf(toolbar_BenefitsButton));
+        toolbar_BenefitsButton.click();
         //This method returns Benefits screen with shams
     }
     /**
@@ -169,7 +177,8 @@ public class HomePageScreen extends Base {
      * @returns SettingsScreen
      */
     public SettingsScreen clickOnToolBarSettingsButton() {
-        toolbar_Settings_Btn.click();
+        wait.until(ExpectedConditions.visibilityOf(toolbar_SettingsButton));
+        toolbar_SettingsButton.click();
         return new SettingsScreen();
     }
     /**
@@ -181,7 +190,8 @@ public class HomePageScreen extends Base {
      * @return navigation drawer screen
      */
     public void clickOnToolBarNavigationDrawerButton() {
-        toolbar_NavigationDrawer_Btn.click();
+        wait.until(ExpectedConditions.visibilityOf(toolbar_NavigationDrawerButton));
+        toolbar_NavigationDrawerButton.click();
         //This method returns Navigation Drawer screen with shams
     }
     /**
@@ -191,7 +201,8 @@ public class HomePageScreen extends Base {
      * This method is to click on prayer times right arrow button
      */
     public void clickOnPrayerTimesRightArrowButton() {
-        prayerTimes_RightArrow_Btn.click();
+        wait.until(ExpectedConditions.visibilityOf(prayerTimes_RightArrowButton));
+        prayerTimes_RightArrowButton.click();
     }
     /**
      * *********************************************************************************************************************************************
@@ -200,7 +211,8 @@ public class HomePageScreen extends Base {
      * This method is to click on prayer times left arrow button
      */
     public void clickOnPrayerTimesLeftArrowButton() {
-        prayerTimes_LeftArrow_Btn.click();
+        wait.until(ExpectedConditions.visibilityOf(prayerTimes_LeftArrowButton));
+        prayerTimes_LeftArrowButton.click();
     }
     /**
      * *********************************************************************************************************************************************
@@ -209,7 +221,8 @@ public class HomePageScreen extends Base {
      * This method is to click on prayer times fajr button
      */
     public void clickOnPrayerTimesFajrButton() {
-        prayerTimes_Fajr_Btn.click();
+        wait.until(ExpectedConditions.visibilityOf(prayerTimes_FajrButton));
+        prayerTimes_FajrButton.click();
     }
     /**
      * *********************************************************************************************************************************************
@@ -218,7 +231,8 @@ public class HomePageScreen extends Base {
      * This method is to click on prayer times fajr button
      */
     public void clickOnPrayerTimesSheroukButton() {
-        prayerTimes_Sherouk_Btn.click();
+        wait.until(ExpectedConditions.visibilityOf(prayerTimes_SheroukButton));
+        prayerTimes_SheroukButton.click();
     }
     /**
      * *********************************************************************************************************************************************
@@ -227,7 +241,8 @@ public class HomePageScreen extends Base {
      * This method is to click on prayer times fajr button
      */
     public void clickOnPrayerTimesDuhrButton() {
-        prayerTimes_Duhr_Btn.click();
+        wait.until(ExpectedConditions.visibilityOf(prayerTimes_DuhrButton));
+        prayerTimes_DuhrButton.click();
     }
     /**
      * *********************************************************************************************************************************************
@@ -236,7 +251,8 @@ public class HomePageScreen extends Base {
      * This method is to click on prayer times Asr button
      */
     public void clickOnPrayerTimesAsrButton() {
-        prayerTimes_Asr_Btn.click();
+        wait.until(ExpectedConditions.visibilityOf(prayerTimes_AsrButton));
+        prayerTimes_AsrButton.click();
     }
     /**
      * *********************************************************************************************************************************************
@@ -245,7 +261,8 @@ public class HomePageScreen extends Base {
      * This method is to click on prayer times Maghreb button
      */
     public void clickOnPrayerTimesMaghrebButton() {
-        prayerTimes_Maghreb_Btn.click();
+        wait.until(ExpectedConditions.visibilityOf(prayerTimes_MaghrebButton));
+        prayerTimes_MaghrebButton.click();
     }
     /**
      * *********************************************************************************************************************************************
@@ -254,7 +271,8 @@ public class HomePageScreen extends Base {
      * This method is to click on prayer times Ishaa button
      */
     public void clickOnPrayerTimesIshaaButton() {
-        prayerTimes_Ishaa_Btn.click();
+        wait.until(ExpectedConditions.visibilityOf(prayerTimes_IshaaButton));
+        prayerTimes_IshaaButton.click();
     }
     /**
      * *********************************************************************************************************************************************
@@ -263,7 +281,9 @@ public class HomePageScreen extends Base {
      * This method is to scroll to the next day in prayer times card
      */
     public void scrollToTheNextDayOnPrayerTimesCard() {
-        TestUtils.scrollFromAnElementToAnElement(prayerTimes_Ishaa_Btn, prayerTimes_Fajr_Btn);
+        wait.until(ExpectedConditions.visibilityOf(prayerTimes_IshaaButton));
+        wait.until(ExpectedConditions.visibilityOf(prayerTimes_FajrButton));
+        TestUtils.scrollFromAnElementToAnElement(prayerTimes_IshaaButton, prayerTimes_FajrButton);
     }
     /**
      * *********************************************************************************************************************************************
@@ -272,7 +292,9 @@ public class HomePageScreen extends Base {
      * This method is to scroll to the previous day in prayer times card
      */
     public void scrollToThePreviousDayOnPrayerTimesCard() {
-        TestUtils.scrollFromAnElementToAnElement(prayerTimes_Fajr_Btn, prayerTimes_Ishaa_Btn);
+        wait.until(ExpectedConditions.visibilityOf(prayerTimes_IshaaButton));
+        wait.until(ExpectedConditions.visibilityOf(prayerTimes_FajrButton));
+        TestUtils.scrollFromAnElementToAnElement(prayerTimes_FajrButton, prayerTimes_IshaaButton);
     }
     /**
      * *********************************************************************************************************************************************
@@ -283,7 +305,8 @@ public class HomePageScreen extends Base {
      * @return prayer times more screen
      */
     public void clickOnPrayerTimesMoreButton() {
-        prayerTimes_MoreButton_Btn.click();
+        wait.until(ExpectedConditions.visibilityOf(prayerTimes_MoreButtonButton));
+        prayerTimes_MoreButtonButton.click();
         //This method returns PrayerTimesMoreScreen with shams
     }
     /**
@@ -293,7 +316,8 @@ public class HomePageScreen extends Base {
      * This method is to click on prayer times Share button
      */
     public void clickOnPrayerTimesShareButton() {
-        prayerTimes_Share_Btn.click();
+        wait.until(ExpectedConditions.visibilityOf(prayerTimes_ShareButton));
+        prayerTimes_ShareButton.click();
     }
     /**
      * *********************************************************************************************************************************************
@@ -304,7 +328,8 @@ public class HomePageScreen extends Base {
      * @return azkar variety Screen
      */
     public void clickOnApproveButtonAzkarCard() {
-        azkarCard_Approve_Btn.click();
+        wait.until(ExpectedConditions.visibilityOf(azkarCard_ApproveButton));
+        azkarCard_ApproveButton.click();
         //This method returns AzkarVarietyScreen with shams
     }
     /**
@@ -316,7 +341,8 @@ public class HomePageScreen extends Base {
      * @return azkar variety list Screen
      */
     public void clickOnMoreButtonAzkarCard() {
-        azkarCard_More_Btn.click();
+        wait.until(ExpectedConditions.visibilityOf(azkarCard_MoreButton));
+        azkarCard_MoreButton.click();
         //This method returns AzkarVarietyListScreen with shams
     }
     /**
@@ -328,7 +354,8 @@ public class HomePageScreen extends Base {
      * @return CompassScreen
      */
     public CompassScreen clickOnQiblaCompassButton() {
-        qiblaCard_ByCompass_Btn.click();
+        wait.until(ExpectedConditions.visibilityOf(byCompassButton));
+        byCompassButton.click();
         return new CompassScreen();
     }
     /**
@@ -340,7 +367,8 @@ public class HomePageScreen extends Base {
      * @return SunAndMoonScreen
      */
     public SunAndMoonScreen clickOnQiblaSunAndMoonButton() {
-        qiblaCard_BySunAndMoon_Btn.click();
+        wait.until(ExpectedConditions.visibilityOf(bySunAndMoonButton));
+        bySunAndMoonButton.click();
         return new SunAndMoonScreen();
     }
     /**
@@ -352,7 +380,8 @@ public class HomePageScreen extends Base {
      * @return ShadowScreen
      */
     public ShadowScreen clickOnQiblaShadowButton() {
-        qiblaCard_ByShadow_Btn.click();
+        wait.until(ExpectedConditions.visibilityOf(byShadowButton));
+        byShadowButton.click();
         return new ShadowScreen();
     }
     /**
@@ -364,7 +393,8 @@ public class HomePageScreen extends Base {
      * @return VisualScreen
      */
     public VisualScreen clickOnQiblaVisualButton() {
-        qiblaCard_ByVisual_Btn.click();
+        wait.until(ExpectedConditions.visibilityOf(byVisualButton));
+        byVisualButton.click();
         return new VisualScreen();
     }
     /**
@@ -423,7 +453,8 @@ public class HomePageScreen extends Base {
      * This method is to click on best participation like button
      */
     public void clickOnBestParticipationLikeButton() {
-        bestParticipation_Like_Btn.click();
+        wait.until(ExpectedConditions.visibilityOf(bestParticipation_LikeButton));
+        bestParticipation_LikeButton.click();
     }
     /**
      * *********************************************************************************************************************************************
@@ -434,7 +465,8 @@ public class HomePageScreen extends Base {
      * @return CommentScreen
      */
     public CommentScreen clickOnBestParticipationCommentButton() {
-        bestParticipation_Comment_Btn.click();
+        wait.until(ExpectedConditions.visibilityOf(bestParticipation_CommentButton));
+        bestParticipation_CommentButton.click();
         return new CommentScreen();
     }
     /**
@@ -444,7 +476,8 @@ public class HomePageScreen extends Base {
      * This method is to click on best participation share button
      */
     public void clickOnBestParticipationShareButton() {
-        bestParticipation_Share_Btn.click();
+        wait.until(ExpectedConditions.visibilityOf(bestParticipation_ShareButton));
+        bestParticipation_ShareButton.click();
     }
     /**
      * *********************************************************************************************************************************************
@@ -453,7 +486,8 @@ public class HomePageScreen extends Base {
      * This method is to click on benefits like button
      */
     public void clickOnBenefitsCardLikeButton() {
-        benefits_Like_Btn.click();
+        wait.until(ExpectedConditions.visibilityOf(benefits_LikeButton));
+        benefits_LikeButton.click();
     }
     /**
      * *********************************************************************************************************************************************
@@ -464,7 +498,8 @@ public class HomePageScreen extends Base {
      * @return CommentScreen
      */
     public CommentScreen clickOnBenefitsCardCommentButton() {
-        benefits_Comment_Btn.click();
+        wait.until(ExpectedConditions.visibilityOf(benefits_CommentButton));
+        benefits_CommentButton.click();
         return new CommentScreen();
     }
     /**
@@ -474,7 +509,8 @@ public class HomePageScreen extends Base {
      * This method is to click on benefits share button
      */
     public void clickOnBenefitsCardShareButton() {
-        benefits_Share_Btn.click();
+        wait.until(ExpectedConditions.visibilityOf(benefits_ShareButton));
+        benefits_ShareButton.click();
     }
     /**
      * *********************************************************************************************************************************************
@@ -483,7 +519,8 @@ public class HomePageScreen extends Base {
      * This method is to click on benefits subject button
      */
     public void clickOnBenefitsSubject() {
-        benefits_BenefitSubject_Btn.click();
+        wait.until(ExpectedConditions.visibilityOf(benefits_BenefitSubjectButton));
+        benefits_BenefitSubjectButton.click();
         //This method returns benefit subject with shams
     }
     /**
@@ -493,7 +530,9 @@ public class HomePageScreen extends Base {
      * This method is to scroll to the next benefit on the screen
      */
     public void scrollToTheNextBenefitOnTheScreen() {
-        TestUtils.scrollFromAnElementToAnElement(benefits_Share_Btn, benefits_Like_Btn);
+        wait.until(ExpectedConditions.visibilityOf(benefits_LikeButton));
+        wait.until(ExpectedConditions.visibilityOf(benefits_ShareButton));
+        TestUtils.scrollFromAnElementToAnElement(benefits_ShareButton, benefits_LikeButton);
     }
     /**
      * *********************************************************************************************************************************************
@@ -502,7 +541,9 @@ public class HomePageScreen extends Base {
      * This method is to scroll to the prevoius benefit on the screen
      */
     public void scrollToThePreviousBenefitOnTheScreen() {
-        TestUtils.scrollFromAnElementToAnElement(benefits_Like_Btn, benefits_Share_Btn);
+        wait.until(ExpectedConditions.visibilityOf(benefits_LikeButton));
+        wait.until(ExpectedConditions.visibilityOf(benefits_ShareButton));
+        TestUtils.scrollFromAnElementToAnElement(benefits_LikeButton, benefits_ShareButton);
     }
     /**
      * *********************************************************************************************************************************************

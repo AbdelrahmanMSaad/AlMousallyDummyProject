@@ -1,5 +1,7 @@
 package java.screens.qibla;
 
+import org.openqa.selenium.support.ui.ExpectedConditions;
+
 import java.utilities.TestUtils;
 
 public class ShadowScreen extends QiblaScreen {
@@ -13,8 +15,8 @@ public class ShadowScreen extends QiblaScreen {
      * @return Screen title as a string
      */
     public String getActualScreenTitle() {
-        TestUtils.fluentWaitBySecondsToCheckTheVisibilityOfAnAndroidElemnet(1, 60, screenTitle_Text);
-        return screenTitle_Text.getText();
+        wait.until(ExpectedConditions.visibilityOf(screenTitleText));
+        return screenTitleText.getText();
     }
     /**
      * *********************************************************************************************************************************************
@@ -25,8 +27,8 @@ public class ShadowScreen extends QiblaScreen {
      * @return navigation drawer screen
      */
     public void clickOnNavigationDrawerButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, navigationDrawer_Btn);
-        navigationDrawer_Btn.click();
+        wait.until(ExpectedConditions.visibilityOf(navigationDrawerButton));
+        navigationDrawerButton.click();
         //This method returns navigation drawer method with shams
     }
     /**
@@ -38,8 +40,8 @@ public class ShadowScreen extends QiblaScreen {
      * @return CompassScreen
      */
     public CompassScreen clickOnCompassButton() {
-        TestUtils.fluentWaitBySecondsToCheckTheClickabilityOfAnAndroidElemnet(1, 60, compass_Btn);
-        compass_Btn.click();
+        wait.until(ExpectedConditions.visibilityOf(compassButton));
+        compassButton.click();
         return new CompassScreen();
     }
     /**
@@ -51,7 +53,8 @@ public class ShadowScreen extends QiblaScreen {
      * @returns SunAndMoonScreen
      */
     public SunAndMoonScreen clickOnSunAndMoonButton() {
-        sunAndMoon_Btn.click();
+        wait.until(ExpectedConditions.visibilityOf(sunAndMoonButton));
+        sunAndMoonButton.click();
         return new SunAndMoonScreen();
     }
     /**
@@ -63,7 +66,8 @@ public class ShadowScreen extends QiblaScreen {
      * @return VisualScreen
      */
     public VisualScreen clickOnVisibleButton() {
-        visual_Btn.click();
+        wait.until(ExpectedConditions.visibilityOf(visualButton));
+        visualButton.click();
         return new VisualScreen();
     }
     /**
@@ -73,7 +77,8 @@ public class ShadowScreen extends QiblaScreen {
      * This method is to click on help button
      */
     public void clickOnHelpButton() {
-        help_Btn.click();
+        wait.until(ExpectedConditions.visibilityOf(helpButton));
+        helpButton.click();
     }
     /**
      * *********************************************************************************************************************************************

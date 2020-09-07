@@ -1,10 +1,11 @@
-package java.screens.quranWerd;
+package java.screens.quranWerd.mushafScreen;
 
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.touch.offset.PointOption;
 
 import java.base.Base;
+import java.screens.quranWerd.quranWerdMainScreen.AddedScreen;
 import java.utilities.TestUtils;
 
 public class MushafScreen extends Base {

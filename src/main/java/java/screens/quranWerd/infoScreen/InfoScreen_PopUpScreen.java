@@ -1,16 +1,20 @@
-package java.screens.quranWerd;
+package java.screens.quranWerd.infoScreen;
 
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Wait;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.base.Base;
 
 public class InfoScreen_PopUpScreen extends Base {
+    Wait wait = new WebDriverWait(driver,10);
     @AndroidFindBy(id = "com.moslay:id/warning_cancel")
-    private AndroidElement cancel_Btn;
+    private AndroidElement cancelButton;
 
     @AndroidFindBy(id = "com.moslay:id/warning_ok")
-    private AndroidElement ok_Btn;
+    private AndroidElement okButton;
 
     /**
      * *********************************************************************************************************************************************
@@ -21,7 +25,8 @@ public class InfoScreen_PopUpScreen extends Base {
      * @return InfoScreen
      */
     public InfoScreen clickOnOkButton() {
-        ok_Btn.click();
+        wait.until(ExpectedConditions.visibilityOf(okButton));
+        okButton.click();
         return new InfoScreen();
     }
     /**
@@ -33,7 +38,8 @@ public class InfoScreen_PopUpScreen extends Base {
      * @return InfoScreen
      */
     public InfoScreen clickOnCancelButton() {
-        cancel_Btn.click();
+        wait.until(ExpectedConditions.visibilityOf(cancelButton));
+        cancelButton.click();
         return new InfoScreen();
     }
     /**

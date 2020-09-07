@@ -1,5 +1,7 @@
 package java.screens.qibla;
 
+import org.openqa.selenium.support.ui.ExpectedConditions;
+
 public class CompassScreen extends QiblaScreen {
     /**
      * *********************************************************************************************************************************************
@@ -10,7 +12,8 @@ public class CompassScreen extends QiblaScreen {
      * @return Screen title as a string
      */
     public String getActualScreenTitle() {
-        return screenTitle_Text.getText();
+        wait.until(ExpectedConditions.visibilityOf(screenTitleText));
+        return screenTitleText.getText();
     }
     /**
      * *********************************************************************************************************************************************
@@ -21,7 +24,8 @@ public class CompassScreen extends QiblaScreen {
      * @return navigation drawer screen
      */
     public void clickOnNavigationDrawerButton() {
-        navigationDrawer_Btn.click();
+        wait.until(ExpectedConditions.visibilityOf(navigationDrawerButton));
+        navigationDrawerButton.click();
         //This method returns navigation drawer method with shams
     }
     /**
@@ -33,7 +37,8 @@ public class CompassScreen extends QiblaScreen {
      * @returns SunAndMoonScreen
      */
     public SunAndMoonScreen clickOnSunAndMoonButton() {
-        sunAndMoon_Btn.click();
+        wait.until(ExpectedConditions.visibilityOf(sunAndMoonButton));
+        sunAndMoonButton.click();
         return new SunAndMoonScreen();
     }
     /**
@@ -45,7 +50,8 @@ public class CompassScreen extends QiblaScreen {
      * @return ShadowScreen
      */
     public ShadowScreen clickOnShadowButton() {
-        shadow_Btn.click();
+        wait.until(ExpectedConditions.visibilityOf(shadowButton));
+        shadowButton.click();
         return new ShadowScreen();
     }
     /**
@@ -57,7 +63,8 @@ public class CompassScreen extends QiblaScreen {
      * @return VisualScreen
      */
     public VisualScreen clickOnVisibleButton() {
-        visual_Btn.click();
+        wait.until(ExpectedConditions.visibilityOf(visualButton));
+        visualButton.click();
         return new VisualScreen();
     }
     /**
@@ -67,7 +74,8 @@ public class CompassScreen extends QiblaScreen {
      * This method is to click on help button
      */
     public void clickOnHelpButton() {
-        help_Btn.click();
+        wait.until(ExpectedConditions.visibilityOf(helpButton));
+        helpButton.click();
     }
     /**
      * *********************************************************************************************************************************************

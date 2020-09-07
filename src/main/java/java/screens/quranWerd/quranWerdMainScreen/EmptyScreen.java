@@ -1,10 +1,11 @@
-package java.screens.quranWerd;
+package java.screens.quranWerd.quranWerdMainScreen;
 
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 
 import java.screens.quranWerd.addWerd.AddWerdScreen;
 import java.base.Base;
+import java.screens.quranWerd.mushafScreen.MushafScreen;
 
 public class EmptyScreen extends Base {
     String expectedTitle = "ورد القران";

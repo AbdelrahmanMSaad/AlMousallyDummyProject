@@ -2,15 +2,19 @@ package java.screens.mosques;
 
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Wait;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.base.Base;
 
 public class MosquesScreen extends Base {
+    Wait wait = new WebDriverWait(driver,10);
     String expectedTitle = "مساجد";
     @AndroidFindBy(id = "com.moslay:id/img_more")
-    private AndroidElement navigationDrawer_Btn;
+    private AndroidElement navigationDrawerButton;
     @AndroidFindBy(id = "com.moslay:id/qibla_inside_title")
-    private AndroidElement screenTitle_Text;
+    private AndroidElement screenTitleText;
     /**
      * *********************************************************************************************************************************************
      */
@@ -21,7 +25,8 @@ public class MosquesScreen extends Base {
      * @return Screen title as a string
      */
     public String getActualScreenTitle() {
-        return screenTitle_Text.getText();
+        wait.until(ExpectedConditions.visibilityOf(screenTitleText));
+        return screenTitleText.getText();
     }
     /**
      * *********************************************************************************************************************************************
@@ -32,7 +37,8 @@ public class MosquesScreen extends Base {
      * @return navigation drawer screen
      */
     public void clickOnNavigationDrawerButton() {
-        navigationDrawer_Btn.click();
+        wait.until(ExpectedConditions.visibilityOf(navigationDrawerButton));
+        navigationDrawerButton.click();
         //This method returns navigation drawer method with shams
     }
     /**

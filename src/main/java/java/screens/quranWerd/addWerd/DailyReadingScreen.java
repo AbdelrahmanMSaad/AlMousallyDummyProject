@@ -2,24 +2,28 @@ package java.screens.quranWerd.addWerd;
 
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Wait;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.base.Base;
 
 public class DailyReadingScreen extends Base {
+    Wait wait = new WebDriverWait(driver,10);
     @AndroidFindBy(xpath = "/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.ListView/android.widget.CheckedTextView[1]")
-    private AndroidElement gozaaButton_Btn;
+    private AndroidElement gozaaButton;
 
     @AndroidFindBy(xpath = "/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.ListView/android.widget.CheckedTextView[2]")
-    private AndroidElement hezbButton_Btn;
+    private AndroidElement hezbButton;
 
     @AndroidFindBy(xpath = "/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.ListView/android.widget.CheckedTextView[3]")
     private AndroidElement robaaButton;
 
     @AndroidFindBy(xpath = "/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.ListView/android.widget.CheckedTextView[4]")
-    private AndroidElement pageButton_Btn;
+    private AndroidElement pageButton;
 
     @AndroidFindBy(xpath = "/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.ListView/android.widget.CheckedTextView[5]")
-    private AndroidElement soraaButton_Btn;
+    private AndroidElement soraaButton;
 
     /**
      * *********************************************************************************************************************************************
@@ -28,7 +32,8 @@ public class DailyReadingScreen extends Base {
      * This method is to click on gozaa button
      */
     public void clickOnGozaaButton() {
-        gozaaButton_Btn.click();
+        wait.until(ExpectedConditions.visibilityOf(gozaaButton));
+        gozaaButton.click();
     }
     /**
      * *********************************************************************************************************************************************
@@ -37,7 +42,8 @@ public class DailyReadingScreen extends Base {
      * This method is to click on hezb button
      */
     public void clickOnHezbButton() {
-        hezbButton_Btn.click();
+        wait.until(ExpectedConditions.visibilityOf(hezbButton));
+        hezbButton.click();
     }
     /**
      * *********************************************************************************************************************************************
@@ -46,6 +52,7 @@ public class DailyReadingScreen extends Base {
      * This method is to click on robaa button
      */
     public void clickOnRobaaButton() {
+        wait.until(ExpectedConditions.visibilityOf(robaaButton));
         robaaButton.click();
     }
     /**
@@ -55,7 +62,8 @@ public class DailyReadingScreen extends Base {
      * This method is to click on page button
      */
     public void clickOnPageButton() {
-        pageButton_Btn.click();
+        wait.until(ExpectedConditions.visibilityOf(pageButton));
+        pageButton.click();
     }
     /**
      * *********************************************************************************************************************************************
@@ -64,7 +72,8 @@ public class DailyReadingScreen extends Base {
      * This method is to click on soraa button
      */
     public void clickOnSoraaButton() {
-        soraaButton_Btn.click();
+        wait.until(ExpectedConditions.visibilityOf(soraaButton));
+        soraaButton.click();
     }
     /**
      * *********************************************************************************************************************************************

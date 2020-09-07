@@ -1,20 +1,24 @@
-package java.screens.quranWerd;
+package java.screens.quranWerd.infoScreen;
 
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Wait;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.base.Base;
 
 public class InfoScreen extends Base {
+    Wait wait = new WebDriverWait(driver,10);
     String expectedTitle = "ورد القران";
     @AndroidFindBy(id = "com.moslay:id/img_menu")
-    private AndroidElement navigationDrawer_Btn;
+    private AndroidElement navigationDrawerButton;
     @AndroidFindBy(id = "com.moslay:id/Azkar_menu_Header")
-    private AndroidElement screenTitle_Text;
+    private AndroidElement screenTitleText;
     @AndroidFindBy(id = "com.moslay:id/delete_khtma")
-    private AndroidElement delete_Btn;
+    private AndroidElement deleteButton;
     @AndroidFindBy(id = "com.moslay:id/pause_khtma")
-    private AndroidElement pause_Btn;
+    private AndroidElement pauseButton;
 
     /**
      * *********************************************************************************************************************************************
@@ -26,7 +30,8 @@ public class InfoScreen extends Base {
      * @return Screen title as a string
      */
     public String getActualScreenTitle() {
-        return screenTitle_Text.getText();
+        wait.until(ExpectedConditions.visibilityOf(screenTitleText));
+        return screenTitleText.getText();
     }
     /**
      * *********************************************************************************************************************************************
@@ -37,7 +42,8 @@ public class InfoScreen extends Base {
      * @return navigation drawer screen
      */
     public void clickOnNavigationDrawerButton() {
-        navigationDrawer_Btn.click();
+        wait.until(ExpectedConditions.visibilityOf(navigationDrawerButton));
+        navigationDrawerButton.click();
         //This method returns navigation drawer method with shams
     }
     /**
@@ -49,7 +55,8 @@ public class InfoScreen extends Base {
      * @return InfoScreen_PopUpScreen
      */
     public InfoScreen_PopUpScreen clickOnPauseButton() {
-        pause_Btn.click();
+        wait.until(ExpectedConditions.visibilityOf(pauseButton));
+        pauseButton.click();
         return new InfoScreen_PopUpScreen();
     }
     /**
@@ -61,7 +68,8 @@ public class InfoScreen extends Base {
      * @return InfoScreen_PopUpScreen
      */
     public InfoScreen_PopUpScreen clickOnDeleteButton() {
-        delete_Btn.click();
+        wait.until(ExpectedConditions.visibilityOf(deleteButton));
+        deleteButton.click();
         return new InfoScreen_PopUpScreen();
     }
     /**

@@ -2,21 +2,25 @@ package java.screens.quranWerd.addWerd;
 
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Wait;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.base.Base;
 
 public class SetAlertTimeScreen extends Base {
+    Wait wait = new WebDriverWait(driver,10);
     @AndroidFindBy(xpath = "/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.TimePicker/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.NumberPicker[2]/android.widget.EditText")
-    private AndroidElement minutesBar_TextView;
+    private AndroidElement minutesBarTextView;
 
     @AndroidFindBy(xpath = "/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.TimePicker/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.NumberPicker[1]/android.widget.EditText")
-    private AndroidElement hoursBar_TextView;
+    private AndroidElement hoursBarTextView;
 
     @AndroidFindBy(id = "android:id/button2")
-    private AndroidElement cancel_Btn;
+    private AndroidElement cancelButton;
 
     @AndroidFindBy(id = "android:id/button1")
-    private AndroidElement save_Btn;
+    private AndroidElement saveButton;
 
     /**
      * *********************************************************************************************************************************************
@@ -27,7 +31,8 @@ public class SetAlertTimeScreen extends Base {
      * @param numberOfMinutes number of minutes sent as a string
      */
     public void sendKeysToMinutesTextField(String numberOfMinutes) {
-        minutesBar_TextView.sendKeys(numberOfMinutes);
+        wait.until(ExpectedConditions.visibilityOf(minutesBarTextView));
+        minutesBarTextView.sendKeys(numberOfMinutes);
     }
     /**
      * *********************************************************************************************************************************************
@@ -38,7 +43,8 @@ public class SetAlertTimeScreen extends Base {
      * @param numberOfHours number of hours sent as a string
      */
     public void sendKeysToHoursTextField(String numberOfHours) {
-        hoursBar_TextView.sendKeys(numberOfHours);
+        wait.until(ExpectedConditions.visibilityOf(hoursBarTextView));
+        hoursBarTextView.sendKeys(numberOfHours);
     }
     /**
      * *********************************************************************************************************************************************
@@ -49,7 +55,8 @@ public class SetAlertTimeScreen extends Base {
      * @return AddWerdScreen
      */
     public AddWerdScreen clickOnCancelButton() {
-        cancel_Btn.click();
+        wait.until(ExpectedConditions.visibilityOf(cancelButton));
+        cancelButton.click();
         return new AddWerdScreen();
     }
     /**
@@ -61,7 +68,8 @@ public class SetAlertTimeScreen extends Base {
      * @return AddWerdScreen
      */
     public AddWerdScreen clickOnSaveButton() {
-        save_Btn.click();
+        wait.until(ExpectedConditions.visibilityOf(saveButton));
+        saveButton.click();
         return new AddWerdScreen();
     }
     /**

@@ -2,14 +2,15 @@ package java.screens.qibla;
 
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class VisualScreen extends QiblaScreen {
     @AndroidFindBy(xpath = "//android.widget.ImageView[@content-desc=\"Zoom in\"]")
-    private AndroidElement zoomIn_Btn;
+    private AndroidElement zoomInButton;
     @AndroidFindBy(xpath = "//android.widget.ImageView[@content-desc=\"Zoom out\"]")
-    private AndroidElement zoomOut_Btn;
+    private AndroidElement zoomOutButton;
     @AndroidFindBy(id = "com.moslay:id/map_type")
-    private AndroidElement mapLayers_Btn;
+    private AndroidElement mapLayersButton;
     /**
      * *********************************************************************************************************************************************
      */
@@ -20,7 +21,8 @@ public class VisualScreen extends QiblaScreen {
      * @return Screen title as a string
      */
     public String getActualScreenTitle() {
-        return screenTitle_Text.getText();
+        wait.until(ExpectedConditions.visibilityOf(screenTitleText));
+        return screenTitleText.getText();
     }
     /**
      * *********************************************************************************************************************************************
@@ -31,7 +33,8 @@ public class VisualScreen extends QiblaScreen {
      * @return navigation drawer screen
      */
     public void clickOnNavigationDrawerButton() {
-        navigationDrawer_Btn.click();
+        wait.until(ExpectedConditions.visibilityOf(navigationDrawerButton));
+        navigationDrawerButton.click();
         //This method returns navigation drawer method with shams
     }
     /**
@@ -43,7 +46,8 @@ public class VisualScreen extends QiblaScreen {
      * @return CompassScreen
      */
     public CompassScreen clickOnCompassButton() {
-        compass_Btn.click();
+        wait.until(ExpectedConditions.visibilityOf(compassButton));
+        compassButton.click();
         return new CompassScreen();
     }
     /**
@@ -55,7 +59,8 @@ public class VisualScreen extends QiblaScreen {
      * @returns SunAndMoonScreen
      */
     public SunAndMoonScreen clickOnSunAndMoonButton() {
-        sunAndMoon_Btn.click();
+        wait.until(ExpectedConditions.visibilityOf(sunAndMoonButton));
+        sunAndMoonButton.click();
         return new SunAndMoonScreen();
     }
     /**
@@ -67,7 +72,8 @@ public class VisualScreen extends QiblaScreen {
      * @return ShadowScreen
      */
     public ShadowScreen clickOnShadowButton() {
-        shadow_Btn.click();
+        wait.until(ExpectedConditions.visibilityOf(shadowButton));
+        shadowButton.click();
         return new ShadowScreen();
     }
     /**
@@ -77,7 +83,8 @@ public class VisualScreen extends QiblaScreen {
      * This method is to click on help button
      */
     public void clickOnHelpButton() {
-        help_Btn.click();
+        wait.until(ExpectedConditions.visibilityOf(helpButton));
+        helpButton.click();
     }
     /**
      * *********************************************************************************************************************************************
@@ -86,7 +93,8 @@ public class VisualScreen extends QiblaScreen {
      * This method is to click on zoom in button
      */
     public void clickOnZoomInButton() {
-        zoomIn_Btn.click();
+        wait.until(ExpectedConditions.visibilityOf(zoomInButton));
+        zoomInButton.click();
     }
     /**
      * *********************************************************************************************************************************************
@@ -95,7 +103,8 @@ public class VisualScreen extends QiblaScreen {
      * This method is to click on zoom in button
      */
     public void clickOnZoomOutButton() {
-        zoomOut_Btn.click();
+        wait.until(ExpectedConditions.visibilityOf(zoomOutButton));
+        zoomOutButton.click();
     }
     /**
      * *********************************************************************************************************************************************
@@ -104,7 +113,8 @@ public class VisualScreen extends QiblaScreen {
      * This method is to click on map layers button
      */
     public void clickOnMapLayersButton(){
-        mapLayers_Btn.click();
+        wait.until(ExpectedConditions.visibilityOf(mapLayersButton));
+        mapLayersButton.click();
     }
     /**
      * *********************************************************************************************************************************************

@@ -2,27 +2,31 @@ package java.screens.golden;
 
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Wait;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.base.Base;
 
 public class GoldenScreen extends Base {
+    Wait wait = new WebDriverWait(driver,10);
     @AndroidFindBy(xpath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.RelativeLayout/android.widget.TextView")
-    private AndroidElement screenTitle_Text;
+    private AndroidElement screenTitleText;
 
     @AndroidFindBy(id = "com.moslay:id/subscribe")
-    private AndroidElement subscribe_Btn;
+    private AndroidElement subscribeButton;
 
     @AndroidFindBy(id = "com.moslay:id/renew_subscribe")
-    private AndroidElement renewSubscribtion_Btn;
+    private AndroidElement renewSubscribtionButton;
 
     @AndroidFindBy(id = "com.moslay:id/list")
-    private AndroidElement plansList_Element;
+    private AndroidElement plansListElement;
 
     @AndroidFindBy(id = "com.moslay:id/privacy_policy")
-    private AndroidElement privacyPolicy_Btn;
+    private AndroidElement privacyPolicyButton;
 
     @AndroidFindBy(id = "com.moslay:id/terms_conditions")
-    private AndroidElement termsAndConditions_Btn;
+    private AndroidElement termsAndConditionsButton;
     /**
      * *********************************************************************************************************************************************
      */
@@ -32,7 +36,8 @@ public class GoldenScreen extends Base {
      * @return Screen title as a string
      */
     public String getActualScreenTitle() {
-        return screenTitle_Text.getText();
+        wait.until(ExpectedConditions.visibilityOf(screenTitleText));
+        return screenTitleText.getText();
     }
     /**
      * *********************************************************************************************************************************************
@@ -41,7 +46,8 @@ public class GoldenScreen extends Base {
      * This method is to click on subscribe button
      */
     public void clickOnSubscribeButton() {
-        subscribe_Btn.click();
+        wait.until(ExpectedConditions.visibilityOf(subscribeButton));
+        subscribeButton.click();
     }
     /**
      * *********************************************************************************************************************************************
@@ -50,7 +56,8 @@ public class GoldenScreen extends Base {
      * This method is to click on renew subscribtion button
      */
     public void clickOnRenewSubscribtion() {
-        renewSubscribtion_Btn.click();
+        wait.until(ExpectedConditions.visibilityOf(renewSubscribtionButton));
+        renewSubscribtionButton.click();
     }
     /**
      * *********************************************************************************************************************************************
@@ -59,7 +66,8 @@ public class GoldenScreen extends Base {
      * This method is to click on privacy and policy button
      */
     public void clickOnPrivacyAndPolicyButton() {
-        privacyPolicy_Btn.click();
+        wait.until(ExpectedConditions.visibilityOf(privacyPolicyButton));
+        privacyPolicyButton.click();
     }
     /**
      * *********************************************************************************************************************************************
@@ -68,7 +76,8 @@ public class GoldenScreen extends Base {
      * This method is to click on terms and condition button
      */
     public void clickOnTermsAndConditionsButton() {
-        termsAndConditions_Btn.click();
+        wait.until(ExpectedConditions.visibilityOf(termsAndConditionsButton));
+        termsAndConditionsButton.click();
     }
     /**
      * *********************************************************************************************************************************************

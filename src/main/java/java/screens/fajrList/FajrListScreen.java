@@ -2,25 +2,29 @@ package java.screens.fajrList;
 
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Wait;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.base.Base;
 
 public class FajrListScreen extends Base {
+    Wait wait = new WebDriverWait(driver,10);
     String expectedTitle = "قائمة الفجر";
     @AndroidFindBy(id = "com.moslay:id/img_more")
-    private AndroidElement navigationDrawer_Btn;
+    private AndroidElement navigationDrawerButton;
     @AndroidFindBy(xpath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.drawerlayout.widget.DrawerLayout/android.widget.RelativeLayout/android.widget.RelativeLayout/android.widget.RelativeLayout/android.widget.LinearLayout/android.widget.RelativeLayout[1]/android.widget.TextView")
-    private AndroidElement screenTitle_Text;
+    private AndroidElement screenTitleText;
     @AndroidFindBy(id = "com.moslay:id/im_fajr_list_add")
-    private AndroidElement addElement_Btn;
+    private AndroidElement addElementButton;
     @AndroidFindBy(id = "com.moslay:id/im_fajr_list_delete")
-    private AndroidElement deleteElement_Btn;
+    private AndroidElement deleteElementButton;
     @AndroidFindBy(id = "com.moslay:id/im_fajr_list_pause")
-    private AndroidElement pause_Btn;
+    private AndroidElement pauseButton;
     @AndroidFindBy(id = "com.moslay:id/et_fajr_list_search")
-    private AndroidElement searchBar_TextView;
+    private AndroidElement searchBar;
     @AndroidFindBy(id = "com.moslay:id/txt_fagr_list_add")
-    private AndroidElement addContact_Btn;
+    private AndroidElement addContactButton;
     /**
      * *********************************************************************************************************************************************
      */
@@ -30,7 +34,8 @@ public class FajrListScreen extends Base {
      * @return Screen title as a string
      */
     public String getActualScreenTitle() {
-        return screenTitle_Text.getText();
+        wait.until(ExpectedConditions.visibilityOf(screenTitleText));
+        return screenTitleText.getText();
     }
     /**
      * *********************************************************************************************************************************************
@@ -41,7 +46,8 @@ public class FajrListScreen extends Base {
      * @return navigation drawer screen
      */
     public void clickOnNavigationDrawerButton() {
-        navigationDrawer_Btn.click();
+        wait.until(ExpectedConditions.visibilityOf(navigationDrawerButton));
+        navigationDrawerButton.click();
         //This method returns navigation drawer method with shams
     }
     /**
@@ -51,7 +57,8 @@ public class FajrListScreen extends Base {
      * This method is to click on add element button
      */
     public void clickOnAddElementButton() {
-        addElement_Btn.click();
+        wait.until(ExpectedConditions.visibilityOf(addElementButton));
+        addElementButton.click();
     }
     /**
      * *********************************************************************************************************************************************
@@ -60,7 +67,8 @@ public class FajrListScreen extends Base {
      * This method is to click on delete element button
      */
     public void clickOnDeleteElementButton() {
-        deleteElement_Btn.click();
+        wait.until(ExpectedConditions.visibilityOf(deleteElementButton));
+        deleteElementButton.click();
     }
     /**
      * *********************************************************************************************************************************************
@@ -69,7 +77,8 @@ public class FajrListScreen extends Base {
      * This method is to click on pause button
      */
     public void clickOnPauseButton() {
-        pause_Btn.click();
+        wait.until(ExpectedConditions.visibilityOf(pauseButton));
+        pauseButton.click();
     }
     /**
      * *********************************************************************************************************************************************
@@ -78,7 +87,8 @@ public class FajrListScreen extends Base {
      * This method is to send text to search text field
      */
     public void sendTextToSearchBar(String text) {
-        searchBar_TextView.sendKeys(text);
+        wait.until(ExpectedConditions.visibilityOf(searchBar));
+        searchBar.sendKeys(text);
     }
     /**
      * *********************************************************************************************************************************************
@@ -86,7 +96,9 @@ public class FajrListScreen extends Base {
     /**
      * This method is to get text from search text field
      */
-    public String getTextFromSearchBar(){return searchBar_TextView.getText();}
+    public String getTextFromSearchBar(){
+        wait.until(ExpectedConditions.visibilityOf(searchBar));
+        return searchBar.getText();}
     /**
      * *********************************************************************************************************************************************
      */
@@ -94,7 +106,8 @@ public class FajrListScreen extends Base {
      * This method is to click on add contact button
      */
     public void clickOnAddContactButton() {
-        addContact_Btn.click();
+        wait.until(ExpectedConditions.visibilityOf(addContactButton));
+        addContactButton.click();
     }
     /**
      * *********************************************************************************************************************************************

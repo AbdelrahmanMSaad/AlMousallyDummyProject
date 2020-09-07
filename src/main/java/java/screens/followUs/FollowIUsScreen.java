@@ -2,21 +2,25 @@ package java.screens.followUs;
 
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Wait;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.base.Base;
 
 public class FollowIUsScreen extends Base {
+    Wait wait = new WebDriverWait(driver,10);
     String expectedTitle = "تابعنا";
     @AndroidFindBy(id = "com.moslay:id/img_more")
-    private AndroidElement navigationDrawer_Btn;
+    private AndroidElement navigationDrawerButton;
     @AndroidFindBy(id = "com.moslay:id/my_resources_header")
-    private AndroidElement screenTitle_Text;
+    private AndroidElement screenTitleText;
     @AndroidFindBy(id = "com.moslay:id/follow_us_fb")
-    private AndroidElement facebook_Btn;
+    private AndroidElement facebookButton;
     @AndroidFindBy(id = "com.moslay:id/settings_twitter")
-    private AndroidElement twitter_Btn;
+    private AndroidElement twitterButton;
     @AndroidFindBy(id = "com.moslay:id/settings_instagram")
-    private AndroidElement youtube_Btn;
+    private AndroidElement youtubeButton;
     /**
      * *********************************************************************************************************************************************
      */
@@ -26,7 +30,8 @@ public class FollowIUsScreen extends Base {
      * @return Screen title as a string
      */
     public String getActualScreenTitle() {
-        return screenTitle_Text.getText();
+        wait.until(ExpectedConditions.visibilityOf(screenTitleText));
+        return screenTitleText.getText();
     }
     /**
      * *********************************************************************************************************************************************
@@ -37,7 +42,8 @@ public class FollowIUsScreen extends Base {
      * @return navigation drawer screen
      */
     public void clickOnNavigationDrawerButton() {
-        navigationDrawer_Btn.click();
+        wait.until(ExpectedConditions.visibilityOf(navigationDrawerButton));
+        navigationDrawerButton.click();
         //This method returns navigation drawer method with shams
     }
     /**
@@ -47,7 +53,8 @@ public class FollowIUsScreen extends Base {
      * This method is click on facebook button
      */
     public void clickOnFacebookButton() {
-        facebook_Btn.click();
+        wait.until(ExpectedConditions.visibilityOf(facebookButton));
+        facebookButton.click();
     }
     /**
      * *********************************************************************************************************************************************
@@ -56,7 +63,8 @@ public class FollowIUsScreen extends Base {
      * This method is to click on twitter button
      */
     public void clickOnTwitterButton() {
-        twitter_Btn.click();
+        wait.until(ExpectedConditions.visibilityOf(twitterButton));
+        twitterButton.click();
     }
     /**
      * *********************************************************************************************************************************************
@@ -65,7 +73,8 @@ public class FollowIUsScreen extends Base {
      * This method is to click on youtube button
      */
     public void clickOnYouTubeButton() {
-        youtube_Btn.click();
+        wait.until(ExpectedConditions.visibilityOf(youtubeButton));
+        youtubeButton.click();
     }
     /**
      * *********************************************************************************************************************************************
