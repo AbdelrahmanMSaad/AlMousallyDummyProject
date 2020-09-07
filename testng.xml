@@ -3,14 +3,14 @@
 <suite name="All Test Suite">
     <test verbose="2" preserve-order="true" name="D:/Work/MadarSoft/AlMousallyDummyProject">
         <classes>
-            <class name="java.Screens.benefits._CommentScreenTest">
+            <class name="java.screens.benefits._CommentScreenTest">
                 <methods>
                     <include name="testReturnActualScreenTitle"/>
                     <include name="testClickOnAddCommentButton"/>
                     <include name="testSendTextToCommentTextField"/>
                 </methods>
             </class>
-            <class name="java.Screens.calender.GregorianScreenTest">
+            <class name="java.screens.calender.GregorianScreenTest">
                 <methods>
                     <include name="testReturnActualScreenTitle"/>
                     <include name="testClickOnNavigationDrawerButton"/>
@@ -24,7 +24,7 @@
                     <include name="testCheckEventsListExistance"/>
                 </methods>
             </class>
-            <class name="java.Screens.calender.HijriDateCorrectionScreenTest">
+            <class name="java.screens.calender.HijriDateCorrectionScreenTest">
                 <methods>
                     <include name="testReturnActualScreenTitle"/>
                     <include name="testReturnCurrentDataInString"/>
@@ -39,7 +39,7 @@
                     <include name="testClickOnCancelButton"/>
                 </methods>
             </class>
-            <class name="java.Screens.calender.HijriScreenTest">
+            <class name="java.screens.calender.HijriScreenTest">
                 <methods>
                     <include name="testReturnActualScreenTitle"/>
                     <include name="testClickOnNavigationDrawerButton"/>
@@ -52,7 +52,7 @@
                     <include name="testCheckCalenderExistance"/>
                 </methods>
             </class>
-            <class name="java.Screens.fajrList.FajrListScreenTest">
+            <class name="java.screens.fajrList.FajrListScreenTest">
                 <methods>
                     <include name="testReturnActualScreenTitle"/>
                     <include name="testClickOnNavigationDrawerButton"/>
@@ -77,7 +77,7 @@
                     <include name="testTestClickOnAddContactButton1"/>
                 </methods>
             </class>
-            <class name="java.Screens.followUs.FollowIUsScreenTest">
+            <class name="java.screens.followUs.FollowIUsScreenTest">
                 <methods>
                     <include name="testReturnActualScreenTitle"/>
                     <include name="testClickOnNavigationDrawerButton"/>
@@ -91,7 +91,7 @@
                     <include name="testTestClickOnYouTubeButton"/>
                 </methods>
             </class>
-            <class name="java.Screens.golden.GoldenScreenTest">
+            <class name="java.screens.golden.GoldenScreenTest">
                 <methods>
                     <include name="testReturnActualScreenTitle"/>
                     <include name="testClickOnSubscribeButton"/>
@@ -105,7 +105,7 @@
                     <include name="testTestClickOnTermsAndConditionsButton"/>
                 </methods>
             </class>
-            <class name="java.Screens.home.HomePageScreenTest">
+            <class name="java.screens.home.HomePageScreenTest">
                 <methods>
                     <include name="testClickOnToolBarSebhaButton"/>
                     <include name="testClickOnToolBarAzkarButton"/>
@@ -183,24 +183,13 @@
                     <include name="testTestScrollToThePreviousBenefitOnTheScreen"/>
                 </methods>
             </class>
-            <class name="java.Screens.mosques.MosquesScreenTest">
+            <class name="java.screens.mosques.MosquesScreenTest">
                 <methods>
                     <include name="testReturnActualScreenTitle"/>
                     <include name="testClickOnNavigationDrawerButton"/>
                 </methods>
             </class>
-            <class name="java.Screens.qibla._CompassScreenTest">
-                <methods>
-                    <include name="testReturnActualScreenTitle"/>
-                    <include name="testClickOnNavigationDrawerButton"/>
-                    <include name="testClickOnCompassButton"/>
-                    <include name="testClickOnSunAndMoonButton"/>
-                    <include name="testClickOnShadowButton"/>
-                    <include name="testClickOnVisibleButton"/>
-                    <include name="testClickOnHelpButton"/>
-                </methods>
-            </class>
-            <class name="java.Screens.qibla._ShadowScreenTest">
+            <class name="java.screens.qibla._CompassScreenTest">
                 <methods>
                     <include name="testReturnActualScreenTitle"/>
                     <include name="testClickOnNavigationDrawerButton"/>
@@ -211,7 +200,7 @@
                     <include name="testClickOnHelpButton"/>
                 </methods>
             </class>
-            <class name="java.Screens.qibla._SunAndMoonScreenTest">
+            <class name="java.screens.qibla._ShadowScreenTest">
                 <methods>
                     <include name="testReturnActualScreenTitle"/>
                     <include name="testClickOnNavigationDrawerButton"/>
@@ -222,7 +211,18 @@
                     <include name="testClickOnHelpButton"/>
                 </methods>
             </class>
-            <class name="java.Screens.qibla._VisualScreenTest">
+            <class name="java.screens.qibla._SunAndMoonScreenTest">
+                <methods>
+                    <include name="testReturnActualScreenTitle"/>
+                    <include name="testClickOnNavigationDrawerButton"/>
+                    <include name="testClickOnCompassButton"/>
+                    <include name="testClickOnSunAndMoonButton"/>
+                    <include name="testClickOnShadowButton"/>
+                    <include name="testClickOnVisibleButton"/>
+                    <include name="testClickOnHelpButton"/>
+                </methods>
+            </class>
+            <class name="java.screens.qibla._VisualScreenTest">
                 <methods>
                     <include name="testReturnActualScreenTitle"/>
                     <include name="testClickOnNavigationDrawerButton"/>
@@ -235,7 +235,7 @@
                     <include name="testClickOnZoomOutButton"/>
                 </methods>
             </class>
-            <class name="java.Screens.quranWerd.addWerd._AddWerdScreenTest">
+            <class name="java.screens.quranWerd.addWerd._AddWerdScreenTest">
                 <methods>
                     <include name="testReturnActualScreenTitle"/>
                     <include name="testClickOnNavigationDrawerButton"/>
@@ -249,7 +249,7 @@
                     <include name="testClickOnSaveButton"/>
                 </methods>
             </class>
-            <class name="java.Screens.quranWerd.addWerd.__DailyReadingScreenTest">
+            <class name="java.screens.quranWerd.addWerd.__DailyReadingScreenTest">
                 <methods>
                     <include name="testClickOnGozaaButton"/>
                     <include name="testClickOnHezbButton"/>
@@ -258,12 +258,12 @@
                     <include name="testClickOnSoraaButton"/>
                 </methods>
             </class>
-            <class name="java.Screens.quranWerd.addWerd.__HowManyChaptersScreenTest">
+            <class name="java.screens.quranWerd.addWerd.__HowManyChaptersScreenTest">
                 <methods>
                     <include name="testScrollToAChapterNumberAndClickIt"/>
                 </methods>
             </class>
-            <class name="java.Screens.quranWerd.addWerd.__SetAlertTimeScreenTest">
+            <class name="java.screens.quranWerd.addWerd.__SetAlertTimeScreenTest">
                 <methods>
                     <include name="testSendKeysToMinutesTextField"/>
                     <include name="testSendKeysToHoursTextField"/>
@@ -271,12 +271,12 @@
                     <include name="testClickOnSaveButton"/>
                 </methods>
             </class>
-            <class name="java.Screens.quranWerd.addWerd.__StartFromScreenTest">
+            <class name="java.screens.quranWerd.addWerd.__StartFromScreenTest">
                 <methods>
                     <include name="testScrollToAChapterNumberAndClickIt"/>
                 </methods>
             </class>
-            <class name="java.Screens.quranWerd._AddedScreenTest">
+            <class name="java.screens.quranWerd._AddedScreenTest">
                 <methods>
                     <include name="testReturnActualScreenTitle"/>
                     <include name="testClickOnNavigationDrawerButton"/>
@@ -284,7 +284,7 @@
                     <include name="testClickOnInfoButtonForAWerdByItsIndex"/>
                 </methods>
             </class>
-            <class name="java.Screens.quranWerd._EmptyScreenTest">
+            <class name="java.screens.quranWerd._EmptyScreenTest">
                 <methods>
                     <include name="testReturnActualScreenTitle"/>
                     <include name="testClickOnNavigationDrawerButton"/>
@@ -293,7 +293,7 @@
                     <include name="testClickOnAddWerdButton"/>
                 </methods>
             </class>
-            <class name="java.Screens.quranWerd._InfoScreenTest">
+            <class name="java.screens.quranWerd._InfoScreenTest">
                 <methods>
                     <include name="testReturnActualScreenTitle"/>
                     <include name="testClickOnNavigationDrawerButton"/>
@@ -301,13 +301,13 @@
                     <include name="testClickOnDeleteButton"/>
                 </methods>
             </class>
-            <class name="java.Screens.quranWerd._InfoScreen_PopUpScreenTest">
+            <class name="java.screens.quranWerd._InfoScreen_PopUpScreenTest">
                 <methods>
                     <include name="testClickOnOkButton"/>
                     <include name="testClickOnCancelButton"/>
                 </methods>
             </class>
-            <class name="java.Screens.quranWerd._MushafScreenTest">
+            <class name="java.screens.quranWerd._MushafScreenTest">
                 <methods>
                     <include name="testReturnActualScreenTitle"/>
                     <include name="testClickOnBackButton"/>
@@ -317,7 +317,7 @@
                     <include name="testScrollToPreviousPage"/>
                 </methods>
             </class>
-            <class name="java.Screens.quranWerd._Mushaf_BrowseScreenTest">
+            <class name="java.screens.quranWerd._Mushaf_BrowseScreenTest">
                 <methods>
                     <include name="testClickOnSuraaMenuButton"/>
                     <include name="testClickOnChapterMenuButton"/>
@@ -325,7 +325,7 @@
                     <include name="testClickOnDownloadButton"/>
                 </methods>
             </class>
-            <class name="java.Screens.settings.SettingsScreenTest">
+            <class name="java.screens.settings.SettingsScreenTest">
                 <methods>
                     <include name="testReturnActualScreenTitle"/>
                     <include name="testClickOnLanguageButton"/>
@@ -373,7 +373,7 @@
                     <include name="testClickOnBenefitsNotificationsSwitch"/>
                 </methods>
             </class>
-            <class name="java.Screens.settings.generalSettings._EnableBackgroudActivationScreenTest">
+            <class name="java.screens.settings.generalSettings._EnableBackgroudActivationScreenTest">
                 <methods>
                     <include name="testClickOnCloseButton"/>
                     <include name="testReturnScreenTitle"/>
@@ -381,7 +381,7 @@
                     <include name="testClickOnDoNotShowThisAgainButton"/>
                 </methods>
             </class>
-            <class name="java.Screens.settings.generalSettings._LanguageScreenTest">
+            <class name="java.screens.settings.generalSettings._LanguageScreenTest">
                 <methods>
                     <include name="testReturnScreenTitle"/>
                     <include name="testClickOnArabicElement"/>
@@ -395,19 +395,19 @@
                     <include name="testClickOnIgurElement"/>
                 </methods>
             </class>
-            <class name="java.Screens.settings.location.automatic._AutomaticScreenTest">
+            <class name="java.screens.settings.location.automatic._AutomaticScreenTest">
                 <methods>
                     <include name="testReturnCityNameAsString"/>
                     <include name="testClickOnNextButton"/>
                     <include name="testClickOnDetectViaOtherMethodsScreen"/>
                 </methods>
             </class>
-            <class name="java.Screens.settings.location.automatic.__AddCityName_CityListScreenTest">
+            <class name="java.screens.settings.location.automatic.__AddCityName_CityListScreenTest">
                 <methods>
                     <include name="testSearchForACountryByTextAndClickIt"/>
                 </methods>
             </class>
-            <class name="java.Screens.settings.location.automatic.__AddCityNameScreenTest">
+            <class name="java.screens.settings.location.automatic.__AddCityNameScreenTest">
                 <methods>
                     <include name="testClickOnCountryElementToOpenCountriesList"/>
                     <include name="testSendKeysToSearchTextField"/>
@@ -415,7 +415,7 @@
                     <include name="testClickOnSaveButton"/>
                 </methods>
             </class>
-            <class name="java.Screens.settings.location.automatic._OtherMethodsScreenTest">
+            <class name="java.screens.settings.location.automatic._OtherMethodsScreenTest">
                 <methods>
                     <include name="testClickOnOfflineSearchButton"/>
                     <include name="testClickOnOnlineDetectionButton"/>
@@ -423,7 +423,7 @@
                     <include name="testClickOnAddCityNameButton"/>
                 </methods>
             </class>
-            <class name="java.Screens.settings.location.automatic.__OfflineSearchScreenTest">
+            <class name="java.screens.settings.location.automatic.__OfflineSearchScreenTest">
                 <methods>
                     <include name="testReturnScreenTitle"/>
                     <include name="testClickOnBackButton"/>
@@ -432,14 +432,14 @@
                     <include name="testSearchForACountryByTextAndClickIt"/>
                 </methods>
             </class>
-            <class name="java.Screens.settings.location.automatic.__SearchOnlineScreenTest">
+            <class name="java.screens.settings.location.automatic.__SearchOnlineScreenTest">
                 <methods>
                     <include name="testReturnScreenTitle"/>
                     <include name="testSendKeysToSearchTextField"/>
                     <include name="testReturnTextFromSearchTextField"/>
                 </methods>
             </class>
-            <class name="java.Screens.settings.location.travelMode._TravelModeScreenTest">
+            <class name="java.screens.settings.location.travelMode._TravelModeScreenTest">
                 <methods>
                     <include name="testReturnScreenTitleText"/>
                     <include name="testClickOnTravelModeSwitch"/>
@@ -447,7 +447,7 @@
                     <include name="testClickOnGoToPhoneSettingsButton"/>
                 </methods>
             </class>
-            <class name="java.Screens.settings.location.travelMode._TravelMode_IntervalsScreenTest">
+            <class name="java.screens.settings.location.travelMode._TravelMode_IntervalsScreenTest">
                 <methods>
                     <include name="testClickOnQuarterHourButton"/>
                     <include name="testClickOnHalfHourButton"/>
@@ -458,7 +458,7 @@
                     <include name="testClickOnFiveHoursButton"/>
                 </methods>
             </class>
-            <class name="java.Screens.settings.notifications.azkarNotifications._AzkarNotificationsSettingsScreenTest">
+            <class name="java.screens.settings.notifications.azkarNotifications._AzkarNotificationsSettingsScreenTest">
                 <methods>
                     <include name="testReturnScreenTitle"/>
                     <include name="testClickOnAllNotificationsSwitch"/>
@@ -486,7 +486,7 @@
                     <include name="testTestClickOnOpenAzkarDuringPrayerSwitch"/>
                 </methods>
             </class>
-            <class name="java.Screens.settings.notifications.silentDuringPrayer._SilentDuringPrayerNotificationsScreenTest">
+            <class name="java.screens.settings.notifications.silentDuringPrayer._SilentDuringPrayerNotificationsScreenTest">
                 <methods>
                     <include name="testReturnScreenTitleString"/>
                     <include name="testClickOnEnableNotificationsDuringSilentSwitch"/>
@@ -559,7 +559,7 @@
                     <include name="testClickOnMinusButtonForPeriodOfMakingPhoneSilentDuringPrayerForTaraweehPrayer"/>
                 </methods>
             </class>
-            <class name="java.Screens.settings.prayerTimesCorrection._CalculationMethodScreenTest">
+            <class name="java.screens.settings.prayerTimesCorrection._CalculationMethodScreenTest">
                 <methods>
                     <include name="testClickOnNavigationDrawerButton"/>
                     <include name="testReturnScreenGeneralTitleString"/>
@@ -574,7 +574,7 @@
                     <include name="testClickOnAScrollDotByIndex"/>
                 </methods>
             </class>
-            <class name="java.Screens.settings.prayerTimesCorrection._MazhabScreenTest">
+            <class name="java.screens.settings.prayerTimesCorrection._MazhabScreenTest">
                 <methods>
                     <include name="testClickOnNavigationDrawerButton"/>
                     <include name="testReturnScreenGeneralTitleString"/>
@@ -590,7 +590,7 @@
                     <include name="testClickOnAScrollDotByIndex"/>
                 </methods>
             </class>
-            <class name="java.Screens.settings.prayerTimesCorrection._PolarZonesScreenTest">
+            <class name="java.screens.settings.prayerTimesCorrection._PolarZonesScreenTest">
                 <methods>
                     <include name="testClickOnNavigationDrawerButton"/>
                     <include name="testReturnScreenGeneralTitleString"/>
@@ -608,7 +608,7 @@
                     <include name="testClickOnAScrollDotByIndex"/>
                 </methods>
             </class>
-            <class name="java.Screens.settings.prayerTimesCorrection._ResetScreenTest">
+            <class name="java.screens.settings.prayerTimesCorrection._ResetScreenTest">
                 <methods>
                     <include name="testClickOnNavigationDrawerButton"/>
                     <include name="testReturnScreenGeneralTitleString"/>
@@ -623,7 +623,7 @@
                     <include name="testClickOnAScrollDotByIndex"/>
                 </methods>
             </class>
-            <class name="java.Screens.settings.prayerTimesCorrection._SummerTimeScreenTest">
+            <class name="java.screens.settings.prayerTimesCorrection._SummerTimeScreenTest">
                 <methods>
                     <include name="testClickOnNavigationDrawerButton"/>
                     <include name="testReturnScreenGeneralTitleString"/>
@@ -639,7 +639,7 @@
                     <include name="testClickOnAScrollDotByIndex"/>
                 </methods>
             </class>
-            <class name="java.Screens.settings.prayerTimesCorrection._TimeZoneScreenTest">
+            <class name="java.screens.settings.prayerTimesCorrection._TimeZoneScreenTest">
                 <methods>
                     <include name="testClickOnNavigationDrawerButton"/>
                     <include name="testReturnScreenGeneralTitleString"/>
@@ -654,7 +654,7 @@
                     <include name="testClickOnAScrollDotByIndex"/>
                 </methods>
             </class>
-            <class name="java.Screens.settings.prayerTimesCorrection._TimesCorrectionScreenTest">
+            <class name="java.screens.settings.prayerTimesCorrection._TimesCorrectionScreenTest">
                 <methods>
                     <include name="testClickOnNavigationDrawerButton"/>
                     <include name="testReturnScreenGeneralTitleString"/>
@@ -686,7 +686,7 @@
                     <include name="testClickOnAScrollDotByIndex"/>
                 </methods>
             </class>
-            <class name="java.Screens.technicalSupport.TechnicalSupportScreenTest">
+            <class name="java.screens.technicalSupport.TechnicalSupportScreenTest">
                 <methods>
                     <include name="testReturnActualScreenTitle"/>
                     <include name="testClickOnNavigationDrawerButton"/>
@@ -694,7 +694,7 @@
                     <include name="testClickOnContactUsButton"/>
                 </methods>
             </class>
-            <class name="java.Screens.technicalSupport.contactUs._ContactUsScreenTest">
+            <class name="java.screens.technicalSupport.contactUs._ContactUsScreenTest">
                 <methods>
                     <include name="testReturnActualScreenTitle"/>
                     <include name="testClickOnNavigationDrawerButton"/>
@@ -707,7 +707,7 @@
                     <include name="testClickOnSendScreen"/>
                 </methods>
             </class>
-            <class name="java.Screens.werdAlMohasba.WerdAlMohasbaScreenTest">
+            <class name="java.screens.werdAlMohasba.WerdAlMohasbaScreenTest">
                 <methods>
                     <include name="testReturnActualScreenTitle"/>
                     <include name="testClickOnBackButton"/>
@@ -722,12 +722,12 @@
                     <include name="testClickOnHideDoneTasksButton"/>
                 </methods>
             </class>
-            <class name="java.Screens.werdAlMohasba._InfoScreenTest">
+            <class name="java.screens.werdAlMohasba._InfoScreenTest">
                 <methods>
                     <include name="testClickOnCloseButton"/>
                 </methods>
             </class>
-            <class name="java.Screens.worldPrayers.WorldPrayersScreenTest">
+            <class name="java.screens.worldPrayers.WorldPrayersScreenTest">
                 <methods>
                     <include name="testReturnActualScreenTitle"/>
                     <include name="testClickOnNavigationDrawerButton"/>
