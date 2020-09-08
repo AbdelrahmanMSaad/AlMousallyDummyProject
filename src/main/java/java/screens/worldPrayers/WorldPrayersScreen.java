@@ -2,23 +2,27 @@ package java.screens.worldPrayers;
 
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Wait;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.base.Base;
 
 public class WorldPrayersScreen extends Base {
+    Wait wait = new WebDriverWait(driver,10);
     String expectedTitle = "الصلاة حول العالم";
     @AndroidFindBy(id = "com.moslay:id/img_more")
-    private AndroidElement navigationDrawer_Btn;
+    private AndroidElement navigationDrawerButton;
     @AndroidFindBy(id = "com.moslay:id/qibla_inside_title")
-    private AndroidElement screenTitle_Text;
+    private AndroidElement screenTitleText;
     @AndroidFindBy(id = "com.moslay:id/img_share")
-    private AndroidElement share_Btn;
+    private AndroidElement shareButton;
     @AndroidFindBy(id = "com.moslay:id/frag_around_world_help")
-    private AndroidElement help_Btn;
+    private AndroidElement helpButton;
     @AndroidFindBy(accessibility = "Zoom in")
-    private AndroidElement zoomIn_Btn;
+    private AndroidElement zoomInButton;
     @AndroidFindBy(accessibility = "Zoom out")
-    private AndroidElement zoomOut_Btn;
+    private AndroidElement zoomOutButton;
     /**
      * *********************************************************************************************************************************************
      */
@@ -29,7 +33,8 @@ public class WorldPrayersScreen extends Base {
      * @return Screen title as a string
      */
     public String getActualScreenTitle() {
-        return screenTitle_Text.getText();
+        wait.until(ExpectedConditions.visibilityOf(screenTitleText));
+        return screenTitleText.getText();
     }
     /**
      * *********************************************************************************************************************************************
@@ -40,7 +45,8 @@ public class WorldPrayersScreen extends Base {
      * @return navigation drawer screen
      */
     public void clickOnNavigationDrawerButton() {
-        navigationDrawer_Btn.click();
+        wait.until(ExpectedConditions.visibilityOf(navigationDrawerButton));
+        navigationDrawerButton.click();
         //This method returns navigation drawer method with shams
     }
     /**
@@ -50,7 +56,8 @@ public class WorldPrayersScreen extends Base {
      * This test case is to click on share button
      */
     public void clickOnShareButton() {
-        share_Btn.click();
+        wait.until(ExpectedConditions.visibilityOf(shareButton));
+        shareButton.click();
     }
     /**
      * *********************************************************************************************************************************************
@@ -59,7 +66,8 @@ public class WorldPrayersScreen extends Base {
      * This test case is to click on help button
      */
     public void clickOnHelpButton() {
-        help_Btn.click();
+        wait.until(ExpectedConditions.visibilityOf(helpButton));
+        helpButton.click();
     }
     /**
      * *********************************************************************************************************************************************
@@ -68,7 +76,8 @@ public class WorldPrayersScreen extends Base {
      * This test case is to click on zoom in button
      */
     public void clickOnZoomInButton() {
-        zoomIn_Btn.click();
+        wait.until(ExpectedConditions.visibilityOf(zoomInButton));
+        zoomInButton.click();
     }
     /**
      * *********************************************************************************************************************************************
@@ -77,7 +86,8 @@ public class WorldPrayersScreen extends Base {
      * This test case is to click on zoom out button
      */
     public void clickOnZoomOutButton() {
-        zoomOut_Btn.click();
+        wait.until(ExpectedConditions.visibilityOf(zoomInButton));
+        zoomOutButton.click();
     }
     /**
      * *********************************************************************************************************************************************

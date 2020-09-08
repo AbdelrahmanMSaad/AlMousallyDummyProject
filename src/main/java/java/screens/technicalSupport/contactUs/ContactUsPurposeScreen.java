@@ -2,18 +2,22 @@ package java.screens.technicalSupport.contactUs;
 
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Wait;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.base.Base;
 
 public class ContactUsPurposeScreen extends Base {
+    Wait wait = new WebDriverWait(driver,10);
     @AndroidFindBy(xpath = "/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.ListView/android.widget.CheckedTextView[1]")
-    private AndroidElement technicalSupport_Btn;
+    private AndroidElement technicalSupportButton;
 
     @AndroidFindBy(xpath = "/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.ListView/android.widget.CheckedTextView[2]")
-    private AndroidElement suggestions_Btn;
+    private AndroidElement suggestionsButton;
 
     @AndroidFindBy(xpath = "/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.ListView/android.widget.CheckedTextView[3]")
-    private AndroidElement marketingAndSales_Btn;
+    private AndroidElement marketingAndSalesButton;
 
     /**
      * *********************************************************************************************************************************************
@@ -24,7 +28,8 @@ public class ContactUsPurposeScreen extends Base {
      * @return ContactUsScreen
      */
     public ContactUsScreen clickOnTechnicalSupportButton() {
-        technicalSupport_Btn.click();
+        wait.until(ExpectedConditions.visibilityOf(technicalSupportButton));
+        technicalSupportButton.click();
         return new ContactUsScreen();
     }
     /**
@@ -36,7 +41,8 @@ public class ContactUsPurposeScreen extends Base {
      * @return ContactUsScreen
      */
     public ContactUsScreen clickOnSuggestionsButton() {
-        suggestions_Btn.click();
+        wait.until(ExpectedConditions.visibilityOf(suggestionsButton));
+        suggestionsButton.click();
         return new ContactUsScreen();
     }
     /**
@@ -48,7 +54,8 @@ public class ContactUsPurposeScreen extends Base {
      * @return ContactUsScreen
      */
     public ContactUsScreen clickOnSalesAndMarketingButton() {
-        marketingAndSales_Btn.click();
+        wait.until(ExpectedConditions.visibilityOf(marketingAndSalesButton));
+        marketingAndSalesButton.click();
         return new ContactUsScreen();
     }
     /**

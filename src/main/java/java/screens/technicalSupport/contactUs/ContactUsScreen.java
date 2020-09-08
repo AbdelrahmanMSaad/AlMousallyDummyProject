@@ -2,29 +2,33 @@ package java.screens.technicalSupport.contactUs;
 
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Wait;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.base.Base;
 
 public class ContactUsScreen extends Base {
+    Wait wait = new WebDriverWait(driver,10);
     String expectedTitle = "الدعم الفنى";
     @AndroidFindBy(id = "com.moslay:id/img_menu")
-    private AndroidElement navigationDrawer_Btn;
+    private AndroidElement navigationDrawerButton;
     @AndroidFindBy(xpath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.drawerlayout.widget.DrawerLayout/android.widget.RelativeLayout/android.widget.RelativeLayout/android.widget.RelativeLayout[2]/android.widget.RelativeLayout/android.widget.TextView")
-    private AndroidElement screenTitle_Text;
+    private AndroidElement screenTitleText;
     @AndroidFindBy(id = "name")
-    private AndroidElement name_TextView;
+    private AndroidElement nameTextField;
     @AndroidFindBy(id = "email")
-    private AndroidElement email_TextView;
+    private AndroidElement emailTextField;
     @AndroidFindBy(id = "title")
-    private AndroidElement title_TextView;
+    private AndroidElement titleTextField;
     @AndroidFindBy(id = "message")
-    private AndroidElement message_TextView;
+    private AndroidElement messageTextField;
     @AndroidFindBy(id = "groupId")
-    private AndroidElement contactUsPurpose_Btn;
+    private AndroidElement contactUsPurposeButton;
     @AndroidFindBy(id = "image")
-    private AndroidElement uplaodFile_Btn;
+    private AndroidElement uplaodFileButton;
     @AndroidFindBy(id = "allAppsId")
-    private AndroidElement send_Btn;
+    private AndroidElement sendButton;
     /**
      * *********************************************************************************************************************************************
      */
@@ -35,7 +39,8 @@ public class ContactUsScreen extends Base {
      * @return Screen title as a string
      */
     public String getActualScreenTitle() {
-        return screenTitle_Text.getText();
+        wait.until(ExpectedConditions.visibilityOf(screenTitleText));
+        return screenTitleText.getText();
     }
     /**
      * *********************************************************************************************************************************************
@@ -46,7 +51,8 @@ public class ContactUsScreen extends Base {
      * @return navigation drawer screen
      */
     public void clickOnNavigationDrawerButton() {
-        navigationDrawer_Btn.click();
+        wait.until(ExpectedConditions.visibilityOf(navigationDrawerButton));
+        navigationDrawerButton.click();
         //This method returns navigation drawer method with shams
     }
     /**
@@ -58,7 +64,8 @@ public class ContactUsScreen extends Base {
      * @param text string sent to the name text field
      */
     public void sendTextToNameTextBar(String text) {
-        name_TextView.sendKeys(text);
+        wait.until(ExpectedConditions.visibilityOf(nameTextField));
+        nameTextField.sendKeys(text);
     }
     /**
      * *********************************************************************************************************************************************
@@ -69,7 +76,8 @@ public class ContactUsScreen extends Base {
      * @param text string sent to the email text field
      */
     public void sendTextToEmailTextBar(String text) {
-        email_TextView.sendKeys(text);
+        wait.until(ExpectedConditions.visibilityOf(emailTextField));
+        emailTextField.sendKeys(text);
     }
     /**
      * *********************************************************************************************************************************************
@@ -80,7 +88,8 @@ public class ContactUsScreen extends Base {
      * @param text string sent to the title text field
      */
     public void sendTextToTitleTextBar(String text) {
-        title_TextView.sendKeys(text);
+        wait.until(ExpectedConditions.visibilityOf(titleTextField));
+        titleTextField.sendKeys(text);
     }
     /**
      * *********************************************************************************************************************************************
@@ -91,7 +100,8 @@ public class ContactUsScreen extends Base {
      * @param text string sent to the message text field
      */
     public void sendTextToMessageTextBar(String text) {
-        message_TextView.sendKeys(text);
+        wait.until(ExpectedConditions.visibilityOf(messageTextField));
+        messageTextField.sendKeys(text);
     }
     /**
      * *********************************************************************************************************************************************
@@ -102,7 +112,8 @@ public class ContactUsScreen extends Base {
      * @return ContactUsPurposeScreen
      */
     public ContactUsPurposeScreen clickOnContactUsPurposeScreenButton() {
-        contactUsPurpose_Btn.click();
+        wait.until(ExpectedConditions.visibilityOf(contactUsPurposeButton));
+        contactUsPurposeButton.click();
         return new ContactUsPurposeScreen();
     }
     /**
@@ -112,7 +123,8 @@ public class ContactUsScreen extends Base {
      * This method is to click on upload image button
      */
     public void clickOnUploadImageButton() {
-        uplaodFile_Btn.click();
+        wait.until(ExpectedConditions.visibilityOf(uplaodFileButton));
+        uplaodFileButton.click();
     }
     /**
      * *********************************************************************************************************************************************
@@ -121,7 +133,8 @@ public class ContactUsScreen extends Base {
      * This method is to click on upload image button
      */
     public void clickOnSendButton() {
-        send_Btn.click();
+        wait.until(ExpectedConditions.visibilityOf(sendButton));
+        sendButton.click();
     }
     /**
      * *********************************************************************************************************************************************

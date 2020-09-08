@@ -2,23 +2,27 @@ package java.screens.quranWerd.quranWerdMainScreen;
 
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Wait;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.screens.quranWerd.addWerd.AddWerdScreen;
 import java.base.Base;
 import java.screens.quranWerd.mushafScreen.MushafScreen;
 
 public class EmptyScreen extends Base {
+    Wait wait = new WebDriverWait(driver,10);
     String expectedTitle = "ورد القران";
     @AndroidFindBy(id = "com.moslay:id/img_menu")
-    private AndroidElement navigationDrawer_Btn;
+    private AndroidElement navigationDrawerButton;
     @AndroidFindBy(id = "com.moslay:id/header_txt")
-    private AndroidElement screenTitle_Text;
+    private AndroidElement screenTitleText;
     @AndroidFindBy(id = "com.moslay:id/fagr_help")
-    private AndroidElement info_btn;
+    private AndroidElement infoButton;
     @AndroidFindBy(id = "com.moslay:id/werd_add_default_khatma")
-    private AndroidElement readFromMoshaf_Btn;
+    private AndroidElement readFromMoshafButton;
     @AndroidFindBy(id = "com.moslay:id/werd_add_khatma")
-    private AndroidElement addWerd_Btn;
+    private AndroidElement addWerdButton;
     /**
      * *********************************************************************************************************************************************
      */
@@ -29,7 +33,8 @@ public class EmptyScreen extends Base {
      * @return Screen title as a string
      */
     public String getActualScreenTitle() {
-        return screenTitle_Text.getText();
+        wait.until(ExpectedConditions.visibilityOf(screenTitleText));
+        return screenTitleText.getText();
     }
     /**
      * *********************************************************************************************************************************************
@@ -40,7 +45,8 @@ public class EmptyScreen extends Base {
      * @return navigation drawer screen
      */
     public void clickOnNavigationDrawerButton() {
-        navigationDrawer_Btn.click();
+        wait.until(ExpectedConditions.visibilityOf(navigationDrawerButton));
+        navigationDrawerButton.click();
         //This method returns navigation drawer method with shams
     }
     /**
@@ -50,7 +56,8 @@ public class EmptyScreen extends Base {
      * This method is to click on info button
      */
     public void clickOnInfoButton() {
-        info_btn.click();
+        wait.until(ExpectedConditions.visibilityOf(infoButton));
+        infoButton.click();
     }
     /**
      * *********************************************************************************************************************************************
@@ -61,7 +68,8 @@ public class EmptyScreen extends Base {
      * @return MushafScreen
      */
     public MushafScreen clickOnReadFromMushafButton() {
-        readFromMoshaf_Btn.click();
+        wait.until(ExpectedConditions.visibilityOf(readFromMoshafButton));
+        readFromMoshafButton.click();
         return new MushafScreen();
     }
     /**
@@ -73,7 +81,8 @@ public class EmptyScreen extends Base {
      * @return AddWerdScreen
      */
     public AddWerdScreen clickOnAddWerdButton() {
-        addWerd_Btn.click();
+        wait.until(ExpectedConditions.visibilityOf(addWerdButton));
+        addWerdButton.click();
         return new AddWerdScreen();
     }
     /**

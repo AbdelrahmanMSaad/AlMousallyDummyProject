@@ -3,32 +3,36 @@ package java.screens.werdAlMohasba;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Wait;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.base.Base;
 import java.util.List;
 
 public class WerdAlMohasbaScreen extends Base {
+    Wait wait = new WebDriverWait(driver,10);
     String expectedTitle = "ورد المحاسبة";
     @AndroidFindBy(id = "com.moslay:id/img_back")
-    private AndroidElement back_Btn;
+    private AndroidElement backButton;
     @AndroidFindBy(id = "com.moslay:id/img_help")
-    private AndroidElement info_Btn;
+    private AndroidElement infoButton;
     @AndroidFindBy(id = "com.moslay:id/azkar_inside_title")
-    private AndroidElement screenTitle_Text;
+    private AndroidElement screenTitleText;
     @AndroidFindBy(id = "com.moslay:id/img_statistics")
-    private AndroidElement statistics_Btn;
+    private AndroidElement statisticsButton;
     @AndroidFindBy(id = "com.moslay:id/selected_date")
-    private AndroidElement selectedDate_TextView;
+    private AndroidElement selectedDateTextField;
     @AndroidFindBy(id = "com.moslay:id/imgview_add")
     private AndroidElement addTaskButton;
     @AndroidFindBy(id = "com.moslay:id/edittext_add_tasks_cat")
-    private AndroidElement taskName_TextView;
+    private AndroidElement taskNameTextField;
     @AndroidFindBy(id = "com.moslay:id/imgview_add_cat_text")
-    private AndroidElement finishAddTask_Btn;
+    private AndroidElement finishAddTaskButton;
     @AndroidFindBy(id = "com.moslay:id/tasks_items_recycler_view")
-    private AndroidElement tasksList_Element;
+    private AndroidElement tasksListElement;
     @AndroidFindBy(id = "com.moslay:id/txtview_hide_done")
-    private AndroidElement hideDoneTask_Btn;
+    private AndroidElement hideDoneTaskButton;
     /**
      * *********************************************************************************************************************************************
      */
@@ -39,7 +43,8 @@ public class WerdAlMohasbaScreen extends Base {
      * @return Screen title as a string
      */
     public String getActualScreenTitle() {
-        return screenTitle_Text.getText();
+        wait.until(ExpectedConditions.visibilityOf(screenTitleText));
+        return screenTitleText.getText();
     }
     /**
      * *********************************************************************************************************************************************
@@ -48,7 +53,8 @@ public class WerdAlMohasbaScreen extends Base {
      * This method is to click on back button
      */
     public void clickOnBackButton() {
-        back_Btn.click();
+        wait.until(ExpectedConditions.visibilityOf(backButton));
+        backButton.click();
     }
     /**
      * *********************************************************************************************************************************************
@@ -57,7 +63,8 @@ public class WerdAlMohasbaScreen extends Base {
      * This method is to click on info screen and returns InfoScreen
      */
     public InfoScreen clickOnInfoButton() {
-        info_Btn.click();
+        wait.until(ExpectedConditions.visibilityOf(infoButton));
+        infoButton.click();
         return new InfoScreen();
     }
     /**
@@ -67,7 +74,8 @@ public class WerdAlMohasbaScreen extends Base {
      * This method is to click on info screen and returns InfoScreen
      */
     public void clickOnStatsButton() {
-        statistics_Btn.click();
+        wait.until(ExpectedConditions.visibilityOf(statisticsButton));
+        statisticsButton.click();
     }
     /**
      * *********************************************************************************************************************************************
@@ -76,6 +84,7 @@ public class WerdAlMohasbaScreen extends Base {
      * This method is to click on add task button
      */
     public void clickOnAddTaskButton() {
+        wait.until(ExpectedConditions.visibilityOf(addTaskButton));
         addTaskButton.click();
     }
     /**
@@ -87,7 +96,8 @@ public class WerdAlMohasbaScreen extends Base {
      * @param text string sent to task name text field
      */
     public void sendTextToTaskNameTextBar(String text) {
-        taskName_TextView.sendKeys(text);
+        wait.until(ExpectedConditions.visibilityOf(tasksListElement));
+        taskNameTextField.sendKeys(text);
     }
     /**
      * *********************************************************************************************************************************************
@@ -96,7 +106,8 @@ public class WerdAlMohasbaScreen extends Base {
      * This method is to click on finish add task button
      */
     public void clickOnFinishAddTaskButton() {
-        finishAddTask_Btn.click();
+        wait.until(ExpectedConditions.visibilityOf(finishAddTaskButton));
+        finishAddTaskButton.click();
     }
     /**
      * *********************************************************************************************************************************************
@@ -107,7 +118,8 @@ public class WerdAlMohasbaScreen extends Base {
      * @param index integer to access a specific element from the tasks list
      */
     public MobileElement accessTaskViaIndex(int index) {
-        List<MobileElement> tasksList_List = tasksList_Element.findElementsById("com.moslay:id/cardview_root");
+        wait.until(ExpectedConditions.visibilityOf(tasksListElement));
+        List<MobileElement> tasksList_List = tasksListElement.findElementsById("com.moslay:id/cardview_root");
         return tasksList_List.get(index);
     }
     /**
@@ -145,7 +157,8 @@ public class WerdAlMohasbaScreen extends Base {
      * This method is to click on hide done tasks button
      */
     public void clickOnHideDoneTasksButton() {
-        hideDoneTask_Btn.click();
+        wait.until(ExpectedConditions.visibilityOf(hideDoneTaskButton));
+        hideDoneTaskButton.click();
     }
     /**
      * *********************************************************************************************************************************************

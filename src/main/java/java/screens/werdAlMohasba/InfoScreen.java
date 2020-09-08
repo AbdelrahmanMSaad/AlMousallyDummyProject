@@ -2,12 +2,16 @@ package java.screens.werdAlMohasba;
 
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Wait;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.base.Base;
 
 public class InfoScreen extends Base {
+    Wait wait = new WebDriverWait(driver,10);
     @AndroidFindBy(id = "com.moslay:id/werd_close")
-    private AndroidElement close_Btn;
+    private AndroidElement closeButton;
 
     /**
      * *********************************************************************************************************************************************
@@ -18,7 +22,8 @@ public class InfoScreen extends Base {
      * @return WerdAlMohasbaScreen
      */
     public WerdAlMohasbaScreen clickOnCloseButton() {
-        close_Btn.click();
+        wait.until(ExpectedConditions.visibilityOf(closeButton));
+        closeButton.click();
         return new WerdAlMohasbaScreen();
     }
     /**

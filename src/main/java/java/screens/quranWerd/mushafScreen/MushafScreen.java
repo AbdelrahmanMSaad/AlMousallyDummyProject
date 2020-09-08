@@ -3,21 +3,25 @@ package java.screens.quranWerd.mushafScreen;
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.touch.offset.PointOption;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Wait;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.base.Base;
 import java.screens.quranWerd.quranWerdMainScreen.AddedScreen;
 import java.utilities.TestUtils;
 
 public class MushafScreen extends Base {
+    Wait wait = new WebDriverWait(driver,10);
     String expectedTitle = "ورد القران";
     @AndroidFindBy(id = "com.moslay:id/im_back")
-    private AndroidElement back_Btn;
+    private AndroidElement backButton;
     @AndroidFindBy(xpath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.drawerlayout.widget.DrawerLayout/android.widget.RelativeLayout/android.widget.RelativeLayout/android.widget.RelativeLayout[2]/android.widget.RelativeLayout/android.widget.TextView")
-    private AndroidElement screenTitle_Text;
+    private AndroidElement screenTitleText;
     @AndroidFindBy(id = "com.moslay:id/tb_turn_screen_on")
-    private AndroidElement screenOn_Btn;
+    private AndroidElement screenOnButton;
     @AndroidFindBy(id = "com.moslay:id/im_download_moshaf")
-    private AndroidElement browsingMushaf_Btn;
+    private AndroidElement browsingMushafButton;
 
     /**
      * *********************************************************************************************************************************************
@@ -29,7 +33,8 @@ public class MushafScreen extends Base {
      * @return Screen title as a string
      */
     public String getActualScreenTitle() {
-        return screenTitle_Text.getText();
+        wait.until(ExpectedConditions.visibilityOf(screenTitleText));
+        return screenTitleText.getText();
     }
     /**
      * *********************************************************************************************************************************************
@@ -40,7 +45,8 @@ public class MushafScreen extends Base {
      * @return AddedScreen
      */
     public AddedScreen clickOnBackButton() {
-        back_Btn.click();
+        wait.until(ExpectedConditions.visibilityOf(backButton));
+        backButton.click();
         return new AddedScreen();
     }
     /**
@@ -50,7 +56,8 @@ public class MushafScreen extends Base {
      * This method is to click on Screen On Button
      */
     public void clickOnScreenOnButton() {
-        screenOn_Btn.click();
+        wait.until(ExpectedConditions.visibilityOf(screenOnButton));
+        screenOnButton.click();
     }
     /**
      * *********************************************************************************************************************************************
@@ -61,7 +68,8 @@ public class MushafScreen extends Base {
      * @return Mushaf_BrowseScreen
      */
     public Mushaf_BrowseScreen clickOnMushafBrowseButton() {
-        browsingMushaf_Btn.click();
+        wait.until(ExpectedConditions.visibilityOf(browsingMushafButton));
+        browsingMushafButton.click();
         return new Mushaf_BrowseScreen();
     }
     /**

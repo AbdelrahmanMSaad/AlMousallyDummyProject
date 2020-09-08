@@ -3,6 +3,9 @@ package java.screens.quranWerd.quranWerdMainScreen;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Wait;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.screens.quranWerd.addWerd.AddWerdScreen;
 import java.base.Base;
@@ -10,15 +13,16 @@ import java.screens.quranWerd.infoScreen.InfoScreen;
 import java.util.List;
 
 public class AddedScreen extends Base {
+    Wait wait = new WebDriverWait(driver,10);
     String expectedTitle = "ورد القران";
     @AndroidFindBy(id = "com.moslay:id/img_menu")
-    private AndroidElement navigationDrawer_Btn;
+    private AndroidElement navigationDrawerButton;
     @AndroidFindBy(id = "com.moslay:id/Azkar_menu_Header")
-    private AndroidElement screenTitle_Text;
+    private AndroidElement screenTitleText;
     @AndroidFindBy(id = "com.moslay:id/add_khtma")
-    private AndroidElement addKhatma_Btn;
+    private AndroidElement addKhatmaButton;
     @AndroidFindBy(id = "com.moslay:id/khatma_listview")
-    private AndroidElement khatmaList_Element;
+    private AndroidElement khatmaListElement;
     /**
      * *********************************************************************************************************************************************
      */
@@ -29,7 +33,8 @@ public class AddedScreen extends Base {
      * @return Screen title as a string
      */
     public String getActualScreenTitle() {
-        return screenTitle_Text.getText();
+        wait.until(ExpectedConditions.visibilityOf(screenTitleText));
+        return screenTitleText.getText();
     }
     /**
      * *********************************************************************************************************************************************
@@ -40,7 +45,8 @@ public class AddedScreen extends Base {
      * @return navigation drawer screen
      */
     public void clickOnNavigationDrawerButton() {
-        navigationDrawer_Btn.click();
+        wait.until(ExpectedConditions.visibilityOf(navigationDrawerButton));
+        navigationDrawerButton.click();
         //This method returns navigation drawer method with shams
     }
     /**
@@ -52,7 +58,8 @@ public class AddedScreen extends Base {
      * @return AddWerdScreen
      */
     public AddWerdScreen clickOnAddWerdButton() {
-        addKhatma_Btn.click();
+        wait.until(ExpectedConditions.visibilityOf(addKhatmaButton));
+        addKhatmaButton.click();
         return new AddWerdScreen();
     }
     /**
@@ -64,7 +71,8 @@ public class AddedScreen extends Base {
      * @return InfoScreen
      */
     public InfoScreen clickOnInfoButtonForAWerdByItsIndex(int index) {
-        List<MobileElement> khatmaList_List = khatmaList_Element.findElementsById("com.moslay:id/dimmed");
+        wait.until(ExpectedConditions.visibilityOf(khatmaListElement));
+        List<MobileElement> khatmaList_List = khatmaListElement.findElementsById("com.moslay:id/dimmed");
         AndroidElement requiredElement = (AndroidElement) khatmaList_List.get(index);
         AndroidElement requiredElement_KhatmaInfoButton = (AndroidElement) requiredElement.findElementById("com.moslay:id/khtma_info");
         requiredElement_KhatmaInfoButton.click();
