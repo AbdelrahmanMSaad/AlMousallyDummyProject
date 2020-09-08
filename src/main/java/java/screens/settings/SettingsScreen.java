@@ -2,99 +2,103 @@ package java.screens.settings;
 
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Wait;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.base.Base;
 import java.screens.settings.generalSettings.EnableBackgroudActivationScreen;
 import java.screens.settings.generalSettings.LanguageScreen;
 import java.screens.settings.location.automatic.AutomaticScreen;
 import java.screens.settings.location.travelMode.TravelModeScreen;
 import java.screens.settings.notifications.silentDuringPrayer.SilentDuringPrayerNotificationsScreen;
 import java.screens.settings.prayerTimesCorrection.*;
-import java.base.Base;
 import java.utilities.TestUtils;
 
 public class SettingsScreen extends Base {
+    Wait wait = new WebDriverWait(driver,10);
     String expectedTile = "الاعدادات";
     @AndroidFindBy(id = "com.moslay:id/settings")
-    private AndroidElement screenTitle_Text;
+    private AndroidElement screenTitleText;
     @AndroidFindBy(id = "com.moslay:id/settings_language_layout")
-    private AndroidElement language_Btn;
+    private AndroidElement languageButton;
     @AndroidFindBy(id = "com.moslay:id/settings_general_language")
-    private AndroidElement languageChoice_TxtView;
+    private AndroidElement languageChoiceText;
     @AndroidFindBy(id = "com.moslay:id/mosaly_bg_activate")
-    private AndroidElement backgroundActivation_Btn;
+    private AndroidElement backgroundActivationButton;
     @AndroidFindBy(id = "com.moslay:id/solve_azan_problems")
-    private AndroidElement solveAzanProblems_Btn;
+    private AndroidElement solveAzanProblemsButton;
     @AndroidFindBy(id = "com.moslay:id/ll_azan_mode")
-    private AndroidElement azanMode_Btn;
+    private AndroidElement azanModeButton;
     @AndroidFindBy(id = "com.moslay:id/tv_azan_mode")
-    private AndroidElement azanModeChoice_TxtView;
+    private AndroidElement azanModeChoiceText;
     @AndroidFindBy(id = "com.moslay:id/ex_azanMode")
-    private AndroidElement azanModeSelectionsList_Element;
+    private AndroidElement azanModeSelectionsListElement;
     @AndroidFindBy(id = "com.moslay:id/settings_calcultionMethod")
-    private AndroidElement calcultionMethod_Btn;
+    private AndroidElement calcultionMethodButton;
     @AndroidFindBy(id = "com.moslay:id/settings_calculation")
-    private AndroidElement calcultionMethodChoice_TxtView;
+    private AndroidElement calcultionMethodChoiceText;
     @AndroidFindBy(id = "com.moslay:id/settings_asr")
-    private AndroidElement mazhabCorrection_Btn;
+    private AndroidElement mazhabCorrectionButton;
     @AndroidFindBy(id = "com.moslay:id/settings_prayer_mazhab")
-    private AndroidElement mazhabCorrectionChoice_TxtView;
+    private AndroidElement mazhabCorrectionChoiceText;
     @AndroidFindBy(id = "com.moslay:id/settings_DayLightSaving")
-    private AndroidElement summerTiming_Btn;
+    private AndroidElement summerTimingButton;
     @AndroidFindBy(id = "com.moslay:id/settings_day_light_saving")
-    private AndroidElement summerTimingChoice_TxtView;
+    private AndroidElement summerTimingChoiceText;
     @AndroidFindBy(id = "com.moslay:id/settings_prayerTimeCorrection")
-    private AndroidElement prayerTimeCorrection_Btn;
+    private AndroidElement prayerTimeCorrectionButton;
     @AndroidFindBy(id = "com.moslay:id/settings_timeZone")
-    private AndroidElement timeZone_Btn;
+    private AndroidElement timeZoneButton;
     @AndroidFindBy(id = "com.moslay:id/time_zone")
-    private AndroidElement timeZoneChoice_TxtView;
+    private AndroidElement timeZoneChoiceText;
     @AndroidFindBy(id = "com.moslay:id/settings_highLatitudeWay")
-    private AndroidElement polarZonesCalculation_Btn;
+    private AndroidElement polarZonesCalculationButton;
     @AndroidFindBy(id = "com.moslay:id/high_latitude")
-    private AndroidElement polarZonesCalculationChoice_TxtView;
+    private AndroidElement polarZonesCalculationChoiceText;
     @AndroidFindBy(id = "com.moslay:id/settings_restoreSettings")
-    private AndroidElement resetPrayerTimesCorrections_Btn;
+    private AndroidElement resetPrayerTimesCorrectionsText;
     @AndroidFindBy(id = "com.moslay:id/settings_location_layout")
-    private AndroidElement autoDetectLocation_Btn;
+    private AndroidElement autoDetectLocationButton;
     @AndroidFindBy(id = "com.moslay:id/settings_country_city")
-    private AndroidElement locationChoice_TxtView;
+    private AndroidElement locationChoiceText;
     @AndroidFindBy(id = "com.moslay:id/setting_travel_on")
-    private AndroidElement travelModeSection_Element;
+    private AndroidElement travelModeSectionElement;
     @AndroidFindBy(id = "com.moslay:id/settings_azkar_layout")
-    private AndroidElement azkarSettings_Btn;
+    private AndroidElement azkarSettingsButton;
     @AndroidFindBy(id = "com.moslay:id/settingsAzanLayout")
-    private AndroidElement azanSettings_Btn;
+    private AndroidElement azanSettingsButton;
     @AndroidFindBy(id = "com.moslay:id/ll_alert_sound")
-    private AndroidElement alertSound_Btn;
+    private AndroidElement alertSoundButton;
     @AndroidFindBy(id = "com.moslay:id/tv_choosen_alert_sound")
-    private AndroidElement alertSoundChoice_TxtView;
+    private AndroidElement alertSoundChoiceText;
     @AndroidFindBy(id = "com.moslay:id/lv_alert_sounds")
-    private AndroidElement alertSoundList_Element;
+    private AndroidElement alertSoundListElement;
     @AndroidFindBy(id = "com.moslay:id/setting_azanAndIqama_ll")
-    private AndroidElement azanAndIqamaSettingsSection_Btn;
+    private AndroidElement azanAndIqamaSettingsSectionButton;
     @AndroidFindBy(id = "com.moslay:id/settings_nawafel")
-    private AndroidElement nawafelSettingsSection_Btn;
+    private AndroidElement nawafelSettingsSectionButton;
     @AndroidFindBy(id = "com.moslay:id/settings_notification_Friday")
-    private AndroidElement gomaaSettingsSection_Btn;
+    private AndroidElement gomaaSettingsSectionButton;
     @AndroidFindBy(id = "com.moslay:id/settings_fasting")
-    private AndroidElement fastingSettingsFasting_Btn;
+    private AndroidElement fastingSettingsFastingButton;
     @AndroidFindBy(id = "com.moslay:id/settings_silent")
-    private AndroidElement silentDuringPrayerSettingsSection_Btn;
+    private AndroidElement silentDuringPrayerSettingsSectionButton;
     @AndroidFindBy(id = "com.moslay:id/settings_azkar_notification_on_off")
-    private AndroidElement azkarNotificationsSettingsSection_Btn;
+    private AndroidElement azkarNotificationsSettingsSectionButton;
     @AndroidFindBy(id = "com.moslay:id/settings_benefits_notifications")
-    private AndroidElement benefitsNotificationsSettingsSections_Btn;
+    private AndroidElement benefitsNotificationsSettingsSectionsButton;
     /**
      * *********************************************************************************************************************************************
      */
-
     /**
      * This method is to return the screen's actual title as a string
      *
      * @return Screen title as a string
      */
     public String getActualScreenTitle() {
-        return screenTitle_Text.getText();
+        wait.until(ExpectedConditions.visibilityOf(screenTitleText));
+        return screenTitleText.getText();
     }
     /**
      * *********************************************************************************************************************************************
@@ -105,7 +109,8 @@ public class SettingsScreen extends Base {
      * @return LanguageScreen
      */
     public LanguageScreen clickOnLanguageButton() {
-        language_Btn.click();
+        wait.until(ExpectedConditions.visibilityOf(languageButton));
+        languageButton.click();
         return new LanguageScreen();
     }
     /**
@@ -117,7 +122,8 @@ public class SettingsScreen extends Base {
      * @return the chosen language as text
      */
     public String getLanguageChoiceString() {
-        return languageChoice_TxtView.getText();
+        wait.until(ExpectedConditions.visibilityOf(languageChoiceText));
+        return languageChoiceText.getText();
     }
     /**
      * *********************************************************************************************************************************************
@@ -128,7 +134,8 @@ public class SettingsScreen extends Base {
      * @return EnableBackgroudActivationScreen
      */
     public EnableBackgroudActivationScreen clickOnBackgroundActivationButton() {
-        backgroundActivation_Btn.click();
+        wait.until(ExpectedConditions.visibilityOf(backgroundActivationButton));
+        backgroundActivationButton.click();
         return new EnableBackgroudActivationScreen();
     }
     /**
@@ -140,7 +147,8 @@ public class SettingsScreen extends Base {
      * @return common questions screen
      */
     public void clickOnSolveAzaanProblemsSolutionsButton() {
-        solveAzanProblems_Btn.click();
+        wait.until(ExpectedConditions.visibilityOf(solveAzanProblemsButton));
+        solveAzanProblemsButton.click();
         //This methods returns CommonQuestionsScreen class with shams
     }
     /**
@@ -150,7 +158,8 @@ public class SettingsScreen extends Base {
      * This method is to click on azan mode button
      */
     public void clickOnAzanModeButton() {
-        azanMode_Btn.click();
+        wait.until(ExpectedConditions.visibilityOf(azanModeButton));
+        azanModeButton.click();
     }
     /**
      * *********************************************************************************************************************************************
@@ -161,7 +170,8 @@ public class SettingsScreen extends Base {
      * @return the chosen azan mode as a string
      */
     public String getAzanModeSelectionString() {
-        return azanModeChoice_TxtView.getText();
+        wait.until(ExpectedConditions.visibilityOf(azanModeChoiceText));
+        return azanModeChoiceText.getText();
     }
     /**
      * *********************************************************************************************************************************************
@@ -171,6 +181,7 @@ public class SettingsScreen extends Base {
      */
     public void clickOnAzanModeOneButton() {
         AndroidElement azanModeOne = (AndroidElement) TestUtils.scrollToASpecificElementByItsText("نمط صوتى 1");
+        wait.until(ExpectedConditions.visibilityOf(azanModeOne));
         azanModeOne.click();
     }
     /**
@@ -181,6 +192,7 @@ public class SettingsScreen extends Base {
      */
     public void clickOnAzanModeTwoButton() {
         AndroidElement azanModeTwo = (AndroidElement) TestUtils.scrollToASpecificElementByItsText("نمط صوتى 2");
+        wait.until(ExpectedConditions.visibilityOf(azanModeTwo));
         azanModeTwo.click();
     }
     /**
@@ -192,7 +204,8 @@ public class SettingsScreen extends Base {
      * @return CalculationMethodScreen
      */
     public CalculationMethodScreen clickOnCalculationMethodButton() {
-        calcultionMethod_Btn.click();
+        wait.until(ExpectedConditions.visibilityOf(calcultionMethodButton));
+        calcultionMethodButton.click();
         return new CalculationMethodScreen();
     }
     /**
@@ -204,7 +217,8 @@ public class SettingsScreen extends Base {
      * @return the chosen calculation method as a string
      */
     public String getCalculationMethodChoiceString() {
-        return calcultionMethodChoice_TxtView.getText();
+        wait.until(ExpectedConditions.visibilityOf(calcultionMethodChoiceText));
+        return calcultionMethodChoiceText.getText();
     }
     /**
      * *********************************************************************************************************************************************
@@ -215,7 +229,8 @@ public class SettingsScreen extends Base {
      * @return MazhabScreen
      */
     public MazhabScreen clickOnMazhabButton() {
-        mazhabCorrection_Btn.click();
+        wait.until(ExpectedConditions.visibilityOf(mazhabCorrectionButton));
+        mazhabCorrectionButton.click();
         return new MazhabScreen();
     }
     /**
@@ -227,7 +242,8 @@ public class SettingsScreen extends Base {
      * @return the chosen mazhab as a string
      */
     public String getMazhabChoiceString() {
-        return mazhabCorrectionChoice_TxtView.getText();
+        wait.until(ExpectedConditions.visibilityOf(mazhabCorrectionChoiceText));
+        return mazhabCorrectionChoiceText.getText();
     }
     /**
      * *********************************************************************************************************************************************
@@ -238,7 +254,8 @@ public class SettingsScreen extends Base {
      * @return SummerTimeScreen
      */
     public SummerTimeScreen clickOnSummerTimeButton() {
-        summerTiming_Btn.click();
+        wait.until(ExpectedConditions.visibilityOf(summerTimingButton));
+        summerTimingButton.click();
         return new SummerTimeScreen();
     }
     /**
@@ -250,7 +267,8 @@ public class SettingsScreen extends Base {
      * @return the chosen option for summer timing
      */
     public String getSummerTimingChoiceString() {
-        return summerTimingChoice_TxtView.getText();
+        wait.until(ExpectedConditions.visibilityOf(summerTimingChoiceText));
+        return summerTimingChoiceText.getText();
     }
     /**
      * *********************************************************************************************************************************************
@@ -261,7 +279,8 @@ public class SettingsScreen extends Base {
      * @return TimesCorrectionScreen
      */
     public TimesCorrectionScreen clickOnPrayerTimesCorrectionButton() {
-        prayerTimeCorrection_Btn.click();
+        wait.until(ExpectedConditions.visibilityOf(prayerTimeCorrectionButton));
+        prayerTimeCorrectionButton.click();
         return new TimesCorrectionScreen();
     }
     /**
@@ -273,7 +292,8 @@ public class SettingsScreen extends Base {
      * @return TimeZoneScreen
      */
     public TimeZoneScreen clickOnTimeZoneButton() {
-        timeZone_Btn.click();
+        wait.until(ExpectedConditions.visibilityOf(timeZoneButton));
+        timeZoneButton.click();
         return new TimeZoneScreen();
     }
     /**
@@ -285,7 +305,8 @@ public class SettingsScreen extends Base {
      * @return the chosen time zone as a string
      */
     public String getTimeZoneChoiceString() {
-        return timeZoneChoice_TxtView.getText();
+        wait.until(ExpectedConditions.visibilityOf(timeZoneChoiceText));
+        return timeZoneChoiceText.getText();
     }
     /**
      * *********************************************************************************************************************************************
@@ -296,7 +317,8 @@ public class SettingsScreen extends Base {
      * @return PolarZonesScreen
      */
     public PolarZonesScreen clickOnPolarZonesCalculationButton() {
-        polarZonesCalculation_Btn.click();
+        wait.until(ExpectedConditions.visibilityOf(polarZonesCalculationButton));
+        polarZonesCalculationButton.click();
         return new PolarZonesScreen();
     }
     /**
@@ -308,7 +330,8 @@ public class SettingsScreen extends Base {
      * @return the chose option for the polar zone as a string
      */
     public String getPolarZonesChoiceString() {
-        return polarZonesCalculationChoice_TxtView.getText();
+        wait.until(ExpectedConditions.visibilityOf(polarZonesCalculationChoiceText));
+        return polarZonesCalculationChoiceText.getText();
     }
     /**
      * *********************************************************************************************************************************************
@@ -319,7 +342,8 @@ public class SettingsScreen extends Base {
      * @return ResetScreen
      */
     public ResetScreen clickOnResetToDefaultButton() {
-        resetPrayerTimesCorrections_Btn.click();
+        wait.until(ExpectedConditions.visibilityOf(resetPrayerTimesCorrectionsText));
+        resetPrayerTimesCorrectionsText.click();
         return new ResetScreen();
     }
     /**
@@ -331,7 +355,8 @@ public class SettingsScreen extends Base {
      * @return AutomaticScreen
      */
     public AutomaticScreen clickOnAutoDetectLocationButton() {
-        autoDetectLocation_Btn.click();
+        wait.until(ExpectedConditions.visibilityOf(autoDetectLocationButton));
+        autoDetectLocationButton.click();
         return new AutomaticScreen();
     }
     /**
@@ -343,7 +368,8 @@ public class SettingsScreen extends Base {
      * @return the chosen location as a string
      */
     public String getLocationChoiceString() {
-        return locationChoice_TxtView.getText();
+        wait.until(ExpectedConditions.visibilityOf(locationChoiceText));
+        return locationChoiceText.getText();
     }
     /**
      * *********************************************************************************************************************************************
@@ -352,7 +378,8 @@ public class SettingsScreen extends Base {
      * This method is to click on travel mode switch
      */
     public void clickOnTravelModeSwitch() {
-        AndroidElement travelModeSwitch = (AndroidElement) travelModeSection_Element.findElementById("com.moslay:id/on_off_switch");
+        wait.until(ExpectedConditions.visibilityOf(travelModeSectionElement));
+        AndroidElement travelModeSwitch = (AndroidElement) travelModeSectionElement.findElementById("com.moslay:id/on_off_switch");
         travelModeSwitch.click();
     }
     /**
@@ -364,7 +391,8 @@ public class SettingsScreen extends Base {
      * @return TravelModeScreen
      */
     public TravelModeScreen clickOnTravelModeSectionToOpenTravelModeScreen() {
-        AndroidElement travelModeSection = (AndroidElement) travelModeSection_Element.findElementById("com.moslay:id/title");
+        wait.until(ExpectedConditions.visibilityOf(travelModeSectionElement));
+        AndroidElement travelModeSection = (AndroidElement) travelModeSectionElement.findElementById("com.moslay:id/title");
         travelModeSection.click();
         return new TravelModeScreen();
     }
@@ -377,7 +405,8 @@ public class SettingsScreen extends Base {
      * @return the azkar settings screen
      */
     public void clickOnAzkarSettingsButton() {
-        azkarSettings_Btn.click();
+        wait.until(ExpectedConditions.visibilityOf(azkarSettingsButton));
+        azkarSettingsButton.click();
         //This method returns azkar settings screen with shams
     }
     /**
@@ -389,7 +418,8 @@ public class SettingsScreen extends Base {
      * @return the azan settings screen
      */
     public void clickOnAzanSettingsButton() {
-        azanSettings_Btn.click();
+        wait.until(ExpectedConditions.visibilityOf(azanSettingsButton));
+        azanSettingsButton.click();
         //This method returns azan settings screen with shams
     }
     /**
@@ -399,7 +429,8 @@ public class SettingsScreen extends Base {
      * This method is to click on alert sound button
      */
     public void clickOnAlertSoundButton() {
-        alertSound_Btn.click();
+        wait.until(ExpectedConditions.visibilityOf(alertSoundButton));
+        alertSoundButton.click();
     }
     /**
      * *********************************************************************************************************************************************
@@ -410,7 +441,8 @@ public class SettingsScreen extends Base {
      * @return the alert sound as a string
      */
     public String returnALertSoundChoiceAsAString() {
-        return alertSoundChoice_TxtView.getText();
+        wait.until(ExpectedConditions.visibilityOf(alertSoundChoiceText));
+        return alertSoundChoiceText.getText();
     }
     /**
      * *********************************************************************************************************************************************
@@ -419,7 +451,8 @@ public class SettingsScreen extends Base {
      * This method is to click on alert sound option one
      */
     public void clickOnAlertSoundOptionOne() {
-        AndroidElement soundAlertsOptionOne = (AndroidElement) alertSoundList_Element.findElementById("com.moslay:id/radio_button_layout[1]");
+        wait.until(ExpectedConditions.visibilityOf(alertSoundListElement));
+        AndroidElement soundAlertsOptionOne = (AndroidElement) alertSoundListElement.findElementById("com.moslay:id/radio_button_layout[1]");
         soundAlertsOptionOne.click();
     }
     /**
@@ -429,7 +462,8 @@ public class SettingsScreen extends Base {
      * This method is to click on alert sound option Two
      */
     public void clickOnAlertSoundOptionTwo() {
-        AndroidElement soundAlertsOptionTwo = (AndroidElement) alertSoundList_Element.findElementById("com.moslay:id/radio_button_layout[2]");
+        wait.until(ExpectedConditions.visibilityOf(alertSoundListElement));
+        AndroidElement soundAlertsOptionTwo = (AndroidElement) alertSoundListElement.findElementById("com.moslay:id/radio_button_layout[2]");
         soundAlertsOptionTwo.click();
     }
     /**
@@ -441,7 +475,8 @@ public class SettingsScreen extends Base {
      * @return azan and iqama notifications screen
      */
     public void clickOnAzanAndIqamaSettingsButton() {
-        azanAndIqamaSettingsSection_Btn.click();
+        wait.until(ExpectedConditions.visibilityOf(azanAndIqamaSettingsSectionButton));
+        azanAndIqamaSettingsSectionButton.click();
         //This method returns azan and iqama notifications screen with shams
     }
     /**
@@ -451,7 +486,8 @@ public class SettingsScreen extends Base {
      * This method is to click on azan and Iqama notifications switch
      */
     public void clickOnAzanAndIqamaNotificationsSwitch() {
-        AndroidElement azanAndIqamaSwitch = (AndroidElement) azanAndIqamaSettingsSection_Btn.findElementById("com.moslay:id/bg");
+        wait.until(ExpectedConditions.visibilityOf(azanAndIqamaSettingsSectionButton));
+        AndroidElement azanAndIqamaSwitch = (AndroidElement) azanAndIqamaSettingsSectionButton.findElementById("com.moslay:id/bg");
         azanAndIqamaSwitch.click();
     }
     /**
@@ -463,7 +499,8 @@ public class SettingsScreen extends Base {
      * @return nawafel notifications settings button
      */
     public void clickOnNawafelSettingsButton() {
-        nawafelSettingsSection_Btn.click();
+        wait.until(ExpectedConditions.visibilityOf(nawafelSettingsSectionButton));
+        nawafelSettingsSectionButton.click();
         //This method returns nawafel notifications screen with shams
     }
     /**
@@ -473,7 +510,8 @@ public class SettingsScreen extends Base {
      * This method is to click on nawafel notifications switch
      */
     public void clickOnNawafelNotificationsSwitch() {
-        AndroidElement nawafelSwitch = (AndroidElement) nawafelSettingsSection_Btn.findElementById("com.moslay:id/bg");
+        wait.until(ExpectedConditions.visibilityOf(nawafelSettingsSectionButton));
+        AndroidElement nawafelSwitch = (AndroidElement) nawafelSettingsSectionButton.findElementById("com.moslay:id/bg");
         nawafelSwitch.click();
     }
     /**
@@ -485,7 +523,8 @@ public class SettingsScreen extends Base {
      * @return gomaa notifications screen
      */
     public void clickOnGomaaSettingsButton() {
-        gomaaSettingsSection_Btn.click();
+        wait.until(ExpectedConditions.visibilityOf(gomaaSettingsSectionButton));
+        gomaaSettingsSectionButton.click();
         //This method returns gomaa notifications screen with shams
     }
     /**
@@ -495,7 +534,8 @@ public class SettingsScreen extends Base {
      * This method is to click on gomaa notifications switch
      */
     public void clickOnGomaaNotificationsSwitch() {
-        AndroidElement gomaaSwitch = (AndroidElement) gomaaSettingsSection_Btn.findElementById("com.moslay:id/bg");
+        wait.until(ExpectedConditions.visibilityOf(gomaaSettingsSectionButton));
+        AndroidElement gomaaSwitch = (AndroidElement) gomaaSettingsSectionButton.findElementById("com.moslay:id/bg");
         gomaaSwitch.click();
     }
     /**
@@ -507,7 +547,8 @@ public class SettingsScreen extends Base {
      * @return fasting notifications settings screen
      */
     public void clickOnFastingSettingsButton() {
-        fastingSettingsFasting_Btn.click();
+        wait.until(ExpectedConditions.visibilityOf(fastingSettingsFastingButton));
+        fastingSettingsFastingButton.click();
         //This method will return fasting notifications screen with shams
     }
     /**
@@ -517,7 +558,8 @@ public class SettingsScreen extends Base {
      * This method is to click on fasting notifications switch
      */
     public void clickOnFastingNotificationsSwitch() {
-        AndroidElement fastingSwitch = (AndroidElement) fastingSettingsFasting_Btn.findElementById("com.moslay:id/bg");
+        wait.until(ExpectedConditions.visibilityOf(fastingSettingsFastingButton));
+        AndroidElement fastingSwitch = (AndroidElement) fastingSettingsFastingButton.findElementById("com.moslay:id/bg");
         fastingSwitch.click();
     }
     /**
@@ -529,7 +571,8 @@ public class SettingsScreen extends Base {
      * @return SilentDuringPrayerNotificationsScreen
      */
     public SilentDuringPrayerNotificationsScreen clickOnSilentDuringPrayerSettingsButton() {
-        silentDuringPrayerSettingsSection_Btn.click();
+        wait.until(ExpectedConditions.visibilityOf(silentDuringPrayerSettingsSectionButton));
+        silentDuringPrayerSettingsSectionButton.click();
         return new SilentDuringPrayerNotificationsScreen();
     }
     /**
@@ -539,7 +582,8 @@ public class SettingsScreen extends Base {
      * This method is to click on silent during prayer notifications switch
      */
     public void clickOnSilentDurningPrayerNotificationsSwitch() {
-        AndroidElement silentDuringPrayerSwitch = (AndroidElement) silentDuringPrayerSettingsSection_Btn.findElementById("com.moslay:id/bg");
+        wait.until(ExpectedConditions.visibilityOf(silentDuringPrayerSettingsSectionButton));
+        AndroidElement silentDuringPrayerSwitch = (AndroidElement) silentDuringPrayerSettingsSectionButton.findElementById("com.moslay:id/bg");
         silentDuringPrayerSwitch.click();
     }
     /**
@@ -551,7 +595,8 @@ public class SettingsScreen extends Base {
      * @return azkar notifications screen
      */
     public void clickOnAzkarNotificationsSettingsButton() {
-        azkarNotificationsSettingsSection_Btn.click();
+        wait.until(ExpectedConditions.visibilityOf(azkarNotificationsSettingsSectionButton));
+        azkarNotificationsSettingsSectionButton.click();
         //This method will return azkar notifications screen with shams
     }
     /**
@@ -561,7 +606,8 @@ public class SettingsScreen extends Base {
      * This method is to click on azkar notification notifications switch
      */
     public void clickOnAzkarNotificationsSwitch() {
-        AndroidElement azkarNotificationsSwitch = (AndroidElement) azkarNotificationsSettingsSection_Btn.findElementById("com.moslay:id/bg");
+        wait.until(ExpectedConditions.visibilityOf(azkarNotificationsSettingsSectionButton));
+        AndroidElement azkarNotificationsSwitch = (AndroidElement) azkarNotificationsSettingsSectionButton.findElementById("com.moslay:id/bg");
         azkarNotificationsSwitch.click();
     }
     /**
@@ -571,7 +617,8 @@ public class SettingsScreen extends Base {
      * This method is to click on beneftis notifications switch
      */
     public void clickOnBenefitsNotificationsSwitch() {
-        AndroidElement benefitsNotificationsSwitch = (AndroidElement) benefitsNotificationsSettingsSections_Btn.findElementById("com.moslay:id/bg");
+        wait.until(ExpectedConditions.visibilityOf(benefitsNotificationsSettingsSectionsButton));
+        AndroidElement benefitsNotificationsSwitch = (AndroidElement) benefitsNotificationsSettingsSectionsButton.findElementById("com.moslay:id/bg");
         benefitsNotificationsSwitch.click();
     }
     /**

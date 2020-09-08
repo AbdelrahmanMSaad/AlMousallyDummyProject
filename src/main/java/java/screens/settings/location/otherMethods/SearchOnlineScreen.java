@@ -2,16 +2,18 @@ package java.screens.settings.location.otherMethods;
 
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Wait;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.base.Base;
 
 public class SearchOnlineScreen extends Base {
+    Wait wait = new WebDriverWait(driver,10);
     @AndroidFindBy(xpath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.RelativeLayout/android.widget.LinearLayout/android.widget.RelativeLayout/android.widget.TextView")
-    private AndroidElement screenTitle_Text;
-
+    private AndroidElement screenTitleText;
     @AndroidFindBy(id = "com.moslay:id/autocomplete_places")
-    private AndroidElement searchBar_TextView;
-
+    private AndroidElement searchBarText;
     /**
      * *********************************************************************************************************************************************
      */
@@ -21,7 +23,8 @@ public class SearchOnlineScreen extends Base {
      * @return actual title as a string
      */
     public String getScreenTitle() {
-        return screenTitle_Text.getText();
+        wait.until(ExpectedConditions.visibilityOf(screenTitleText));
+        return screenTitleText.getText();
     }
     /**
      * *********************************************************************************************************************************************
@@ -32,7 +35,8 @@ public class SearchOnlineScreen extends Base {
      * @param text to be sent to the search bar
      */
     public void sendTextToSearchBar(String text) {
-        searchBar_TextView.sendKeys(text);
+        wait.until(ExpectedConditions.visibilityOf(searchBarText));
+        searchBarText.sendKeys(text);
     }
     /**
      * *********************************************************************************************************************************************
@@ -43,7 +47,8 @@ public class SearchOnlineScreen extends Base {
      * @return the text within the search bar as a string
      */
     public String getTextFromSearchBar() {
-        return searchBar_TextView.getText();
+        wait.until(ExpectedConditions.visibilityOf(searchBarText));
+        return searchBarText.getText();
     }
     /**
      * *********************************************************************************************************************************************

@@ -2,43 +2,37 @@ package java.screens.settings.generalSettings;
 
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Wait;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.screens.home.HomePageScreen;
 import java.base.Base;
 
 public class LanguageScreen extends Base {
+    Wait wait = new WebDriverWait(driver,10);
     @AndroidFindBy(id = "com.moslay:id/lang_txt_chooseLanguage")
-    private AndroidElement screenTitle_Text;
-
+    private AndroidElement screenTitleText;
     @AndroidFindBy(id = "com.moslay:id/list_container")
-    private AndroidElement languagesList_Element;
-
+    private AndroidElement languagesListElement;
     @AndroidFindBy(accessibility = "العربية")
-    private AndroidElement arabic_Btn;
-
+    private AndroidElement arabicButton;
     @AndroidFindBy(accessibility = "English")
-    private AndroidElement english_Btn;
-
+    private AndroidElement englishButton;
     @AndroidFindBy(accessibility = "Türk")
-    private AndroidElement turkish_Btn;
-
+    private AndroidElement turkishButton;
     @AndroidFindBy(accessibility = "Duits")
-    private AndroidElement german_Btn;
-
+    private AndroidElement germanButton;
     @AndroidFindBy(accessibility = "francais")
-    private AndroidElement french_Btn;
-
+    private AndroidElement frenchButton;
     @AndroidFindBy(accessibility = "Español")
-    private AndroidElement spanish_Btn;
-
+    private AndroidElement spanishButton;
     @AndroidFindBy(accessibility = "Indonesia")
-    private AndroidElement indonesian_Btn;
-
+    private AndroidElement indonesianButton;
     @AndroidFindBy(accessibility = "اردو")
-    private AndroidElement ardu_Btn;
-
+    private AndroidElement arduButtton;
     @AndroidFindBy(accessibility = "ئۇيغۇرچە")
-    private AndroidElement ugyhr_Btn;
+    private AndroidElement ugyhrButton;
 
     /**
      * *********************************************************************************************************************************************
@@ -49,7 +43,8 @@ public class LanguageScreen extends Base {
      * @return String representing the screen's title
      */
     public String getScreenTitle() {
-        return screenTitle_Text.getText();
+        wait.until(ExpectedConditions.visibilityOf(screenTitleText));
+        return screenTitleText.getText();
     }
     /**
      * *********************************************************************************************************************************************
@@ -60,7 +55,8 @@ public class LanguageScreen extends Base {
      * @return home page screen
      */
     public HomePageScreen clickOnArabicElement() {
-        arabic_Btn.click();
+        wait.until(ExpectedConditions.visibilityOf(arabicButton));
+        arabicButton.click();
         return new HomePageScreen();
     }
     /**
@@ -72,7 +68,8 @@ public class LanguageScreen extends Base {
      * @return home page screen
      */
     public HomePageScreen clickOnEnglishElement() {
-        english_Btn.click();
+        wait.until(ExpectedConditions.visibilityOf(englishButton));
+        englishButton.click();
         return new HomePageScreen();
     }
     /**
@@ -84,7 +81,8 @@ public class LanguageScreen extends Base {
      * @return home page screen
      */
     public HomePageScreen clickOnTurkishElement() {
-        turkish_Btn.click();
+        wait.until(ExpectedConditions.visibilityOf(turkishButton));
+        turkishButton.click();
         return new HomePageScreen();
     }
     /**
@@ -96,7 +94,8 @@ public class LanguageScreen extends Base {
      * @return home page screen
      */
     public HomePageScreen clickOnGermanElement() {
-        german_Btn.click();
+        wait.until(ExpectedConditions.visibilityOf(germanButton));
+        germanButton.click();
         return new HomePageScreen();
     }
     /**
@@ -108,7 +107,8 @@ public class LanguageScreen extends Base {
      * @return home page screen
      */
     public HomePageScreen clickOnFrenchElement() {
-        french_Btn.click();
+        wait.until(ExpectedConditions.visibilityOf(frenchButton));
+        frenchButton.click();
         return new HomePageScreen();
     }
     /**
@@ -120,7 +120,8 @@ public class LanguageScreen extends Base {
      * @return home page screen
      */
     public HomePageScreen clickOnSpanishElement() {
-        spanish_Btn.click();
+        wait.until(ExpectedConditions.visibilityOf(spanishButton));
+        spanishButton.click();
         return new HomePageScreen();
     }
     /**
@@ -132,7 +133,8 @@ public class LanguageScreen extends Base {
      * @return home page screen
      */
     public HomePageScreen clickOnIndonesianElement() {
-        indonesian_Btn.click();
+        wait.until(ExpectedConditions.visibilityOf(indonesianButton));
+        indonesianButton.click();
         return new HomePageScreen();
     }
     /**
@@ -144,7 +146,8 @@ public class LanguageScreen extends Base {
      * @return home page screen
      */
     public HomePageScreen clickOnArduElement() {
-        ardu_Btn.click();
+        wait.until(ExpectedConditions.visibilityOf(arduButtton));
+        arduButtton.click();
         return new HomePageScreen();
     }
     /**
@@ -156,7 +159,8 @@ public class LanguageScreen extends Base {
      * @return home page screen
      */
     public HomePageScreen clickOnIgurElement() {
-        ugyhr_Btn.click();
+        wait.until(ExpectedConditions.visibilityOf(ugyhrButton));
+        ugyhrButton.click();
         return new HomePageScreen();
     }
     /**

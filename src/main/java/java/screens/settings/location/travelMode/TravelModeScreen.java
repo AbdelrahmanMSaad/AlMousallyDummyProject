@@ -2,22 +2,22 @@ package java.screens.settings.location.travelMode;
 
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Wait;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.base.Base;
 
 public class TravelModeScreen extends Base {
+    Wait wait = new WebDriverWait(driver,10);
     @AndroidFindBy(xpath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.RelativeLayout[1]/android.widget.LinearLayout/android.widget.RelativeLayout/android.widget.TextView")
-    private AndroidElement screenTitle_Text;
-
+    private AndroidElement screenTitleText;
     @AndroidFindBy(id = "com.moslay:id/on_off_switch")
-    private AndroidElement onOff_Switch;
-
+    private AndroidElement onOffSwitch;
     @AndroidFindBy(id = "com.moslay:id/tv_loc_period")
-    private AndroidElement updateLocationInterval_Btn;
-
+    private AndroidElement updateLocationIntervalButton;
     @AndroidFindBy(id = "com.moslay:id/tv_settings")
-    private AndroidElement goToPhoneSettings_Btn;
-
+    private AndroidElement goToPhoneSettingsButton;
     /**
      * *********************************************************************************************************************************************
      */
@@ -27,7 +27,8 @@ public class TravelModeScreen extends Base {
      * @return home page screen
      */
     public String getScreenTitleText() {
-        return screenTitle_Text.getText();
+        wait.until(ExpectedConditions.visibilityOf(screenTitleText));
+        return screenTitleText.getText();
     }
     /**
      * *********************************************************************************************************************************************
@@ -36,7 +37,8 @@ public class TravelModeScreen extends Base {
      * This method is to click on the travel mode switch
      */
     public void clickOnTravelModeSwitch() {
-        onOff_Switch.click();
+        wait.until(ExpectedConditions.visibilityOf(onOffSwitch));
+        onOffSwitch.click();
     }
     /**
      * *********************************************************************************************************************************************
@@ -47,7 +49,8 @@ public class TravelModeScreen extends Base {
      * @return TravelMode_IntervalsScreen
      */
     public TravelMode_IntervalsScreen clickOnUpdateLocationTimeIntervalButton() {
-        updateLocationInterval_Btn.click();
+        wait.until(ExpectedConditions.visibilityOf(updateLocationIntervalButton));
+        updateLocationIntervalButton.click();
         return new TravelMode_IntervalsScreen();
     }
     /**
@@ -57,7 +60,8 @@ public class TravelModeScreen extends Base {
      * This method is to click on the settigns button which directs the user to the phone location settings
      */
     public void clickOnGoToPhoneSettingsButton() {
-        goToPhoneSettings_Btn.click();
+        wait.until(ExpectedConditions.visibilityOf(goToPhoneSettingsButton));
+        goToPhoneSettingsButton.click();
     }
     /**
      * *********************************************************************************************************************************************

@@ -3,20 +3,20 @@ package java.screens.settings.prayerTimesCorrection;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Wait;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.List;
 
 public class PolarZonesScreen extends PrayerTimesCorrectionScreen {
-
+//    Wait wait = new WebDriverWait(driver,10);
     @AndroidFindBy(id = "com.moslay:id/txt_setting_title")
-    private AndroidElement screenTitleTxt_Text;
-
+    private AndroidElement screenTitleText;
     @AndroidFindBy(id = "com.moslay:id/lv_calway_list")
-    private AndroidElement polarZonesListElement_Element;
-
+    private AndroidElement polarZonesListElement;
     @AndroidFindBy(id = "com.moslay:id/fagr_helper_double_listview")
-    private AndroidElement scrollListElement_Element;
-
+    private AndroidElement scrollListElement;
     /**
      * *********************************************************************************************************************************************
      */
@@ -26,7 +26,8 @@ public class PolarZonesScreen extends PrayerTimesCorrectionScreen {
      * @return navigation drawer screen
      */
     public void clickOnNavigationDrawerButton() {
-        navigationDrawerBtn_Btn.click();
+        wait.until(ExpectedConditions.visibilityOf(navigationDrawerButton));
+        navigationDrawerButton.click();
         //This method returns navigation drawer screen with shams
     }
     /**
@@ -38,7 +39,8 @@ public class PolarZonesScreen extends PrayerTimesCorrectionScreen {
      * @return the screen's general title as a string
      */
     public String returnScreenGeneralTitleString() {
-        return screenGeneralTitleTxt_Text.getText();
+        wait.until(ExpectedConditions.visibilityOf(screenGeneralTitleText));
+        return screenGeneralTitleText.getText();
     }
     /**
      * *********************************************************************************************************************************************
@@ -49,7 +51,8 @@ public class PolarZonesScreen extends PrayerTimesCorrectionScreen {
      * @return ishaa time in string
      */
     public String returnIshaaTimeString() {
-        return ishaTimeElement_Element.findElementByClassName("android.widget.TextView").getText();
+        wait.until(ExpectedConditions.visibilityOf(ishaTimeElement));
+        return ishaTimeElement.findElementByClassName("android.widget.TextView").getText();
     }
     /**
      * *********************************************************************************************************************************************
@@ -60,7 +63,8 @@ public class PolarZonesScreen extends PrayerTimesCorrectionScreen {
      * @return maghrib time in string
      */
     public String returnMaghribTimeString() {
-        return maghribTimeElement_Element.findElementByClassName("android.widget.TextView").getText();
+        wait.until(ExpectedConditions.visibilityOf(maghribTimeElement));
+        return maghribTimeElement.findElementByClassName("android.widget.TextView").getText();
     }
     /**
      * *********************************************************************************************************************************************
@@ -71,7 +75,8 @@ public class PolarZonesScreen extends PrayerTimesCorrectionScreen {
      * @return asr time in string
      */
     public String returnAsrTimeString() {
-        return asrTimeElement_Element.findElementByClassName("android.widget.TextView").getText();
+        wait.until(ExpectedConditions.visibilityOf(asrTimeElement));
+        return asrTimeElement.findElementByClassName("android.widget.TextView").getText();
     }
     /**
      * *********************************************************************************************************************************************
@@ -82,7 +87,8 @@ public class PolarZonesScreen extends PrayerTimesCorrectionScreen {
      * @return zohr time in string
      */
     public String returnZohrTimeString() {
-        return zohrTimeElement_Element.findElementByClassName("android.widget.TextView").getText();
+        wait.until(ExpectedConditions.visibilityOf(zohrTimeElement));
+        return zohrTimeElement.findElementByClassName("android.widget.TextView").getText();
     }
     /**
      * *********************************************************************************************************************************************
@@ -93,7 +99,8 @@ public class PolarZonesScreen extends PrayerTimesCorrectionScreen {
      * @return sherouqe time in string
      */
     public String returnSherouqeTimeString() {
-        return shrouqeTimeElement_Element.findElementByClassName("android.widget.TextView").getText();
+        wait.until(ExpectedConditions.visibilityOf(shrouqeTimeElement));
+        return shrouqeTimeElement.findElementByClassName("android.widget.TextView").getText();
     }
     /**
      * *********************************************************************************************************************************************
@@ -104,7 +111,8 @@ public class PolarZonesScreen extends PrayerTimesCorrectionScreen {
      * @return fajr time in string
      */
     public String returnFajrTimeString() {
-        return fajrTimeElement_Element.findElementByClassName("android.widget.TextView").getText();
+        wait.until(ExpectedConditions.visibilityOf(fajrTimeElement));
+        return fajrTimeElement.findElementByClassName("android.widget.TextView").getText();
     }
     /**
      * *********************************************************************************************************************************************
@@ -115,7 +123,8 @@ public class PolarZonesScreen extends PrayerTimesCorrectionScreen {
      * @return screen's title as a string
      */
     public String returnScreenTitleString() {
-        return screenTitleTxt_Text.getText();
+        wait.until(ExpectedConditions.visibilityOf(screenTitleText));
+        return screenTitleText.getText();
     }
     /**
      * *********************************************************************************************************************************************
@@ -124,7 +133,8 @@ public class PolarZonesScreen extends PrayerTimesCorrectionScreen {
      * This method is to click on none button
      */
     public void clickOnNoneButton() {
-        List<MobileElement> polarZonesList_List = (List<MobileElement>) polarZonesListElement_Element.findElementByClassName("android.widget.LinearLayout");
+        wait.until(ExpectedConditions.visibilityOf(polarZonesListElement));
+        List<MobileElement> polarZonesList_List = (List<MobileElement>) polarZonesListElement.findElementByClassName("android.widget.LinearLayout");
         AndroidElement noneButton = (AndroidElement) polarZonesList_List.get(0);
         noneButton.click();
     }
@@ -135,7 +145,8 @@ public class PolarZonesScreen extends PrayerTimesCorrectionScreen {
      * This method is to click on using angle button
      */
     public void clickOnUsingAngleButton() {
-        List<MobileElement> polarZonesList_List = (List<MobileElement>) polarZonesListElement_Element.findElementByClassName("android.widget.LinearLayout");
+        wait.until(ExpectedConditions.visibilityOf(polarZonesListElement));
+        List<MobileElement> polarZonesList_List = (List<MobileElement>) polarZonesListElement.findElementByClassName("android.widget.LinearLayout");
         AndroidElement usingAngleButton = (AndroidElement) polarZonesList_List.get(1);
         usingAngleButton.click();
     }
@@ -146,7 +157,8 @@ public class PolarZonesScreen extends PrayerTimesCorrectionScreen {
      * This method is to click on mid night button
      */
     public void clickOnMidnightButton() {
-        List<MobileElement> polarZonesList_List = (List<MobileElement>) polarZonesListElement_Element.findElementByClassName("android.widget.LinearLayout");
+        wait.until(ExpectedConditions.visibilityOf(polarZonesListElement));
+        List<MobileElement> polarZonesList_List = (List<MobileElement>) polarZonesListElement.findElementByClassName("android.widget.LinearLayout");
         AndroidElement midnightButton = (AndroidElement) polarZonesList_List.get(2);
         midnightButton.click();
     }
@@ -157,7 +169,8 @@ public class PolarZonesScreen extends PrayerTimesCorrectionScreen {
      * This method is to click on seventh night button
      */
     public void clickOnSeventhNightButton() {
-        List<MobileElement> polarZonesList_List = (List<MobileElement>) polarZonesListElement_Element.findElementByClassName("android.widget.LinearLayout");
+        wait.until(ExpectedConditions.visibilityOf(polarZonesListElement));
+        List<MobileElement> polarZonesList_List = (List<MobileElement>) polarZonesListElement.findElementByClassName("android.widget.LinearLayout");
         AndroidElement seventhNightButton = (AndroidElement) polarZonesList_List.get(3);
         seventhNightButton.click();
     }
@@ -170,7 +183,8 @@ public class PolarZonesScreen extends PrayerTimesCorrectionScreen {
      * @param index that represents the scroll dot number
      */
     public void clickOnAScrollDotByIndex(int index) {
-        List<MobileElement> scrollList_List = scrollListElement_Element.findElementsByClassName("android.widget.LinearLayout");
+        wait.until(ExpectedConditions.visibilityOf(scrollListElement));
+        List<MobileElement> scrollList_List = scrollListElement.findElementsByClassName("android.widget.LinearLayout");
         scrollList_List.get(index).click();
     }
     /**

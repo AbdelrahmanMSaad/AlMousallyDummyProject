@@ -2,23 +2,23 @@ package java.screens.settings.location.otherMethods;
 
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Wait;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.base.Base;
 import java.utilities.TestUtils;
 
 public class OfflineSearchScreen extends Base {
+    Wait wait = new WebDriverWait(driver,10);
     @AndroidFindBy(accessibility = "رجوع")
-    private AndroidElement back_Btn;
-
+    private AndroidElement backButton;
     @AndroidFindBy(id = "com.moslay:id/country_header")
-    private AndroidElement screenTitle_Text;
-
+    private AndroidElement screenTitleText;
     @AndroidFindBy(id = "com.moslay:id/countrySelection_inputSearch")
-    private AndroidElement searchBar_TextView;
-
+    private AndroidElement searchBar;
     @AndroidFindBy(id = "com.moslay:id/country_ListView")
-    private AndroidElement countryList_Element;
-
+    private AndroidElement countryListElement;
     /**
      * *********************************************************************************************************************************************
      */
@@ -28,7 +28,8 @@ public class OfflineSearchScreen extends Base {
      * @return actual title as a string
      */
     public String getScreenTitle() {
-        return screenTitle_Text.getText();
+        wait.until(ExpectedConditions.visibilityOf(screenTitleText));
+        return screenTitleText.getText();
     }
     /**
      * *********************************************************************************************************************************************
@@ -39,7 +40,8 @@ public class OfflineSearchScreen extends Base {
      * @return OtherMethodsScreen
      */
     public OtherMethodsScreen clickOnBackButton() {
-        back_Btn.click();
+        wait.until(ExpectedConditions.visibilityOf(backButton));
+        backButton.click();
         return new OtherMethodsScreen();
     }
     /**
@@ -51,7 +53,8 @@ public class OfflineSearchScreen extends Base {
      * @param text to be sent to the search bar
      */
     public void sendTextToSearchBar(String text) {
-        searchBar_TextView.sendKeys(text);
+        wait.until(ExpectedConditions.visibilityOf(searchBar));
+        searchBar.sendKeys(text);
     }
     /**
      * *********************************************************************************************************************************************
@@ -62,7 +65,8 @@ public class OfflineSearchScreen extends Base {
      * @return the text within the search bar as a string
      */
     public String getTextFromSearchBar() {
-        return searchBar_TextView.getText();
+        wait.until(ExpectedConditions.visibilityOf(searchBar));
+        return searchBar.getText();
     }
     /**
      * *********************************************************************************************************************************************

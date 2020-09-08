@@ -2,13 +2,16 @@ package java.screens.settings.location.otherMethods;
 
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;
+import org.openqa.selenium.support.ui.Wait;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.base.Base;
 import java.utilities.TestUtils;
 
 public class AddCityName_CityListScreen extends Base {
+    Wait wait = new WebDriverWait(driver,10);
     @AndroidFindBy(id = "android:id/select_dialog_listview")
-    private AndroidElement countriesList_Element;
+    private AndroidElement countriesListElement;
 
     /**
      * *********************************************************************************************************************************************

@@ -2,23 +2,23 @@ package java.screens.settings.generalSettings;
 
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Wait;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.screens.settings.SettingsScreen;
 import java.base.Base;
 
 public class EnableBackgroudActivationScreen extends Base {
+    Wait wait = new WebDriverWait(driver,10);
     @AndroidFindBy(id = "com.moslay:id/warning_cancel")
-    private AndroidElement close_Btn;
-
+    private AndroidElement closeButton;
     @AndroidFindBy(xpath = "/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.LinearLayout/android.widget.RelativeLayout/android.widget.RelativeLayout/android.widget.TextView")
-    private AndroidElement screenTitle_Text;
-
+    private AndroidElement screenTitleText;
     @AndroidFindBy(id = "com.moslay:id/warning_ok")
-    private AndroidElement goToSettings_Btn;
-
+    private AndroidElement goToSettingsButton;
     @AndroidFindBy(id = "com.moslay:id/checkbox")
-    private AndroidElement doNotShowThisAgain_Btn;
-
+    private AndroidElement doNotShowThisAgainButton;
     /**
      * *********************************************************************************************************************************************
      */
@@ -28,7 +28,8 @@ public class EnableBackgroudActivationScreen extends Base {
      * @return SettingsScreen
      */
     public SettingsScreen clickOnCloseButton() {
-        close_Btn.click();
+        wait.until(ExpectedConditions.visibilityOf(closeButton));
+        closeButton.click();
         return new SettingsScreen();
     }
     /**
@@ -40,7 +41,8 @@ public class EnableBackgroudActivationScreen extends Base {
      * @return string representing the screen title
      */
     public String getScreenTitle() {
-        return screenTitle_Text.getText();
+        wait.until(ExpectedConditions.visibilityOf(screenTitleText));
+        return screenTitleText.getText();
     }
     /**
      * *********************************************************************************************************************************************
@@ -51,7 +53,8 @@ public class EnableBackgroudActivationScreen extends Base {
      * @return SettingsScreen
      */
     public SettingsScreen clickOnSettingsButton() {
-        goToSettings_Btn.click();
+        wait.until(ExpectedConditions.visibilityOf(goToSettingsButton));
+        goToSettingsButton.click();
         return new SettingsScreen();
     }
     /**
@@ -61,7 +64,8 @@ public class EnableBackgroudActivationScreen extends Base {
      * This method is to click on do not show this again check box
      */
     public void clickOnDoNotShowThisAgainButton() {
-        doNotShowThisAgain_Btn.click();
+        wait.until(ExpectedConditions.visibilityOf(doNotShowThisAgainButton));
+        doNotShowThisAgainButton.click();
     }
     /**
      * *********************************************************************************************************************************************

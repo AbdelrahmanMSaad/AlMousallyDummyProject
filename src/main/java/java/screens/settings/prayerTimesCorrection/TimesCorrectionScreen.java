@@ -3,19 +3,20 @@ package java.screens.settings.prayerTimesCorrection;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import java.util.List;
 
 public class TimesCorrectionScreen extends PrayerTimesCorrectionScreen {
 
     @AndroidFindBy(id = "com.moslay:id/txt_setting_title")
-    private AndroidElement screenTitleTxt_Text;
+    private AndroidElement screenTitleText;
 
     @AndroidFindBy(id = "com.moslay:id/lv_calway_list")
-    private AndroidElement timesCorrectionListElement_Element;
+    private AndroidElement timesCorrectionListElement;
 
     @AndroidFindBy(id = "com.moslay:id/fagr_helper_double_listview")
-    private AndroidElement scrollListElement_Element;
+    private AndroidElement scrollListElement;
 
     /**
      * *********************************************************************************************************************************************
@@ -26,7 +27,8 @@ public class TimesCorrectionScreen extends PrayerTimesCorrectionScreen {
      * @return navigation drawer screen
      */
     public void clickOnNavigationDrawerButton() {
-        navigationDrawerBtn_Btn.click();
+        wait.until(ExpectedConditions.visibilityOf(navigationDrawerButton));
+        navigationDrawerButton.click();
         //This method returns navigation drawer screen with shams
     }
     /**
@@ -38,7 +40,8 @@ public class TimesCorrectionScreen extends PrayerTimesCorrectionScreen {
      * @return the screen's general title as a string
      */
     public String returnScreenGeneralTitleString() {
-        return screenGeneralTitleTxt_Text.getText();
+        wait.until(ExpectedConditions.visibilityOf(screenGeneralTitleText));
+        return screenGeneralTitleText.getText();
     }
     /**
      * *********************************************************************************************************************************************
@@ -49,7 +52,8 @@ public class TimesCorrectionScreen extends PrayerTimesCorrectionScreen {
      * @return ishaa time in string
      */
     public String returnIshaaTimeString() {
-        return ishaTimeElement_Element.findElementByClassName("android.widget.TextView").getText();
+        wait.until(ExpectedConditions.visibilityOf(ishaTimeElement));
+        return ishaTimeElement.findElementByClassName("android.widget.TextView").getText();
     }
     /**
      * *********************************************************************************************************************************************
@@ -60,7 +64,8 @@ public class TimesCorrectionScreen extends PrayerTimesCorrectionScreen {
      * @return maghrib time in string
      */
     public String returnMaghribTimeString() {
-        return maghribTimeElement_Element.findElementByClassName("android.widget.TextView").getText();
+        wait.until(ExpectedConditions.visibilityOf(maghribTimeElement));
+        return maghribTimeElement.findElementByClassName("android.widget.TextView").getText();
     }
     /**
      * *********************************************************************************************************************************************
@@ -71,7 +76,8 @@ public class TimesCorrectionScreen extends PrayerTimesCorrectionScreen {
      * @return asr time in string
      */
     public String returnAsrTimeString() {
-        return asrTimeElement_Element.findElementByClassName("android.widget.TextView").getText();
+        wait.until(ExpectedConditions.visibilityOf(asrTimeElement));
+        return asrTimeElement.findElementByClassName("android.widget.TextView").getText();
     }
     /**
      * *********************************************************************************************************************************************
@@ -82,7 +88,8 @@ public class TimesCorrectionScreen extends PrayerTimesCorrectionScreen {
      * @return zohr time in string
      */
     public String returnZohrTimeString() {
-        return zohrTimeElement_Element.findElementByClassName("android.widget.TextView").getText();
+        wait.until(ExpectedConditions.visibilityOf(zohrTimeElement));
+        return zohrTimeElement.findElementByClassName("android.widget.TextView").getText();
     }
     /**
      * *********************************************************************************************************************************************
@@ -93,7 +100,8 @@ public class TimesCorrectionScreen extends PrayerTimesCorrectionScreen {
      * @return sherouqe time in string
      */
     public String returnSherouqeTimeString() {
-        return shrouqeTimeElement_Element.findElementByClassName("android.widget.TextView").getText();
+        wait.until(ExpectedConditions.visibilityOf(shrouqeTimeElement));
+        return shrouqeTimeElement.findElementByClassName("android.widget.TextView").getText();
     }
     /**
      * *********************************************************************************************************************************************
@@ -104,7 +112,8 @@ public class TimesCorrectionScreen extends PrayerTimesCorrectionScreen {
      * @return fajr time in string
      */
     public String returnFajrTimeString() {
-        return fajrTimeElement_Element.findElementByClassName("android.widget.TextView").getText();
+        wait.until(ExpectedConditions.visibilityOf(fajrTimeElement));
+        return fajrTimeElement.findElementByClassName("android.widget.TextView").getText();
     }
     /**
      * *********************************************************************************************************************************************
@@ -115,7 +124,8 @@ public class TimesCorrectionScreen extends PrayerTimesCorrectionScreen {
      * @return screen's title as a string
      */
     public String returnScreenTitleString() {
-        return screenTitleTxt_Text.getText();
+        wait.until(ExpectedConditions.visibilityOf(screenTitleText));
+        return screenTitleText.getText();
     }
     /**
      * *********************************************************************************************************************************************
@@ -124,7 +134,8 @@ public class TimesCorrectionScreen extends PrayerTimesCorrectionScreen {
      * This method is to click on fajr plus button
      */
     public void clickOnFajrPlusButton() {
-        List<MobileElement> timesCorrectionList_List = timesCorrectionListElement_Element.findElementsByClassName("timesCorrectionListElement_Element");
+        wait.until(ExpectedConditions.visibilityOf(timesCorrectionListElement));
+        List<MobileElement> timesCorrectionList_List = timesCorrectionListElement.findElementsByClassName("timesCorrectionListElement_Element");
         AndroidElement fajrPlusButton = (AndroidElement) timesCorrectionList_List.get(0).findElementsById("com.moslay:id/im_plus");
         fajrPlusButton.click();
     }
@@ -137,7 +148,8 @@ public class TimesCorrectionScreen extends PrayerTimesCorrectionScreen {
      * @param number represents the number sent to fajr correction time text field
      */
     public void sendNumberToFajrCorrectionTimeTextField(String number) {
-        List<MobileElement> timesCorrectionList_List = timesCorrectionListElement_Element.findElementsByClassName("timesCorrectionListElement_Element");
+        wait.until(ExpectedConditions.visibilityOf(timesCorrectionListElement));
+        List<MobileElement> timesCorrectionList_List = timesCorrectionListElement.findElementsByClassName("timesCorrectionListElement_Element");
         AndroidElement fajrTextField = (AndroidElement) timesCorrectionList_List.get(0).findElementsById("com.moslay:id/et_number");
         fajrTextField.sendKeys(number);
     }
@@ -148,7 +160,8 @@ public class TimesCorrectionScreen extends PrayerTimesCorrectionScreen {
      * This method is to click on fajr minus button
      */
     public void clickOnFajrMinusButton() {
-        List<MobileElement> timesCorrectionList_List = timesCorrectionListElement_Element.findElementsByClassName("timesCorrectionListElement_Element");
+        wait.until(ExpectedConditions.visibilityOf(timesCorrectionListElement));
+        List<MobileElement> timesCorrectionList_List = timesCorrectionListElement.findElementsByClassName("timesCorrectionListElement_Element");
         AndroidElement fajrMinusButton = (AndroidElement) timesCorrectionList_List.get(0).findElementsById("com.moslay:id/im_minus");
         fajrMinusButton.click();
     }
@@ -159,7 +172,8 @@ public class TimesCorrectionScreen extends PrayerTimesCorrectionScreen {
      * This method is to click on sherouqe plus button
      */
     public void clickOnSherouqePlusButton() {
-        List<MobileElement> timesCorrectionList_List = timesCorrectionListElement_Element.findElementsByClassName("timesCorrectionListElement_Element");
+        wait.until(ExpectedConditions.visibilityOf(timesCorrectionListElement));
+        List<MobileElement> timesCorrectionList_List = timesCorrectionListElement.findElementsByClassName("timesCorrectionListElement_Element");
         AndroidElement sherouqePlusButton = (AndroidElement) timesCorrectionList_List.get(1).findElementsById("com.moslay:id/im_plus");
         sherouqePlusButton.click();
     }
@@ -172,7 +186,8 @@ public class TimesCorrectionScreen extends PrayerTimesCorrectionScreen {
      * @param number represents the number sent to sherouqe correction time text field
      */
     public void sendNumberToSherouqeCorrectionTimeTextField(String number) {
-        List<MobileElement> timesCorrectionList_List = timesCorrectionListElement_Element.findElementsByClassName("timesCorrectionListElement_Element");
+        wait.until(ExpectedConditions.visibilityOf(timesCorrectionListElement));
+        List<MobileElement> timesCorrectionList_List = timesCorrectionListElement.findElementsByClassName("timesCorrectionListElement_Element");
         AndroidElement sherouqeTextField = (AndroidElement) timesCorrectionList_List.get(1).findElementsById("com.moslay:id/et_number");
         sherouqeTextField.sendKeys(number);
     }
@@ -183,7 +198,8 @@ public class TimesCorrectionScreen extends PrayerTimesCorrectionScreen {
      * This method is to click on sherouqe minus button
      */
     public void clickOnSherouqeMinusButton() {
-        List<MobileElement> timesCorrectionList_List = timesCorrectionListElement_Element.findElementsByClassName("timesCorrectionListElement_Element");
+        wait.until(ExpectedConditions.visibilityOf(timesCorrectionListElement));
+        List<MobileElement> timesCorrectionList_List = timesCorrectionListElement.findElementsByClassName("timesCorrectionListElement_Element");
         AndroidElement sherouqeMinusButton = (AndroidElement) timesCorrectionList_List.get(1).findElementsById("com.moslay:id/im_minus");
         sherouqeMinusButton.click();
     }
@@ -194,7 +210,8 @@ public class TimesCorrectionScreen extends PrayerTimesCorrectionScreen {
      * This method is to click on zohr plus button
      */
     public void clickOnZohrPlusButton() {
-        List<MobileElement> timesCorrectionList_List = timesCorrectionListElement_Element.findElementsByClassName("timesCorrectionListElement_Element");
+        wait.until(ExpectedConditions.visibilityOf(timesCorrectionListElement));
+        List<MobileElement> timesCorrectionList_List = timesCorrectionListElement.findElementsByClassName("timesCorrectionListElement_Element");
         AndroidElement zohrPlusButton = (AndroidElement) timesCorrectionList_List.get(2).findElementsById("com.moslay:id/im_plus");
         zohrPlusButton.click();
     }
@@ -207,7 +224,8 @@ public class TimesCorrectionScreen extends PrayerTimesCorrectionScreen {
      * @param number represents the number sent to zohr correction time text field
      */
     public void sendNumberToZohrCorrectionTimeTextField(String number) {
-        List<MobileElement> timesCorrectionList_List = timesCorrectionListElement_Element.findElementsByClassName("timesCorrectionListElement_Element");
+        wait.until(ExpectedConditions.visibilityOf(timesCorrectionListElement));
+        List<MobileElement> timesCorrectionList_List = timesCorrectionListElement.findElementsByClassName("timesCorrectionListElement_Element");
         AndroidElement zohrTextField = (AndroidElement) timesCorrectionList_List.get(2).findElementsById("com.moslay:id/et_number");
         zohrTextField.sendKeys(number);
     }
@@ -218,7 +236,8 @@ public class TimesCorrectionScreen extends PrayerTimesCorrectionScreen {
      * This method is to click on zohr minus button
      */
     public void clickOnZohrMinusButton() {
-        List<MobileElement> timesCorrectionList_List = timesCorrectionListElement_Element.findElementsByClassName("timesCorrectionListElement_Element");
+        wait.until(ExpectedConditions.visibilityOf(timesCorrectionListElement));
+        List<MobileElement> timesCorrectionList_List = timesCorrectionListElement.findElementsByClassName("timesCorrectionListElement_Element");
         AndroidElement zohrMinusButton = (AndroidElement) timesCorrectionList_List.get(2).findElementsById("com.moslay:id/im_minus");
         zohrMinusButton.click();
     }
@@ -229,7 +248,8 @@ public class TimesCorrectionScreen extends PrayerTimesCorrectionScreen {
      * This method is to click on asr plus button
      */
     public void clickOnAsrPlusButton() {
-        List<MobileElement> timesCorrectionList_List = timesCorrectionListElement_Element.findElementsByClassName("timesCorrectionListElement_Element");
+        wait.until(ExpectedConditions.visibilityOf(timesCorrectionListElement));
+        List<MobileElement> timesCorrectionList_List = timesCorrectionListElement.findElementsByClassName("timesCorrectionListElement_Element");
         AndroidElement asrPlusButton = (AndroidElement) timesCorrectionList_List.get(3).findElementsById("com.moslay:id/im_plus");
         asrPlusButton.click();
     }
@@ -242,7 +262,8 @@ public class TimesCorrectionScreen extends PrayerTimesCorrectionScreen {
      * @param number represents the number sent to asr correction time text field
      */
     public void sendNumberToAsrCorrectionTimeTextField(String number) {
-        List<MobileElement> timesCorrectionList_List = timesCorrectionListElement_Element.findElementsByClassName("timesCorrectionListElement_Element");
+        wait.until(ExpectedConditions.visibilityOf(timesCorrectionListElement));
+        List<MobileElement> timesCorrectionList_List = timesCorrectionListElement.findElementsByClassName("timesCorrectionListElement_Element");
         AndroidElement asrTextField = (AndroidElement) timesCorrectionList_List.get(3).findElementsById("com.moslay:id/et_number");
         asrTextField.sendKeys(number);
     }
@@ -253,7 +274,8 @@ public class TimesCorrectionScreen extends PrayerTimesCorrectionScreen {
      * This method is to click on asr minus button
      */
     public void clickOnAsrMinusButton() {
-        List<MobileElement> timesCorrectionList_List = timesCorrectionListElement_Element.findElementsByClassName("timesCorrectionListElement_Element");
+        wait.until(ExpectedConditions.visibilityOf(timesCorrectionListElement));
+        List<MobileElement> timesCorrectionList_List = timesCorrectionListElement.findElementsByClassName("timesCorrectionListElement_Element");
         AndroidElement asrMinusButton = (AndroidElement) timesCorrectionList_List.get(3).findElementsById("com.moslay:id/im_minus");
         asrMinusButton.click();
     }
@@ -264,7 +286,8 @@ public class TimesCorrectionScreen extends PrayerTimesCorrectionScreen {
      * This method is to click on maghrib plus button
      */
     public void clickOnMaghribPlusButton() {
-        List<MobileElement> timesCorrectionList_List = timesCorrectionListElement_Element.findElementsByClassName("timesCorrectionListElement_Element");
+        wait.until(ExpectedConditions.visibilityOf(timesCorrectionListElement));
+        List<MobileElement> timesCorrectionList_List = timesCorrectionListElement.findElementsByClassName("timesCorrectionListElement_Element");
         AndroidElement maghribPlusButton = (AndroidElement) timesCorrectionList_List.get(4).findElementsById("com.moslay:id/im_plus");
         maghribPlusButton.click();
     }
@@ -277,7 +300,8 @@ public class TimesCorrectionScreen extends PrayerTimesCorrectionScreen {
      * @param number represents the number sent to maghrib correction time text field
      */
     public void sendNumberToMaghribCorrectionTimeTextField(String number) {
-        List<MobileElement> timesCorrectionList_List = timesCorrectionListElement_Element.findElementsByClassName("timesCorrectionListElement_Element");
+        wait.until(ExpectedConditions.visibilityOf(timesCorrectionListElement));
+        List<MobileElement> timesCorrectionList_List = timesCorrectionListElement.findElementsByClassName("timesCorrectionListElement_Element");
         AndroidElement maghribTextField = (AndroidElement) timesCorrectionList_List.get(4).findElementsById("com.moslay:id/et_number");
         maghribTextField.sendKeys(number);
     }
@@ -288,7 +312,8 @@ public class TimesCorrectionScreen extends PrayerTimesCorrectionScreen {
      * This method is to click on maghrib minus button
      */
     public void clickOnMaghribMinusButton() {
-        List<MobileElement> timesCorrectionList_List = timesCorrectionListElement_Element.findElementsByClassName("timesCorrectionListElement_Element");
+        wait.until(ExpectedConditions.visibilityOf(timesCorrectionListElement));
+        List<MobileElement> timesCorrectionList_List = timesCorrectionListElement.findElementsByClassName("timesCorrectionListElement_Element");
         AndroidElement maghribMinusButton = (AndroidElement) timesCorrectionList_List.get(4).findElementsById("com.moslay:id/im_minus");
         maghribMinusButton.click();
     }
@@ -299,7 +324,8 @@ public class TimesCorrectionScreen extends PrayerTimesCorrectionScreen {
      * This method is to click on ishaa plus button
      */
     public void clickOnIshaaPlusButton() {
-        List<MobileElement> timesCorrectionList_List = timesCorrectionListElement_Element.findElementsByClassName("timesCorrectionListElement_Element");
+        wait.until(ExpectedConditions.visibilityOf(timesCorrectionListElement));
+        List<MobileElement> timesCorrectionList_List = timesCorrectionListElement.findElementsByClassName("timesCorrectionListElement_Element");
         AndroidElement ishaaPlusButton = (AndroidElement) timesCorrectionList_List.get(5).findElementsById("com.moslay:id/im_plus");
         ishaaPlusButton.click();
     }
@@ -312,7 +338,8 @@ public class TimesCorrectionScreen extends PrayerTimesCorrectionScreen {
      * @param number represents the number sent to ishaa correction time text field
      */
     public void sendNumberToIshaaCorrectionTimeTextField(String number) {
-        List<MobileElement> timesCorrectionList_List = timesCorrectionListElement_Element.findElementsByClassName("timesCorrectionListElement_Element");
+        wait.until(ExpectedConditions.visibilityOf(timesCorrectionListElement));
+        List<MobileElement> timesCorrectionList_List = timesCorrectionListElement.findElementsByClassName("timesCorrectionListElement_Element");
         AndroidElement ishaaTextField = (AndroidElement) timesCorrectionList_List.get(5).findElementsById("com.moslay:id/et_number");
         ishaaTextField.sendKeys(number);
     }
@@ -323,7 +350,8 @@ public class TimesCorrectionScreen extends PrayerTimesCorrectionScreen {
      * This method is to click on ishaa minus button
      */
     public void clickOnIshaaMinusButton() {
-        List<MobileElement> timesCorrectionList_List = timesCorrectionListElement_Element.findElementsByClassName("timesCorrectionListElement_Element");
+        wait.until(ExpectedConditions.visibilityOf(timesCorrectionListElement));
+        List<MobileElement> timesCorrectionList_List = timesCorrectionListElement.findElementsByClassName("timesCorrectionListElement_Element");
         AndroidElement ishaaMinusButton = (AndroidElement) timesCorrectionList_List.get(5).findElementsById("com.moslay:id/im_minus");
         ishaaMinusButton.click();
     }
@@ -336,7 +364,8 @@ public class TimesCorrectionScreen extends PrayerTimesCorrectionScreen {
      * @param index that represents the scroll dot number
      */
     public void clickOnAScrollDotByIndex(int index) {
-        List<MobileElement> scrollList_List = scrollListElement_Element.findElementsByClassName("android.widget.LinearLayout");
+        wait.until(ExpectedConditions.visibilityOf(scrollListElement));
+        List<MobileElement> scrollList_List = scrollListElement.findElementsByClassName("android.widget.LinearLayout");
         scrollList_List.get(index).click();
     }
     /**

@@ -3,20 +3,17 @@ package java.screens.settings.prayerTimesCorrection;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import java.util.List;
 
 public class ResetScreen extends PrayerTimesCorrectionScreen {
-
     @AndroidFindBy(id = "com.moslay:id/txt_setting_title")
-    private AndroidElement screenTitleTxt_Text;
-
+    private AndroidElement screenTitleText;
     @AndroidFindBy(id = "com.moslay:id/click_here")
-    private AndroidElement resetButton_Btn;
-
+    private AndroidElement resetButton;
     @AndroidFindBy(id = "com.moslay:id/fagr_helper_double_listview")
-    private AndroidElement scrollListElement_Element;
-
+    private AndroidElement scrollListElement;
     /**
      * *********************************************************************************************************************************************
      */
@@ -26,7 +23,8 @@ public class ResetScreen extends PrayerTimesCorrectionScreen {
      * @return navigation drawer screen
      */
     public void clickOnNavigationDrawerButton() {
-        navigationDrawerBtn_Btn.click();
+        wait.until(ExpectedConditions.visibilityOf(navigationDrawerButton));
+        navigationDrawerButton.click();
         //This method returns navigation drawer screen with shams
     }
     /**
@@ -38,7 +36,8 @@ public class ResetScreen extends PrayerTimesCorrectionScreen {
      * @return the screen's general title as a string
      */
     public String returnScreenGeneralTitleString() {
-        return screenGeneralTitleTxt_Text.getText();
+        wait.until(ExpectedConditions.visibilityOf(screenGeneralTitleText));
+        return screenGeneralTitleText.getText();
     }
     /**
      * *********************************************************************************************************************************************
@@ -49,7 +48,8 @@ public class ResetScreen extends PrayerTimesCorrectionScreen {
      * @return ishaa time in string
      */
     public String returnIshaaTimeString() {
-        return ishaTimeElement_Element.findElementByClassName("android.widget.TextView").getText();
+        wait.until(ExpectedConditions.visibilityOf(ishaTimeElement));
+        return ishaTimeElement.findElementByClassName("android.widget.TextView").getText();
     }
     /**
      * *********************************************************************************************************************************************
@@ -60,7 +60,8 @@ public class ResetScreen extends PrayerTimesCorrectionScreen {
      * @return maghrib time in string
      */
     public String returnMaghribTimeString() {
-        return maghribTimeElement_Element.findElementByClassName("android.widget.TextView").getText();
+        wait.until(ExpectedConditions.visibilityOf(maghribTimeElement));
+        return maghribTimeElement.findElementByClassName("android.widget.TextView").getText();
     }
     /**
      * *********************************************************************************************************************************************
@@ -71,7 +72,8 @@ public class ResetScreen extends PrayerTimesCorrectionScreen {
      * @return asr time in string
      */
     public String returnAsrTimeString() {
-        return asrTimeElement_Element.findElementByClassName("android.widget.TextView").getText();
+        wait.until(ExpectedConditions.visibilityOf(asrTimeElement));
+        return asrTimeElement.findElementByClassName("android.widget.TextView").getText();
     }
     /**
      * *********************************************************************************************************************************************
@@ -82,7 +84,8 @@ public class ResetScreen extends PrayerTimesCorrectionScreen {
      * @return zohr time in string
      */
     public String returnZohrTimeString() {
-        return zohrTimeElement_Element.findElementByClassName("android.widget.TextView").getText();
+        wait.until(ExpectedConditions.visibilityOf(zohrTimeElement));
+        return zohrTimeElement.findElementByClassName("android.widget.TextView").getText();
     }
     /**
      * *********************************************************************************************************************************************
@@ -93,7 +96,8 @@ public class ResetScreen extends PrayerTimesCorrectionScreen {
      * @return sherouqe time in string
      */
     public String returnSherouqeTimeString() {
-        return shrouqeTimeElement_Element.findElementByClassName("android.widget.TextView").getText();
+        wait.until(ExpectedConditions.visibilityOf(shrouqeTimeElement));
+        return shrouqeTimeElement.findElementByClassName("android.widget.TextView").getText();
     }
     /**
      * *********************************************************************************************************************************************
@@ -104,7 +108,8 @@ public class ResetScreen extends PrayerTimesCorrectionScreen {
      * @return fajr time in string
      */
     public String returnFajrTimeString() {
-        return fajrTimeElement_Element.findElementByClassName("android.widget.TextView").getText();
+        wait.until(ExpectedConditions.visibilityOf(fajrTimeElement));
+        return fajrTimeElement.findElementByClassName("android.widget.TextView").getText();
     }
     /**
      * *********************************************************************************************************************************************
@@ -115,7 +120,8 @@ public class ResetScreen extends PrayerTimesCorrectionScreen {
      * @return screen's title as a string
      */
     public String returnScreenTitleString() {
-        return screenTitleTxt_Text.getText();
+        wait.until(ExpectedConditions.visibilityOf(screenTitleText));
+        return screenTitleText.getText();
     }
     /**
      * *********************************************************************************************************************************************
@@ -124,7 +130,8 @@ public class ResetScreen extends PrayerTimesCorrectionScreen {
      * This method is to click on reset button
      */
     public void clickOnResetButton() {
-        resetButton_Btn.click();
+        wait.until(ExpectedConditions.visibilityOf(resetButton));
+        resetButton.click();
     }
     /**
      * *********************************************************************************************************************************************
@@ -135,7 +142,8 @@ public class ResetScreen extends PrayerTimesCorrectionScreen {
      * @param index that represents the scroll dot number
      */
     public void clickOnAScrollDotByIndex(int index) {
-        List<MobileElement> scrollList_List = scrollListElement_Element.findElementsByClassName("android.widget.LinearLayout");
+        wait.until(ExpectedConditions.visibilityOf(scrollListElement));
+        List<MobileElement> scrollList_List = scrollListElement.findElementsByClassName("android.widget.LinearLayout");
         scrollList_List.get(index).click();
     }
     /**

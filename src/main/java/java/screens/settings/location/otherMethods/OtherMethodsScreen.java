@@ -2,29 +2,27 @@ package java.screens.settings.location.otherMethods;
 
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Wait;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.screens.settings.location.automatic.AutomaticScreen;
 import java.base.Base;
 
 public class OtherMethodsScreen extends Base {
+    Wait wait = new WebDriverWait(driver,10);
     @AndroidFindBy(id = "com.moslay:id/hint")
-    private AndroidElement hint_Text;
-
+    private AndroidElement hintText;
     @AndroidFindBy(id = "com.moslay:id/rv_city_list")
-    private AndroidElement citySuggestionList_Element;
-
+    private AndroidElement citySuggestionListElement;
     @AndroidFindBy(id = "com.moslay:id/txt_offline_search")
-    private AndroidElement offlineSearch_Btn;
-
+    private AndroidElement offlineSearchButton;
     @AndroidFindBy(id = "com.moslay:id/txt_online_detection")
-    private AndroidElement onlineDetection_Btn;
-
+    private AndroidElement onlineDetectionButton;
     @AndroidFindBy(id = "com.moslay:id/txt_search_online")
-    private AndroidElement searchOnline_Btn;
-
+    private AndroidElement searchOnlineButton;
     @AndroidFindBy(id = "com.moslay:id/txt_add_city_name_to_your_location")
-    private AndroidElement addCityNameToYourLocation_Btn;
-
+    private AndroidElement addCityNameToYourLocationButton;
     /**
      * *********************************************************************************************************************************************
      */
@@ -34,7 +32,8 @@ public class OtherMethodsScreen extends Base {
      * @return boolean
      */
     public boolean isLocationSuggestionListDisplayed() {
-        return citySuggestionList_Element.isDisplayed();
+        wait.until(ExpectedConditions.visibilityOf(citySuggestionListElement));
+        return citySuggestionListElement.isDisplayed();
     }
     /**
      * *********************************************************************************************************************************************
@@ -45,7 +44,8 @@ public class OtherMethodsScreen extends Base {
      * @return OtherMethods_OfflineSearchScreen
      */
     public OfflineSearchScreen clickOnOfflineSearchButton() {
-        offlineSearch_Btn.click();
+        wait.until(ExpectedConditions.visibilityOf(offlineSearchButton));
+        offlineSearchButton.click();
         return new OfflineSearchScreen();
     }
     /**
@@ -57,7 +57,8 @@ public class OtherMethodsScreen extends Base {
      * @return AutomaticScreen
      */
     public AutomaticScreen clickOnOnlineDetectionButton() {
-        onlineDetection_Btn.click();
+        wait.until(ExpectedConditions.visibilityOf(onlineDetectionButton));
+        onlineDetectionButton.click();
         return new AutomaticScreen();
     }
     /**
@@ -69,7 +70,8 @@ public class OtherMethodsScreen extends Base {
      * @return OtherMethods_SearchOnlineScreen
      */
     public SearchOnlineScreen clickOnSearchOnlineButton() {
-        searchOnline_Btn.click();
+        wait.until(ExpectedConditions.visibilityOf(searchOnlineButton));
+        searchOnlineButton.click();
         return new SearchOnlineScreen();
     }
     /**
@@ -81,7 +83,8 @@ public class OtherMethodsScreen extends Base {
      * @return OtherMethods_AddCityNameScreen
      */
     public AddCityNameScreen clickOnAddCityNameButton() {
-        addCityNameToYourLocation_Btn.click();
+        wait.until(ExpectedConditions.visibilityOf(addCityNameToYourLocationButton));
+        addCityNameToYourLocationButton.click();
         return new AddCityNameScreen();
     }
     /**

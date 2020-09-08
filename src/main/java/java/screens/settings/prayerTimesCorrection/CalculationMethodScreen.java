@@ -3,21 +3,18 @@ package java.screens.settings.prayerTimesCorrection;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import java.util.List;
 import java.utilities.TestUtils;
 
 public class CalculationMethodScreen extends PrayerTimesCorrectionScreen {
-
     @AndroidFindBy(id = "com.moslay:id/txt_setting_title")
-    private AndroidElement screenTitleTxt_Text;
-
+    private AndroidElement screenTitleText;
     @AndroidFindBy(id = "com.moslay:id/lv_calway_list")
-    private AndroidElement calculationMethodsListElement_Element;
-
+    private AndroidElement calculationMethodsListElement;
     @AndroidFindBy(id = "com.moslay:id/fagr_helper_double_listview")
-    private AndroidElement scrollListElement_Element;
-
+    private AndroidElement scrollListElement;
     /**
      * *********************************************************************************************************************************************
      */
@@ -27,7 +24,8 @@ public class CalculationMethodScreen extends PrayerTimesCorrectionScreen {
      * @return navigation drawer screen
      */
     public void clickOnNavigationDrawerButton() {
-        navigationDrawerBtn_Btn.click();
+        wait.until(ExpectedConditions.visibilityOf(navigationDrawerButton));
+        navigationDrawerButton.click();
         //This method returns navigation drawer screen with shams
     }
     /**
@@ -39,7 +37,8 @@ public class CalculationMethodScreen extends PrayerTimesCorrectionScreen {
      * @return the screen's general title as a string
      */
     public String returnScreenGeneralTitleString() {
-        return screenGeneralTitleTxt_Text.getText();
+        wait.until(ExpectedConditions.visibilityOf(screenTitleText));
+        return screenGeneralTitleText.getText();
     }
     /**
      * *********************************************************************************************************************************************
@@ -50,7 +49,8 @@ public class CalculationMethodScreen extends PrayerTimesCorrectionScreen {
      * @return ishaa time in string
      */
     public String returnIshaaTimeString() {
-        return ishaTimeElement_Element.findElementByClassName("android.widget.TextView").getText();
+        wait.until(ExpectedConditions.visibilityOf(ishaTimeElement));
+        return ishaTimeElement.findElementByClassName("android.widget.TextView").getText();
     }
     /**
      * *********************************************************************************************************************************************
@@ -61,7 +61,8 @@ public class CalculationMethodScreen extends PrayerTimesCorrectionScreen {
      * @return maghrib time in string
      */
     public String returnMaghribTimeString() {
-        return maghribTimeElement_Element.findElementByClassName("android.widget.TextView").getText();
+        wait.until(ExpectedConditions.visibilityOf(maghribTimeElement));
+        return maghribTimeElement.findElementByClassName("android.widget.TextView").getText();
     }
     /**
      * *********************************************************************************************************************************************
@@ -72,7 +73,8 @@ public class CalculationMethodScreen extends PrayerTimesCorrectionScreen {
      * @return asr time in string
      */
     public String returnAsrTimeString() {
-        return asrTimeElement_Element.findElementByClassName("android.widget.TextView").getText();
+        wait.until(ExpectedConditions.visibilityOf(asrTimeElement));
+        return asrTimeElement.findElementByClassName("android.widget.TextView").getText();
     }
     /**
      * *********************************************************************************************************************************************
@@ -83,7 +85,8 @@ public class CalculationMethodScreen extends PrayerTimesCorrectionScreen {
      * @return zohr time in string
      */
     public String returnZohrTimeString() {
-        return zohrTimeElement_Element.findElementByClassName("android.widget.TextView").getText();
+        wait.until(ExpectedConditions.visibilityOf(zohrTimeElement));
+        return zohrTimeElement.findElementByClassName("android.widget.TextView").getText();
     }
     /**
      * *********************************************************************************************************************************************
@@ -94,7 +97,8 @@ public class CalculationMethodScreen extends PrayerTimesCorrectionScreen {
      * @return sherouqe time in string
      */
     public String returnSherouqeTimeString() {
-        return shrouqeTimeElement_Element.findElementByClassName("android.widget.TextView").getText();
+        wait.until(ExpectedConditions.visibilityOf(shrouqeTimeElement));
+        return shrouqeTimeElement.findElementByClassName("android.widget.TextView").getText();
     }
     /**
      * *********************************************************************************************************************************************
@@ -105,7 +109,8 @@ public class CalculationMethodScreen extends PrayerTimesCorrectionScreen {
      * @return fajr time in string
      */
     public String returnFajrTimeString() {
-        return fajrTimeElement_Element.findElementByClassName("android.widget.TextView").getText();
+        wait.until(ExpectedConditions.visibilityOf(fajrTimeElement));
+        return fajrTimeElement.findElementByClassName("android.widget.TextView").getText();
     }
     /**
      * *********************************************************************************************************************************************
@@ -116,7 +121,8 @@ public class CalculationMethodScreen extends PrayerTimesCorrectionScreen {
      * @return screen's title as a string
      */
     public String returnScreenTitleString() {
-        return screenTitleTxt_Text.getText();
+        wait.until(ExpectedConditions.visibilityOf(screenTitleText));
+        return screenTitleText.getText();
     }
     /**
      * *********************************************************************************************************************************************
@@ -128,6 +134,7 @@ public class CalculationMethodScreen extends PrayerTimesCorrectionScreen {
      */
     public void scrollToACalculationMehtodAndClickIt(String text) {
         AndroidElement requiredElement = (AndroidElement) TestUtils.scrollToASpecificElementByItsText(text);
+        wait.until(ExpectedConditions.visibilityOf(requiredElement));
         requiredElement.click();
     }
     /**
@@ -140,7 +147,8 @@ public class CalculationMethodScreen extends PrayerTimesCorrectionScreen {
      */
     public void clickOnAScrollDotByIndex(int index) {
         index--;
-        List<MobileElement> scrollList_List = scrollListElement_Element.findElementsByClassName("android.widget.LinearLayout");
+        wait.until(ExpectedConditions.visibilityOf(scrollListElement));
+        List<MobileElement> scrollList_List = scrollListElement.findElementsByClassName("android.widget.LinearLayout");
         scrollList_List.get(index).click();
     }
     /**

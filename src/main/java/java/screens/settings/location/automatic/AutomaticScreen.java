@@ -2,27 +2,26 @@ package java.screens.settings.location.automatic;
 
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Wait;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.screens.home.HomePageScreen;
 import java.screens.settings.location.otherMethods.OtherMethodsScreen;
 import java.base.Base;
 
 public class AutomaticScreen extends Base {
+    Wait wait = new WebDriverWait(driver,10);
     @AndroidFindBy(id = "com.moslay:id/background_onbaording")
-    private AndroidElement backgroundImgLayout_Element;
-
+    private AndroidElement backgroundImgLayoutElement;
     @AndroidFindBy(id = "com.moslay:id/loading_image")
     private AndroidElement loadingImg;
-
     @AndroidFindBy(id = "com.moslay:id/tvCityName")
-    private AndroidElement cityName_Text;
-
+    private AndroidElement cityNameText;
     @AndroidFindBy(id = "com.moslay:id/txt_next")
-    private AndroidElement next_Btn;
-
+    private AndroidElement nextButton;
     @AndroidFindBy(id = "com.moslay:id/detect_other_ways")
-    private AndroidElement detectViaOtherWays_Btn;
-
+    private AndroidElement detectViaOtherWaysButton;
     /**
      * *********************************************************************************************************************************************
      */
@@ -32,7 +31,8 @@ public class AutomaticScreen extends Base {
      * @return boolean
      */
     public boolean isBackgroundImageDisplayed() {
-        return backgroundImgLayout_Element.isDisplayed();
+        wait.until(ExpectedConditions.visibilityOf(backgroundImgLayoutElement));
+        return backgroundImgLayoutElement.isDisplayed();
     }
     /**
      * *********************************************************************************************************************************************
@@ -43,7 +43,8 @@ public class AutomaticScreen extends Base {
      * @return city name as a string
      */
     public String getCityNameAsString() {
-        return cityName_Text.getText();
+        wait.until(ExpectedConditions.visibilityOf(cityNameText));
+        return cityNameText.getText();
     }
     /**
      * *********************************************************************************************************************************************
@@ -54,7 +55,8 @@ public class AutomaticScreen extends Base {
      * @return HomePageScreen
      */
     public HomePageScreen clickOnNextButton() {
-        next_Btn.click();
+        wait.until(ExpectedConditions.visibilityOf(nextButton));
+        nextButton.click();
         return new HomePageScreen();
     }
     /**
@@ -66,7 +68,8 @@ public class AutomaticScreen extends Base {
      * @return OtherMethodsScreen
      */
     public OtherMethodsScreen clickOnDetectViaOtherMethodsScreen() {
-        detectViaOtherWays_Btn.click();
+        wait.until(ExpectedConditions.visibilityOf(detectViaOtherWaysButton));
+        detectViaOtherWaysButton.click();
         return new OtherMethodsScreen();
     }
     /**
